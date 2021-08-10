@@ -1,0 +1,5 @@
+SetEnvIf X-Forwarded-For "150\.83.*" allowed_ip
+
+Order deny,allow
+Deny from all
+Allow from 150.83. 10. env=allowed_ip

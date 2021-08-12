@@ -283,7 +283,7 @@ a:active {
 .box26 {
     position: relative;
     margin: 0em 0;
-    padding: 0.5em 1em;
+    padding: 1em 2em;
     border: solid 3px #3498DB;
     border-radius: 8px;
 }
@@ -292,7 +292,7 @@ a:active {
     display: inline-block;
     top: -1vmax;
     left: 10px;
-    padding: 0 9px;
+    padding: 0 0px;
     line-height: 1;
         font-size: 1.5vmax;
         font-weight: Normal;
@@ -306,33 +306,133 @@ a:active {
     margin: 0; 
     padding: 0;
 }
+table#demo_1 {
+border: none;
+border-top: 0px solid #5DE4BF;
+border-collapse: separate;
+border-spacing: 0;
+margin-top: 0px;
+table-layout: fixed;
+width: 100%;
+}
 
-.box25 {
-position: relative;
-margin: 0em 0;
-padding: 0.1em 0em;
-border: solid 0px #3579BD;
-border-radius: 8px;
-background: #3579BD;
+table#demo_1 th,
+table#demo_1 td {
+border-bottom: 0px solid #DDD;
+font-size: 1.2vmax;
+line-height: 1.5vmax;
+padding: 0px;
+text-align: left;
+vertical-align: middle;
 }
-.box25 .box-title {
-position: absolute;
-display: inline-block;
-top: -13px;
-left: 10px;
-padding: 0 9px;
-line-height: 1;
-font-size: 1.5vmax;
-font-weight: Normal;
-font-family: "Roboto";       
-color: #EE490D; 
-background: #FFF;
-<!--color: #3579BD;
-	font-weight: bold; -->
+
+table#demo_1 th:first-child,
+table#demo_1 td:first-child {
+padding-left: 0;
 }
-.box25 p {
-margin: 0; 
-padding: 0;
+
+table#demo_1 th:last-child,
+table#demo_1 td:last-child {
+padding-right: 0;
+width: 45%;
+}
+
+table#demo_1 th {
+font-weight: bold;
+vertical-align: top;
+}
+
+table#demo_1 td .thTitle {
+display: none;
+}
+
+/*ウィンドウサイズが 768px以内の場合に上書きされる*/
+@media screen and (max-width: 1000px) {
+
+table#demo_1,
+table#demo_1 caption,
+table#demo_1 tbody,
+table#demo_1 tfoot,
+table#demo_1 tr,
+table#demo_1 th,
+table#demo_1 td {
+display: block;
+width: 100% !important;
+}
+
+table#demo_1 th,
+table#demo_1 td {
+padding-left: 0;
+padding-right: 0;
+}
+
+table#demo_1 th {
+display: none;
+}
+
+table#demo_1 td {
+border: none;
+text-align: left;
+}
+
+table#demo_1 td {
+border-bottom: 0px solid #DDD;
+}
+
+table#demo_1 td:first-child {
+font-weight: bold;
+}
+
+table#demo_1 td:last-child {
+border-bottom: 0px solid #DDD;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .inner {
+display: table;
+table-layout: fixed;
+width: 100%;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .thTitle,
+table#demo_1 td .tdContents {
+display: table-cell;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .thTitle {
+font-weight: bold;
+width: 20%;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .tdContents {
+padding-left: 0px;
+width: 80%;
+}
+}
+
+/*ウィンドウサイズが 480px以内の場合に上書きされる*/
+@media screen and (max-width: 480px) {
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .inner,
+table#demo_1 td .thTitle,
+table#demo_1 td .tdContents {
+display: block;
+width: 100%;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .inner {
+table-layout: auto;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .tdContents {
+padding: 10px 0 0;
+}
 }
 
 </style>
@@ -349,6 +449,9 @@ padding: 0;
 </head>
 
 <body>
+
+
+
 <div class="image"><img src="Otaru_port_TEDS2021.png" alt="Otaru pot"></div>
 <!--================-->
 <!--　　HEADER　　-->
@@ -371,11 +474,15 @@ padding: 0;
 <div style="width:100%;  height:800px; overflow:auto;">
 	
 <hr color="#FFFFFF" size="1px"> 
-<table border="0" cellspacing="0px" valign="top" align="center" width="75%" style="font-size: 1.2vmax; line-height:0; ">
+<table class="main" border="0" width="75%" >
+	<tr>
+		<td width="100%">
+<table  id="demo_1" border="0" cellspacing="0px" valign="top" align="center" width="75%" style="font-size: 1.2vmax; line-height:0; ">
+<tbody >
 <tr>
-<td width="49%">
+<td width="49%" style="padding-bottom: 30px;">
 
-<div class="box26">
+<div class="box26" >
     <span class="box-title">Next Seminar</span>
 
 
@@ -419,13 +526,19 @@ padding: 0;
 <td width="2%" ></td>
 
 <td>
-<td width="49%" style="font-size: 1.2vmax; line-height:0; background: #E9F0F2; border-radius: 0px; ">
+<td width="49%" style="font-size: 1.2vmax; line-height:0;  border-radius: 0px; padding-bottom: 30px;">
 <img width="100%" src="Aoike.png" alt="Blue_Pond_Biei">
 </td>
 
 </tr>
+</tbody>
 </table>
-<hr color="#FFFFFF">
+
+
+</td>
+</tr>
+</table>
+
  <!-- <img width="100%" src="Aoike.png" alt="Aoike Biei"> -->
 
 

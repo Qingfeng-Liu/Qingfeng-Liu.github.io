@@ -459,6 +459,39 @@ padding: 10px 0 0;
 }
 }
 
+	* {
+box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+float: left;
+width: 50%;
+padding: 10px;
+/*　height: 300px;  Should be removed. Only for demonstration */
+}
+
+.subcolumn1 {
+float: left;
+width: 30%;
+padding: 0px;
+background-color:#ffffff;
+/*　height: 300px;  Should be removed. Only for demonstration */
+}
+.subcolumn2 {
+float: left;
+width: 70%;
+padding-left: 50px;
+background-color:#ffffff;
+/*　height: 300px;  Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0 " >
 
@@ -582,8 +615,24 @@ padding: 10px 0 0;
 <td width="2%" ></td>
 
 <td>
-<td width="49%" style="font-size: 1.2vmax; line-height:0;  border-radius: 0px; padding-bottom: 30px;">
-<img width="100%" src="lake_shikotsu.png" alt="Blue_Pond_Biei">
+<td width="49%" style="font-size: 1.2vmax; line-height:1.2;  border-radius: 0px; padding-bottom: 30px;">
+<div class="row">
+		<div class="subcolumn1"  style="background-color:#ffffff;">
+			<div align="center" style="font-size: 1.2vmax;  padding-bottom: 10px; font-family: Roboto;">Next  Speaker</div>
+			<img width="100%" src="Ryo_Okui.jpg" alt="Blue_Pond_Biei">
+			</div>
+			<div class="subcolumn2" style="background-color:#ffffff;">
+				<div style="font-size: 1.2vmax;  padding-bottom: 10px;"><a href="https://econ.snu.ac.kr/people/faculty?mode=view&profidx=88">Ryo OKUI</a></div>
+				<div style=" padding-bottom: 10px; font-family: Roboto;">
+				Selected Publication
+				</div>
+				<div  class="main" style="text-align: justify; text-justify:auto; ">
+					<li>Asymptotic Inference for Dynamic Panel Es- timators of Infinite Order Autoregressive Processes (with Lee, Yoon-Jin, and Mototsugu Shintani). Journal of Econometrics. 2018.</li>
+					<li>Constructing Optimal Instruments by First Stage Prediction Averaging (with Kuersteiner, Guido). Econometrica. 2010.</li>
+				</div>
+				
+			</div>
+	</div>
 </td>
 
 </tr>

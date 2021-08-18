@@ -110,7 +110,7 @@ p.p3 {
         margin: 0.0px 0.0px 0.0px 0.0px;
         font-size: 1.5vh;
         font-weight: Bold;
-        font-family: "Oswald";
+        font-family: Oswald;
         color: #EE490D; <!-- color: #464646; #424949; -->
         <!-- -webkit-text-stroke: #000000 -->
     }
@@ -311,17 +311,22 @@ background-size: 100% 100%;
 font-family:"Roboto";
 }
 
+.wrap{
+ display:flex;
+}
+
 .box26 {
     position: relative;
     margin: 0em 0;
     padding: 1em 2em;
     border: solid 3px  #3498DB;
     border-radius: 8px;
+    min-height: 320px;
 }
 .box26 .box-title {
     position: absolute;
     display: inline-block;
-    top: -13px;
+    top: -1vmax;
     left: 10px;
     padding: 0 0px;
     line-height: 1;
@@ -524,7 +529,7 @@ clear: both;
 <!--　　HEADER　　-->
 <!--================-->
 <div id="HEADER">
-	<!--style="border-style: solid; border-width: 0px; border-top-width: 5px; border-color: #EE490D;"-->
+    <!--style="border-style: solid; border-width: 0px; border-top-width: 5px; border-color: #EE490D;"-->
     <div class="container2" style="text-align: left; ">
         <table class="main" border="0" width="90%">
             <tr>
@@ -587,7 +592,7 @@ clear: both;
                     <tbody>
                     <tr>
                         <td width="34.5%"
-                            style="padding-right: 10px; padding-left: 10px; padding-top: 13px; padding-bottom: 10px;">
+                            style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
 
                             <div class="box26">
                                 <span class="box-title">Next Seminar</span>
@@ -641,11 +646,11 @@ clear: both;
 
                         <td width=34.5%"
                             style="font-size: 1.2vmax; line-height:1.2;
-                            border-radius: 0px; padding-right: 10px; padding-left: 10px; padding-top: 13px; padding-bottom: 10px;">
+                            border-radius: 0px; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
                             <div class="box26">
                                 <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
                                     Next Speaker
-                                    <a style="text-decoration:underline; font-family: Oswald;"
+                                    <a style="text-decoration:underline; font-family: Merriweather;"
                                        href="https://econ.snu.ac.kr/people/faculty?mode=view&profidx=88">
                                         Ryo Okui
                                     </a>
@@ -686,7 +691,7 @@ clear: both;
     <!--Shinya Tanaka
     Antai Wang New Jersey Institute of Technology
     xin chen southern university of science and technology-->
-    <hr color="#FFFFFF" size="10px">
+    <hr color="#FFFFFF" size="20px">
     <div>
         <table id="committees" class="main" border="0" width="75%">
             <tr>
@@ -769,8 +774,7 @@ clear: both;
             </tr>
         </table>
     </div>
-    <hr color="#FFFFFF">
-    <hr color="#FFFFFF">
+    <hr color="#FFFFFF" size="30px">
     <div>
         <h1 id="next"></h1>
         <h2>Next Seminar</h2>

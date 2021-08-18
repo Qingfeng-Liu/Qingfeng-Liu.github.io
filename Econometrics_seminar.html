@@ -17,9 +17,11 @@
 
 
 
+    
     </script>
     <meta charset="utf-8">
     <title>TRANSDICIPLINARY ECONOMETRICS & DATA SCIENCE SEMINAR - TEDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 
 body {
@@ -107,6 +109,14 @@ p.p3 {
     }
 
     p.p5 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.5vh;
+        font-weight: Bold;
+        font-family: Oswald;
+        color: #EE490D; <!-- color: #464646; #424949; -->
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+    div.p5 {
         margin: 0.0px 0.0px 0.0px 0.0px;
         font-size: 1.5vh;
         font-weight: Bold;
@@ -269,12 +279,12 @@ div,dl,dt,dd,ul,ol,li,h4,h5,h6,pre,form,fieldset,blockquote{margin:0;padding:0;}
 a:link {
 	color:  #3498DB/*#000080*/; text-decoration:none;
 	font-weight: Bold;
-	font-family: "Roboto";
+	font-family: Roboto;
 }
 a:visited {
 	color:  #3498DB; text-decoration:underline; /*#358AC3; */
 	font-weight: Bold;
-	font-family: "Roboto";
+	font-family: Roboto;
 }
 a:hover {
 	color: #626567; text-decoration:underline;
@@ -311,6 +321,10 @@ background-size: 100% 100%;
 font-family:"Roboto";
 }
 
+.wrap{
+ display:flex;
+}
+
 .box26 {
     position: relative;
     margin: 0em 0;
@@ -318,6 +332,7 @@ font-family:"Roboto";
     border: solid 3px  #3498DB;
     border-radius: 8px;
     min-height: 18vmax;
+    z-index: 0;
 }
 .box26 .box-title {
     position: absolute;
@@ -379,7 +394,7 @@ display: none;
 }
 
 /*ウィンドウサイズが 768px以内の場合に上書きされる*/
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 1000px) {
 
 table#demo_1,
 table#demo_1 caption,
@@ -501,12 +516,37 @@ clear: both;
 }
 
 
+#navbar {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: -30vmax;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 1;
+  box-shadow: 2px 2px 2px #eeeeee;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 1.5vmax;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 
 
 
 
-
+    
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
 
@@ -520,6 +560,29 @@ clear: both;
 </head>
 
 <body>
+<div id="navbar">
+    <table border="0" cellpadding="0" align="left">
+        <tr>
+            <td width="22%"></td>
+            <td><a href="#next"><p class="p5" style="font-size: 1vmax;">NEXT SEMINAR</p></a>
+            </td>
+            <td width="6vmax"></td>
+            <td><a href="#upcoming"><p class="p5" style="font-size: 1vmax;">UPCOMING SEMINARS
+            </p></a></td>
+            <td width="6vmax"></td>
+            <td><a href="#past"><p class="p5" style="font-size: 1vmax;">PAST SEMINARS
+            </p></a>
+            <td width="6vmax"></td>
+            <td><a href="#committees"><p class="p5" style="font-size: 1vmax;">COMMITTEES
+            </p></a>
+            </td>
+            <td width="6vmax"></td>
+            <td><a href="#HEADER"><p class="p5" style="font-size: 1vmax;">TOP
+            </p></a>
+            </td>
+        </tr>
+    </table>
+</div>
 
 <!--================-->
 <!--　　HEADER　　-->
@@ -558,28 +621,53 @@ clear: both;
             </tr>
         </table>
     </div>
-    <table border="0" width="100%" cellspacing="30vw" cellpadding="0" align="center">
+    <table width="100%" style="box-shadow: 2px 2px 2px #eeeeee;">
         <tr>
-            <td width="10%"></td>
-            <td align="center" width="15%"><a href="#next"><p class="p5" style="font-size: 1vmax;">NEXT SEMINAR</p></a>
+            <td width="100%">
+                <table border="0" cellspacing="30vw" cellpadding="0" align="left">
+                    <tr>
+                        <td width="22%"></td>
+                        <td><a href="#next"><p class="p5" style="font-size: 1vmax;">NEXT SEMINAR</p></a>
+                        </td>
+                        <td width="6vmax"></td>
+                        <td><a href="#upcoming"><p class="p5" style="font-size: 1vmax;">UPCOMING SEMINARS
+                        </p></a></td>
+                        <td width="6vmax"></td>
+                        <td><a href="#past"><p class="p5" style="font-size: 1vmax;">PAST SEMINARS
+                        </p></a>
+                        <td width="6vmax"></td>
+                        <td><a href="#committees"><p class="p5" style="font-size: 1vmax;">COMMITTEES
+                        </p></a>
+                        </td>
+                        <td width="6vmax"></td>
+                        <td><a href="#HEADER"><p class="p5" style="font-size: 1vmax;">TOP
+                        </p></a>
+                        </td>
+                    </tr>
+                </table>
+
             </td>
-            <td align="center" width="15%"><a href="#upcoming"><p class="p5" style="font-size: 1vmax;">UPCOMING
-                SEMINARS</p></a></td>
-            <td align="center" width="15%"><a href="#past"><p class="p5" style="font-size: 1vmax;">PAST SEMINARS</p></a>
-            </td>
-            <td align="center" width="15%"><a href="#committees"><p class="p5" style="font-size: 1vmax;">COMMITTEES</p></a>
-            </td>
-            <td align="right" width="28%"></td>
-            <td width="2%"></td>
         </tr>
     </table>
 </div>
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+}
+
+</script>
 <!--================-->
 <!--　　MAIN　　-->
 <!--================-->
 
-<div style="width:100%;  height:800px; overflow:auto;">
+<div style="width:100%;  height:800px; ">
     <table class="main" border="0" width="80%">
         <tr>
             <td width="100%">
@@ -588,7 +676,7 @@ clear: both;
                     <tbody>
                     <tr>
                         <td width="34.5%"
-                            style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                            style="padding-right: 10px; padding-left: 10px; padding-top: 40px; padding-bottom: 10px;">
 
                             <div class="box26">
                                 <span class="box-title">Next Seminar</span>
@@ -642,7 +730,7 @@ clear: both;
 
                         <td width=34.5%"
                             style="font-size: 1.2vmax; line-height:1.2;
-                            border-radius: 0px; padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                            border-radius: 0px; padding-right: 10px; padding-left: 10px; padding-top: 40px; padding-bottom: 10px;">
                             <div class="box26">
                                 <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
                                     Next Speaker
@@ -651,26 +739,28 @@ clear: both;
                                         Ryo Okui
                                     </a>
                                 </span>
-                            <div class="row">
-                                <div class="subcolumn1" style="background-color:#ffffff;">
-                                    <img width="100%" src="Ryo_Okui.jpg" alt="Speaker">
-                                </div>
-                                <div class="subcolumn2" style="background-color:#ffffff;">
-                                    <div style=" padding-bottom: 8px; font-family: Roboto;">
-                                        Selected Publication
+                                <div class="row">
+                                    <div class="subcolumn1" style="background-color:#ffffff;">
+                                        <img width="100%" src="Ryo_Okui.jpg" alt="Speaker">
                                     </div>
-                                    <div class="main" style="text-align: justify; text-justify:auto;">
-                                        <li style=" padding-bottom: 8px;">Asymptotic Inference for Dynamic Panel
-                                            Estimators
-                                            of Infinite Order Autoregressive Processes (with Lee, Yoon-Jin, and
-                                            Mototsugu
-                                            Shintani). <em>Journal of Econometrics</em>. 2018.
-                                        </li>
-                                        <li>Constructing Optimal Instruments by First Stage Prediction Averaging (with
-                                            Kuersteiner, Guido). <em>Econometrica</em>. 2010.
-                                        </li>
+                                    <div class="subcolumn2" style="background-color:#ffffff;">
+                                        <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                            Selected Publication
+                                        </div>
+                                        <div class="main" style="text-align: justify; text-justify:auto;">
+                                            <li style=" padding-bottom: 8px;">Asymptotic Inference for Dynamic Panel
+                                                Estimators
+                                                of Infinite Order Autoregressive Processes (with Lee, Yoon-Jin, and
+                                                Mototsugu
+                                                Shintani). <em>Journal of Econometrics</em>. 2018.
+                                            </li>
+                                            <li>Constructing Optimal Instruments by First Stage Prediction Averaging
+                                                (with
+                                                Kuersteiner, Guido). <em>Econometrica</em>. 2010.
+                                            </li>
+                                        </div>
+                                        <div id="committees"></div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </td>
@@ -678,8 +768,6 @@ clear: both;
                     </tr>
                     </tbody>
                 </table>
-
-
             </td>
         </tr>
     </table>
@@ -689,7 +777,7 @@ clear: both;
     xin chen southern university of science and technology-->
     <hr color="#FFFFFF" size="20px">
     <div>
-        <table id="committees" class="main" border="0" width="75%">
+        <table class="main" border="0" width="75%">
             <tr>
                 <td width="100%">
                     <table id="demo_1" border="0" align="center" cellspacing="0" width="100%"
@@ -704,23 +792,23 @@ clear: both;
                                     <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
                                     text-transform: uppercase;" align="left">
                                         <p class="p5" style="font-size: 1.2vmax;">
-                                        Corresponding Chair of 2021
+                                            Corresponding Chair of 2021
                                         </p>
                                     </div>
                                     <div style="padding-bottom: 15px">
-                                    <a href="https://qingfeng-liu.github.io/index.html">
+                                        <a href="https://qingfeng-liu.github.io/index.html">
                                         <span class="s5" style="font-family: Oswald;">
                                             Qingfeng Liu, Otaru University of Commerce, JPN.
                                         </span>
-                                    </a>
-                                    <a href="mailto: qliu@res.otaru-uc.ac.jp">
-                                        <img alt="Email" src="email.png" style="max-height:1.2vmax"/>
-                                    </a>
+                                        </a>
+                                        <a href="mailto: qliu@res.otaru-uc.ac.jp">
+                                            <img alt="Email" src="email.png" style="max-height:1.2vmax"/>
+                                        </a>
                                     </div>
-                                    <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    <div id="next" style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
                                     align: left; text-transform: uppercase;">
                                         <p class="p5" style="font-size: 1.2vmax;">
-                                        Co-chairs
+                                            Co-chairs
                                         </p>
                                     </div>
                                     Qu Feng, Nanyang Technological University, SGP. <br>
@@ -742,17 +830,17 @@ clear: both;
                                     text-transform: uppercase;"
                                          align="left">
                                         <p class="p5" style="font-size: 1.2vmax;">
-                                        Advisor
+                                            Advisor
                                         </p>
                                     </div>
                                     <div style="padding-bottom: 15px">
-                                    Yoshihiko Nishiyama, Kyoto University, JPN.
+                                        Yoshihiko Nishiyama, Kyoto University, JPN.
                                     </div>
                                     <div style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
                                     text-transform: uppercase;"
                                          align="left">
                                         <p class="p5" style="font-size: 1.2vmax;">
-                                        Coordinators
+                                            Coordinators
                                         </p>
                                     </div>
                                     Masamune Iwasawa, Otaru University of Commerce, JPN.<br>
@@ -771,8 +859,10 @@ clear: both;
         </table>
     </div>
     <hr color="#FFFFFF" size="30px">
+    <img width="100%" src="Lake_Shikotsu.png" alt="TEDS">
+    <hr color="#FFFFFF" size="30px">
     <div>
-        <h1 id="next"></h1>
+        <h1></h1>
         <h2>Next Seminar</h2>
         <table class="main" border="0" width="75%" style="font-size: 1.2vmax;">
             <tr>
@@ -818,8 +908,8 @@ clear: both;
             </tr>
         </table>
 
-
-        <h1 id="upcoming"></h1>
+        <div id="upcoming"></div>
+        <h1></h1>
 
         <h2>Upcoming Seminars</h2>
 
@@ -967,52 +1057,53 @@ clear: both;
             </tr>
         </table>
         <h1 id="end"></h1>
-  </div>
-        <div class="container3" style="text-align: left; ">
-
-            <hr style="border: 1px solid transparent; margin-top: 20px; padding-top: 10px; padding-bottom: 30px;">
-            <table class="main" border="0" width="90%">
-                <tr>
-                    <td width="100%">
-                        <p class="p7" style="font-size: 2.2vmax; text-align: justify; text-justify:auto;"><font
-                                color=#ffffff>Transdisciplinary Econometrics & Data Science Seminar - TEDS</font></p>
-                        <hr style="border: 1px solid transparent;">
-                    </td>
-                </tr>
-                <tr>
-                    <td width="100%">
-                        <p class="p7"
-                           style="font-size: 1.5vmax; text-align: left; text-align: justify; text-justify:auto;">
-                            <font color=#ffffff>
-                                We provide a platform for econometricians and statistisians to interact and engage
-                                with each other while sharing their newest research findings. We welcome
-                                researchers and students in different countries and research
-                                fields of Econometrics, Statistics and Data Science
-                                to join our seminar.
-                            </font>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-            <hr width="90%" color="#FFFFFF" style=" margin-top: 10px; margin-bottom: 10px;">
-            <table class="main" border="0" width="90%">
-                <tr>
-                    <td width="100%">
-                        <p class="p7" style="text-align: right; width: 100%;"><font color=#ffffff> E-mail: </font><a
-                                href="mailto: qliu@res.otaru-uc.ac.jp"><font
-                                color=#ffffff>qliu@res.otaru-uc.ac.jp</font></a></p>
-                    </td>
-                </tr>
-            </table>
-            <h2></h2>
-            <table class="main" border="0" width="100%" style="padding-bottom: 100px;">
-                <tr>
-                    <td width="100%">
-                    </td>
-                </tr>
-            </table>
-        </div>
     </div>
+    <div class="container3" style="text-align: left; ">
+
+        <hr style="border: 1px solid transparent; margin-top: 20px; padding-top: 10px; padding-bottom: 30px;">
+        <table class="main" border="0" width="90%">
+            <tr>
+                <td width="100%">
+                    <p class="p7" style="font-size: 2.2vmax; text-align: justify; text-justify:auto;"><font
+                            color=#ffffff>Transdisciplinary Econometrics & Data Science Seminar - TEDS</font></p>
+                    <hr style="border: 1px solid transparent;">
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p class="p7"
+                       style="font-size: 1.5vmax; text-align: left; text-align: justify; text-justify:auto;">
+                        <font color=#ffffff>
+                            We provide a platform for econometricians and statistisians to interact and engage
+                            with each other while sharing their newest research findings. We welcome
+                            researchers and students in different countries and research
+                            fields of Econometrics, Statistics and Data Science
+                            to join our seminar.
+                        </font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <hr width="90%" color="#FFFFFF" style=" margin-top: 10px; margin-bottom: 10px;">
+        <table class="main" border="0" width="90%">
+            <tr>
+                <td width="100%">
+                    <p class="p7" style="text-align: right; width: 100%;"><font color=#ffffff> E-mail: </font><a
+                            href="mailto: qliu@res.otaru-uc.ac.jp"><font
+                            color=#ffffff>qliu@res.otaru-uc.ac.jp</font></a></p>
+                </td>
+            </tr>
+        </table>
+        <h2></h2>
+        <table class="main" border="0" width="100%" style="padding-bottom: 100px;">
+            <tr>
+                <td width="100%">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 
 </body>
 </html>

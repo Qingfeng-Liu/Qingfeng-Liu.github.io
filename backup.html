@@ -1,0 +1,3688 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TRANSDISCIPLINARY ECONOMETRICS & DATA SCIENCE SEMINAR, TEDS</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JHSLM57DKB');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+
+body {
+  margin: 0 0;
+    background: #fff;
+    font-family: Merriweather;
+    font-weight: normal;
+    line-height: 1.0;
+    color:#C4C4C4
+    height: 100%;
+  -webkit-text-size-adjust:100%;
+  }
+
+.image {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  width: 75%;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: Normal;
+  font-size: 1.5vmax;
+  color: #353535;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #C4C4C4;
+  /*color: #358AC3;*/
+}
+
+h2 {
+  width: 75%;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: Normal;
+  font-size: 1.5vmax;
+  color: #EE490D;
+  margin-left: auto;
+  margin-right: auto;
+  /*color: #358AC3;*/
+}
+
+h4 {
+  font-size: 1vw;
+  font-family: "franklin_gothic";
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 0vw;
+  text-align: center;
+  font-family: "franklin_gothic";
+  font-weight: Extra-light;
+  text-transform: uppercase;
+  border-bottom: 0px solid #FFFFFF;
+  margin-top: 12px;
+}
+
+p.p3 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 1vw '"franklin_gothic"';
+        color: #0000e9;
+        -webkit-text-stroke: #0000e9
+    }
+
+    p.p4 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font: 12.0px '"franklin_gothic"';
+        color: #000000;
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+
+    p.p5 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.5vh;
+        font-weight: Bold;
+        font-family: Oswald;
+        color: #EE490D; <!-- color: #464646; #424949; -->
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+    div.p5 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.5vh;
+        font-weight: Bold;
+        font-family: Oswald;
+        color: #EE490D; <!-- color: #464646; #424949; -->
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+     div.p6 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.2vmax;
+        font-weight: Normal;
+        font-family: "Oswald";
+        <!-- color: #3498DB; color: #464646; #424949; -->
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+    p.p6 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.5vmax;
+        font-weight: Bold;
+        font-family: "Oswald";
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+    p.p7 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.5vmax;
+        font-weight: Bold;
+        font-family: "Oswald";
+        color: #EE490D;
+        color: #EE490D;
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+    p.p8 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.5vmax;
+        font-weight: Bold;
+        font-family: "Oswald";
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+
+    span.s1 {
+        font-kerning: none
+    }
+
+    span.s2 {
+        text-decoration: underline;
+        font-kerning: none
+    }
+    span.s3 {
+        display: inline-block;
+        font-size: 1.2vmax;
+        Width: 15vw
+    }
+　　span.s4 {
+        display: inline-block;
+        font-size: 1.2vmax;
+        Width: 85vw
+    }
+   span.s5 {
+        margin: 0.0px 0.0px 0.0px 0.0px;
+        font-size: 1.2vmax;
+        font-weight: Normal;
+        font-family:"Merriweather";
+        color: #353535; <!-- #424949; -->
+        <!-- -webkit-text-stroke: #000000 -->
+    }
+.main {
+  font-family:"Merriweather";
+  font-weight: Extra-light;
+  margin-left: auto;
+  margin-right: auto;
+  line-height:1.2;
+ color: #353535;
+}
+
+.main2 {
+  font-family:"franklin_gothic";
+  font-weight: Extra-light;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.sample {
+text-align:justify;
+font-family:"Merriweather";
+font-weight: Normal;
+margin-left: auto;
+margin-right: auto;
+line-height:1.8;
+color: #353535;
+}
+
+
+table.sample2 {
+text-align:justify;
+font-family:"franklin_gothic";
+font-weight: Normal;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.sample3 {
+text-align:justify;
+font-family:"franklin_gothic";
+font-weight: Extra-light;
+margin-left: auto;
+margin-right: auto;
+table-layout:auto;
+margin-bottom: 0.3em;
+}
+
+/*
+table.sample3 td {
+text-align:justify;
+font-family:"franklin_gothic";
+font-weight: Extra-light;
+margin-left: auto;
+margin-right: auto;
+}
+*/
+
+table.sample4 {
+text-align:justify;
+font-family:"Robot";
+font-weight: Extra-light;
+margin-left: auto;
+margin-right: auto;
+line-height:1.8;
+color: #353535;
+
+}
+
+div.anchor {
+    display: block;
+    padding-top: 90px;
+    margin-top: -90px;
+}
+
+div#HEADER {
+	margin-bottom: 3px;
+	border-bottom: solid 0px #DCDCDA;
+	background: #FFFFFF;
+         margin-right: calc(50% - 50vw);
+         margin-left: calc(50% - 50vw);
+}
+ul#PAN {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	text-align: right;
+}
+#INDEX ul#PAN{
+	display: none;
+}
+#PAN li{
+	display: inline;
+}
+#PAN a{
+	text-decoration: none;
+}
+#PAN a:after{
+	content: "->";
+}
+
+/* default */
+div,dl,dt,dd,ul,ol,li,h4,h5,h6,pre,form,fieldset,blockquote{margin:0;padding:0;}
+
+a:link {
+	color:  #3498DB/*#000080*/; text-decoration:none;
+	font-weight: Bold;
+	font-family: Roboto;
+}
+a:visited {
+	color:  #3498DB; text-decoration:underline; /*#358AC3; */
+	font-weight: Bold;
+	font-family: Roboto;
+}
+a:hover {
+	color: #626567; text-decoration:underline;
+}
+a:active {
+	color: #626567; text-decoration:underline;
+}
+
+a.color1:link{
+    color: #626567;
+	text-decoration:underline;
+	font-weight: Bold;
+	font-family: Roboto;
+}
+a.color1:visited {
+	color:  #626567; text-decoration:underline; /*#358AC3; */
+	font-weight: Bold;
+	font-family: Roboto;
+}
+a.color1:hover {
+	color: #A0A19E; text-decoration:none;
+}
+a.color1:active {
+	color: #A0A19E; text-decoration:underline;
+}
+
+
+
+
+.container {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  background: #f5f5f5;
+  font-family:"Roboto";
+}
+.container2 {
+  position: relative;
+  width: 100%;
+  background-image: url('bottom.png');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.container3 {
+position: relative;
+height: 80%;
+width: 100%;
+background-image: url('bottom.png');
+background-attachment: fixed;
+background-size: 100% 100%;
+font-family:"Roboto";
+}
+
+.wrap{
+ display:flex;
+}
+
+.box26 {
+    position: relative;
+    margin: 0em 0;
+    padding: 1em 2em;
+    border: solid 3px  #3498DB;
+    border-radius: 8px;
+    min-height: 17vmax;
+    z-index: 0;
+}
+td .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -0.9vmax;
+    left: 10px;
+    padding: 0 0px;
+    line-height: 1;
+        font-size: 1.2vmax;
+        font-weight: Normal;
+        font-family: "Roboto";
+        color: #EE490D;
+    background: #FFF;
+    <!--color: #3579BD;
+    font-weight: bold; -->
+}
+.box26 p {
+    margin: 0;
+    padding: 0;
+}
+table#demo_1 {
+border: none;
+border-top: 0px solid #5DE4BF;
+border-collapse: separate;
+border-spacing: 0;
+margin-top: 0px;
+table-layout: fixed;
+width: 100%;
+}
+
+table#demo_1 th,
+table#demo_1 td {
+border-bottom: 0px solid #DDD;
+font-size: 1.2vmax;
+line-height: 1.5vmax;
+padding: 0px;
+text-align: left;
+vertical-align: top;
+}
+
+table#demo_1 th:first-child,
+table#demo_1 td:first-child {
+padding-left: 0;
+}
+
+table#demo_1 th:last-child,
+table#demo_1 td:last-child {
+padding-right: 0;
+/*width: 45%;*/
+}
+
+table#demo_1 th {
+font-weight: bold;
+vertical-align: top;
+}
+
+table#demo_1 td .thTitle {
+display: none;
+}
+
+/*ウィンドウサイズが 768px以内の場合に上書きされる*/
+@media screen and (max-width: 1000px) {
+
+table#demo_1,
+table#demo_1 caption,
+table#demo_1 tbody,
+table#demo_1 tfoot,
+table#demo_1 tr,
+table#demo_1 th,
+table#demo_1 td {
+display: block;
+width: 100% !important;
+}
+
+table#demo_1 th,
+table#demo_1 td {
+padding-left: 0;
+padding-right: 0;
+}
+
+table#demo_1 th {
+display: block;
+}
+
+table#demo_1 td {
+border: none;
+text-align: left;
+}
+
+table#demo_1 td {
+border-bottom: 0px solid #DDD;
+}
+
+table#demo_1 td:first-child {
+font-weight: normal;
+}
+
+table#demo_1 td:last-child {
+border-bottom: 0px solid #DDD;
+font-weight: normal;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .inner {
+display: table;
+table-layout: fixed;
+width: 100%;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .thTitle,
+table#demo_1 td .tdContents {
+display: table-cell;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .thTitle {
+font-weight: bold;
+width: 20%;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .tdContents {
+padding-left: 0px;
+width: 80%;
+}
+}
+
+/*ウィンドウサイズが 480px以内の場合に上書きされる*/
+@media screen and (max-width: 480px) {
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .inner,
+table#demo_1 td .thTitle,
+table#demo_1 td .tdContents {
+display: block;
+width: 100%;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .inner {
+table-layout: auto;
+}
+
+/*JavaScriptで追加する要素*/
+table#demo_1 td .tdContents {
+padding: 10px 0 0;
+}
+}
+
+	* {
+box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+float: left;
+width: 50%;
+padding: 10px;
+/*　height: 300px;  Should be removed. Only for demonstration */
+}
+
+.subcolumn1 {
+float: left;
+width: 30%;
+padding: 0px;
+background-color:#ffffff;
+/*　height: 300px;  Should be removed. Only for demonstration */
+}
+.subcolumn2 {
+float: left;
+width: 70%;
+padding-left: 20px;
+background-color:#ffffff;
+/*　height: 300px;  Should be removed. Only for demonstration */
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+
+#navbar {
+  background-color: #FFFFFF;
+  position: fixed;
+  top: -30vmax;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 1;
+  box-shadow: 2px 2px 2px #eeeeee;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 1.5vmax;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#more {display: none;}
+#more2 {display: none;}
+
+h3[id] {
+  display: block;
+  height: 4rem;
+  margin-top: -4rem;
+  content: "";
+}
+
+
+
+
+
+
+
+
+
+    </style>
+    <meta content="width=device-width, initial-scale=1.0 " name="viewport">
+
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap"
+          rel="stylesheet">
+
+
+</head>
+
+<body>
+<div id="navbar">
+    <table align="center" border="0" cellpadding="0">
+        <tr>
+            <td><a href="#next">
+                <div class="p5" style="font-size: 1vmax;">NEXT SEMINAR</div>
+            </a>
+            </td>
+            <td width="6vw"></td>
+            <td><a href="#upcoming">
+                <div class="p5" style="font-size: 1vmax;">UPCOMING SEMINARS
+                </div>
+            </a></td>
+            <td width="6vw"></td>
+            <td><a href="#past">
+                <div class="p5" style="font-size: 1vmax;">PAST SEMINARS
+                </div>
+            </a>
+            <td width="6vw"></td>
+            <td><a href="#committee">
+                <div class="p5" style="font-size: 1vmax;">COMMITTEE
+                </div>
+            </a>
+            </td>
+            <td width="6vw"></td>
+            <td><a href="#HEADER">
+                <div class="p5" style="font-size: 1vmax;">TOP
+                </div>
+            </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!--================-->
+<!--　　HEADER　　-->
+<!--================-->
+<div id="HEADER">
+    <!--style="border-style: solid; border-width: 0px; border-top-width: 5px; border-color: #EE490D;"-->
+    <div class="container2" id="next" style="text-align: left; ">
+        <table border="0" class="main" width="90%">
+            <tr>
+                <td width="100%">
+                    <p class="p7"
+                       style="font-size: 2.3vmax; text-align: justify; text-align: Center;text-justify:auto; margin-top: 7vmin;margin-bottom: 0.8vmin; ">
+                        <font color=#ffffff>TRANSDISCIPLINARY ECONOMETRICS & DATA SCIENCE SEMINAR</font></p>
+                </td>
+            </tr>
+        </table>
+        <p class="p8" style="text-align: right; width:70%; height: 20%;">
+            <font color=#ffffff style="font-size: 1.5vmax;">SINCE 2021</font>
+        </p>
+
+
+        <table border="0" class="main" width="79%">
+            <tr>
+                <td width="100%">
+                    <p class="p7" style="font-size: 1.5vmax; text-align: Center; text-align: justify;
+                text-justify:auto;  margin-top: 2.5vmin; margin-bottom: 2.5vmax;">
+                        <font color=#ffffff>
+                            TEDS is co-organized by scholars from Chinese Academy of Sciences, Hong Kong University of
+                            Science and Technology, Jilin University, Kobe University,
+                            Kyoto Sangyo University, Kyoto University, Nanyang Technological University,
+                            New York University, Otaru University of Commerce, Seoul National University, Shanghai
+                            University of Finance & Economics and Tohoku University.
+                            We provide a platform for econometricians and statisticians to interact and engage
+                            with each other while sharing their newest research findings. We welcome
+                            researchers and students in different countries and research
+                            fields of Econometrics, Statistics and Data Science to join our seminar.
+                        </font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table style="box-shadow: 2px 2px 2px #eeeeee;" width="100%">
+        <tr>
+            <td width="100%">
+                <table align="center" border="0" cellpadding="0" cellspacing="25vw">
+                    <tr>
+
+                        <td><a href="#next">
+                            <div class="p5" style="font-size: 1vmax;">NEXT SEMINAR</div>
+                        </a>
+                        </td>
+                        <td width="5vw"></td>
+                        <td><a href="#upcoming">
+                            <div class="p5" style="font-size: 1vmax;">UPCOMING SEMINARS
+                            </div>
+                        </a></td>
+                        <td width="5vw"></td>
+                        <td><a href="#past">
+                            <div class="p5" style="font-size: 1vmax;">PAST SEMINARS
+                            </div>
+                        </a>
+                        <td width="5vw"></td>
+                        <td><a href="#committee">
+                            <div class="p5" style="font-size: 1vmax;">COMMITTEE
+                            </div>
+                        </a>
+                        </td>
+                        <td width="5vw"></td>
+                        <td><a href="#HEADER">
+                            <div class="p5" style="font-size: 1vmax;">TOP
+                            </div>
+                        </a>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<div>
+    <!--<div id="2022New_Year"></div>-->
+    <div style="width:100%;  height:800px; ">
+
+        <h2>Next Seminar</h2>
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="9" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. Chu-An Liu" src="Chuan_Liu.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">March/14/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">15:00 ~ 16:30</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://chuanliu.weebly.com"
+                            style="text-decoration:underline;">
+                        Chu-An Liu</a> Academia Sinica
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Model Averaging Prediction by K-Fold Cross-Validation
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%">
+                        This paper considers the model averaging prediction in a
+                        quasi-likelihood framework that allows for parameter uncertainty and model misspecification. We
+                        propose an averaging prediction that selects the data-driven weights by minimizing a K-fold
+                        cross-validation. We provide two theoretical justifications for the proposed method. First, when
+                        all candidate models are misspecified, we show that the proposed averaging prediction using
+                        K-fold cross-validation weights is asymptotically optimal in the sense of achieving the lowest
+                        possible prediction risk. Second, when the model set includes correctly specified models, we
+                        demonstrate that the proposed K-fold crossvalidation asymptotically assigns all weights to the
+                        correctly specified models. Monte Carlo simulations show that the proposed averaging prediction
+                        achieves lower empirical risk than other existing model averaging methods. As an empirical
+                        illustration, the proposed method is applied to credit card default prediction.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%" valign="top"><a
+                            href="https://us06web.zoom.us/meeting/register/tZIode-rqTwtG9ElOwe0vw5FyP6KegazEuqs "
+                            style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+                        Meeting</a> Meeting ID: 865 2637 7715 Passcode: 878035
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Chair</td>
+                    <td style="padding-left: 2vw;"
+                        width="79%">
+                        <a href="https://econen.sufe.edu.cn/69/24/c6876a92452/page.htm"
+                           style="text-decoration:underline; font-family: Oswald;">Nianqing (Paul) Liu</a> Shanghai
+                        University of Finance & Economics
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Hosts</td>
+
+                    <td style="padding-left: 2vw;" width="79%" valign="top">TEDS and Otaru University of Commerce
+                    </td>
+                </tr>
+            </table>
+            <h1></h1>
+
+        <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+            <tr>
+                <td rowspan="7" style="padding-bottom: 0; text-align: justify;
+                text-justify:auto;" valign="top"
+                    width="100%">
+                    <div class="p6">
+                        <nobr style="color: #EE490D;">LOGISTICS</nobr>
+                        For each TEDS seminar, the time of presentation is about 1 hour. After the presentation, we have
+                        10 minutes for questions and comments. To learn more from our guest speakers and deepen
+                        exchanges between all of us, after the presentation, a session of several minutes for free talk
+                        is
+                        set. You can ask further questions regardless of whether they are related to the presentation,
+                        or share some idea with the guest or any of us, or introduce yourself to the others, or talk
+                        about anything as you please. You can enter or leave freely during the seminar. We hope
+                        everybody could enjoy our seminar. (Participants are expected to behave in a manner respectful
+                        of the presenter and other participants. Organizers keep rights to mute and/or expel those who
+                        engage in inappropriate conduct.) <h3 id="committee"></h3>
+                    </div>
+
+
+                </td>
+            </tr>
+        </table>
+        <div>
+
+            <div>
+                <table border="0" class="main" width="75%">
+                    <tr>
+                        <td style="padding-top: 1vmax; padding-bottom: 1vmax;" width="100%">
+                            <table align="center" border="0" cellspacing="0" id="demo_1"
+                                   style="font-size: 1.2vmax; text-justify:auto;"
+                                   width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="center" valign="top" width="3%"></td>
+                                    <td align="left" style="border-bottom-width: 1px;
+                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="44%">
+                                        <img alt="shikotsuko" src="shikotsuko01.png"
+                                             style="border-bottom: 1px solid #c4c4ce;"
+                                             width="100%">
+                                        <!--src="shikotsuko2.png" alt="Lake Shikotsu"-->
+                                        <div style="line-height: 2vmax; padding: 15px">
+                                            <!--
+                                                            <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                                            text-transform: uppercase;" align="left">
+                                                                <p class="p5" style="font-size: 1.2vmax;">
+                                                                    Corresponding Chair of 2021
+                                                                </p>
+                                                            </div>
+                                                            <div style="padding-bottom: 15px">
+                                                                <a href="https://qingfeng-liu.github.io/index.html" class="color1">Qingfeng Liu,</a> Otaru University of Commerce, JPN.
+
+                                                                <a href="mailto: qliu@res.otaru-uc.ac.jp">
+                                                                    <img alt="Email" src="email.png" style="max-height:1.2vmax"/>
+                                                                </a>
+                                                            </div>
+                                                         -->
+                                            <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                                                <p class="p5" style="font-size: 1.2vmax;">
+                                                    Managing Chair (2021, till March)
+                                                </p>
+                                            </div>
+                                            <div style="padding-bottom: 15px">
+                                                <a class="color1" href="https://qingfeng-liu.github.io/index.html">Qingfeng
+                                                    Liu,</a>
+                                                Otaru University of Commerce, JPN.
+                                            </div>
+                                            <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                                                <p class="p5" style="font-size: 1.2vmax;">
+                                                    Managing Chair (2022)
+                                                </p>
+                                            </div>
+                                            <div style="padding-bottom: 15px">
+                                                <a class="color1" href="https://personal.ntu.edu.sg/qfeng/">Qu
+                                                    Feng,</a>
+                                                Nanyang Technological University, SGP. <br>
+                                                <a class="color1"
+                                                   href="https://sites.google.com/site/wenjiemetrics/home">
+                                                    Wenjie Wang,</a> Nanyang Technological University, SGP.
+                                            </div>
+
+                                            <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                                                <p class="p5" style="font-size: 1.2vmax;">
+                                                    Co-chairs
+                                                </p>
+                                            </div>
+
+                                            <a class="color1" href="https://yangfeng.hosting.nyu.edu">
+                                                Yang Feng,</a> New York University, USA. <br>
+                                            <a class="color1"
+                                               href="https://sites.google.com/view/masamune-iwasawa/home?authuser=0">
+                                                Masamune Iwasawa,</a> Otaru University of Commerce, JPN.<br>
+                                            <a class="color1"
+                                               href="http://yyli.people.ust.hk">
+                                                Yingying Li,</a> Hong Kong University of Science and Technology,
+                                            CHN. <br>
+                                            <a class="color1"
+                                               href="https://econen.sufe.edu.cn/69/24/c6876a92452/page.htm">
+                                                Nianqing (Paul) Liu,</a> Shanghai University of Finance & Economics,
+                                            CHN. <br>
+
+
+                                        </div>
+
+                                    </td>
+
+                                    <!--<td width="6%" valign="top" align="center"></td>-->
+                                    <td align="center" style="padding-bottom: 2vmax;" valign="top" width="6%">
+                                        <font color=#ffffff>abc</font></td>
+                                    <td align="left" style="border-bottom-width: 1px;
+                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="44%">
+                                        <img alt="Global" src="Global01.png" style="border-bottom: 1px solid #c4c4ce;"
+                                             width="100%">
+                                        <div style="line-height: 2vmax; padding: 15px">
+                                            <div align="left"
+                                                 style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
+                                    text-transform: uppercase;">
+                                                <p class="p5" style="font-size: 1.2vmax;">
+                                                    Advisor
+                                                </p>
+                                            </div>
+                                            <div style="padding-bottom: 15px">
+                                                <a class="color1" href="https://www.kier.kyoto-u.ac.jp/en/faculty/387/">
+                                                    Yoshihiko Nishiyama,</a> Kyoto University, JPN.
+                                            </div>
+                                            <div align="left"
+                                                 style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
+                                    text-transform: uppercase;">
+                                                <p class="p5" style="font-size: 1.2vmax;">
+                                                    co-chairs
+                                                </p>
+                                            </div>
+                                            <a class="color1"
+                                               href="https://econ.snu.ac.kr/people/faculty?mode=view&profidx=88">
+                                                Ryo Okui,</a> Seoul National University, KOR. <br>
+                                            <a class="color1"
+                                               href="http://www.econ.kobe-u.ac.jp/en/people/course/econometrics/sueishi.html">
+                                                Naoya Sueishi,</a> Kobe University, JPN.<br>
+                                            <a class="color1"
+                                               href="http://jlucqe.jlu.edu.cn/info/1145/11463.htm">
+                                                Wei Sun,</a> Jilin University, CHN.<br>
+                                            <a class="color1"
+                                               href="http://researcher.ih.otaru-uc.ac.jp/profile/en.252fd8b9e717f04b.html">
+                                                Takahiro Terasaka,</a> Otaru University of Commerce, JPN.<br>
+                                            <a class="color1" href="https://researchmap.jp/uematsu0911?lang=en">
+                                                Yoshimasa Uematsu,</a> Tohoku University, JPN. <br>
+
+                                            <a class="color1" href="https://sites.google.com/view/takahide-yanagi/">
+                                                Takahide Yanagi,</a> Kyoto University, JPN. <br>
+                                            <a class="color1"
+                                               href="https://sites.google.com/site/arihiroyoshimura/home">
+                                                Arihiro Yoshimura,</a> Kyoto Sangyo University, JPN.<br>
+                                            <a class="color1" href="https://zhangxinyu.weebly.com">
+                                                Xinyu Zhang,</a> Chinese Academy of Sciences, CHN.
+                                        </div>
+
+                                        <hr color="#FFFFFF" size="0px">
+                                    </td>
+                                    <td align="center" valign="top" width="3%"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h1></h1>
+
+
+            <div id="upcoming" class="anchor"></div>
+            <h2>Upcoming Seminars</h2>
+
+
+
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="7" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. SHIMOTSU Katsumi" src="SHIMOTSU_Katsumi.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">April/TBA/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="http://www.e.u-tokyo.ac.jp/fservice/faculty/shimotsu/shimotsu-e/shimotsu01-e.html"
+                            style="text-decoration:underline;">
+                        Katsumi Shimotsu</a> The University of Tokyo
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%" valign="top"><a
+                            href=""
+                            style="text-decoration:underline; font-family: Oswald;">TBA</a>
+                    </td>
+                </tr>
+            </table>
+            <h1></h1>
+            <div id="past" class="anchor"></div>
+            <h2>Past Seminars</h2>
+		 <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+            <tr>
+                <td rowspan="11" style="padding-right: 1vw;" valign="top"
+                    width="15%">
+                    <img alt="Prof. Yuan Liao" src="Yuan_Liao.jpg" width="100%">
+                </td>
+                <td valign="top" width="6%">Date</td>
+                <td style="padding-left: 2vw;" width="79%">Mar/03/2022</td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Time</td>
+                <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%"></td>
+                <td style="padding-left: 2vw;" width="79%">10:00 ~ 11:30</td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Speaker</td>
+                <td style="padding-left: 2vw;" width="79%"><a
+                        href="https://economics.rutgers.edu/people/faculty/people/86-faculty/627-yuan-liao"
+                        style="text-decoration:underline;">
+                    Yuan Liao</a> Rutgers University
+                </td>
+            <tr>
+                <td valign="top" width="6%"></td>
+                <td style="padding-left: 2vw; text-align: justify;
+                text-justify:auto;" width="79%">Yuan Liao is an Associate Professor of Economics at Rutgers
+                    University. He received his Ph.D. in Statistics from Northwestern University in 2010. Before joining
+                    Rutgers, Yuan held a position as Assistant Professor at University of Maryland, and worked at
+                    Princeton University as a postdoc.
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Title</td>
+                <td style="padding-left: 2vw;" width="79%">Inference for low rank estimation</td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Abstract</td>
+                <td style="padding-left: 2vw; text-align: justify;
+                text-justify:auto;" width="79%">This paper studies the inferential theory for estimating
+                    low-rank matrices. It also provides an inference method for the average treatment effect as an
+                    application. We show that the least square estimation of eigenvectors following the nuclear norm
+                    penalization attain the asymptotic normality. The key contribution of our method is that it does not
+                    require sample splitting. In addition, this paper allows dependent observation patterns and
+                    heterogenous observation probabilities. We illustrate the proposed method in simulation experiments
+                    and the empirical study about the impact of the presidential vote on allocating the U.S. federal
+                    budget to the states.
+
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Venue</td>
+                <td style="padding-left: 2vw;" width="79%" valign="top"><a
+                        href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                        style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+                    Meeting</a> Meeting ID: 865 2637 7715 Passcode: 878035
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Chair</td>
+                <td style="padding-left: 2vw;"
+                    width="79%">
+                    <a href="https://personal.ntu.edu.sg/qfeng/"
+                       style="text-decoration:underline; font-family: Oswald;">Qu Feng</a> Nanyang
+                    Technological University
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="6%">Hosts</td>
+
+                <td style="padding-left: 2vw;" width="79%" valign="top">TEDS and Nanyang Technological University
+                </td>
+            </tr>
+        </table>
+
+        <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="10" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. Myoung-jae Lee" src="Myoung_jae.png" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Feb/23/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">15:00 ~ 16:30</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://koreauniv.pure.elsevier.com/en/persons/myoung-jae-lee"
+                            style="text-decoration:underline;">
+                        Myoung-jae Lee</a> Korea University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">
+                        Professor Myoung-jae Lee is an econometrician and statistician at Korea
+                        University. He received his Ph.D. in economics from University of Wisconsin-
+                        Madison in 1989. Since then, he held regular positions in various universities
+                        around the world, including Pennsylvania State University, Tilburg University,
+                        Singapore Management University, Chinese University of Hong Kong,
+                        and
+                        Australian National University. He published more than 80 papers
+                        on
+                        economics, statistics, political science, sociology, transportation research, and
+                        medical science. His papers appeared in many top-rated journals such as
+                        Econometrica, Journal of the Royal Statistical Society (Series B), Biometrika,
+                        Transportation Research (Part B), Po-litical Analysis, and Sociological Methods
+                        & Research. Myoung-jae Lee also published five single-authored books from
+                        Springer, Academic Press and Oxford University Press, induding Micro-
+                        econometrics for policy, program, and treatment effects (2005), Micro.
+                        Econometrics (2010), and Matching, regression discontinuity, difference in
+                        differences, and beyond (2016).
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">OLS and IVE for Binary Treatment with
+                        Propensity or
+                        Instrument Score Residual
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw; text-align: justify;
+                text-justify:auto;" width="79%">Given an endogenous/confounded binary treatment D, a response Y with its
+                        potential versions
+                        (YO, Y1) and covariates X, finding the treatment effect is difficult if Y is not continuous,
+                        even
+                        when a
+                        binary instrumental variable (IV) Z is available. We show that, for any form of Y (continuous,
+                        binary,
+                        mixed,..), there exists a decomposition Y = u(X) + u1(X)D + error with E/error | Z,X) = 0, where
+                        -1(X) =
+                        E(Y1- Y0| complier, X) and 'compliers' are those who get treated if and only if Z = 1. First,
+                        using
+                        the
+                        decomposition, instrumental variable estimator (IVE) is applicable with polynomial
+                        approximations
+                        for
+                        MO(X) and u1(X) to obtain a linear model for Y. Second, better yet, an 'instrumental residual
+                        estimator
+                        (IRE)' with Z-E(Z|X) as an IV for D can be applied, and IRE is consistent for the
+                        'E(Z|X)-overlap'
+                        weighted
+                        average of m1(X), which becomes E(Y1 - YO| complier) for randomized Z. Third, going further,
+                        'weighted IRE' can be done which is consistent for E(u1(X)}. Empirical analyses as well as a
+                        simulation
+                        study are provided to illustrate our approaches.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" valign="top" width="79%"><a
+                            href="https://ntu-sg.zoom.us/j/95503852198"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+                        Meeting</a> Meeting ID: 955 0385 2198
+                        Passcode: NTUECON
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Chair</td>
+                    <td style="padding-left: 2vw;"
+                        width="79%">
+                        <a href="https://personal.ntu.edu.sg/qfeng/"
+                           style="text-decoration:underline; font-family: Oswald;">Qu Feng</a> Nanyang
+                        Technological University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Hosts</td>
+
+                    <td style="padding-left: 2vw;" width="79%" valign="top">TEDS and Nanyang Technological University
+                    </td>
+                </tr>
+            </table>
+            <h1></h1>
+
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="10" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. Takashi Yamagata" src="Yamagata.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Feb/18/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">18:00 ~ 19:30</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://www.york.ac.uk/economics/our-people/staff-profiles/takashi-yamagata/"
+                            style="text-decoration:underline;">
+                        Takashi Yamagata</a> University of York
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">
+                        Takashi Yamagata is Professor in Econometrics and the director of Centre for
+                        Panel Data Analysis (PanDA) at the University of York, Specially Appointed
+                        Professor at Osaka University, and Visiting Professor at Tohoku University. His
+                        main research interests are in panel data econometrics methods, including
+                        model estimation and inference for short and large panel data, and their
+                        applications to economics and finance.
+                        His work has been published in leading econometrics journals such as Journal
+                        of Econometrics (8), Journal of Business and Economic Statistics
+                        Econometrics Journal, and Econometric Reviews, among other outlets.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Discovering the Network Granger Causality in Large Vector
+                        Autoregressive Models
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw; text-align: justify;
+                text-justify:auto;" width="79%">In this paper we propose novel inferential procedures for
+                        network Granger-causality in high-
+                        dimensional vector autoregressive (VAR) models. These procedures are designed to control the
+                        false
+                        discovery rate (FDR) of each element in the coefficient matrices in the large VAR models. The
+                        first
+                        procedure is based on multiple testing using the limiting normal distributions of St$-statistics
+                        constructed by the debased lasso estimator. The second procedure is based on bootstrapping. The
+                        theoretical properties of the proposed procedures, including FDR control and power guarantees,
+                        are
+                        investigated. The finite sample evidence suggests that both procedures can successfully control
+                        the FDR
+                        while maintaining high power. The proposed method is applied to find network Granger-causality
+                        in the
+                        US financial market and in regional house prices in the UK.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" valign="top" width="79%"><a
+                            href="https://us06web.zoom.us/meeting/register/tZIode-rqTwtG9ElOwe0vw5FyP6KegazEuqs"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+                        Meeting</a> Meeting ID: 865 2637 7715 Passcode: 878035
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://sites.google.com/site/wenjiemetrics/home">
+                            Wenjie Wang</a> Nanyang Technological University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Hosts</td>
+
+                    <td style="padding-left: 2vw;" width="79%" valign="top">TEDS and Nanyang Technological University
+                    </td>
+                </tr>
+            </table>
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="10" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. Xiaohua Yu" src="Xiaohua_Yu.png" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Feb/09/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">18:30~20:00</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://uni-goettingen.de/en/prof.+xiaohua+yu+ph.d./114620.html"
+                            style="text-decoration:underline;">
+                        Xiaohua Yu</a> Georg-August-University Göttingen
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;text-align: justify;
+                text-justify:auto;" width="79%">
+                        Xiaohua Yu is Professor of Agricultural Economics in Developing and Transition Countries at the
+                        Department of Agricultural Economics and Rural Development and the Courant Research Centre
+                        “Poverty,
+                        Equity and Growth” at the University of Göttingen, Germany. He studied in Renmin University of
+                        China
+                        and Kyoto University in Japan, and obtained his Ph.D. from Pennsylvania State University in the
+                        U.S.
+                        in 2009. Since 2009, he has been employed as a junior professor and then a full professor at the
+                        University of Göttingen.
+
+                        His research interests focus on agricultural development, nutrition change, economic and
+                        environmental changes in developing and transition countries and contexts such as China, South
+                        Asia,
+                        Southeast Asia and African countries. He currently serves as the associate editor for
+                        agricultural
+                        economics, the official journal of International Association of Agricultural Economists (IAAE)
+                        and
+                        is an editorial board member in a few international journals.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Pattern Recognition and Unsupervised Machine Learning in
+                        Agricultural Economics: Some Applications
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%" valign="top"><a
+                            href="https://us06web.zoom.us/rec/share/TjLN48LZmPxe5gXS1CTwsQmZNJric_S4e1vH7LWYlcXnpCgeDysqmRyGlA4aWpnE.mlTjd8gTfTYW_Vxj?startTime=1644399529000"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to watch the video</a>
+                        (Passcode: 9ScSx$e2)
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="http://www.econ.kobe-u.ac.jp/en/people/course/econometrics/sueishi.html">
+                            Naoya Sueishi</a> Kobe University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Hosts</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        Jointly hosted by TEDS, Joint Research Program of KIER, Kyoto University
+                        and Econometrics Seminar of KIER, Kyoto University.
+                    </td>
+                </tr>
+            </table>
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="9" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. Eiji KUROZUMI" src="Eiji_KUROZUMI.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Jan/27/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:00 ~ 11:30</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%"><a
+                            href="http://www1.econ.hit-u.ac.jp/kurozumi/index-e.html"
+                            style="text-decoration:underline;">
+                        Eiji Kurozumi</a> Hitotsubashi University<br>
+                        He received Ph.D. in Economics from Hitotsubashi University in March 2000.
+                        After the post doctoral position of Japan Society for Promotion and Science, he started working
+                        at
+                        Hitotsubashi university in October 2000.
+                        His research field is theoretical time series analysis.
+                        Prof Kurozumi’s works have been published in leading econometrics journals such as Journal of
+                        Econometrics, Econometric Theory, Econometrics Journal, Econometric Review, and Journal of Time
+                        Series Analysis.
+                        He has also received the JSS Ogawa Award and JSS Research Award from the Japan Statistical
+                        Society,
+                        and Distinguished Author Award from the Journal of Time Series Analysis.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">On the asymptotic behavior of bubble date estimators
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">In this study, we
+                        extend the three-regime bubble model of
+                        Pang, Du, and Chong (2021) to allow the forth regime followed by the
+                        unit root process after recovery. We provide the asymptotic and finite
+                        sample justification of the consistency of the collapse date estimator
+                        in the two-regime AR(1) model. The consistency allows us to split the
+                        sample before and after the date of collapse and to consider the
+                        estimation of the date of exuberation and date of recovery separately.
+                        We have also found that the limiting behavior of the recovery date
+                        varies depending on the extent of explosiveness and recovering.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://personal.ntu.edu.sg/qfeng/">
+                            Qu Feng</a> Nanyang Technological University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Hosts</td>
+                    <td style="padding-left: 2vw;" width="79%">TEDS and Nanyang Technological University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%" valign="top"><a
+                            href="https://www.youtube.com/watch?v=lv80eFoH1Qg"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to watch the video
+                        Meeting</a>
+                    </td>
+                </tr>
+            </table>
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="10" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Prof. Thomas Kneib" src="Thomas_Kneib.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Jan/18/2022</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">18:00 ~ 19:30</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://scholar.google.at/citations?user=atwrJlsAAAAJ"
+                            style="text-decoration:underline;">
+                        Thomas Kneib</a> Georg-August-University Göttingen
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Multivariate Conditional Transformation Models</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">Regression
+                        models
+                        describing the joint distribution of multivariate
+                        response variables conditional on covariate information have become an
+                        important aspect of contemporary regression analysis. However, a
+                        limitation of such models is that they often rely on rather simplistic
+                        assumptions, e.g.~a constant dependence structure that is not allowed to
+                        vary with the covariates or the restriction to linear dependence between
+                        the responses only. We propose a general framework for multivariate
+                        conditional transformation models that overcomes such limitations and
+                        describes the full joint distribution in a tractable and interpretable
+                        yet flexible way. Among the particular merits of the framework are that
+                        it can be embedded into likelihood-based inference (including results on
+                        asymptotic normality) and allows the dependence structure to vary with
+                        the covariates. In addition, the framework scales well beyond bivariate
+                        response situations.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+                        Meeting</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Hosts</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        Jointly hosted by TEDS, Joint Research Program of KIER, Kyoto University
+                        and Econometrics Seminar of KIER, Kyoto University.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://qingfeng-liu.github.io/index.html">Qingfeng Liu</a>
+                        Otaru University of Commerce
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://us06web.zoom.us/rec/share/FNcfRan3gt5N_DjIVK_j-UObTScJ2aNjYaHXADag-_CZEgIGj4GWv8eXX11MKIY.xl7yuhVnbWpPZ19y">
+                            Click here to see the video</a>
+                    </td>
+                </tr>
+            </table>
+
+
+            <h1></h1>
+            <h2 style="padding-top: 1vmax; color: #EE490D;">2022 New Year TEDS Speech</h2>
+            <div>
+                <table border="0" class="main" width="80%">
+                    <tr>
+                        <td style="padding-bottom: 1vmax;" width="100%">
+                            <table align="center" border="0" cellspacing="0" id="demo_1"
+                                   style="font-size: 1.2vmax; text-justify:auto;"
+                                   width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="center" valign="top" width="3%"></td>
+                                    <td align="left" style="box-shadow: 0 0 0 1px #c4c4c4 inset;
+                                    border-top-width: 0px; border-left-width: 0px; border-right-width: 1px;
+                                    border-bottom-width: 1px; border-color: #ffffff;" valign="top" width="44%">
+                                        <img alt="Image by monicore from Pixabay" src="New_Year.jpg"
+                                             style="border-bottom: 0px solid #c4c4ce;"
+                                             width="100%">
+                                        <!--src="shikotsuko2.png" alt="Lake Shikotsu"-->
+                                        <div style="line-height: 2vmax; padding: 20px">
+                                            <div class="row">
+                                                <div class="subcolumn1" style="background-color:#ffffff;">
+                                                    <img style="padding-top: 8px;"
+                                                         alt="Speaker" src="Prof_Jianqing_Fan.png" width="100%">
+                                                </div>
+                                                <div class="subcolumn2" style="background-color:#ffffff;">
+                                                    <div style="padding-bottom: 8px; font-family: Roboto;">
+                                                        <a href="https://fan.princeton.edu"
+                                                           style="text-decoration:underline;">
+                                                            Prof. JIANQING FAN</a>
+                                                    </div>
+                                                    <div class="main" style="text-align: justify; text-justify:auto;">
+                                                        <li style=" padding-bottom: 8px;">He is a statistician,
+                                                            financial
+                                                            econometrician and data scientist,
+                                                        <li style=" padding-bottom: 8px;">
+                                                            He is Frederick L. Moore '18 Professor of Finance, Professor
+                                                            of Statistics, and Professor of Operations Research and
+                                                            Financial Engineering at the Princeton University where he
+                                                            chaired the department from 2012 to 2015.
+                                                        </li>
+                                                        <li style=" padding-bottom: 8px;">He is the winner
+                                                            of The 2000 COPSS Presidents' Award, Morningside Gold Medal
+                                                            for Applied Mathematics (2007), Guggenheim Fellow (2009),
+                                                            Pao-Lu Hsu Prize (2013) and Guy Medal in Silver (2014). He
+                                                            got elected to Academician from Academia Sinica in 2012.
+                                                        </li>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+                                    <!--<td width="6%" valign="top" align="center"></td>-->
+                                    <td align="center" style="padding-bottom: 2vmax;" valign="top" width="1%">
+                                        <font color=#ffffff>abc</font></td>
+                                    <td align="left" style="box-shadow: 0 0 0 1px #c4c4c4 inset;
+                                    border-top-width: 0px; border-left-width: 0px; border-right-width: 1px;
+                                    border-bottom-width: 1px; border-color: #ffffff;"
+                                        valign="top" width="44%">
+                                        <img alt="Image by monicore from Pixabay" src="New_Year_2.jpg"
+                                             style="border-bottom: 0px solid #c4c4ce;"
+                                             width="100%">
+                                        <div style="line-height: 2vmax; padding: 20px; text-align: justify; text-justify:auto;">
+                                            <table border="0" class="main" style="font-size: 1.2vmax;" width="100%">
+                                                <tr>
+                                                    <td rowspan="3" valign="top" width="10%">Date&Time</td>
+                                                    <td style="padding-left: 2vw;" width="80%">JST &#9788; 東京
+                                                        Jan/07/2022 11:00 ~ 12:30
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 2vw;" width="80%">CST &#9788; 北京
+                                                        Jan/07/2022 10:00 ~ 11:30
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-left: 2vw;" width="80%">EST &#9789; NYC
+                                                        Jan/06/2022 21:00 ~ 22:30
+                                                    </td>
+                                                </tr>
+                                                <td valign="top" width="6%">
+                                                    Speaker
+                                                </td>
+                                                <td style="padding-left: 2vw;" width="79%">
+                                                    <a href="https://fan.princeton.edu"
+                                                       style="text-decoration:underline;">
+                                                        Jianqing Fan</a>&nbsp;&nbsp;Princeton University
+                                                </td>
+                                                <tr>
+                                                    <td valign="top" width="6%">Title</td>
+                                                    <td style="padding-left: 2vw;" width="79%">Understanding Deep
+                                                        Q-Learning
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="6%">Abstract</td>
+                                                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="6%">Venue</td>
+                                                    <td style="padding-left: 2vw;" width="79%"><a
+                                                            href="https://us06web.zoom.us/meeting/register/tZIode-rqTwtG9ElOwe0vw5FyP6KegazEuqs"
+                                                            style="text-decoration:underline; font-family: Oswald;">Click
+                                                        here to join the Zoom
+                                                        Meeting</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="6%">Chair</td>
+                                                    <td style="padding-left: 2vw;" width="79%">
+                                                        <a href="https://www.kier.kyoto-u.ac.jp/en/faculty/387/"
+                                                           style="text-decoration:underline; font-family: Oswald;">
+                                                            Yoshihiko Nishiyama</a> Kyoto University
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="6%">Q&A</td>
+                                                    <td style="padding-left: 2vw;"
+                                                        width="79%">Moderated by
+                                                        <a href="https://personal.ntu.edu.sg/qfeng/"
+                                                           style="text-decoration:underline; font-family: Oswald;">Qu
+                                                            Feng</a> Nanyang
+                                                        Technological University
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="6%">Hosts</td>
+                                                    <td style="padding-left: 2vw; text-align: justify; text-justify:auto;"
+                                                        width="79%">
+                                                        Jointly organized by TEDS,
+                                                        Nanyang Technological
+                                                        University,
+                                                        Kansai Keiryo Keizaigaku Kenkyukai（関西計量経済学研究会）and Otaru
+                                                        University
+                                                        of Commerce.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="6%">Video</td>
+                                                    <td style="padding-left: 2vw;" width="79%">
+                                                        <a style="text-decoration:underline; font-family: Oswald;"
+                                                           href="https://www.youtube.com/watch?v=v1itbwzPQj0">
+                                                            Click here to see the video</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <hr color="#FFFFFF" size="0px">
+                                    </td>
+                                    <td align="center" valign="top" width="3%"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="10" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="yasumasa_matsuda.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Dec/16/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">14:40 ~ 16:10</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://www2.econ.tohoku.ac.jp/english/member/matsuda.html"
+                            style="text-decoration:underline;">
+                        Yasumasa Matsuda</a>&nbsp;&nbsp;Tohoku University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        Functional regression models for spatio-temporal data
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">
+                        Functional regression is an extension of regression when both dependent
+                        and independent variables are function-valued. In this talk, we regard
+                        spatial data as square integrable function -valued random variables, and
+                        construct a regression model for spatio-temporal data by a bounded
+                        linear operator on L2(R2), where a convolution operator will be
+                        employed. We propose a frequency
+                        domain approach to estimate parameters that can overcome typical
+                        difficulties in spatial data analysis, including irregularly spaced
+                        observation locations with huge sample sizes, lots of NAs and so on.
+                        We clarify the asymptotic regime under which the estimator is
+                        consistent and asymptotic normal, as asymptotics for spatial data
+                        is not trivial at all unlike time series one. We apply our functional
+                        regression to the spatial dataset of NTT Docomo human mobility survey
+                        in order to examine COVID-19 pandemic in Japan. As I expect audiences
+                        are not necessarily familiar with frequency domain approach esp.
+                        for spatial data, I will include a brief introductory summary of
+                        spectral analysis in the talk.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%" valign="top">Zoom
+                        Meeting
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://us06web.zoom.us/rec/share/eIzQzn6Zedjq4dqHSM0K1MxUy7HeRHkkONHiCKw2aAK-OEBcC9eW48AlmYu5NNMb.u7DNoLF_psWA6rcL?startTime=1639633210000">
+                            Click here to see the video</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Slide</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="Slide/matsuda_slide.pdf"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to see the slide</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://researchmap.jp/uematsu0911?lang=en">
+                            Yoshimasa Uematsu</a> Tohoku University
+                    </td>
+                </tr>
+            </table>
+
+            <h1></h1>
+
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="10" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="Nianqing_Liu.png" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Nov/25/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 PM</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://econen.sufe.edu.cn/69/24/c6876a92452/page.htm"
+                            style="text-decoration:underline;">
+                        Nianqing (Paul) Liu</a>&nbsp;&nbsp;Shanghai University of Finance & Economics
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Nonparametric estimation of generalized additive model
+                        with flexible additive structure
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">
+                        This paper proposes a nonparametric approach to identify
+                        and estimate
+                        (with kernel) the generalized additive model with flexible additive
+                        structure and discrete variable(s) when the link function is
+                        unknown.Our approach allowing
+                        flexible additive structure provides the applied researchers with enough
+                        freedom to balance dimension reduction and robustness of estimate in
+                        their nonparametric application. Motivated by concerns from empirical
+                        research, our method also allows significant number of discrete
+                        variables in the covariates. We effectively transform our model into
+                        a generalized additive model with univariate component functions.
+                        Our identification and estimation hence follow a procedure adapted from
+                        the case with univariate components. The estimators converge to normal
+                        distribution in large sample with a one-dimensional convergence rate for
+                        the link function and a \(d_k\)-dimensional convergence rate of the
+                        component function \(f_k(⋅)\) defined on \(R^{d_k}\). Their finite sample
+                        performance is evaluated by a simulation study.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%">Zoom
+                        Meeting</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://us06web.zoom.us/rec/play/WSrKzZuPhBikcsaoNtbnBEVTi-OyPobpcWxPv5ze6t-9QsFJhJm-HByNr5ipSIiVYPFrEG0iKaWO31Jd.JT1P--I7-T6eyDQe?continueMode=true&_x_zm_rtaid=-OIPWLv1R3OEid2QcbM2Jg.1638336992807.f4de48a4e30457d4e8089b54ff1f122e&_x_zm_rhtaid=325">
+                            Click here to see the video</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Slide</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="Slide/.pdf"
+                            style="text-decoration:underline; font-family: Oswald;">TBA</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://zhangxinyu.weebly.com/">
+                            Xinyu Zhang</a> Chinese Academy of Sciences
+                    </td>
+                </tr>
+            </table>
+
+
+            <h1></h1>
+
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="11" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="WeijieSu.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Nov/04/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td valign="top">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a href="http://stat.wharton.upenn.edu/~suw/"
+                                                                  style="text-decoration:underline;">
+                        Weijie Su</a>&nbsp;&nbsp; Wharton Statistics Department, University of Pennsylvania.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">A Top-Down Approach Toward Understanding
+                        Deep Learning
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Abstract</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;"
+                        width="79%">The remarkable development of deep
+                        learning over the past decade relies heavily on sophisticated heuristics
+                        and tricks. To better exploit its potential in the coming decade,
+                        perhaps a rigorous framework for reasoning deep learning is needed,
+                        which however is not easy to build due to the intricate details of
+                        modern neural networks. For near-term purposes, a practical alternative
+                        is to develop a mathematically tractable surrogate model that yet
+                        maintains many characteristics of deep learning models. This talk
+                        introduces a model of this kind as a tool toward understanding deep
+                        learning. The effectiveness of this model, which we term the
+                        Layer-Peeled Model, is evidenced by two use cases. First, we use this
+                        model to explain an empirical pattern of deep learning recently
+                        discovered by David Donoho and his students. Moreover, this model
+                        predicts a hitherto unknown phenomenon that we term Minority Collapse in
+                        deep learning training. This is based on joint work with Cong Fang,
+                        Hangfeng He, and Qi Long.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%">Zoom
+                        Meeting
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://us06web.zoom.us/rec/share/xQnmbr7VRA08Tz7rmJiJwHBEjFysxeK6tuoWSlxltq_X2cJAMtbAtQvExmbxRFLv.74cCNMRTJLT25t8D">
+                            Click here to see the video</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Slide</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="Slide/LPM_Otaru.pdf"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to see the slide</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://sites.google.com/view/masamune-iwasawa/home?authuser=0">
+                            Masamune Iwasawa</a> Otaru University of Commerce
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">Hosts</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        Jointly hosted by TEDS, Joint Research Program of KIER, Kyoto University
+                        and Econometrics Seminar of KIER, Kyoto University.
+                    </td>
+                </tr>
+            </table>
+
+
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="11" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="xiu.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Oct/22/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://www.chicagobooth.edu/faculty/directory/x/dacheng-xiu"
+                            style="text-decoration:underline;">Dacheng Xiu</a>&nbsp;&nbsp;University
+                        of Chicago
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Test Assets and Weak Factors</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;" width="79%">
+                        Estimation and testing of factor models in asset
+                        pricing requires choosing a set of test assets. The choice of test assets determines how
+                        well different factor risk premia can be identified: if only few assets are exposed to a
+                        factor, that factor is weak, which makes standard estimation and inference incorrect. In
+                        other words, the strength of a factor is not an inherent property of the factor: it is a
+                        property of the cross-section used in the analysis. We propose a novel way to select assets
+                        from a universe of test assets and estimate the risk premium of a factor of interest, as
+                        well as the entire stochastic discount factor, that explicitly accounts for weak factors and
+                        test assets with highly correlated risk exposures. We refer to our methodology as supervised
+                        principal component analysis (SPCA), because it iterates an asset selection step and a
+                        principal-component estimation step. We provide the asymptotic properties of our estimator,
+                        and compare its limiting behavior with that of alternative estimators proposed in the recent
+                        literature, which rely on PCA, Ridge, Lasso, and Partial Least Squares (PLS). We find that
+                        the SPCA is superior in the presence of weak factors, both in theory and in finite samples.
+                        We illustrate the use of SPCA by applying it to estimate the risk premia of several tradable
+                        and nontradable factors, to evaluate asset managers’ performance, and to de-noise asset
+                        pricing factors.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%">Zoom meeting
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://us06web.zoom.us/rec/share/Cw9uQaASXJKRUkwsEyAxsvvWhDIJRXUqBKg85kw6mYJQbUDvRVX7fbpPKNXcUsk8.dNskb93jN2NxIrQ5">
+                            Click here to see the video</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Slide</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="Slide/Test_Assets_and_Weak_factors_Dacheng_Xiu.pdf"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to see the slide</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Chair</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        <a style="text-decoration:underline; font-family: Oswald;"
+                           href="https://sites.google.com/site/wenjiemetrics/home">
+                            Wenjie Wang</a> Nanyang Technological University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Hosts</td>
+                    <td style="padding-left: 2vw;" width="79%">TEDS and Nanyang Technological University
+                    </td>
+                </tr>
+            </table>
+
+
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+
+                <tr>
+                    <td rowspan="9" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="yangfeng.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Oct/12/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:30 AM ~ 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://publichealth.nyu.edu/faculty/yang-feng"
+                            style="text-decoration:underline;">Yang
+                        Feng</a>&nbsp;&nbsp;New York University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%">
+                        We propose a flexible ensemble classification framework, Random Subspace Ensemble (RaSE), for
+                        sparse classification. In the RaSE algorithm, we aggregate many weak learners,
+                        where each weak learner is a base classifier trained in a subspace optimally selected from a
+                        collection of random subspaces. To conduct subspace selection, we propose a new criterion, ratio
+                        information criterion (RIC), based on weighted Kullback-Leibler divergence. The theoretical
+                        analysis includes the risk and Monte-Carlo variance of the RaSE classifier, establishing the
+                        screening consistency and weak consistency of RIC, and providing an upper bound for the
+                        misclassification rate of the RaSE classifier. In addition, we show that in a high-dimensional
+                        framework, the number of random subspaces needs to be very large to guarantee that a subspace
+                        covering signals is selected. Therefore, we propose an iterative version of the RaSE algorithm
+                        and prove that under some specific conditions, a smaller number of generated random subspaces
+                        are needed to find a desirable subspace through iteration. An array of simulations under various
+                        models and real-data applications demonstrate the effectiveness and robustness of the RaSE
+                        classifier and its iterative version in terms of low misclassification rate and accurate feature
+                        ranking. The RaSE algorithm is implemented in the R package RaSEn on CRAN.
+                        <br>Paper: <a
+                            href="https://jmlr.org/beta/papers/v22/20-600.html" class="color1"
+                            style="text-decoration:underline;">https://jmlr.org/beta/papers/v22/20-600.html</a>
+                        <br>Package: <a
+                            href="https://cran.r-project.org/web/packages/RaSEn/index.html" class="color1"
+                            style="text-decoration:underline;">https://cran.r-project.org/web/packages/RaSEn/index.html
+                    </a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%">Zoom Meeting
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Slide</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="Slide/Yang_Feng_talk.pdf"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to see the slide</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://us06web.zoom.us/rec/share/PvOB_fSCJl4sRdIBb6OXxboYIU3PJURbHAzffxzwCoSpoYnL9siQ
+                            57fFnYjOaYg7.ichhN4XPXmn4tdeP?startTime=1634002067000"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to see the video</a>
+                        Passcode: WVe6f+dg
+                    </td>
+                </tr>
+            </table>
+
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="7" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="Xinyu_Zhang.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Oct/04/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:30 AM ~ 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a href="https://zhangxinyu.weebly.com"
+                                                                  style="text-decoration:underline;">Xinyu
+                        Zhang</a>&nbsp;&nbsp;Chinese Academy of Sciences
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">Model averaging by a jackknife criterion for
+                        estimating heterogeneous causal effects
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%">
+                        The interest of this article is in capturing the heterogeneous
+                        treatment effects measured by the conditional average treatment
+                        effect (CATE). A model averaging
+                        estimation scheme is proposed with multiple candidate linear
+                        regression models. The theoretical properties of our proposal
+                        are provided. First, it is shown that our proposal is asymptotically
+                        optimal in the sense of achieving the lowest possible squared error.
+                        Second, the convergence of the weights determined by our proposal is
+                        provided under the case where at least one of the candidate models
+                        is correctly specified. Simulation results in comparison with
+                        several related existing methods favor our proposed method.
+                        The method is applied to a dataset from a labor skills training
+                        program.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+                    <td style="padding-left: 2vw;" width="79%">Zoom Meeting
+                    </td>
+                </tr>
+            </table>
+
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="7" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="kato kengo.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Sep/28/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Time</td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">9:00 AM ~ 10:30 AM</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Speaker</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://stat.cornell.edu/people/faculty/kengo-kato"
+                            style="text-decoration:underline;">Kengo Kato</a>&nbsp;&nbsp;Cornell University
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">
+                        Smooth p-Wasserstein distance: structure, empirical approximation, and applications.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%"
+                        width="79%">
+                        Discrepancy measures between
+                        probability distributions, often termed statistical distances, are
+                        ubiquitous in probability theory, statistics and machine learning.
+                        To combat the curse of dimensionality when estimating these distances from
+                        data, recent work has proposed smoothing out local irregularities in the measured
+                        distributions via convolution with a Gaussian kernel. Motivated by the
+                        scalability of this framework to high dimensions, we investigate the
+                        structural and statistical behavior of the Gaussian-smoothed
+                        p-Wasserstein distance. In particular, we prove that the smoothed
+                        p-Wasserstein distance enjoys a parametric empirical convergence
+                        rate of \(n^{−1/2}\), which contrasts the \(n^{−1/d}\) rate for unsmoothed
+                        Wp when \(d \geq 3\). Also we discuss limit distribution theory for the
+                        smooth 1-Wasserstein distance.<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Video</td>
+                    <td style="padding-left: 2vw;" width="79%"><a
+                            href="https://us06web.zoom.us/rec/share/roGnzWY9kC2At9WXsyI_GiKQeVZsSNDdC4NHr_QCUx9f3VXlFZh1
+                            ttJqZ3Mb4Lqo.uFnacr_7R7D1HtQ1?startTime=1632787259000"
+                            style="text-decoration:underline; font-family: Oswald;">Click here to see the video</a>
+                        Passcode: i5ahWcE+
+                    </td>
+                </tr>
+            </table>
+
+            <h1></h1>
+
+            <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+                <tr>
+                    <td rowspan="8" style="padding-right: 1vw;" valign="top"
+                        width="15%">
+                        <img alt="Speaker" src="Ryo_Okui.jpg" width="100%">
+                    </td>
+                    <td valign="top" width="6%">Date</td>
+                    <td style="padding-left: 2vw;" width="79%">Sep/10/2021</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">
+                        Time
+                    </td>
+                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%"></td>
+                    <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 AM</td>
+                </tr>
+                <td valign="top" width="6%">
+                    Speaker
+                </td>
+                <td style="padding-left: 2vw;" width="79%">
+                    <a href="https://econ.snu.ac.kr/people/faculty?mode=view&profidx=88"
+                       style="text-decoration:underline;">
+                        Ryo Okui
+                    </a>&nbsp;&nbsp;Seoul National University
+                </td>
+                <tr>
+                    <td valign="top" width="6%">Title</td>
+                    <td style="padding-left: 2vw;" width="79%">&ldquo;Latent group structure in linear panel data
+                        models
+                        with endogenous regressor&rdquo;
+                        By Junho CHOI and Ryo OKUI
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Abstract</td>
+                    <td style="padding-left: 2vw;" width="79%">TBA</td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Venue</td>
+
+                    <td style="padding-left: 2vw;" width="79%">Zoom Meeting
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="6%">Hosts</td>
+
+                    <td style="padding-left: 2vw;" width="79%">TEDS and Nanyang Technological University
+                    </td>
+                </tr>
+            </table>
+            <h1 id="end"></h1>
+        </div>
+
+        <!--<img style="padding-bottom: 2vw;" width="100%" src="Lake_Shikotsu.png" alt="TEDS">-->
+        <div class="container3" style="text-align: left; ">
+
+            <hr style="border: 1px solid transparent; margin-top: 20px; padding-top: 10px; padding-bottom: 30px;">
+            <table border="0" class="main" width="90%">
+                <tr>
+                    <td width="100%">
+                        <p class="p7" style="font-size: 2.2vmax; text-align: justify; text-justify:auto;"><font
+                                color=#ffffff>Transdisciplinary Econometrics & Data Science Seminar - TEDS</font>
+                        </p>
+                        <hr style="border: 1px solid transparent;">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%">
+                        <p class="p7"
+                           style="font-size: 1.5vmax; text-align: left; text-align: justify; text-justify:auto;">
+                            <font color=#ffffff>
+                                TEDS gratefully acknowledges the supports of the Japan Society for the Promotion of
+                                Science
+                                through KAKENHI Grant No. JP19K01582 (Qingfeng Liu), Nanyang Technological
+                                University,
+                                Joint Research Program of KIER, Kyoto University and Chinese Academy of Sciences.
+                            </font>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <hr color="#FFFFFF" style=" margin-top: 10px; margin-bottom: 10px;" width="90%">
+            <table border="0" class="main" width="90%">
+                <tr>
+                    <td width="100%">
+                        <p class="p7" style="text-align: right; width: 100%;"><font color=#ffffff> E-mail: </font><a
+                                href="mailto: tedsseminars@gmail.com"><font
+                                color=#ffffff>tedsseminars@gmail.com</font></a></p>
+                    </td>
+                </tr>
+            </table>
+            <h2></h2>
+            <table border="0" class="main" style="padding-bottom: 100px;" width="100%">
+                <tr>
+                    <td width="100%">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <script>
+function moreFunction() {
+  var dots2 = document.getElementById("dots2");
+  var moreText2 = document.getElementById("more2");
+  var btnText2 = document.getElementById("myBtn2");
+
+  if (dots2.style.display === "none") {
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "Read more";
+    moreText2.style.display = "none";
+  } else {
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Read less";
+    moreText2.style.display = "inline";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
+            type="text/javascript">
+    </script>
+
+</div>
+</div>
+</body>
+</html>
+
+<!--================-->
+<!--　　MAIN　　-->
+<!--================-->
+
+
+<!--<div style="width:100%;  height:800px; ">
+    <table border="0" class="main" width="75%">
+        <tr>
+            <td width="100%">
+                <table align="center" border="0" cellspacing="0px" id="demo_1"
+                       style="line-height:0; padding-top: 3vmax; padding-bottom: 1.5vw;" valign="top"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <td style="border: solid 2px  #3498DB;
+                            border-radius: 8px; position: relative; margin: 0em 0;
+                            padding-right: 2vmax; padding-left: 2vmax;
+                            padding-top: 2vmax; padding-bottom: 2vw;"
+                            width="35%">
+
+                            <div>
+                                <span class="box-title">Today's Seminar</span>
+                                <table border="0" class="main" style="font-size: 1.2vmax;" width="100%">
+                                    <tr>
+                                        <td valign="top" width="6%">Date</td>
+                                        <td style="padding-left: 2vw;" width="79%">Oct/04/2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Time</td>
+                                        <td style="padding-left: 2vw;" width="79%">Japan Standard Time
+                                            (UTC+9h)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%"></td>
+                                        <td style="padding-left: 2vw;" width="79%">10:30 AM ~ 12:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Speaker</td>
+                                        <td style="padding-left: 2vw;" width="79%"><a
+                                                href="https://zhangxinyu.weebly.com"
+                                                style="text-decoration:underline;">Xinyu
+                                            Zhang</a>&nbsp;&nbsp;Chinese Academy of Sciences
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Title</td>
+                                        <td style="padding-left: 2vw;" width="79%">Model averaging by a
+                                            jackknife criterion for estimating
+                                            heterogeneous causal effects (Jointly with Yuting Wei and Guangren
+                                            Yang).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Abstract</td>
+                                        <td style="padding-left: 2vw; text-align: justify; text-justify:auto;"
+                                            width="79%">
+                                            The interest of this article is in capturing the heterogeneous
+                                            treatment effects measured by the conditional average treatment
+                                            effect (CATE). <span
+                                                id="dots2">...</span><span id="more2">A model averaging
+                                                    estimation scheme is proposed with multiple candidate linear
+                                                    regression models. The theoretical properties of our proposal
+                                                    are provided. First, it is shown that our proposal is asymptotically
+                                                    optimal in the sense of achieving the lowest possible squared error.
+                                                    Second, the convergence of the weights determined by our proposal is
+                                                    provided under the case where at least one of the candidate models
+                                                    is correctly specified. Simulation results in comparison with
+                                                    several related existing methods favor our proposed method.
+                                                    The method is applied to a dataset from a labor skills training
+                                                    program. </span><br>
+                                            &#9656;
+                                            <u id="myBtn2" onclick="moreFunction()">Read more</u>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Venue</td>
+                                        <td style="padding-left: 2vw;" width="79%"><a
+                                                href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                                                style="text-decoration:underline; font-family: Oswald;">Click
+                                            here to join the Zoom Meeting</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </td>
+
+                        <td style="padding-bottom: 1vmax; font-size: 1vw;" width="2%">
+                            <font color=#ffffff>abc</font></td>
+
+                        <td style="font-size: 1.2vmax; line-height:1.2;
+                            border: solid 2px #3498DB; border-radius: 8px; position: relative; margin: 0em 0;
+                            padding-right: 2vmax; padding-left: 2vmax;
+                            padding-top: 2vmax; padding-bottom: 2vw;"
+                            width="35%">
+                            <div>
+                                <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
+                                    Speaker
+                                    <a href="https://stat.cornell.edu/people/faculty/kengo-kato"
+                                       style="text-decoration:underline; font-family: Merriweather;">
+                                        Xinyu Zhang
+                                    </a>
+                                </span>
+                                <div class="row">
+                                    <div class="subcolumn1" style="background-color:#ffffff;">
+                                        <img alt="Speaker" src="Xinyu_Zhang.jpg" width="100%">
+                                    </div>
+                                    <div class="subcolumn2" style="background-color:#ffffff;">
+                                        <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                            Selected Publication
+                                        </div>
+                                        <div class="main" style="text-align: justify; text-justify:auto;">
+                                            <li style=" padding-bottom: 8px;">Zhang, X. (2021). A new study on
+                                                asymptotic optimality of least squares model averaging. <em>Econometric
+                                                    Theory</em>, 37, 388-407.
+                                            </li>
+                                            <li>Zhang, X., Yu, D., Zou, G. and Liang, H. (2016). Optimal model
+                                                averaging estimation for generalized linear models and
+                                                generalized linear mixed-effects models. <em>Journal of the
+                                                    American Statistical Association</em>, 111, 1775-1790.
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    -->
+
+<!--<table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+    <tr>
+        <td rowspan="9" style="padding-right: 1vw;" valign="top"
+            width="15%">
+            <img alt="Speaker" src="WeijieSu.jpg" width="100%">
+        </td>
+        <td valign="top" width="6%">Date</td>
+        <td style="padding-left: 2vw;" width="79%">Nov/04/2021</td>
+    </tr>
+    <tr>
+        <td valign="top">Time</td>
+        <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+    </tr>
+    <tr>
+        <td valign="top"></td>
+        <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 AM</td>
+    </tr>
+    <tr>
+        <td valign="top">Speaker</td>
+        <td style="padding-left: 2vw;" width="79%"><a href="http://stat.wharton.upenn.edu/~suw/"
+                                                      style="text-decoration:underline;">
+            Weijie Su</a>&nbsp;&nbsp; Wharton Statistics Department, University of Pennsylvania.
+        </td>
+    </tr>
+
+    <tr>
+        <td valign="top">Title</td>
+        <td style="padding-left: 2vw;" width="79%">TBA</td>
+    </tr>
+    <tr>
+        <td valign="top">Abstract</td>
+        <td style="padding-left: 2vw;" width="79%">TBA</td>
+    </tr>
+    <tr>
+        <td valign="top">Venue</td>
+        <td style="padding-left: 2vw;" width="79%"><a
+                href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+            Meeting</a>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">Chair</td>
+        <td style="padding-left: 2vw;" width="79%">
+            <a style="text-decoration:underline; font-family: Oswald;"
+               href="https://sites.google.com/view/masamune-iwasawa/home?authuser=0">
+                Masamune Iwasawa</a> Otaru University of Commerce
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">Hosts</td>
+        <td style="padding-left: 2vw;" width="79%">
+            Jointly hosted by TEDS, Joint Research Program of KIER, Kyoto University
+            and Econometrics Seminar of KIER, Kyoto University.
+        </td>
+    </tr>
+</table>
+
+
+<h1></h1>
+-->
+
+<!--<table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+    <tr>
+        <td rowspan="7" style="padding-right: 1vw;" valign="top"
+            width="15%">
+            <img alt="Speaker" src="Nianqing_Liu.png" width="100%">
+        </td>
+        <td valign="top" width="6%">Date</td>
+        <td style="padding-left: 2vw;" width="79%">Nov/25/2021</td>
+    </tr>
+    <tr>
+        <td valign="top" width="6%">Time</td>
+        <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+    </tr>
+    <tr>
+        <td valign="top" width="6%"></td>
+        <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 PM</td>
+    </tr>
+    <tr>
+        <td valign="top" width="6%">Speaker</td>
+        <td style="padding-left: 2vw;" width="79%"><a
+                href="https://econen.sufe.edu.cn/69/24/c6876a92452/page.htm"
+                style="text-decoration:underline;">
+            Nianqing (Paul) Liu</a>&nbsp;&nbsp;Shanghai University of Finance & Economics
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="6%">Title</td>
+        <td style="padding-left: 2vw;" width="79%">TBA</td>
+    </tr>
+    <tr>
+        <td valign="top" width="6%">Abstract</td>
+        <td style="padding-left: 2vw;" width="79%">TBA</td>
+    </tr>
+    <tr>
+        <td valign="top" width="6%">Venue</td>
+        <td style="padding-left: 2vw;" width="79%"><a
+                href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom
+            Meeting</a>
+        </td>
+    </tr>
+</table>
+
+
+<h1></h1>
+-->
+
+<!--
+<h2 style="padding-top: 1vmax; color: #EE490D;">2022 New Year TEDS Speech</h2>
+<div>
+    <table border="0" class="main" width="80%">
+        <tr>
+            <td style="padding-bottom: 1vmax;" width="100%">
+                <table align="center" border="0" cellspacing="0" id="demo_1"
+                       style="font-size: 1.2vmax; text-justify:auto;"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <td align="center" valign="top" width="3%"></td>
+                        <td align="left" style="box-shadow: 0 0 0 1px #c4c4c4 inset;
+                        border-top-width: 0px; border-left-width: 0px; border-right-width: 1px;
+                        border-bottom-width: 1px; border-color: #ffffff;" valign="top" width="44%">
+                            <img alt="Image by monicore from Pixabay" src="New_Year.jpg"
+                                 style="border-bottom: 0px solid #c4c4ce;"
+                                 width="100%">
+
+                            <div style="line-height: 2vmax; padding: 20px">
+                                <div class="row">
+                                    <div class="subcolumn1" style="background-color:#ffffff;">
+                                        <img style="padding-top: 8px;"
+                                             alt="Speaker" src="Prof_Jianqing_Fan.png" width="100%">
+                                    </div>
+                                    <div class="subcolumn2" style="background-color:#ffffff;">
+                                        <div style="padding-bottom: 8px; font-family: Roboto;">
+                                            <a href="https://fan.princeton.edu"
+                                               style="text-decoration:underline;">
+                                                Prof. JIANQING FAN</a>
+                                        </div>
+                                        <div class="main" style="text-align: justify; text-justify:auto;">
+                                            <li style=" padding-bottom: 8px;">He is a statistician,
+                                                financial
+                                                econometrician and data scientist,
+                                            <li style=" padding-bottom: 8px;">
+                                                He is Frederick L. Moore '18 Professor of Finance, Professor
+                                                of Statistics, and Professor of Operations Research and
+                                                Financial Engineering at the Princeton University where he
+                                                chaired the department from 2012 to 2015.
+                                            </li>
+                                            <li style=" padding-bottom: 8px;">He is the winner
+                                                of The 2000 COPSS Presidents' Award, Morningside Gold Medal
+                                                for Applied Mathematics (2007), Guggenheim Fellow (2009),
+                                                Pao-Lu Hsu Prize (2013) and Guy Medal in Silver (2014). He
+                                                got elected to Academician from Academia Sinica in 2012.
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+
+
+                        <td align="center" style="padding-bottom: 2vmax;" valign="top" width="1%">
+                            <font color=#ffffff>abc</font></td>
+                        <td align="left" style="box-shadow: 0 0 0 1px #c4c4c4 inset;
+                        border-top-width: 0px; border-left-width: 0px; border-right-width: 1px;
+                        border-bottom-width: 1px; border-color: #ffffff;"
+                            valign="top" width="44%">
+                            <img alt="Image by monicore from Pixabay" src="New_Year_2.jpg"
+                                 style="border-bottom: 0px solid #c4c4ce;"
+                                 width="100%">
+                            <div style="line-height: 2vmax; padding: 20px; text-align: justify; text-justify:auto;">
+                                <table border="0" class="main" style="font-size: 1.2vmax;" width="100%">
+                                    <tr>
+
+                                        <td valign="top" width="10%">Date</td>
+                                        <td style="padding-left: 2vw;" width="80%">Jan/07/2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">
+                                            Time
+                                        </td>
+                                        <td style="padding-left: 2vw;" width="79%">Japan Standard Time
+                                            (UTC+9h)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%"></td>
+                                        <td style="padding-left: 2vw;" width="79%">11:00 AM ~ 12:30 PM</td>
+                                    </tr>
+                                    <td valign="top" width="6%">
+                                        Speaker
+                                    </td>
+                                    <td style="padding-left: 2vw;" width="79%">
+                                        <a href="https://fan.princeton.edu"
+                                           style="text-decoration:underline;">
+                                            Jianqing Fan</a>&nbsp;&nbsp;Princeton University
+                                    </td>
+                                    <tr>
+                                        <td valign="top" width="6%">Title</td>
+                                        <td style="padding-left: 2vw;" width="79%">Understanding Deep
+                                            Q-Learning
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Abstract</td>
+                                        <td style="padding-left: 2vw;" width="79%">TBA</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Venue</td>
+                                        <td style="padding-left: 2vw;" width="79%"><a
+                                                href="https://us06web.zoom.us/meeting/register/tZIode-rqTwtG9ElOwe0vw5FyP6KegazEuqs"
+                                                style="text-decoration:underline; font-family: Oswald;">Click
+                                            here to join the Zoom
+                                            Meeting</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Chair</td>
+                                        <td style="padding-left: 2vw;" width="79%">
+                                            <a href="https://www.kier.kyoto-u.ac.jp/en/faculty/387/"
+                                               style="text-decoration:underline; font-family: Oswald;">
+                                                Yoshihiko Nishiyama</a> Kyoto University
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Q&A</td>
+                                        <td style="padding-left: 2vw;"
+                                            width="79%">Moderated by
+                                            <a href="https://personal.ntu.edu.sg/qfeng/"
+                                               style="text-decoration:underline; font-family: Oswald;">Qu
+                                                Feng</a> Nanyang
+                                            Technological University
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Hosts</td>
+                                        <td style="padding-left: 2vw; text-align: justify; text-justify:auto;"
+                                            width="79%">
+                                            Jointly organized by TEDS,
+                                            Nanyang Technological
+                                            University,
+                                            Kansai Keiryo Keizaigaku Kenkyukai（関西計量経済学研究会）and Otaru
+                                            University
+                                            of Commerce.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <hr color="#FFFFFF" size="0px">
+                        </td>
+                        <td align="center" valign="top" width="3%"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<h1></h1>
+-->
+<!--  <h1></h1>
+             <h2>Next Seminar</h2>
+             <table class="main" border="0" width="75%" style="font-size: 1.2vmax;">
+                 <tr>
+                     <td width="15%" valign="top" rowspan="7"
+                     style="padding-right: 1vw;">
+                     <img width="100%" src="Ryo_Okui.jpg" alt="Speaker">
+                 </td>
+                     <td width="6%" valign="top">Date</td>
+                     <td width="79%" style="padding-left: 2vw;">Sep/10/2021</td>
+                 </tr>
+                 <tr>
+                     <td width="6%" valign="top">
+                         Time
+                     </td>
+                     <td width="79%" style="padding-left: 2vw;">Japan Standard Time (UTC+9h)</td>
+                 </tr>
+                 <tr>
+                     <td width="6%" valign="top"></td>
+                     <td width="79%" style="padding-left: 2vw;">10:00 AM ~ 11:30 AM</td>
+                 </tr>
+                 <td width="6%" valign="top">
+                     Speaker
+                 </td>
+                 <td width="79%" style="padding-left: 2vw;">
+                     <a href="https://econ.snu.ac.kr/people/faculty?mode=view&profidx=88" style="text-decoration:underline;">
+                         Ryo Okui
+                     </a>&nbsp;&nbsp;Seoul National University
+                 </td>
+                 <tr>
+                     <td width="6%" valign="top">Title</td>
+                     <td width="79%" style="padding-left: 2vw;">&ldquo;Latent group structure in linear panel data models with endogenous regressor&rdquo;
+                         By Junho CHOI and Ryo OKUI
+                     </td>
+                 </tr>
+                 <tr>
+                     <td width="6%" valign="top">Abstract</td>
+                     <td width="79%" style="padding-left: 2vw;">TBA</td>
+                 </tr>
+                 <tr>
+                     <td width="6%" valign="top">Venue</td>
+
+                     <td width="79%" style="padding-left: 2vw;"><a
+                                                     href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                                                     style="text-decoration:underline; font-family: Oswald;">Click here to join the Zoom Meeting</a>
+                     </td>
+                 </tr>
+             </table>
+           -->
+
+<!--<table border="0" class="main" width="75%">
+            <tr>
+                <td width="100%">
+                    <table align="center" border="0" cellspacing="0px" id="demo_1"
+                           style="line-height:0; padding-top: 3vmax; padding-bottom: 1.5vw;
+                            text-align: justify; text-justify:auto;" valign="top"
+                           width="100%">
+                        <tbody>
+                        <tr>
+                            <td style="border: solid 2px  #3498DB;
+                             border-radius: 8px; position: relative; margin: 0em 0;
+                             padding-right: 2vmax; padding-left: 2vmax;
+                             padding-top: 2vmax; padding-bottom: 2vw;"
+                                width="35%">
+
+                                <div>
+                                    <span class="box-title">Next Seminar</span>
+                                    <table border="0" class="main" style="font-size: 1.2vmax;
+                                     text-align: justify; text-justify:auto;" width="100%">
+                                        <td valign="top" width="6%">Date</td>
+                                        <td style="padding-left: 2vw;" width="79%">Dec/16/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="6%">Time</td>
+                                            <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="6%"></td>
+                                            <td style="padding-left: 2vw;" width="79%">14:40 ~ 16:10</td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="6%">Speaker</td>
+                                            <td style="padding-left: 2vw;" width="79%"><a
+                                                    href="https://www2.econ.tohoku.ac.jp/english/member/matsuda.html"
+                                                    style="text-decoration:underline;">
+                                                Yasumasa Matsuda</a>&nbsp;&nbsp;Tohoku University
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="6%">Title</td>
+                                            <td style="padding-left: 2vw;" width="79%">Functional regression models for
+                                                spatio-temporal data, with Xin Yuan.
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td valign="top" width="6%">Abstract</td>
+                                            <td style="padding-left: 2vw; text-align: justify; text-justify:auto;"
+                                                width="79%">
+                                                Functional regression is an extension of regression when both dependent
+                                                and independent variables are function-valued. In this talk, we regard
+                                                spatial data as square integrable function -valued random variables, and
+                                                construct a regression model for spatio-temporal data by a bounded
+                                                linear operator on L2(R2), where a convolution operator will be
+                                                employed.
+                                                <span
+                                                        id="dots2">...</span><span id="more2"> We propose a frequency
+                                                domain approach to estimate parameters that can overcome typical
+                                                difficulties in spatial data analysis, including irregularly spaced
+                                                observation locations with huge sample sizes, lots of NAs and so on.
+                                                We  clarify the asymptotic regime under which the estimator is
+                                                consistent and asymptotic normal, as asymptotics for spatial data
+                                                is not trivial at all unlike time series one. We apply our functional
+                                                regression to the spatial dataset of NTT Docomo human mobility survey
+                                                in order to examine COVID-19 pandemic in Japan. As I expect audiences
+                                                are not necessarily familiar with frequency domain approach esp.
+                                                for spatial data,  I will include a brief introductory summary of
+                                                spectral analysis in the talk.</span>
+                                                &#9656;
+                                                <u id="myBtn2" onclick="moreFunction()">Read more</u>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" width="6%">Venue</td>
+                                            <td style="padding-left: 2vw;" width="79%"><a
+                                                    href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                                                    style="text-decoration:underline; font-family: Oswald;">Click here
+                                                to join the Zoom
+                                                Meeting</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top">Chair</td>
+                                            <td style="padding-left: 2vw;" width="79%">
+                                                <a style="text-decoration:underline; font-family: Oswald;"
+                                                   href="https://researchmap.jp/uematsu0911?lang=en">
+                                                    Yoshimasa Uematsu</a> Tohoku University
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </td>
+
+                            <td style="padding-bottom: 1vmax; font-size: 1vw;" width="2%">
+                                <font color=#ffffff>abc</font></td>
+
+                            <td style="font-size: 1.2vmax; line-height:1.2;
+                             border: solid 2px #3498DB; border-radius: 8px; position: relative; margin: 0em 0;
+                             padding-right: 2vmax; padding-left: 2vmax;
+                             padding-top: 2vmax; padding-bottom: 2vw;"
+                                width="35%">
+                                <div>
+                                 <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
+                                     Next Speaker
+                                     <a
+                                             href="https://www2.econ.tohoku.ac.jp/english/member/matsuda.html"
+                                             style="text-decoration:underline;">
+                    Yasumasa Matsuda</a>
+                                     </a>
+                                 </span>
+                                    <div class="row">
+                                        <div class="subcolumn1" style="background-color:#ffffff;">
+                                            <img alt="Speaker" src="yasumasa_matsuda.jpg" width="100%">
+                                        </div>
+                                        <div class="subcolumn2" style="background-color:#ffffff;">
+                                            <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                                Selected Publications
+                                            </div>
+                                            <div class="main" style="text-align: justify; text-justify:auto;">
+                                                <li style=" padding-bottom: 8px;">
+                                                    Sato, T., & Matsuda, Y. (2021). Spatial extension of generalized
+                                                    autoregressive conditional heteroskedasticity models. Spatial
+                                                    Economic Analysis, 16(2), 148-160.
+                                                </li>
+                                                <li style=" padding-bottom: 8px;">
+                                                    Brockwell, P. J., & Matsuda, Y. (2017). Continuous auto‐regressive
+                                                    moving average random fields on ℝn. Journal of the Royal Statistical
+                                                    Society: Series B (Statistical Methodology), 79(3), 833-857.
+                                                </li>
+                                                <li style=" padding-bottom: 8px;">
+                                                    Matsuda, Y., & Yajima, Y. (2009). Fourier analysis of irregularly
+                                                    spaced data on Rd. Journal of the Royal Statistical Society: Series
+                                                    B (Statistical Methodology), 71(1), 191-217.
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        -->
+<!--
+ <table border="0" class="main" width="75%">
+     <tr>
+         <td width="100%">
+             <table align="center" border="0" cellspacing="0px" id="demo_1"
+                    style="line-height:0; padding-top: 3vmax; padding-bottom: 1.5vw;
+                    text-align: justify; text-justify:auto;" valign="top"
+                    width="100%">
+                 <tbody>
+                 <tr>
+                     <td style="border: solid 2px  #3498DB;
+                     border-radius: 8px; position: relative; margin: 0em 0;
+                     padding-right: 2vmax; padding-left: 2vmax;
+                     padding-top: 2vmax; padding-bottom: 2vw;"
+                         width="35%">
+
+                         <div>
+                             <span class="box-title">Next Seminar</span>
+                             <table border="0" class="main" style="font-size: 1.2vmax;
+                             text-align: justify; text-justify:auto;" width="100%">
+                                 <tr>
+                                     <td valign="top" width="6%">Date</td>
+                                     <td style="padding-left: 2vw;" width="79%">Nov/04/2021</td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top">Time</td>
+                                     <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top"></td>
+                                     <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 AM</td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top">Speaker</td>
+                                     <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%"><a
+                                             href="http://stat.wharton.upenn.edu/~suw/"
+                                             style="text-decoration:underline;">
+                                         Weijie Su</a>&nbsp;&nbsp; Wharton Statistics Department, University of
+                                         Pennsylvania.
+                                     </td>
+                                 </tr>
+
+                                 <tr>
+                                     <td valign="top">Title</td>
+                                     <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%">A Top-Down Approach Toward
+                                         Understanding Deep Learning
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top">Abstract</td>
+                                     <td style="padding-left: 2vw; text-align: justify; text-justify:auto;"
+                                         width="100%">The remarkable development of deep
+                                         learning over the past decade relies heavily on sophisticated heuristics
+                                         and tricks.<span id="dots">...</span><span id="more">
+                                             To better exploit its potential in the coming decade,
+                                         perhaps a rigorous framework for reasoning deep learning is needed,
+                                         which however is not easy to build due to the intricate details of
+                                         modern neural networks. For near-term purposes, a practical alternative
+                                         is to develop a mathematically tractable surrogate model that yet
+                                         maintains many characteristics of deep learning models. This talk
+                                         introduces a model of this kind as a tool toward understanding deep
+                                         learning. The effectiveness of this model, which we term the
+                                         Layer-Peeled Model, is evidenced by two use cases. First, we use this
+                                         model to explain an empirical pattern of deep learning recently
+                                         discovered by David Donoho and his students. Moreover, this model
+                                         predicts a hitherto unknown phenomenon that we term Minority Collapse in
+                                         deep learning training. This is based on joint work with Cong Fang,
+                                         Hangfeng He, and Qi Long.
+                                             </span>
+                                         &#9656;
+                                         <u id="myBtn" onclick="myFunction()">Read more</u>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top">Venue</td>
+                                     <td style="padding-left: 2vw;" width="79%"><a
+                                             href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                                             style="text-decoration:underline; font-family: Oswald;">Click here
+                                         to join the Zoom
+                                         Meeting</a>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top">Chair</td>
+                                     <td style="padding-left: 2vw;" width="79%">
+                                         <a style="text-decoration:underline; font-family: Oswald;"
+                                            href="https://sites.google.com/view/masamune-iwasawa/home?authuser=0">
+                                             Masamune Iwasawa</a> Otaru University of Commerce
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                     <td valign="top">Hosts</td>
+                                     <td style="padding-left: 2vw; text-align: justify; text-justify:auto;" width="79%">
+                                         TEDS, Joint Research Program of KIER, Kyoto University
+                                         and Econometrics Seminar of KIER, Kyoto University.
+                                     </td>
+                                 </tr>
+                             </table>
+                         </div>
+
+                     </td>
+
+                     <td style="padding-bottom: 1vmax; font-size: 1vw;" width="2%">
+                         <font color=#ffffff>abc</font></td>
+
+                     <td style="font-size: 1.2vmax; line-height:1.2;
+                     border: solid 2px #3498DB; border-radius: 8px; position: relative; margin: 0em 0;
+                     padding-right: 2vmax; padding-left: 2vmax;
+                     padding-top: 2vmax; padding-bottom: 2vw;"
+                         width="35%">
+                         <div>
+                         <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
+                             Next Speaker
+                             <a href="http://stat.wharton.upenn.edu/~suw/"
+                                style="text-decoration:underline; font-family: Merriweather;">
+                                 Weijie Su
+                             </a>
+                         </span>
+                             <div class="row">
+                                 <div class="subcolumn1" style="background-color:#ffffff;">
+                                     <img alt="Speaker" src="WeijieSu.jpg" width="100%">
+                                 </div>
+                                 <div class="subcolumn2" style="background-color:#ffffff;">
+                                     <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                         Selected Publications
+                                     </div>
+                                     <div class="main" style="text-align: justify; text-justify:auto;">
+                                         <li style=" padding-bottom: 8px;">
+                                             W. Su, S. Boyd, and E. Candes. A Differential Equation for Modeling
+                                             Nesterov's Accelerated Gradient
+                                             Method: Theory and Insights. Journal of Machine Learning Research,
+                                             17(1), 5312–5354, 2016.
+                                         </li>
+                                         <li style=" padding-bottom: 8px;">
+                                             W. Su and E. Candes. SLOPE is Adaptive to Unknown Sparsity and
+                                             Asymptotically Minimax. The
+                                             Annals of Statistics, 44(3), 1038–1068, 2016.
+                                         </li>
+                                         <li style=" padding-bottom: 8px;">
+                                             J. Dong, A. Roth, and W. Su. Gaussian Differential Privacy. Journal
+                                             of the Royal Statistical Society: Series B (Statistical Methodology),
+                                             forthcoming.
+                                         </li>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </td>
+
+                 </tr>
+                 </tbody>
+             </table>
+         </td>
+     </tr>
+ </table>
+ -->
+<!--<table border="0" class="main" width="75%">
+    <tr>
+        <td width="100%">
+            <table align="center" border="0" cellspacing="0px" id="demo_1"
+                   style="line-height:0; padding-top: 3vmax; padding-bottom: 1.5vw;" valign="top"
+                   width="100%">
+                <tbody>
+                <tr>
+                    <td style="border: solid 2px  #3498DB;
+                    border-radius: 8px; position: relative; margin: 0em 0;
+                    padding-right: 2vmax; padding-left: 2vmax;
+                    padding-top: 2vmax; padding-bottom: 2vw;"
+                        width="35%">
+
+                        <div>
+                            <span class="box-title">Next Seminar</span>
+                            ???table
+                        </div>
+
+                    </td>
+
+                    <td style="padding-bottom: 1vmax; font-size: 1vw;" width="2%">
+                        <font color=#ffffff>abc</font></td>
+
+                    <td style="font-size: 1.2vmax; line-height:1.2;
+                    border: solid 2px #3498DB; border-radius: 8px; position: relative; margin: 0em 0;
+                    padding-right: 2vmax; padding-left: 2vmax;
+                    padding-top: 2vmax; padding-bottom: 2vw;"
+                        width="35%">
+                        <div>
+                        <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
+                            Next Speaker
+                            <a href="???"
+                               style="text-decoration:underline; font-family: Merriweather;">
+                                ???
+                            </a>
+                        </span>
+                            <div class="row">
+                                <div class="subcolumn1" style="background-color:#ffffff;">
+                                    <img alt="Speaker" src="???.jpg" width="100%">
+                                </div>
+                                <div class="subcolumn2" style="background-color:#ffffff;">
+                                    <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                        Selected Publications
+                                    </div>
+                                    <div class="main" style="text-align: justify; text-justify:auto;">
+                                        <li style=" padding-bottom: 8px;">
+                                        </li>
+                                        <li>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+-->
+<!--<table border="0" class="main" width="75%">
+    <tr>
+        <td width="100%">
+            <table align="center" border="0" cellspacing="0px" id="demo_1"
+                   style="line-height:0; padding-top: 3vmax; padding-bottom: 1.5vw;" valign="top"
+                   width="100%">
+                <tbody>
+                <tr>
+                    <td style="border: solid 2px  #3498DB;
+                    border-radius: 8px; position: relative; margin: 0em 0;
+                    padding-right: 2vmax; padding-left: 2vmax;
+                    padding-top: 2vmax; padding-bottom: 2vw;"
+                        width="35%">
+
+                        <div>
+                            <span class="box-title">Next Seminar</span>
+                            <table border="0" class="main" style="font-size: 1.2vmax;" width="100%">
+                                <tr>
+                                    <td valign="top" width="6%">Date</td>
+                                    <td style="padding-left: 2vw;" width="79%">Oct/22/2021</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Time</td>
+                                    <td style="padding-left: 2vw;" width="79%">Japan Standard Time (UTC+9h)</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%"></td>
+                                    <td style="padding-left: 2vw;" width="79%">10:00 AM ~ 11:30 AM</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Speaker</td>
+                                    <td style="padding-left: 2vw;" width="79%"><a
+                                            href="https://www.chicagobooth.edu/faculty/directory/x/dacheng-xiu"
+                                            style="text-decoration:underline;">Dacheng Xiu</a>&nbsp;&nbsp;University
+                                        of Chicago
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Title</td>
+                                    <td style="padding-left: 2vw;" width="79%">Test Assets and Weak Factors</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Abstract</td>
+                                    <td style="padding-left: 2vw;text-align: justify; text-justify:auto;"
+                                        width="79%">
+                                        Estimation and testing of factor models in asset
+                                        pricing requires choosing a set of test assets.<span
+                                            id="dots">...</span><span id="more">
+                                            The choice of test assets determines how
+                well different factor risk premia can be identified: if only few assets are exposed to a
+                factor, that factor is weak, which makes standard estimation and inference incorrect. In
+                other words, the strength of a factor is not an inherent property of the factor: it is a
+                property of the cross-section used in the analysis. We propose a novel way to select assets
+                from a universe of test assets and estimate the risk premium of a factor of interest, as
+                well as the entire stochastic discount factor, that explicitly accounts for weak factors and
+                test assets with highly correlated risk exposures. We refer to our methodology as supervised
+                principal component analysis (SPCA), because it iterates an asset selection step and a
+                principal-component estimation step. We provide the asymptotic properties of our estimator,
+                and compare its limiting behavior with that of alternative estimators proposed in the recent
+                literature, which rely on PCA, Ridge, Lasso, and Partial Least Squares (PLS). We find that
+                the SPCA is superior in the presence of weak factors, both in theory and in finite samples.
+                We illustrate the use of SPCA by applying it to estimate the risk premia of several tradable
+                and nontradable factors, to evaluate asset managers’ performance, and to de-noise asset
+                pricing factors.
+                </span><br>
+                                        &#9656;
+                                        <u id="myBtn" onclick="myFunction()">Read more</u>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Venue</td>
+                                    <td style="padding-left: 2vw;" width="79%">Zoom meeting
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Video</td>
+                                    <td style="padding-left: 2vw;" width="79%">
+                                        <a style="text-decoration:underline; font-family: Oswald;"
+                                           href="https://us06web.zoom.us/rec/share/Cw9uQaASXJKRUkwsEyAxsvvWhDIJRXUqBKg85kw6mYJQbUDvRVX7fbpPKNXcUsk8.dNskb93jN2NxIrQ5">
+                                        Click here to see the video</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Chair</td>
+                                    <td style="padding-left: 2vw;" width="79%">
+                                        <a style="text-decoration:underline; font-family: Oswald;"
+                                           href="https://sites.google.com/site/wenjiemetrics/home">
+                                        Wenjie Wang</a> Nanyang Technological University
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="6%">Hosts</td>
+                                    <td style="padding-left: 2vw;" width="79%">TEDS and Nanyang Technological University
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </td>
+
+                    <td style="padding-bottom: 1vmax; font-size: 1vw;" width="2%">
+                        <font color=#ffffff>abc</font></td>
+
+                    <td style="font-size: 1.2vmax; line-height:1.2;
+                    border: solid 2px #3498DB; border-radius: 8px; position: relative; margin: 0em 0;
+                    padding-right: 2vmax; padding-left: 2vmax;
+                    padding-top: 2vmax; padding-bottom: 2vw;"
+                        width="35%">
+                        <div>
+                        <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
+                            Next Speaker
+                            <a href="https://www.chicagobooth.edu/faculty/directory/x/dacheng-xiu"
+                               style="text-decoration:underline; font-family: Merriweather;">
+                                Dacheng Xiu
+                            </a>
+                        </span>
+                            <div class="row">
+                                <div class="subcolumn1" style="background-color:#ffffff;">
+                                    <img alt="Speaker" src="xiu.jpg" width="100%">
+                                </div>
+                                <div class="subcolumn2" style="background-color:#ffffff;">
+                                    <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                        Selected Publications
+                                    </div>
+                                    <div class="main" style="text-align: justify; text-justify:auto;">
+                                        <li style=" padding-bottom: 8px;">Feng, G., Giglio, S., & Xiu, D.
+                                            (2020). Taming the factor zoo: A test of new factors. The Journal of
+                                            Finance, 75(3), 1327-1370.
+                                        </li>
+                                        <li>Gu, S., Kelly, B., & Xiu, D. (2020). Empirical asset pricing via
+                                            machine learning. The Review of Financial Studies, 33(5), 2223-2273.
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+-->
+<!--<h1></h1>-->
+
+<!--<div style="width:100%;  height:800px; ">
+    <table border="0" class="main" width="75%">
+        <tr>
+            <td width="100%">
+                <table align="center" border="0" cellspacing="0px" id="demo_1"
+                       style="line-height:0; padding-top: 3vmax; padding-bottom: 1.5vw;" valign="top"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <td style="border: solid 2px  #3498DB;
+                        border-radius: 8px; position: relative; margin: 0em 0;
+                        padding-right: 2vmax; padding-left: 2vmax;
+                        padding-top: 2vmax; padding-bottom: 2vw;"
+                            width="35%">
+
+                            <div>
+                                <span class="box-title">Next Seminar</span>
+                                <table border="0" class="main" style="font-size: 1.2vmax;" width="100%">
+                                    <tr>
+                                        <td valign="top" width="6%">Date</td>
+                                        <td style="padding-left: 2vw;" width="79%">Oct/12/2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Time</td>
+                                        <td style="padding-left: 2vw;" width="79%">Japan Standard Time
+                                            (UTC+9h)
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td valign="top" width="6%"></td>
+                                        <td style="padding-left: 2vw;" width="79%">10:30 AM ~ 12:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Speaker</td>
+                                        <td style="padding-left: 2vw;" width="79%"><a
+                                                href="https://yangfeng.hosting.nyu.edu"
+                                                style="text-decoration:underline;">Yang
+                                            Feng</a>&nbsp;&nbsp;New York University
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Title</td>
+                                        <td style="padding-left: 2vw;" width="79%">RaSE: Random Subspace
+                                            Ensemble Classification
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Abstract</td>
+                                        <td style="padding-left: 2vw; text-align: justify; text-justify:auto;"
+                                            width="79%">
+                                            We propose a flexible ensemble classification framework, Random
+                                            Subspace Ensemble (RaSE), for
+                                            sparse classification.<span
+                                                id="dots">...</span><span id="more">
+                                                In the RaSE algorithm, we aggregate many weak learners,
+                    where each weak learner is a base classifier trained in a subspace optimally selected from a
+                    collection of random subspaces. To conduct subspace selection, we propose a new criterion, ratio
+                    information criterion (RIC), based on weighted Kullback-Leibler divergence. The theoretical
+                    analysis includes the risk and Monte-Carlo variance of the RaSE classifier, establishing the
+                    screening consistency and weak consistency of RIC, and providing an upper bound for the
+                    misclassification rate of the RaSE classifier. In addition, we show that in a high-dimensional
+                    framework, the number of random subspaces needs to be very large to guarantee that a subspace
+                    covering signals is selected. Therefore, we propose an iterative version of the RaSE algorithm
+                    and prove that under some specific conditions, a smaller number of generated random subspaces
+                    are needed to find a desirable subspace through iteration. An array of simulations under various
+                    models and real-data applications demonstrate the effectiveness and robustness of the RaSE
+                    classifier and its iterative version in terms of low misclassification rate and accurate feature
+                    ranking. The RaSE algorithm is implemented in the R package RaSEn on CRAN.
+                    <br>Paper: <br><a
+                                                href="https://jmlr.org/beta/papers/v22/20-600.html"
+                                                class="color1"
+                                                style="text-decoration:underline;">https://jmlr.org/beta/papers/v22/20-600.html</a>
+                    <br>Package: <br><a
+                                                href="https://cran.r-project.org/web/packages/RaSEn/index.html"
+                                                class="color1"
+                                                style="text-decoration:underline;">https://cran.r-project.org/web/packages/RaSEn/index.html
+                    </a></span><br>
+                                            &#9656;
+                                            <u id="myBtn" onclick="myFunction()">Read more</u>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="6%">Venue</td>
+                                        <td style="padding-left: 2vw;" width="79%"><a
+                                                href="https://us06web.zoom.us/j/86526377715?pwd=MXdTVzR6L3ltU0lUT1h6T1pRTHhJUT09"
+                                                style="text-decoration:underline; font-family: Oswald;">Click
+                                            here to join the Zoom
+                                            Meeting</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </td>
+
+                        <td style="padding-bottom: 1vmax; font-size: 1vw;" width="2%">
+                            <font color=#ffffff>abc</font></td>
+
+                        <td style="font-size: 1.2vmax; line-height:1.2;
+                        border: solid 2px #3498DB; border-radius: 8px; position: relative; margin: 0em 0;
+                        padding-right: 2vmax; padding-left: 2vmax;
+                        padding-top: 2vmax; padding-bottom: 2vw;"
+                            width="35%">
+                            <div>
+                            <span class="box-title" style="padding-bottom: 10px; font-family: Roboto;">
+                                Next Speaker
+                                <a href="https://yangfeng.hosting.nyu.edu"
+                                   style="text-decoration:underline; font-family: Merriweather;">
+                                    Yang Feng
+                                </a>
+                            </span>
+                                <div class="row">
+                                    <div class="subcolumn1" style="background-color:#ffffff;">
+                                        <img alt="Speaker" src="yangfeng.jpg" width="100%">
+                                    </div>
+                                    <div class="subcolumn2" style="background-color:#ffffff;">
+                                        <div style=" padding-bottom: 8px; font-family: Roboto;">
+                                            Selected Publication
+                                        </div>
+                                        <div class="main" style="text-align: justify; text-justify:auto;">
+                                            <li style=" padding-bottom: 8px;">Tian, Y., & Feng, Y. (2021). RaSE:
+                                                Random Subspace Ensemble Classification. J. Mach. Learn. Res.,
+                                                22, 45-1.
+                                            </li>
+                                            <li>Tian, Y., & Feng, Y. (2021). RaSE: A variable screening
+                                                framework via random subspace ensembles. Journal of the American
+                                                Statistical Association, (just-accepted), 1-30.
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    -->
+

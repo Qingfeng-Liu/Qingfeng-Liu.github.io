@@ -142,6 +142,7 @@ p.p3 {
         margin: 0.0px 0.0px 0.0px 0.0px;
         margin-left: auto;
         margin-right: auto;
+        font-size: 1.5vh;
         width: 75%;
     }
 
@@ -298,7 +299,7 @@ a.color1:link{
 }
 a.color1:visited {
 	color:  #626567; text-decoration:underline; /*#358AC3; */
-	font-weight: Bold;
+	font-weight: 450;
 	font-family: Roboto;
 }
 a.color1:hover {

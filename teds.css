@@ -29,6 +29,16 @@ body {
   height: auto;
 }
 
+.thumbnail {
+    display: inline-block; /* ここがポイント */
+    height: 80px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.thumbnail img {
+    height: 100%;
+}
+
 h1 {
   width: 75%;
   font-family: "Roboto";

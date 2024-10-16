@@ -29,14 +29,9 @@ body {
   height: auto;
 }
 
-.thumbnail {
-    display: inline-block; /* ここがポイント */
-    height: 80px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-}
-.thumbnail img {
-    height: 100%;
+.same_height img{
+    height: 150px;
+    width: auto;
 }
 
 h1 {

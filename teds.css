@@ -29,9 +29,12 @@ body {
   height: auto;
 }
 
+.same_height{
+    display: flex;
+}
 .same_height img{
-    height: 150px;
-    width: auto;
+    object-fit: cover;
+    width: calc(100%/2);
 }
 
 h1 {

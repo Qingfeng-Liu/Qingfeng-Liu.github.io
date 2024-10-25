@@ -79,6 +79,18 @@ h3 {
   margin-top: 12px;
 }
 
+h5 {
+  width: 75%;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  font-weight: Normal;
+  font-size: 1vmax;
+  color: #EE490D/*#3498DB*/;
+  margin-left: auto;
+  margin-right: auto;
+  /*color: #358AC3;*/
+}
+
 p.p3 {
         margin: 0.0px 0.0px 0.0px 0.0px;
         font: 1vw '"franklin_gothic"';

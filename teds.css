@@ -350,15 +350,6 @@ a.color1:active {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* モバイルデバイス用のスタイル */
-@media (max-width: 768px) {
-  .container2 {
-    height: 40vh; /* モバイル用の高さを縮小 */
-  }
-  .container3 {
-    height: 30vh; /* モバイル用の高さを縮小 */
-  }
-}
 
 /* モバイルデバイス用のスタイル */
 @media (max-width: 768px) {

@@ -332,26 +332,26 @@ a.color1:active {
   background: linear-gradient(to bottom left, #000066 2%, #006666 100%);
   font-family: 'Noto Sans JP', sans-serif;
 }
-.container2, .container3 {
+.container2 {
   position: relative;
   width: 100%;
   background-image: url('bottom.png');
+  background-attachment: fixed;
   background-size: cover; /* 画像をコンテナに合わせてカバー */
-  background-position: center; /* 画像を中央に配置 */
-  background-repeat: no-repeat; /* 画像の繰り返しを防止 */
-  height: auto; /* 高さを内容に合わせて自動調整 */
-  padding: 20px 0; /* パディングを追加 */
+  background-position: center; /* 画像の中央部分を表示 */
+  background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
 }
 
 .container3 {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background-image: url('bottom.png');
+  background-attachment: fixed;
+  background-size: cover; /* 画像をコンテナに合わせてカバー */
+  background-position: center; /* 画像の中央部分を表示 */
+  background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
   font-family: 'Noto Sans JP', sans-serif;
-}
-
-/* モバイルデバイス用のスタイル */
-@media (max-width: 768px) {
-  .container2, .container3 {
-    padding: 10px 0; /* モバイル用のパディングを縮小 */
-  }
 }
 
 

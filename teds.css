@@ -342,12 +342,22 @@ a.color1:active {
 }
 
 .container2 {
-  height: 60vh; /* ビューポートの高さに基づいて高さを設定 */
+  height: 60vh; /* デスクトップ用の高さ */
 }
 
 .container3 {
-  height: 40vh; /* ビューポートの高さに基づいて高さを設定 */
+  height: 40vh; /* デスクトップ用の高さ */
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* モバイルデバイス用のスタイル */
+@media (max-width: 768px) {
+  .container2 {
+    height: 40vh; /* モバイル用の高さを縮小 */
+  }
+  .container3 {
+    height: 30vh; /* モバイル用の高さを縮小 */
+  }
 }
 
 /* モバイルデバイス用のスタイル */

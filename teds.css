@@ -332,21 +332,29 @@ a.color1:active {
   background: linear-gradient(to bottom left, #000066 2%, #006666 100%);
   font-family: 'Noto Sans JP', sans-serif;
 }
-.container2 {
+.container2, .container3 {
   position: relative;
   width: 100%;
   background-image: url('bottom.png');
-  background-attachment: fixed;
-  background-size: 100% 60%;
+  background-size: cover; /* 画像をコンテナに合わせてカバー */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しを防止 */
 }
+
+.container2 {
+  height: 60vh; /* ビューポートの高さに基づいて高さを設定 */
+}
+
 .container3 {
-  position: relative;
-  width: 100%;
-  height: 10%;
-  background-image: url('bottom.png');
-  background-attachment: fixed;
-  background-size: 100% 40%;
+  height: 40vh; /* ビューポートの高さに基づいて高さを設定 */
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* モバイルデバイス用のスタイル */
+@media (max-width: 768px) {
+  .container2, .container3 {
+    background-attachment: scroll; /* モバイルでは固定背景を無効化 */
+  }
 }
 
 

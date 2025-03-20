@@ -339,22 +339,18 @@ a.color1:active {
   background-size: cover; /* 画像をコンテナに合わせてカバー */
   background-position: center; /* 画像を中央に配置 */
   background-repeat: no-repeat; /* 画像の繰り返しを防止 */
-}
-
-.container2 {
-  height: 60vh; /* デスクトップ用の高さ */
+  height: auto; /* 高さを内容に合わせて自動調整 */
+  padding: 20px 0; /* パディングを追加 */
 }
 
 .container3 {
-  height: 40vh; /* デスクトップ用の高さ */
   font-family: 'Noto Sans JP', sans-serif;
 }
-
 
 /* モバイルデバイス用のスタイル */
 @media (max-width: 768px) {
   .container2, .container3 {
-    background-attachment: scroll; /* モバイルでは固定背景を無効化 */
+    padding: 10px 0; /* モバイル用のパディングを縮小 */
   }
 }
 

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="teds.css" rel="stylesheet">
+    <title>DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JHSLM57DKB');
+
+
+
+
+
+    </script>
+
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0 " name="viewport">
+
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .justified-text {
+            text-align: justify;
+            text-justify: inter-character;
+            font-size: 1.1vmax;
+            line-height: 1.8;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        a.color1 {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a.color1:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<div id="navbar">
+    <table align="center" border="0" cellpadding="0">
+        <tr>
+            <td><a href="#MEMBERS">
+                <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
+            </a>
+            </td>
+            <td width="6vw"></td>
+            <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
+                <div class="p5" style="font-size: 1vmax;">RESEARCH
+                </div>
+            </a></td>
+
+            <td width="6vw"></td>
+            <td><a href="#NEWS">
+                <div class="p5" style="font-size: 1vmax;">NEWS
+                </div>
+            </a></td>
+            <td width="6vw"></td>
+            <td><a href="#CONFER">
+                <div class="p5" style="font-size: 1vmax;">CONFERENCE
+                </div>
+            </a>
+            <td width="6vw"></td>
+            <td><a href="https://ise-hp.ws.hosei.ac.jp">
+                <div class="p5" style="font-size: 1vmax;">HOSEI
+                </div>
+            </a>
+                </a>
+            </td>
+            <td width="6vw"></td>
+            <td><a href="#HEADER">
+                <div class="p5" style="font-size: 1vmax;">TOP
+                </div>
+            </a>
+            </td>
+
+
+        </tr>
+    </table>
+</div>
+
+<!--================-->
+<!--　　HEADER　　-->
+<!--================-->
+<div id="HEADER">
+    <!--<img style="position: absolute; left: 100px; top: 100px; z-index: 1;" src="eo_hosei.jpg" width="200">-->
+    <!--style="border-style: solid; border-width: 0px; border-top-width: 5px; border-color: #EE490D;"-->
+    <div class="container2" id="next" style="text-align: left;">
+        <hr style="border: 1px solid transparent; margin-top: -10px; padding-top: 10px; padding-bottom: 0px;">
+        <table border="0" class="main" width="90%">
+    <tr>
+        <td width="100%">
+            <p class="p7"
+               style="font-size: 2.0vmax; text-align: justify; text-align: Center;
+               text-justify:auto; margin-top: 7vmin;margin-bottom: 0.8vmin; line-height:1.5; ">
+                <font color=#ffffff>法政大学数据科学与计量经济学研究室<br>
+                    Data Science & Econometrics Laboratory - DSELab
+                </font></p>
+        </td>
+    </tr>
+</table>
+<hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 0px; padding-bottom: 0px;">
+
+<table border="0" class="main" width="80%">
+    <tr>
+        <td>
+            <p class="p7" style="font-size: 1.5vmax; text-align: Center;
+            text-justify:auto;  margin-top: 2.5vmin; margin-bottom: 1.5vmax;line-height:1.8;">
+                <font color=#ffffff>
+                    展开关于数据科学和计量经济学的研究<br>
+                    开发机器学习和计量经济学方法<br>
+                    将其应用于社会科学和自然科学
+                </font>
+            </p>
+        </td>
+    </tr>
+</table>
+<hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 20px; padding-bottom: 0px;">
+</div>
+</div>
+<table style="box-shadow: 2px 2px 2px #eeeeee; width: 100%; border-collapse: collapse;">
+    <tr>
+        <td style="text-align: center; padding: 10px 0;">
+            <table align="center" border="0" cellpadding="0" cellspacing="25vw" style="margin: 0 auto;">
+                <tr>
+                    <td><a href="#MEMBERS">
+                        <div class="p5" style="font-size: 1vmax;">成员</div>
+                    </a></td>
+                    <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
+                        <div class="p5" style="font-size: 1vmax;">研究</div>
+                    </a></td>
+                    <td><a href="#NEWS">
+                        <div class="p5" style="font-size: 1vmax;">新闻</div>
+                    </a></td>
+                    <td><a href="#CONFER">
+                        <div class="p5" style="font-size: 1vmax;">会议</div>
+                    </a></td>
+                    <td><a href="https://ise-hp.ws.hosei.ac.jp">
+                        <div class="p5" style="font-size: 1vmax;">法政大学</div>
+                    </a></td>
+                    <td><a href="#HEADER">
+                        <div class="p5" style="font-size: 1vmax;">首页</div>
+                    </a></td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="padding-top: 0px;"> <!-- 间隔调整为0px -->
+                        <table align="center" border="0" cellpadding="0" cellspacing="8vw" style="margin: 0 auto;">
+                            <tr>
+                                
+                                <td><a href="https://qingfeng-liu.github.io/index_cn.html" class="color1">
+                                    <div style="font-size: 1vmax;">中文</div>
+                                </a></td>
+                                <td><a href="https://qingfeng-liu.github.io/index.html" class="color1">
+                                    <div style="font-size: 1vmax;">日文</div>
+                                </a></td>
+                                <td><a href="https://qingfeng-liu.github.io/index_en.html" class="color1">
+                                    <div style="font-size: 1vmax;">英文</div>
+                                </a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+}
+
+
+</script>
+
+
+<div>
+    <div>
+        <div class="anchor" id="NEWS"></div>
+        <div class="anchor" id="CONFER"></div>
+
+        <div>
+            <table border="0" class="main" width="75%">
+                <tr>
+                    <td style="padding-top: 1vmax; padding-bottom: 1vmax;" width="100%">
+                        <table align="center" border="0" cellspacing="0" id="demo_1"
+                               style="font-size: 1.2vmax; text-justify:auto;"
+                               width="100%">
+                            <tbody>
+                            <tr>
+                                <td align="center" valign="top" width="0%"></td>
+                                <td align="left" style="border-bottom-width: 1px;
+                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="48%">
+                                    <img alt="shikotsuko" src="shikotsuko01.png"
+                                         style="border-bottom: 1px solid #c4c4ce;"
+                                         width="100%">
+                                    <!--src="shikotsuko2.png" alt="Lake Shikotsu"-->
+                                    <div style="line-height: 2vmax; padding: 15px">
+                                        <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                                            以下は、日本語の部分を中国語に翻訳したコードです。
+
+```html
+<p class="p5" style="font-size: 1.2vmax;">
+    通知
+</p>
+</div>
+<div style="padding-bottom: 15px">
+    2024/10/21 论文学术期刊发表决定 Gu, D., Liu, Q. 和 Zhang, X., (2024), Model
+    Averaging under Flexible Loss Functions.
+    <i>INFORMS Journal on Computing</i>.<br>
+    2024/04/01 论文学术期刊发表决定 Liu, Q. 和 Feng, Y., (2024), Machine
+    Collaboration.
+    <i>stat</i>. <a class="color1"
+                    href="https://arxiv.org/abs/2105.02569">PDF</a><br>
+    鴇田 優太 (2022年入学) <a class="color1"
+                             href="https://signate.jp/competitions/1106">SIGNATE竞赛<br></a>第七名入奖
+    (2023).<br>
+    2024/04/01 研究室招募 <a href="semi_intro.pdf">PDF</a> <a
+        href="semi_intro.pptx">幻灯片</a> <a
+        href="https://www.youtube.com/watch?v=E-qVjWBCrug">视频</a>
+    刘研究室招募三年级学生.<br>
+    <span id="dots2"></span><span
+        id="more2">
+        2022/04/03 研究室招募 <a href="semi_intro.pdf">PDF</a> <a
+        href="semi_intro.pptx">幻灯片</a> <a
+        href="https://www.youtube.com/watch?v=E-qVjWBCrug">视频</a>
+        刘研究室招募三年级学生.<br>
+        2022/04/03 研究室网页公开. <br><br></span>
+    &#9656;
+    <u id="myBtn2" onclick="moreFunction()">阅读更多</u>
+</div>
+</div>
+
+<td align="center" style="padding-bottom: 2vmax;" valign="top" width="4%">
+    <font color=#ffffff>abc</font></td>
+<td align="left" style="border-bottom-width: 1px;
+border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="48%">
+    <img alt="Global" src="Global01.png" style="border-bottom: 1px solid #c4c4ce;"
+         width="100%">
+    <div style="line-height: 2vmax; padding: 15px">
+        <div align="left"
+             style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
+        text-transform: uppercase;">
+            <p class="p5" style="font-size: 1.2vmax;">
+                研究会系列
+            </p>
+        </div>
+        <div style="padding-bottom: 15px">
+
+            <a class="color1" href="https://teds-datascience.github.io/seminars/"
+               style="text-decoration:underline;">
+                跨学科计量经济学与数据科学研讨会</a>
+            （学科共创计量经济学与数据科学研讨会）
+        </div>
+
+        <div align="left"
+             style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
+        text-transform: uppercase;">
+            <p class="p5" style="font-size: 1.2vmax;">
+             2025年统计网络分析与更多工作坊 (SNAB 2025)
+            </p>
+        </div>
+        <div style="padding-bottom: 15px">
+             <a class="color1" href="https://yangfengstat.github.io/snab2025/"
+               style="text-decoration:underline;"> 
+               SNAB 2025 将于2025年6月2日至4日在东京著名的酒店新大谷举行。
+             </a>
+        </div>
+
+        <div align="left"
+             style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
+        text-transform: uppercase;">
+            <p class="p5" style="font-size: 1.2vmax;">
+                ACIEK(winter)-IMIP2024
+            </p>
+        </div>
+        <div style="padding-bottom: 15px">
+            开幕词 劉 慶豊
+        </div>
+        <div class="same_height">
+            <img alt="ACIEK_01" src="Opening_Speech_2024_IMIP.jpeg"
+                 style="border-bottom: 1px solid #c4c4ce;"
+            ><img alt="ACIEK_02" src="Opening_Speech_02.jpeg"
+                  style="border-bottom: 1px solid #c4c4ce;"
+            >
+        </div>
+        <div style="line-height: 2vmax; padding-left: 15px">
+        </div>
+    </div>
+
+<td align="center" valign="top" width="0%"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+
+</div>
+</div>
+
+
+<div>
+    <h1></h1>
+    <div class="anchor" id="MEMBERS"></div>
+    <div style="width:100%; height:100%;">
+        <h2>教职员</h2>
+        <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+            <tr>
+                <td rowspan="2" style="padding-right: 2vw; vertical-align: top;" width="25%">
+                    <img alt="Prof. Qingfeng Liu" src="Qingfeng_Liu.jpg" width="100%">
+                </td>
+                <td style="padding-left: 1vw; vertical-align: top;">
+                    <strong>教授&nbsp;&nbsp;</strong> 刘 慶豊　
+                    <a class="color1" href="https://qingfeng-liu.github.io/index1.html">个人主页</a>
+                    &nbsp;&nbsp;
+                    <a class="color1" href="CV.pdf">简历</a>
+                    <br>
+                    <strong>出生&nbsp;&nbsp;</strong> 中国内蒙古自治区 &nbsp;&nbsp;
+                    <br>
+                    <strong>学位&nbsp;&nbsp;</strong> 京都大学经济学博士 &nbsp;&nbsp;
+                    <br>
+                    <strong>兴趣&nbsp;&nbsp;</strong> 篮球, 围棋 &nbsp;&nbsp;
+                    <br>
+                    <strong>电子邮件&nbsp;&nbsp;</strong> qliu[at]hosei.ac.jp
+                    <br>
+                    <p class="justified-text">
+                        刘庆丰教授从事数据科学、计量经济学和机器学习（人工智能的基础技术之一）领域的研究。目前，他担任法政大学理工学部教授，同时也是纽约大学全球公共卫生学院的共同研究员（Research
+                        Affiliate）。他于2007年在京都大学获得经济学博士学位，之后前往美国，在普林斯顿大学（Princeton
+                        University）担任博士后研究员。
+
+                        他曾在京都大学和美国哥伦比亚大学担任客座教授和访问学者，并将其研究成果发表在《Journal of Business & Economic Statistics》和《Econometric Reviews》等国际期刊，同时也担任《Economics》和《Open Economics》等国际期刊的编辑委员会成员。
+
+                        他曾获得新潟大学经济学会奖、ACIEK(Winter)-IMIP 2024卓越贡献奖以及IEOM2024东京大会优秀会议奖等荣誉。近年来，他致力于推动机器学习与计量经济学的结合，获得了日本学术振兴会（JSPS）的科研资金以及全国银行学术研究振兴基金会的学术研究资助，探索了注重隐私保护的经济分析新方法——联邦学习（Federated Machine Learning）。
+
+                        刘教授致力于利用机器学习和计量经济学方法为经济问题的解决和产业技术发展做出贡献，应用于物联网、大数据分析、金融科技等领域，目标是为第四次产业革命和社会5.0提供解决方案。
+                    <br>
+                    <strong>信条&nbsp;&nbsp;</strong> 一旦决定做，就要愉快地做，做就要做到极致。
+                    <br>
+                    <strong>预言&nbsp;&nbsp;</strong> 日本经济将凭借匠心精神复兴。 &nbsp;&nbsp;
+                    <br>
+                    <strong>心得&nbsp;&nbsp;</strong> 不要对立，要把人们当做伙伴。&nbsp;&nbsp;
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<h1></h1>
+<div>
+    <table align="center" border="0" width="75%">
+        <tr>
+            <td style="padding-bottom: 0vmax; padding-top: 2vmax; padding-left: 0vmax;
+            padding-right: 0vmax;" width="100%">
+
+                <table align="center" border="0" cellspacing="0" id="demo_1"
+                       style="font-size: 1.2vmax; text-justify:auto;"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <td align="left" style="box-shadow: 0 0 0 0px #c4c4c4 inset;vertical-align: middle;
+                        border-top-width: 10px; border-left-width: 0px; border-right-width: 0px;
+                        border-bottom-width: 0px; border-color: #ffffff;" valign="top" width="48%">
+                            <figure>
+                                <img border="0"
+                                     src="Ensemble_Learning.png"
+                                     style="border-bottom: 0px solid #c4c4ce;"
+                                     width="100%">
+                                <figcaption><p style="text-align:center">
+                                    Three types of Ensemble Learning
+                                </p></figcaption>
+                            </figure>
+                        </td>
+                        <td align="center" style="padding-bottom: 2vmax;" valign="top" width="4%">
+                            <font color=#ffffff>abc</font></td>
+                        <td align="left" style="box-shadow: 0 0 0 0px #c4c4c4 inset;vertical-align: bottom;
+                        border-top-width: 10px; border-left-width: 0px; border-right-width: 0px;
+                        border-bottom-width: 0px; border-color: #ffffff;" valign="top" width="48%">
+                            <hr style="border: 0px solid transparent; margin-top: -10px; padding-top: 10px; padding-bottom: 0px;">
+                            <figure>
+                                <img src="mac.jpg"
+                                     style="border-bottom: 0px solid #c4c4ce;"
+                                     width="100%">
+                                <hr style="border: 0px solid transparent; margin-top: -10px; padding-top: 40px; padding-bottom: 0px;">
+                                <figcaption style="vertical-align : bottom;">
+                                    <p style="text-align:center">
+                                        Machine Collaboration of two base machines
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        <td align="center" valign="top" width="0%"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
+<h1></h1>
+<h2>奖项 受奖等</h2>
+<div>
+    <table border="0" class="main" width="75%">
+        <tr>
+            <td style="padding-top: 0vmax; padding-bottom: 1vmax;" width="100%">
+                <table align="center" border="0" cellspacing="0" id="demo_1"
+                       style="font-size: 1.2vmax; text-justify:auto;"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <!--<td align="center" valign="top" width="3%"></td> -->
+                        <td align="left" style="border-bottom-width: 1px;
+                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="100%">
+                            <div class="same_height">
+                                <img alt="ACIEK_01" src="ACIEK_Award.jpg"
+                                     style="border-bottom: 1px solid #c4c4ce;"
+                                ><img alt="ACIEK_02" src="Scene03.jpeg"
+                                      style="border-bottom: 1px solid #c4c4ce;"
+                            >
+                            </div>
+                            <div style="line-height: 2vmax; padding-left: 15px">
+                                <div style="padding-bottom: 0px">
+                                    <p>
+                                        刘庆丰 ACIEK(winter)-IMIP2024<br>
+                                        杰出贡献奖
+                                    </p>
+                                </div>
+                            </div>
+
+
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div>
+    <table border="0" class="main" width="75%">
+        <tr>
+            <td style="padding-top: 0vmax; padding-bottom: 1vmax;" width="100%">
+                <table align="center" border="0" cellspacing="0" id="demo_1"
+                       style="font-size: 1.2vmax; text-justify:auto;"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <!--<td align="center" valign="top" width="3%"></td> -->
+                        <td align="left" style="border-bottom-width: 1px;
+                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="100%">
+                            <div class="same_height">
+                                <img alt="ACIEK_01" src="IEOM_Award.JPG"
+                                     style="border-bottom: 1px solid #c4c4ce;"
+                                ><img alt="ACIEK_02" src="IEOM2024.JPG"
+                                      style="border-bottom: 1px solid #c4c4ce;"
+                            >
+                            </div>
+                            <div style="line-height: 2vmax; padding-left: 15px">
+                                <div style="padding-bottom: 0px">
+                                    <p>
+                                        刘庆丰 IEOM 2024 东京<br>
+                                        杰出会议奖
+                                    </p>
+                                </div>
+                            </div>
+
+
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div>
+    <table border="0" class="main" width="75%">
+        <tr>
+            <td style="padding-top: 0vmax; padding-bottom: 1vmax;" width="100%">
+                <table align="center" border="0" cellspacing="0" id="demo_1"
+                       style="font-size: 1.2vmax; text-justify:auto;"
+                       width="100%">
+                    <tbody>
+                    <tr>
+                        <!--<td align="center" valign="top" width="3%"></td> -->
+                        <td align="left" style="border-bottom-width: 1px;
+                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="100%">
+                            <img alt="tokita_compe" src="tokita_compe.png"
+                                 style="border-bottom: 1px solid #c4c4ce;"
+                                 width="100%">
+                            <div style="line-height: 2vmax; padding-left: 15px">
+                                <div style="padding-bottom: 0px">
+                                    <p>
+                                        鴇田優太 (2022年入ゼミ) SIGNATE竞赛第七名入奖 (2023)<br>
+                                        <a class="color1" href="https://signate.jp/competitions/1106">
+                                            テクノプロ・デザイン社 食品包装图像分析挑战赛</a>
+                                        （一般组、学生组）食品包装分类为食品和饮料!
+                                    </p>
+                                </div>
+                            </div>
+
+
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h1></h1>
+    <h2>本科毕业论文</h2>
+
+    <table border="0" class="main" style="font-size: 1.2vmax" width="75%">
+
+        <tr>
+            <td>
+                <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                    <p class="p5" style="font-size: 1.2vmax;">
+                        2024年度毕业生
+                    </p>
+                </div>
+                <div style="line-height: 2vmax; padding-bottom: 15px">
+                    [1] 使用机器学习构建和精度评估排名预测模型：以赛马预测为例, 岩崎照英, 田中幸佑, 德丸颯太, (2025).
+                    <a class="color1" href="20X4026_1.pdf">概要</a><br>
+
+                    [2] 技术指标与股票价格波动关系的实证分析, 久保村光汰, (2025).
+                    <a class="color1" href="abstract_tokita_2023.pdf">概要</a><br>
+
+                    [3] 以足球战略制定为目的的数据分析, 下村勘太, 林雅哉, (2025).
+                    <a class="color1" href="21X4029_1.pdf">概要</a><br>
+
+                    [4] 使用机器学习检测和分析财务舞弊, 田嶋俊纪, 平田円, (2025).
+                    <a class="color1" href="21X4037_1.pdf">概要</a><br>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" class="main" style="font-size: 1.2vmax" width="75%">
+
+        <tr>
+            <td>
+                <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                    <p class="p5" style="font-size: 1.2vmax;">
+                        2023年度毕业生
+                    </p>
+                </div>
+                <div style="line-height: 2vmax; padding-bottom: 15px">
+                    [1] 考虑泛化性能的食品包装图像分类, 鴇田优太, (2024). <a class="color1"
+                                                                                href="abstract_tokita_2023.pdf">概要</a>
+                    <a class="color1" href="thesis_tokita.pdf"> 正文</a>
+                    <a class="color1" href="beamer_tokita.pdf"> 幻灯片</a><br>
+                    [2] 会计审计中引入机器学习方法检测不正当行为的可行性, 舟桥纯平, (2024). <a
+                        class="color1" href="202302.pdf"></a>
+                    <br>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" class="main" style="font-size: 1.2vmax" width="75%">
+
+        <tr>
+            <td>
+                <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                    <p class="p5" style="font-size: 1.2vmax;">
+                        2022年度毕业生
+                    </p>
+                </div>
+                <div style="line-height: 2vmax; padding-bottom: 15px">
+                    [1] 使用推文数据和指数数据结合预测股票涨跌, 黒崎地大, 山田壮雄, (2023). <a class="color1"
+                                                                                            href="202201.pdf">概要</a><br>
+                    [2] 关于在解决人口问题中推行远程工作和移民支持政策的影响, 大岛宙也, 前田翼, (2023). <a class="color1"
+                                                                                                   href="202202.pdf">概要</a><br>
+                    [3] 关于足球比赛胜负因素的数据分析, 伊藤光毅, 鹿野紘树, 北林良太, (2023). <a class="color1"
+                                                                                           href="202203.pdf">概要</a>
+                    <br>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <h1></h1>
+    <h2>硕士论文</h2>
+
+    <table border="0" class="main" style="font-size: 1.2vmax" width="75%">
+
+        <tr>
+            <td>
+                <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                    <p class="p5" style="font-size: 1.2vmax;">
+                        2024年度硕士课程毕业生
+                    </p>
+                </div>
+                <div style="line-height: 2vmax; padding-bottom: 15px">
+                    [1] 使用对抗自编码器进行垂直联邦学习, 黄凯, (2025年毕业预定).
+                    <a class="color1" href="2024_huang.pdf">概要</a><br>
+
+                    [2] 使用差分机器学习进行粗波动率模型的校准, 黒崎地大, (2025年毕业预定).
+                    <a class="color1" href="2024_kurosaki.pdf">概要</a>
+                    <br>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h1></h1>
+    <h2>毕业生・修了生就业去向</h2>
+
+    <table border="0" class="main" style="font-size: 1.2vmax" width="75%">
+        <tr>
+            <td>
+                <div style="font-size: 1.5vmax; font-family: Roboto; color: #EE490D;
+                                    align: left; text-transform: uppercase;">
+                    <p class="p5" style="font-size: 1.2vmax;">
+                        2024年度毕业生・硕士课程毕业生就业去向
+                    </p>
+                </div>
+                <div style="line-height: 2vmax; padding-bottom: 15px">
+                    大型审计公司、警视厅、金融顾问公司、大型地方银行、大型信用卡公司、大型综合咨询公司、大型汽车制造商数据科学部门、大型IT公司软件开发部门（工作招聘）
+                    <br>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <h1></h1>
+    <h2>指导的博士学位获得者</h2>
+
+     <table border="0" class="main" style="font-size: 1.2vmax; width: 75%; margin: 0 auto;">
+        <tr>
+            <td>
+                <div style="line-height: 1.6;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
+                                <img src="qingsong_yao.jpg" alt="Qingsong Yao" style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
+                            </td>
+                            <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
+                                <strong style="font-size: 1.1em; color: #333;">Dr. Qingsong YAO</strong><br>
+                                经济学博士学位获得<br>
+                                毕业后所属: 路易斯安那州立大学助理教授, 美国.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
+                                <img src="ziyan_zhao.jpg" alt="Ziyan Zhao" style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
+                            </td>
+                            <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
+                                <strong style="font-size: 1.1em; color: #333;">Dr. Ziyan ZHAO</strong><br>
+                                商学博士学位获得<br>
+                                毕业后所属: 南洋理工大学研究员, 新加坡.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<h1></h1>
+
+
+<!--<img style="padding-bottom: 2vw;" width="100%" src="Lake_Shikotsu.png" alt="TEDS">-->
+<div class="container2" id="end" style="text-align: left;">
+
+    <hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 30px; padding-bottom: 0px;
+            padding-left: 0px;padding-right: 0px;">
+    <table border="0" class="main" width="90%">
+        <tr>
+            <td width="100%">
+                <p class="p7" style="font-size: 2.0vmax; text-align: justify; text-justify:auto;"><font
+                        color=#ffffff>Data Science & Econometrics Laboratory - DSELab</font>
+                </p>
+                <hr style="border: 1px solid transparent;">
+            </td>
+        </tr>
+
+        <tr>
+            <td width="100%">
+                <hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 5px; padding-bottom: 0px;">
+                <p class="p7"
+                   style="font-size: 1.2vmax; text-align: left; text-align: justify; text-justify:auto;">
+                    <font color=#ffffff>在科学的海洋里自由地游弋
+                    </font>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 40px; padding-bottom: 0px;">
+    <hr color="#FFFFFF" style=" margin-top: 10px; margin-bottom: 10px;" width="90%">
+    <table border="0" class="main" width="90%">
+        <tr>
+            <td width="100%">
+                <p class="p7" style="text-align: right; width: 100%;"><font color=#ffffff> E-mail: </font><a
+                        href="mailto: tedsseminars@gmail.com"><font
+                        color=#ffffff>tedsseminars@gmail.com</font></a></p>
+            </td>
+        </tr>
+    </table>
+    <h2></h2>
+    <table border="0" class="main" style="padding-bottom: 30px;" width="100%">
+    </table>
+</div>
+
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+
+
+
+
+</script>
+<script>
+function moreFunction() {
+  var dots2 = document.getElementById("dots2");
+  var moreText2 = document.getElementById("more2");
+  var btnText2 = document.getElementById("myBtn2");
+
+  if (dots2.style.display === "none") {
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "Read more";
+    moreText2.style.display = "none";
+  } else {
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Read less";
+    moreText2.style.display = "inline";
+  }
+}
+
+
+
+
+
+</script>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
+        type="text/javascript">
+</script>
+
+
+</body>
+</html>

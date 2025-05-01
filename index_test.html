@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qingfeng Liu | Data Science & Econometrics Lab | Hosei University</title>
     <link href="teds.css" rel="stylesheet">
+    <title>Qingfeng Liu, 劉 慶豊, 刘庆丰, DATA SCIENCE & Econometrics Lab (LIU), Hosei University, Liu Laboratory</title>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
@@ -16,23 +14,19 @@
     </script>
 
     <meta name="keywords" content="Qingfeng Liu, 劉 慶豊, 刘庆丰, machine learning, model averaging, econometrics, 機械学習, 人工知能, 計量経済学">
-    
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-bg: #f9f9f9;
-            --border-color: #e0e0e0;
-        }
-        
+        /* 元の色調と背景スタイルを保持 */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.8;
@@ -40,357 +34,328 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
+            background-image: url('Lake_Shikotsu.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
         }
         
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        .navbar {
-            background-color: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-table {
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-        
-        .nav-link {
-            padding: 8px 15px;
-            font-size: 1rem;
-            text-decoration: none;
-            color: var(--primary-color);
-            transition: color 0.3s;
-        }
-        
-        .nav-link:hover {
-            color: var(--secondary-color);
-        }
-        
-        .header {
-            background-color: var(--primary-color);
+        /* ヘッダー背景（元のスタイルを保持） */
+        .header-bg {
+            background-color: rgba(44, 62, 80, 0.9);
             color: white;
             padding: 40px 0;
             text-align: center;
         }
         
-        .section {
-            margin-bottom: 40px;
-            padding: 20px;
+        /* ナビゲーションバー（元のスタイルを保持） */
+        #navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        
+        /* コンテンツカード（元のスタイルに近い） */
+        .content-card {
             background-color: white;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
         }
         
-        h1, h2, h3 {
-            color: var(--primary-color);
+        /* 元のリンクカラーを保持 */
+        a.color1 {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a.color1:hover {
+            text-decoration: underline;
         }
         
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+        /* 元のフォントサイズ調整を保持 */
+        .justified-text {
+            text-align: justify;
+            text-justify: inter-character;
+            font-size: 1.1vmax;
+            line-height: 1.8;
         }
         
-        h2 {
-            font-size: 1.8rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px;
-            float: left;
-        }
-        
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        
-        .award-item {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .award-item::before {
-            content: "🏆";
-            position: absolute;
-            left: 0;
-        }
-        
-        .philosophy-box {
-            background-color: var(--light-bg);
-            padding: 20px;
-            border-left: 4px solid var(--secondary-color);
-            margin: 30px 0;
-        }
-        
-        .research-img {
-            width: 100%;
-            max-width: 400px;
-            margin: 15px 0;
-            border: 1px solid var(--border-color);
-        }
-        
-        .footer {
-            background-color: var(--primary-color);
+        /* フッター（元のスタイルを保持） */
+        .footer-bg {
+            background-color: rgba(44, 62, 80, 0.9);
             color: white;
             padding: 30px 0;
             text-align: center;
-            margin-top: 50px;
         }
         
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-            
-            .profile-img {
-                float: none;
-                display: block;
-                margin: 0 auto 20px;
-            }
+        /* アワードアイテムスタイル */
+        .award-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        /* 画像ギャラリースタイル */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .image-gallery img {
+            flex: 1 1 calc(50% - 15px);
+            max-width: calc(50% - 15px);
+            height: auto;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <div class="navbar">
-        <table class="nav-table">
+    <!-- ナビゲーションバー（元の構造を保持） -->
+    <div id="navbar">
+        <table align="center" border="0" cellpadding="0">
             <tr>
-                <td><a href="#MEMBERS" class="nav-link">MEMBERS</a></td>
-                <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ" class="nav-link">RESEARCH</a></td>
-                <td><a href="#NEWS" class="nav-link">NEWS</a></td>
-                <td><a href="#CONFER" class="nav-link">CONFERENCE</a></td>
-                <td><a href="https://ise-hp.ws.hosei.ac.jp" class="nav-link">HOSEI</a></td>
-                <td><a href="#HEADER" class="nav-link">TOP</a></td>
-            </tr>
-            <tr>
-                <td colspan="6" style="text-align: center; padding-top: 10px;">
-                    <a href="https://qingfeng-liu.github.io/index.html" class="nav-link">JAPANESE</a> | 
-                    <a href="https://qingfeng-liu.github.io/index_en.html" class="nav-link">ENGLISH</a> | 
-                    <a href="https://qingfeng-liu.github.io/index_cn.html" class="nav-link">CHINESE</a>
-                </td>
+                <td><a href="#MEMBERS">
+                    <div style="font-size: 1vmax;">MEMBERS</div>
+                </a></td>
+                <td width="6vw"></td>
+                <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
+                    <div style="font-size: 1vmax;">RESEARCH</div>
+                </a></td>
+                <td width="6vw"></td>
+                <td><a href="#NEWS">
+                    <div style="font-size: 1vmax;">NEWS</div>
+                </a></td>
+                <td width="6vw"></td>
+                <td><a href="#CONFER">
+                    <div style="font-size: 1vmax;">CONFERENCE</div>
+                </a></td>
+                <td width="6vw"></td>
+                <td><a href="https://ise-hp.ws.hosei.ac.jp">
+                    <div style="font-size: 1vmax;">HOSEI</div>
+                </a></td>
+                <td width="6vw"></td>
+                <td><a href="#HEADER">
+                    <div style="font-size: 1vmax;">TOP</div>
+                </a></td>
             </tr>
         </table>
     </div>
 
-    <!-- Header -->
-    <div id="HEADER" class="header">
-        <div class="container">
-            <h1>Hosei University Data Science & Econometrics Laboratory - DSELab</h1>
-            <p>Conducting research on data science and econometrics<br>
-            Developing methods in machine learning and econometrics<br>
-            Applying them to social and natural sciences</p>
+    <!-- ヘッダーセクション（元のスタイルを保持） -->
+    <div id="HEADER" class="header-bg">
+        <div style="width: 80%; margin: 0 auto;">
+            <p style="font-size: 2.0vmax; text-align: center; margin-top: 7vmin; margin-bottom: 0.8vmin; line-height:1.5;">
+                Hosei University Data Science & Econometrics Laboratory - DSELab
+            </p>
+            <hr style="border: 1px solid transparent; margin: 10px 0;">
+            <p style="font-size: 1.5vmax; text-align: center; margin-top: 2.5vmin; margin-bottom: 2.5vmax; line-height:1.8;">
+                Conducting research on data science and econometrics<br>
+                Developing methods in machine learning and econometrics<br>
+                Applying them to social and natural sciences
+            </p>
         </div>
     </div>
 
-    <div class="container">
-        <!-- News Section -->
-        <div id="NEWS" class="section">
-            <h2>Announcements</h2>
-            <div class="award-item">
-                2024/10/21 Paper accepted: Gu, D., Liu, Q. and Zhang, X., (2024), Model Averaging under Flexible Loss Functions. <i>INFORMS Journal on Computing</i>.
-            </div>
-            <div class="award-item">
-                2024/04/01 Paper accepted: Liu, Q. and Feng, Y., (2024), Machine Collaboration. <i>stat</i>. <a href="https://arxiv.org/abs/2105.02569">PDF</a>
-            </div>
-            <div class="award-item">
-                Yuta Tokita (2022 Seminar Member) <a href="https://signate.jp/competitions/1106">SIGNATE Competition</a> Ranked 7th (2023).
-            </div>
-            <div class="award-item">
-                2024/04/01 Seminar Recruitment <a href="semi_intro.pdf">PDF</a> <a href="semi_intro.pptx">Slides</a> <a href="https://www.youtube.com/watch?v=E-qVjWBCrug">Video</a>
-                Liu Seminar is recruiting 3rd-year students.
+    <!-- メインコンテンツコンテナ -->
+    <div style="width: 80%; margin: 30px auto;">
+        <!-- NEWSセクション -->
+        <div id="NEWS" class="content-card">
+            <h2 style="color: #EE490D; font-family: Roboto; text-transform: uppercase;">Announcements</h2>
+            <div style="padding: 15px 0;">
+                <p>2024/10/21 Paper accepted: Gu, D., Liu, Q. and Zhang, X., (2024), Model Averaging under Flexible Loss Functions. <i>INFORMS Journal on Computing</i>.</p>
+                <p>2024/04/01 Paper accepted: Liu, Q. and Feng, Y., (2024), Machine Collaboration. <i>stat</i>. <a class="color1" href="https://arxiv.org/abs/2105.02569">PDF</a></p>
+                <p>Yuta Tokita (2022 Seminar Member) <a class="color1" href="https://signate.jp/competitions/1106">SIGNATE Competition</a> Ranked 7th (2023).</p>
+                <p>2024/04/01 Seminar Recruitment <a class="color1" href="semi_intro.pdf">PDF</a> <a class="color1" href="semi_intro.pptx">Slides</a> <a class="color1" href="https://www.youtube.com/watch?v=E-qVjWBCrug">Video</a>
+                Liu Seminar is recruiting 3rd-year students.</p>
             </div>
         </div>
 
-        <!-- Research Section -->
-        <div id="CONFER" class="section">
-            <h2>Research Seminar Series</h2>
-            <p><a href="https://teds-datascience.github.io/seminars/">Transdisciplinary Econometrics & Data Science Seminar</a></p>
+        <!-- CONFERENCEセクション -->
+        <div id="CONFER" class="content-card">
+            <h2 style="color: #EE490D; font-family: Oswald; text-transform: uppercase;">Research Seminar Series</h2>
+            <p><a class="color1" href="https://teds-datascience.github.io/seminars/" style="text-decoration:underline;">
+                Transdisciplinary Econometrics & Data Science Seminar</a></p>
             
-            <h3>The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)</h3>
-            <p><a href="https://yangfengstat.github.io/snab2025/">The SNAB 2025 will take place on June 2-4, 2025 at the renowned Hotel New Otani in Tokyo, Japan.</a></p>
+            <h3 style="color: #EE490D; font-family: Oswald; text-transform: uppercase;">The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)</h3>
+            <p><a class="color1" href="https://yangfengstat.github.io/snab2025/" style="text-decoration:underline;">
+                The SNAB 2025 will take place on June 2-4, 2025 at the renowned Hotel New Otani in Tokyo, Japan.</a></p>
             
-            <h3>ACIEK(winter)-IMIP2024</h3>
+            <h3 style="color: #EE490D; font-family: Oswald; text-transform: uppercase;">ACIEK(winter)-IMIP2024</h3>
             <p>Opening Speech by Liu Qingfeng</p>
-            <img src="Opening_Speech_2024_IMIP.jpeg" alt="ACIEK Opening Speech" class="research-img">
-            <img src="Opening_Speech_02.jpeg" alt="ACIEK Opening Speech" class="research-img">
+            <div class="image-gallery">
+                <img src="Opening_Speech_2024_IMIP.jpeg">
+                <img src="Opening_Speech_02.jpeg">
+            </div>
         </div>
 
-        <!-- Members Section -->
-        <div id="MEMBERS" class="section clearfix">
+        <!-- MEMBERSセクション -->
+        <div id="MEMBERS" class="content-card">
             <h2>Faculty Member</h2>
-            <img src="Qingfeng_Liu.jpg" alt="Prof. Qingfeng Liu" class="profile-img">
-            
-            <h3>Professor: Qingfeng Liu</h3>
-            <p><a href="CV.pdf">CV</a></p>
-            <p><a href="https://ise-hp.ws.hosei.ac.jp">Chair of the Department of Industrial and Systems Engineering</a></p>
-            <p><strong>Place of Birth:</strong> Inner Mongolia, China</p>
-            <p><strong>Degree:</strong> Ph.D. in Economics, Kyoto University</p>
-            <p><strong>Hobbies:</strong> Basketball, Go</p>
-            <p><strong>E-mail:</strong> qliu[at]hosei.ac.jp</p>
-            
-            <div class="philosophy-box">
-                <p><strong>Belief</strong> Pursue with passion. Master with purpose.</p>
-                <p><strong>Prophecy</strong> Craftsmanship will revive Japan.</p>
-                <p><strong>Principle</strong> Transform opposition into fellowship.</p>
+            <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                <img src="Qingfeng_Liu.jpg" style="width: 150px; margin-right: 20px;">
+                <div>
+                    <p><strong>Professor:</strong> Qingfeng Liu &nbsp;&nbsp;<a class="color1" href="CV.pdf">CV</a></p>
+                    <p><a class="color1" href="https://ise-hp.ws.hosei.ac.jp">Chair of the Department of Industrial and Systems Engineering</a></p>
+                    <p><strong>Place of Birth:</strong> Inner Mongolia, China</p>
+                    <p><strong>Degree:</strong> Ph.D. in Economics, Kyoto University</p>
+                    <p><strong>Hobbies:</strong> Basketball, Go</p>
+                    <p><strong>E-mail:</strong> qliu[at]hosei.ac.jp</p>
+                </div>
             </div>
             
-            <p class="justified-text">
-                Professor Qingfeng Liu conducts research in the fields of data science, econometrics, and machine learning (one of the fundamental technologies of artificial intelligence). He is currently a professor in the Faculty of Science and Engineering at Hosei University and also serves as a Research Affiliate at the New York University School of Global Public Health. He obtained his Ph.D. in Economics from Kyoto University in 2007 and later moved to the United States, where he worked as a postdoctoral researcher at Princeton University.
-            </p>
-            <p class="justified-text">
-                He has also worked as a visiting professor or visiting scholar at institutions such as Kyoto University and Columbia University in the U.S. His research has been published in international journals such as the <strong><em>Journal of Business & Economic Statistics</em></strong> and <strong><em>Econometric Reviews</em></strong>, and he also serves as an editorial board member for international journals such as <strong><em>Economics</em></strong> and <strong><em>Open Economics</em></strong>.
-            </p>
-            <p class="justified-text">
-                His awards include the Niigata University Economic Society Prize, the Outstanding Contribution Award at <strong><em>ACIEK (Winter)-IMIP 2024</em></strong>, and the Best Conference Award at <strong><em>IEOM 2024 Tokyo</em></strong>. In recent years, he has been integrating machine learning with econometrics, exploring a new privacy-preserving machine learning approach for economic analysis called Federated Machine Learning. His research has been supported by the Japan Society for the Promotion of Science (JSPS) and the Academic Research Grant from the National Banking Academic Research Promotion Foundation.
-            </p>
-            <p class="justified-text">
-                Professor Liu aims to develop machine learning and econometric methods for solving economic problems and advancing industrial technologies. He leverages IoT, big data analytics, and fintech to contribute to the Fourth Industrial Revolution and Society 5.0.
-            </p>
-            
-            <div style="margin-top: 30px;">
-                <img src="Ensemble_Learning.png" alt="Three types of Ensemble Learning" class="research-img">
-                <p style="text-align: center;">Three types of Ensemble Learning</p>
+            <div class="justified-text">
+                <p>Professor Qingfeng Liu conducts research in the fields of data science, econometrics, and machine learning (one of the fundamental technologies of artificial intelligence). He is currently a professor in the Faculty of Science and Engineering at Hosei University and also serves as a Research Affiliate at the New York University School of Global Public Health. He obtained his Ph.D. in Economics from Kyoto University in 2007 and later moved to the United States, where he worked as a postdoctoral researcher at Princeton University.</p>
+
+                <p>He has also worked as a visiting professor or visiting scholar at institutions such as Kyoto University and Columbia University in the U.S. His research has been published in international journals such as the <strong><em>Journal of Business & Economic Statistics</em></strong> and <strong><em>Econometric Reviews</em></strong>, and he also serves as an editorial board member for international journals such as <strong><em>Economics</em></strong> and <strong><em>Open Economics</em></strong>.</p>
+
+                <p>His awards include the Niigata University Economic Society Prize, the Outstanding Contribution Award at <strong><em>ACIEK (Winter)-IMIP 2024</em></strong>, and the Best Conference Award at <strong><em>IEOM 2024 Tokyo</em></strong>. In recent years, he has been integrating machine learning with econometrics, exploring a new privacy-preserving machine learning approach for economic analysis called Federated Machine Learning. His research has been supported by the Japan Society for the Promotion of Science (JSPS) and the Academic Research Grant from the National Banking Academic Research Promotion Foundation.</p>
+
+                <p>Professor Liu aims to develop machine learning and econometric methods for solving economic problems and advancing industrial technologies. He leverages IoT, big data analytics, and fintech to contribute to the Fourth Industrial Revolution and Society 5.0.</p>
                 
-                <img src="mac.jpg" alt="Machine Collaboration of two base machines" class="research-img">
-                <p style="text-align: center;">Machine Collaboration of two base machines</p>
+                <div style="background-color: #f6f8fa; padding: 15px; border-left: 4px solid #0366d6; margin: 20px 0;">
+                    <p><strong>Belief</strong> Pursue with passion. Master with purpose.</p>
+                    <p><strong>Prophecy</strong> Craftsmanship will revive Japan.</p>
+                    <p><strong>Principle</strong> Transform opposition into fellowship.</p>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap;">
+                <div style="width: 48%; margin-bottom: 20px;">
+                    <img src="Ensemble_Learning.png" style="width: 100%;">
+                    <p style="text-align: center;">Three types of Ensemble Learning</p>
+                </div>
+                <div style="width: 48%; margin-bottom: 20px;">
+                    <img src="mac.jpg" style="width: 100%;">
+                    <p style="text-align: center;">Machine Collaboration of two base machines</p>
+                </div>
             </div>
         </div>
 
-        <!-- Awards Section -->
-        <div class="section">
+        <!-- AWARDSセクション -->
+        <div class="content-card">
             <h2>Awards</h2>
+            
             <div class="award-item">
-                <strong>Qingfeng Liu ACIEK(Winter)-IMIP2024 Outstanding Contribution Award</strong>
-                <img src="ACIEK_Award.jpg" alt="ACIEK Award" class="research-img">
-                <img src="Scene03.jpeg" alt="ACIEK Scene" class="research-img">
+                <h3>Qingfeng Liu ACIEK(Winter)-IMIP2024 Outstanding Contribution Award</h3>
+                <div class="image-gallery">
+                    <img src="ACIEK_Award.jpg">
+                    <img src="Scene03.jpeg">
+                </div>
             </div>
             
             <div class="award-item">
-                <strong>Qingfeng Liu IEOM 2024 Tokyo Outstanding Conference Award</strong>
-                <img src="IEOM_Award.JPG" alt="IEOM Award" class="research-img">
-                <img src="IEOM2024.JPG" alt="IEOM Conference" class="research-img">
+                <h3>Qingfeng Liu IEOM 2024 Tokyo Outstanding Conference Award</h3>
+                <div class="image-gallery">
+                    <img src="IEOM_Award.JPG">
+                    <img src="IEOM2024.JPG">
+                </div>
             </div>
             
             <div class="award-item">
-                <strong>Yuta Tokita (Joined in 2022) SIGNATE Competition Ranked 7th (2023)</strong>
-                <p><a href="https://signate.jp/competitions/1106">TechnoPro Design Company Food Package Image Analysis Challenge</a> (General & Student Divisions) Classify Food Packages into Food & Beverages!</p>
-                <img src="tokita_compe.png" alt="Tokita Competition" class="research-img">
+                <h3>Yuta Tokita (Joined in 2022) SIGNATE Competition Ranked 7th (2023)</h3>
+                <p><a class="color1" href="https://signate.jp/competitions/1106">TechnoPro Design Company Food Package Image Analysis Challenge</a> (General & Student Divisions) Classify Food Packages into Food & Beverages!</p>
+                <div class="image-gallery">
+                    <img src="tokita_compe.png">
+                </div>
             </div>
         </div>
 
-        <!-- Thesis Sections -->
-        <div class="section">
+        <!-- UNDERGRADUATE THESISセクション -->
+        <div class="content-card">
             <h2>Undergraduate Thesis</h2>
             
-            <h3>Graduates of 2024</h3>
-            <div class="award-item">
-                [1] Construction and Accuracy Evaluation of a Ranking Prediction Model Using Machine Learning: A Case Study on Horse Racing Prediction, Teruhide Iwasaki, Kosuke Tanaka, Sota Tokumaru, (2025). <a href="20X4026_1.pdf">Abstract</a>
-            </div>
-            <div class="award-item">
-                [2] Empirical Analysis of the Relationship Between Technical Indicators and Stock Price Movements, Kota Kubomura, (2025). <a href="abstract_tokita_2023.pdf">Abstract</a>
-            </div>
-            <div class="award-item">
-                [3] Data Analysis for Strategy Formulation in Soccer, Kanta Shimomura, Masaya Hayashi, (2025). <a href="21X4029_1.pdf">Abstract</a>
-            </div>
-            <div class="award-item">
-                [4] Detection and Analysis of Accounting Fraud Using Machine Learning, Toshiki Tajima, Madoka Hirata, (2025). <a href="21X4037_1.pdf">Abstract</a>
+            <h3 style="color: #EE490D; font-family: Roboto; text-transform: uppercase;">Graduates of 2024</h3>
+            <div style="padding: 15px 0;">
+                <p>[1] Construction and Accuracy Evaluation of a Ranking Prediction Model Using Machine Learning: A Case Study on Horse Racing Prediction, Teruhide Iwasaki, Kosuke Tanaka, Sota Tokumaru, (2025). <a class="color1" href="20X4026_1.pdf">Abstract</a></p>
+                <p>[2] Empirical Analysis of the Relationship Between Technical Indicators and Stock Price Movements, Kota Kubomura, (2025). <a class="color1" href="abstract_tokita_2023.pdf">Abstract</a></p>
+                <p>[3] Data Analysis for Strategy Formulation in Soccer, Kanta Shimomura, Masaya Hayashi, (2025). <a class="color1" href="21X4029_1.pdf">Abstract</a></p>
+                <p>[4] Detection and Analysis of Accounting Fraud Using Machine Learning, Toshiki Tajima, Madoka Hirata, (2025). <a class="color1" href="21X4037_1.pdf">Abstract</a></p>
             </div>
             
-            <h3>Graduates of 2023</h3>
-            <div class="award-item">
-                [1] Image Classification of Food Packages Considering Generalization Performance, Yuta Tokita, (2024). <a href="abstract_tokita_2023.pdf">Abstract</a> <a href="thesis_tokita.pdf">Full Text</a> <a href="beamer_tokita.pdf">Slides</a>
-            </div>
-            <div class="award-item">
-                [2] Feasibility of Introducing Machine Learning Methods for Fraud Detection in Analytical Procedures in Financial Auditing, Junpei Funahashi, (2024).
+            <h3 style="color: #EE490D; font-family: Roboto; text-transform: uppercase;">Graduates of 2023</h3>
+            <div style="padding: 15px 0;">
+                <p>[1] Image Classification of Food Packages Considering Generalization Performance, Yuta Tokita, (2024). <a class="color1" href="abstract_tokita_2023.pdf">Abstract</a> <a class="color1" href="thesis_tokita.pdf">Full Text</a> <a class="color1" href="beamer_tokita.pdf">Slides</a></p>
+                <p>[2] Feasibility of Introducing Machine Learning Methods for Fraud Detection in Analytical Procedures in Financial Auditing, Junpei Funahashi, (2024).</p>
             </div>
             
-            <h3>Graduates of 2022</h3>
-            <div class="award-item">
-                [1] Stock Price Prediction Using Tweet and Index Data, Chidai Kurosaki, Takeo Yamada, (2023). <a href="202201.pdf">Abstract</a>
-            </div>
-            <div class="award-item">
-                [2] Effects of Telework Promotion and Relocation Support Measures on Population Issues, Chuya Oshima, Tsubasa Maeda, (2023). <a href="202202.pdf">Abstract</a>
-            </div>
-            <div class="award-item">
-                [3] Data Analysis of Factors Influencing Soccer Match Outcomes, Koki Ito, Hiroki Kano, Ryota Kitabayashi, (2023). <a href="202203.pdf">Abstract</a>
+            <h3 style="color: #EE490D; font-family: Roboto; text-transform: uppercase;">Graduates of 2022</h3>
+            <div style="padding: 15px 0;">
+                <p>[1] Stock Price Prediction Using Tweet and Index Data, Chidai Kurosaki, Takeo Yamada, (2023). <a class="color1" href="202201.pdf">Abstract</a></p>
+                <p>[2] Effects of Telework Promotion and Relocation Support Measures on Population Issues, Chuya Oshima, Tsubasa Maeda, (2023). <a class="color1" href="202202.pdf">Abstract</a></p>
+                <p>[3] Data Analysis of Factors Influencing Soccer Match Outcomes, Koki Ito, Hiroki Kano, Ryota Kitabayashi, (2023). <a class="color1" href="202203.pdf">Abstract</a></p>
             </div>
         </div>
 
-        <div class="section">
+        <!-- MASTER'S THESISセクション -->
+        <div class="content-card">
             <h2>Master's Thesis</h2>
-            <h3>2024 Master's Program Graduates</h3>
-            <div class="award-item">
-                [1] Vertical Federated Learning Using Adversarial Autoencoder, Kai Huang, (Expected Graduation: 2025). <a href="2024_huang.pdf">Abstract</a>
-            </div>
-            <div class="award-item">
-                [2] Calibration of Rough Volatility Models Using Differential Machine Learning, Chidai Kurosaki, (Expected Graduation: 2025). <a href="2024_kurosaki.pdf">Abstract</a>
+            
+            <h3 style="color: #EE490D; font-family: Roboto; text-transform: uppercase;">2024 Master's Program Graduates</h3>
+            <div style="padding: 15px 0;">
+                <p>[1] Vertical Federated Learning Using Adversarial Autoencoder, Kai Huang, (Expected Graduation: 2025). <a class="color1" href="2024_huang.pdf">Abstract</a></p>
+                <p>[2] Calibration of Rough Volatility Models Using Differential Machine Learning, Chidai Kurosaki, (Expected Graduation: 2025). <a class="color1" href="2024_kurosaki.pdf">Abstract</a></p>
             </div>
         </div>
 
-        <div class="section">
+        <!-- CAREER DESTINATIONSセクション -->
+        <div class="content-card">
             <h2>Career Destinations of Graduates</h2>
-            <h3>2024 Career Destinations of Bachelor's and Master's Graduates</h3>
-            <p>Major audit firms, Metropolitan Police Department, financial advisory firms, major regional banks, major credit card companies, major comprehensive consulting firms, data science divisions of major automobile manufacturers, software development divisions of major IT companies (Job-based recruitment)</p>
+            
+            <h3 style="color: #EE490D; font-family: Roboto; text-transform: uppercase;">2024 Career Destinations of Bachelor's and Master's Graduates</h3>
+            <div style="padding: 15px 0;">
+                <p>Major audit firms, Metropolitan Police Department, financial advisory firms, major regional banks, major credit card companies, major comprehensive consulting firms, data science divisions of major automobile manufacturers, software development divisions of major IT companies (Job-based recruitment)</p>
+            </div>
         </div>
 
-        <div class="section">
+        <!-- PHD GRADUATESセクション -->
+        <div class="content-card">
             <h2>PhD Graduates Supervised</h2>
-            <div style="display: flex; margin-bottom: 20px; align-items: center;">
-                <img src="qingsong_yao.jpg" alt="Qingsong Yao" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+            
+            <div style="display: flex; margin-bottom: 20px; padding: 15px; border-bottom: 1px solid #e0e0e0;">
+                <img src="qingsong_yao.jpg" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
                 <div>
-                    <strong>Dr. Qingsong YAO</strong><br>
-                    Ph.D. in Economics<br>
-                    Current Position: Assistant Professor, Louisiana State University, USA.
+                    <h3>Dr. Qingsong YAO</h3>
+                    <p>Ph.D. in Economics</p>
+                    <p>Current Position: Assistant Professor, Louisiana State University, USA.</p>
                 </div>
             </div>
-            <div style="display: flex; align-items: center;">
-                <img src="ziyan_zhao.jpg" alt="Ziyan Zhao" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+            
+            <div style="display: flex; padding: 15px;">
+                <img src="ziyan_zhao.jpg" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
                 <div>
-                    <strong>Dr. Ziyan ZHAO</strong><br>
-                    Ph.D. in Commerce<br>
-                    Current Position: Research Fellow, Nanyang Technological University, Singapore.
+                    <h3>Dr. Ziyan ZHAO</h3>
+                    <p>Ph.D. in Commerce</p>
+                    <p>Current Position: Research Fellow, Nanyang Technological University, Singapore.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <h2>Data Science & Econometrics Laboratory - DSELab</h2>
-            <p>大海原を自由に泳ぐ</p>
-            <p>E-mail: <a href="mailto:tedsseminars@gmail.com" style="color: white;">tedsseminars@gmail.com</a></p>
+    <!-- フッター（元のスタイルを保持） -->
+    <div class="footer-bg">
+        <div style="width: 80%; margin: 0 auto;">
+            <p style="font-size: 2.0vmax; text-align: center;">Data Science & Econometrics Laboratory - DSELab</p>
+            <hr style="border: 1px solid transparent; margin: 10px 0;">
+            <p style="font-size: 1.2vmax; text-align: center;">大海原を自由に泳ぐ</p>
+            <hr style="border: 1px solid #FFFFFF; margin: 20px auto; width: 90%;">
+            <p style="text-align: right; width: 90%; margin: 0 auto;">E-mail: <a href="mailto:tedsseminars@gmail.com" style="color: white;">tedsseminars@gmail.com</a></p>
         </div>
     </div>
 
     <script>
-        // Sticky navbar
+        // 元のスクロール機能を保持
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.querySelector(".navbar").style.top = "0";
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                document.getElementById("navbar").style.top = "0";
             } else {
-                document.querySelector(".navbar").style.top = "-100px";
+                document.getElementById("navbar").style.top = "-100px";
             }
         }
     </script>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凡璞瑰珍集</title>
+    <style>
+        body {
+            font-family: "Noto Serif SC", "Hiragino Mincho ProN", serif;
+            background-color: #f9f4e8;
+            background-image: url('https://img.freepik.com/free-photo/vintage-japanese-paper-texture_1194-6958.jpg');
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.8;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(255, 253, 245, 0.85);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0d6c2;
+            position: relative;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid #d4c9b5;
+            pointer-events: none;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #5a4a3a;
+            font-weight: normal;
+            letter-spacing: 5px;
+            border-bottom: 1px solid #d4c9b5;
+            padding-bottom: 15px;
+        }
+        
+        .poem {
+            margin-bottom: 50px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .poem-title {
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #5a4a3a;
+            font-weight: normal;
+        }
+        
+        .poem-author {
+            text-align: right;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #7a6b5a;
+        }
+        
+        .poem-content {
+            font-size: 1.1em;
+            white-space: pre-line;
+            text-align: center;
+            line-height: 2.2;
+        }
+        
+        .poem-content p {
+            margin: 20px 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #d4c9b5;
+            color: #7a6b5a;
+            font-size: 0.9em;
+        }
+        
+        .seal {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background-color: #b22222;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Noto Serif SC", serif;
+            font-size: 16px;
+            transform: rotate(15deg);
+            opacity: 0.8;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>凡璞瑰珍集</h1>
+        
+        <div class="poem">
+            <div class="poem-title">粒度</div>
+            <div class="poem-author">作者：凡璞&小C</div>
+            <div class="poem-content">
+焦虑，是昨日未醒的梦，
+我轻轻将它折叠，
+藏入晨光未触的褶皱里。
+
+自信，不是声响，
+而是深处一滴沉默的光，
+在无言中，决意照亮自己。
+
+我不再丈量日子的长度，
+我用呼吸，去触碰时间的密度，
+它不是河，不是线，
+是浮游于空气中的微尘，
+一粒一粒
+像神明遗漏的念头。
+
+我不在别处寻找答案，
+我所在之处，
+已是真理的种子。
+
+世界不追问你的起点，
+也不催促你的归途，
+它只在你凝视的瞬间，
+全然为你闪耀。
+            </div>
+            <div class="seal">凡璞印</div>
+        </div>
+        
+        <footer>
+            © 2023 凡璞瑰珍集 · 保留所有权利
+        </footer>
+    </div>
+</body>
+</html>

@@ -197,7 +197,70 @@ span.s5 {
   font-family: 'Noto Sans JP', sans-serif;
   color: #353535;
 }
+.ai-section {
+      width: 75%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 1vw;
+      box-sizing: border-box;
+      padding: 1vw 0;
+    }
 
+    .ai-column {
+      width: 24%;
+      box-sizing: border-box;
+    }
+
+    .ai-column img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 0vw;
+    }
+    .ai-img-trimmed {
+  height: 100%;
+  max-height: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+  clip-path: inset(0 0 0% 0); /* 裁剪下部 10% */
+}
+    .ai-title {
+      font-weight: bold;
+      color: #0033cc;
+      margin-bottom: 0.5em;
+    }
+
+    .ai-text {
+  font-size: 80%;        /* サイズ8割 */
+  line-height: 1.6;
+  width: 80%;             /* 行の幅を9割に */
+  box-sizing: border-box;
+  margin: 0 auto;        /* 中央揃え */
+}
+    .ai-section h1 {
+  color: #1a5276;
+  margin-top: 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+}
+    .figure-caption {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 80%;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.figure-caption .left {
+  width: 50%;
+}
+
+.figure-caption .right {
+  width: 50%;
+}
 .main {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: Extra-light;

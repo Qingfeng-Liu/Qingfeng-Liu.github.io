@@ -3,14 +3,18 @@
 
 body {
   margin: 0 0;
-    background: #fff;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: normal;
-    line-height: 1.0;
-    color:#C4C4C4
-    height: 100%;
+  background: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  line-height: 1.0;
+  color:#C4C4C4;
+  height: 100%;
   -webkit-text-size-adjust:100%;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+}
 
 .image {
   margin-right: calc(50% - 50vw);
@@ -31,10 +35,12 @@ body {
 
 .same_height{
     display: flex;
+    justify-content: space-between;
 }
 .same_height img{
     object-fit: cover;
     width: calc(100%/2);
+    width: 49%;
 }
 
 h1 {
@@ -43,11 +49,10 @@ h1 {
   text-transform: uppercase;
   font-weight: Normal;
   font-size: 1.5vmax;
-  color: black/*#353535*/;
+  color: black;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 1px solid #C4C4C4;
-  /*color: #358AC3;*/
 }
 
 h2 {
@@ -56,10 +61,9 @@ h2 {
   text-transform: uppercase;
   font-weight: Normal;
   font-size: 1.5vmax;
-  color: #EE490D/*#3498DB*/;
+  color: #EE490D;
   margin-left: auto;
   margin-right: auto;
-  /*color: #358AC3;*/
 }
 
 h4 {
@@ -79,119 +83,128 @@ h3 {
   margin-top: 12px;
 }
 
+h3[id] {
+  display: block;
+  height: 4rem;
+  margin-top: -4rem;
+  content: "";
+}
+
 h5 {
   width: 75%;
   font-family: "Roboto";
   text-transform: uppercase;
   font-weight: Normal;
   font-size: 1vmax;
-  color: #EE490D/*#3498DB*/;
+  color: #EE490D;
   margin-left: auto;
   margin-right: auto;
-  /*color: #358AC3;*/
 }
 
 p.p3 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font: 1vw '"franklin_gothic"';
-        color: #0000e9;
-        -webkit-text-stroke: #0000e9
-    }
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font: 1vw '"franklin_gothic"';
+  color: #0000e9;
+  -webkit-text-stroke: #0000e9;
+}
 
-    p.p4 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font: 12.0px '"franklin_gothic"';
-        color: #000000;
-        <!-- -webkit-text-stroke: #000000 -->
-    }
+p.p4 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font: 12.0px '"franklin_gothic"';
+  color: #000000;
+}
 
-    p.p5 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.5vh;
-        font-weight: Bold;
-        font-family: 'Noto Sans JP', sans-serif;
-        color: black;/*#EE490D; <!-- color: #464646; #424949; -->
-        <!-- -webkit-text-stroke: #000000 -->*/
-    }
-    div.p5 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.5vh;
-        font-weight: Bold;
-        font-family: 'Noto Sans JP', sans-serif;
-        color: #EE490D; <!-- color: #464646; #424949; -->
-        <!-- -webkit-text-stroke: #000000 -->*/
-    }
-     div.p6 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.2vmax;
-        font-weight: Normal;
-        font-family: 'Noto Sans JP', sans-serif;
-        <!-- color: #3498DB; color: #464646; #424949; -->
-        <!-- -webkit-text-stroke: #000000 -->
-    }
-    p.p6 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.5vmax;
-        font-weight: Bold;
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        <!-- -webkit-text-stroke: #000000 -->
-    }
-    p.p7 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.5vmax;
-        font-weight: Bold;
-        font-family: 'Noto Sans JP', sans-serif;
-        color: #EE490D;
-        color: #EE490D;
-        <!-- -webkit-text-stroke: #000000 -->
-    }
-    p.p8 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.5vmax;
-        font-weight: Bold;
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        <!-- -webkit-text-stroke: #000000 -->
-    }
+p.p5 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.5vh;
+  font-weight: Bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.1em;
+}
 
-    span.s1 {
-        font-kerning: none
-    }
+div.p5 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.5vh;
+  font-weight: Bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #EE490D;
+}
 
-    span.s2 {
-        text-decoration: underline;
-        font-kerning: none
-    }
-    span.s3 {
-        display: inline-block;
-        font-size: 1.2vmax;
-        Width: 15vw
-    }
-　　span.s4 {
-        display: inline-block;
-        font-size: 1.2vmax;
-        Width: 85vw
-    }
-   span.s5 {
-        margin: 0.0px 0.0px 0.0px 0.0px;
-        font-size: 1.2vmax;
-        font-weight: Normal;
-        font-family: 'Noto Sans JP', sans-serif;
-        color: #353535; <!-- #424949; -->
-        <!-- -webkit-text-stroke: #000000 -->
-    }
+div.p6 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.2vmax;
+  font-weight: Normal;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+p.p6 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.5vmax;
+  font-weight: Bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+p.p7 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.5vmax;
+  font-weight: Bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #EE490D;
+  font-family: 'STIX Two Text', serif;
+  letter-spacing: 0.05em;
+}
+
+p.p8 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.5vmax;
+  font-weight: Bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+span.s1 {
+  font-kerning: none;
+}
+
+span.s2 {
+  text-decoration: underline;
+  font-kerning: none;
+}
+
+span.s3 {
+  display: inline-block;
+  font-size: 1.2vmax;
+  Width: 15vw;
+}
+
+span.s4 {
+  display: inline-block;
+  font-size: 1.2vmax;
+  Width: 85vw;
+}
+
+span.s5 {
+  margin: 0.0px 0.0px 0.0px 0.0px;
+  font-size: 1.2vmax;
+  font-weight: Normal;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #353535;
+}
+
 .main {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: Extra-light;
   margin-left: auto;
   margin-right: auto;
   line-height:1.2;
- color: #353535;
+  color: #353535;
 }
 
 .main2 {
@@ -201,129 +214,143 @@ p.p3 {
   margin-right: auto;
 }
 
-table.sample {
-text-align:justify;
-font-family: 'Noto Sans JP', sans-serif;
-font-weight: Normal;
-margin-left: auto;
-margin-right: auto;
-line-height:1.8;
-color: #353535;
+.justified-text {
+  text-align: justify;
+  text-justify: inter-character;
+  font-size: 1.1vmax;
+  line-height: 1.8;
 }
 
+table.sample {
+  text-align:justify;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: Normal;
+  margin-left: auto;
+  margin-right: auto;
+  line-height:1.8;
+  color: #353535;
+}
 
 table.sample2 {
-text-align:justify;
-font-family: 'Noto Sans JP', sans-serif;
-font-weight: Normal;
-margin-left: auto;
-margin-right: auto;
-
+  text-align:justify;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: Normal;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sample3 {
-text-align:justify;
-font-family: 'Noto Sans JP', sans-serif;
-font-weight: Extra-light;
-margin-left: auto;
-margin-right: auto;
-table-layout:auto;
-margin-bottom: 0.3em;
+  text-align:justify;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: Extra-light;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout:auto;
+  margin-bottom: 0.3em;
 }
-
-/*
-table.sample3 td {
-text-align:justify;
-font-family: 'Noto Sans JP', sans-serif;
-font-weight: Extra-light;
-margin-left: auto;
-margin-right: auto;
-}
-*/
 
 table.sample4 {
-text-align:justify;
-font-family: 'Noto Sans JP', sans-serif;
-font-weight: Extra-light;
-margin-left: auto;
-margin-right: auto;
-line-height:1.8;
-color: #353535;
-
+  text-align:justify;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: Extra-light;
+  margin-left: auto;
+  margin-right: auto;
+  line-height:1.8;
+  color: #353535;
 }
 
 div.anchor {
-    display: block;
-    padding-top: 90px;
-    margin-top: -90px;
+  display: block;
+  padding-top: 90px;
+  margin-top: -90px;
 }
 
 div#HEADER {
-	margin-bottom: 3px;
-	border-bottom: solid 0px #DCDCDA;
-	background: #FFFFFF;
-         margin-right: calc(50% - 50vw);
-         margin-left: calc(50% - 50vw);
-}
-ul#PAN {
-	position: absolute;
-	top: 10px;
-	right: 0px;
-	text-align: right;
-}
-#INDEX ul#PAN{
-	display: none;
-}
-#PAN li{
-	display: inline;
-}
-#PAN a{
-	text-decoration: none;
-}
-#PAN a:after{
-	content: "->";
+  margin-bottom: 3px;
+  border-bottom: solid 0px #DCDCDA;
+  background: #FFFFFF;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
-/* default */
-div,dl,dt,dd,ul,ol,li,h4,h5,h6,pre,form,fieldset,blockquote{margin:0;padding:0;}
+ul#PAN {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  text-align: right;
+}
+
+#INDEX ul#PAN {
+  display: none;
+}
+
+#PAN li {
+  display: inline;
+}
+
+#PAN a {
+  text-decoration: none;
+}
+
+#PAN a:after {
+  content: "->";
+}
+
+div, dl, dt, dd, ul, ol, li, h4, h5, h6, pre, form, fieldset, blockquote {
+  margin:0;
+  padding:0;
+}
 
 a:link {
-	color:  #3498DB/*#000080*/; text-decoration:none;
-	font-weight: Bold;
-	font-family: Roboto, 'Noto Sans JP', sans-serif;
+  color: #3498DB;
+  text-decoration:none;
+  font-weight: Bold;
+  font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
+
 a:visited {
-	color:  #3498DB; text-decoration:underline; /*#358AC3; */
-	font-weight: Bold;
-	font-family: Roboto, 'Noto Sans JP', sans-serif;
+  color: #3498DB;
+  text-decoration:underline;
+  font-weight: Bold;
+  font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
+
 a:hover {
-	color: #626567; text-decoration:underline;
+  color: #626567;
+  text-decoration:underline;
 }
+
 a:active {
-	color: #626567; text-decoration:underline;
+  color: #626567;
+  text-decoration:underline;
 }
 
-a.color1:link{
-    color: #626567;
-	text-decoration:underline;
-	font-weight: Bold;
-	font-family: Roboto, 'Noto Sans JP', sans-serif;
+a.color1:link {
+  color: #626567;
+  text-decoration:underline;
+  font-weight: Bold;
+  font-family: Roboto, 'Noto Sans JP', sans-serif;
+  color: #3498db;
+  text-decoration: none;
 }
+
 a.color1:visited {
-	color:  #626567; text-decoration:underline; /*#358AC3; */
-	font-weight: Bold;
-	font-family: Roboto, 'Noto Sans JP', sans-serif;
+  color: #626567;
+  text-decoration:underline;
+  font-weight: Bold;
+  font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
+
 a.color1:hover {
-	color: #A0A19E; text-decoration:none;
+  color: #A0A19E;
+  text-decoration:none;
+  text-decoration: underline;
 }
+
 a.color1:active {
-	color: #A0A19E; text-decoration:underline;
+  color: #A0A19E;
+  text-decoration:underline;
 }
-
-
-
 
 .container {
   position: relative;
@@ -331,15 +358,21 @@ a.color1:active {
   width: 100%;
   background: linear-gradient(to bottom left, #000066 2%, #006666 100%);
   font-family: 'Noto Sans JP', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
 .container2 {
   position: relative;
   width: 100%;
   background-image: url('bottom.png');
-  background-size: cover; /* 画像をコンテナに合わせてカバー */
-  background-position: center; /* 画像の中央部分を表示 */
-  background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container3 {
@@ -347,208 +380,113 @@ a.color1:active {
   width: 100%;
   height: 10%;
   background-image: url('bottom.png');
-  background-size: cover; /* 画像をコンテナに合わせてカバー */
-  background-position: center; /* 画像の中央部分を表示 */
-  background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-
-.wrap{
- display:flex;
+.wrap {
+  display:flex;
 }
 
 .box26 {
-    position: relative;
-    margin: 0em 0;
-    padding: 1em 2em;
-    border: solid 3px  #3498DB;
-    border-radius: 8px;
-    min-height: 17vmax;
-    z-index: 0;
+  position: relative;
+  margin: 0em 0;
+  padding: 1em 2em;
+  border: solid 3px #3498DB;
+  border-radius: 8px;
+  min-height: 17vmax;
+  z-index: 0;
 }
+
 td .box-title {
-    position: absolute;
-    display: inline-block;
-    top: -0.9vmax;
-    left: 10px;
-    padding: 0 0px;
-    line-height: 1;
-        font-size: 1.2vmax;
-        font-weight: Normal;
-        font-family: 'Noto Sans JP', sans-serif;
-        color: #EE490D;
-    background: #FFF;
-    <!--color: #3579BD;
-    font-weight: bold; -->
+  position: absolute;
+  display: inline-block;
+  top: -0.9vmax;
+  left: 10px;
+  padding: 0 0px;
+  line-height: 1;
+  font-size: 1.2vmax;
+  font-weight: Normal;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #EE490D;
+  background: #FFF;
 }
+
 .box26 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 table#demo_1 {
-border: none;
-border-top: 0px solid #5DE4BF;
-border-collapse: separate;
-border-spacing: 0;
-margin-top: 0px;
-table-layout: fixed;
-width: 100%;
+  border: none;
+  border-top: 0px solid #5DE4BF;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 0px;
+  table-layout: fixed;
+  width: 100%;
 }
 
 table#demo_1 th,
 table#demo_1 td {
-border-bottom: 0px solid #DDD;
-font-size: 1.2vmax;
-line-height: 1.5vmax;
-padding: 0px;
-text-align: left;
-vertical-align: top;
+  border-bottom: 0px solid #DDD;
+  font-size: 1.2vmax;
+  line-height: 1.5vmax;
+  padding: 0px;
+  text-align: left;
+  vertical-align: top;
 }
 
 table#demo_1 th:first-child,
 table#demo_1 td:first-child {
-padding-left: 0;
+  padding-left: 0;
 }
 
 table#demo_1 th:last-child,
 table#demo_1 td:last-child {
-padding-right: 0;
-/*width: 45%;*/
+  padding-right: 0;
 }
 
 table#demo_1 th {
-font-weight: bold;
-vertical-align: top;
+  font-weight: bold;
+  vertical-align: top;
 }
 
 table#demo_1 td .thTitle {
-display: none;
+  display: none;
 }
 
-/*ウィンドウサイズが 768px以内の場合に上書きされる*/
-@media screen and (max-width: 1000px) {
-
-table#demo_1,
-table#demo_1 caption,
-table#demo_1 tbody,
-table#demo_1 tfoot,
-table#demo_1 tr,
-table#demo_1 th,
-table#demo_1 td {
-display: block;
-width: 100% !important;
+* {
+  box-sizing: border-box;
 }
 
-table#demo_1 th,
-table#demo_1 td {
-padding-left: 0;
-padding-right: 0;
-}
-
-table#demo_1 th {
-display: block;
-}
-
-table#demo_1 td {
-border: none;
-text-align: left;
-}
-
-table#demo_1 td {
-border-bottom: 0px solid #DDD;
-}
-
-table#demo_1 td:first-child {
-font-weight: normal;
-}
-
-table#demo_1 td:last-child {
-border-bottom: 0px solid #DDD;
-font-weight: normal;
-}
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .inner {
-display: table;
-table-layout: fixed;
-width: 100%;
-}
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .thTitle,
-table#demo_1 td .tdContents {
-display: table-cell;
-}
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .thTitle {
-font-weight: bold;
-width: 20%;
-}
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .tdContents {
-padding-left: 0px;
-width: 80%;
-}
-}
-
-/*ウィンドウサイズが 480px以内の場合に上書きされる*/
-@media screen and (max-width: 480px) {
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .inner,
-table#demo_1 td .thTitle,
-table#demo_1 td .tdContents {
-display: block;
-width: 100%;
-}
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .inner {
-table-layout: auto;
-}
-
-/*JavaScriptで追加する要素*/
-table#demo_1 td .tdContents {
-padding: 10px 0 0;
-}
-}
-
-	* {
-box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
 .column {
-float: left;
-width: 50%;
-padding: 10px;
-/*　height: 300px;  Should be removed. Only for demonstration */
+  float: left;
+  width: 50%;
+  padding: 10px;
 }
 
 .subcolumn1 {
-float: left;
-width: 30%;
-padding: 0px;
-background-color:#ffffff;
-/*　height: 300px;  Should be removed. Only for demonstration */
-}
-.subcolumn2 {
-float: left;
-width: 70%;
-padding-left: 20px;
-background-color:#ffffff;
-/*　height: 300px;  Should be removed. Only for demonstration */
-}
-/* Clear floats after the columns */
-.row:after {
-content: "";
-display: table;
-clear: both;
+  float: left;
+  width: 30%;
+  padding: 0px;
+  background-color:#ffffff;
 }
 
+.subcolumn2 {
+  float: left;
+  width: 70%;
+  padding-left: 20px;
+  background-color:#ffffff;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 #navbar {
   background-color: #FFFFFF;
@@ -559,6 +497,11 @@ clear: both;
   transition: top 0.3s;
   z-index: 1;
   box-shadow: 2px 2px 2px #eeeeee;
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 1000;
 }
 
 #navbar a {
@@ -576,20 +519,19 @@ clear: both;
   color: black;
 }
 
-#more {display: none;}
-#more2 {display: none;}
+#more {
+  display: none;
+}
 
-h3[id] {
-  display: block;
-  height: 4rem;
-  margin-top: -4rem;
-  content: "";
+#more2 {
+  display: none;
 }
 
 figure {
   border: 0px #ffffff solid;
   padding: 0px;
   margin: auto;
+  margin: 0;
 }
 
 figcaption {
@@ -598,5 +540,97 @@ figcaption {
   font-style: normal;
   padding: 2px;
   text-align: center;
+  font-size: 1vmax;
+  color: #666;
+  padding: 5px 0;
 }
 
+strong {
+  color: #2c3e50;
+}
+
+@media screen and (max-width: 1000px) {
+  table#demo_1,
+  table#demo_1 caption,
+  table#demo_1 tbody,
+  table#demo_1 tfoot,
+  table#demo_1 tr,
+  table#demo_1 th,
+  table#demo_1 td {
+    display: block;
+    width: 100% !important;
+  }
+
+  table#demo_1 th,
+  table#demo_1 td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  table#demo_1 th {
+    display: block;
+  }
+
+  table#demo_1 td {
+    border: none;
+    text-align: left;
+  }
+
+  table#demo_1 td {
+    border-bottom: 0px solid #DDD;
+  }
+
+  table#demo_1 td:first-child {
+    font-weight: normal;
+  }
+
+  table#demo_1 td:last-child {
+    border-bottom: 0px solid #DDD;
+    font-weight: normal;
+  }
+
+  table#demo_1 td .inner {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  table#demo_1 td .thTitle,
+  table#demo_1 td .tdContents {
+    display: table-cell;
+  }
+
+  table#demo_1 td .thTitle {
+    font-weight: bold;
+    width: 20%;
+  }
+
+  table#demo_1 td .tdContents {
+    padding-left: 0px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  table#demo_1 td .inner,
+  table#demo_1 td .thTitle,
+  table#demo_1 td .tdContents {
+    display: block;
+    width: 100%;
+  }
+
+  table#demo_1 td .inner {
+    table-layout: auto;
+  }
+
+  table#demo_1 td .tdContents {
+    padding: 10px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}

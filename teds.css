@@ -779,3 +779,107 @@ strong {
     padding: 10px;
   }
 }
+/* 图标基础样式 */
+.shield-logo {
+  height: 2.6em;
+  width: auto;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+/* 最后一个图标不需要右边距 */
+.shield-logo:last-child {
+    margin-right: 0;
+}
+
+/* PC端默认显示 */
+.pc-logos {
+  display: table-cell !important;
+}
+
+.mobile-logos {
+  display: none !important;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .pc-logos {
+    display: none !important;
+  }
+
+  .mobile-logos {
+    display: table-row !important;
+  }
+
+  /* 移动端调整 */
+  .shield-logo {
+    height: 1.1em;
+  }
+
+  #navbar table {
+    width: auto !important;
+  }
+}
+
+/* 悬停效果 */
+.shield-logo:hover {
+  transform: scale(1.1);
+}
+
+.shield-logo-01 {
+    height: 5em; /* 与文字等高 */
+    width: auto; /* 保持原始比例 */
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .pc-logos-01 {
+        display: none !important;
+    }
+    .mobile-logos-01 {
+        display: block !important;
+    }
+
+    /* 调整表格宽度 */
+    table[style*="width: 75%"] {
+        width: 90% !important;
+    }
+
+    /* 调整菜单项间距 */
+    table[style*="cellspacing="] {
+        cellspacing: 15vw !important;
+    }
+}
+
+/* PC端适配 */
+@media (min-width: 769px) {
+    .mobile-logos-01 {
+        display: none !important;
+    }
+}
+/* 图标容器 */
+.shield-container-01 {
+    padding-right: 0em; /* 与文字间距 */
+    line-height: 1; /* 防止额外高度 */
+}
+
+/* 图标间距 */
+.shield-logo-01:not(:last-child) {
+    margin-right: 0.5em;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .shield-container {
+        padding-right: 0.5em; /* 移动端缩小间距 */
+    }
+    .shield-logo-01:not(:last-child) {
+        margin-right: 0.3em;
+    }
+}
+
+/* 悬停效果 */
+.shield-logo-01:hover {
+    transform: scale(1.15); /* 更细腻的放大效果 */
+}

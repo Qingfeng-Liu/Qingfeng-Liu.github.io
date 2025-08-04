@@ -16,7 +16,7 @@
   @media (max-width: 768px) {
     .ai-section {
       flex-direction: column;
-      width: 90% !important;
+      width: 83% !important;
       margin: 0 auto !important; /* 中央揃え */
       text-align: center !important; /* テキスト中央揃え */
     }
@@ -85,18 +85,25 @@
 </head>
 
 <body>
-<div id="navbar">
-    <table align="center" border="0" cellpadding="0">
+<div id="navbar" style="overflow: visible;"> <!-- 关键修改 -->
+  <table align="center" border="0" cellpadding="0"
+         style="box-shadow: 0 2px 2px #eeeeee;  /* 只保留底部阴影 */
+                width: calc(100% + 2px);       /* 左右各扩展1px */
+                margin-left: -8px;">
         <tr>
-            <td><a href="#MEMBERS">
-                <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
-            </a>
+            <!-- PC端显示 - 图标在左侧 -->
+            <td class="shield-container pc-logos" style="text-align: right; white-space: nowrap;">
+    <img src="Figures/hosei_shield.png" alt="Hosei University" class="shield-logo">
+    <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo" style="margin-left: 8px;">
+</td>
+
+
+            <td class="nav-item">
+
+                <a href="#MEMBERS">
+                    <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
+                </a>
             </td>
-            <td width="6vw"></td>
-            <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
-                <div class="p5" style="font-size: 1vmax;">RESEARCH
-                </div>
-            </a></td>
 
             <td width="6vw"></td>
             <td><a href="#NEWS">
@@ -169,9 +176,22 @@
         <hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 20px; padding-bottom: 0px;">
     </div>
 </div>
-<table style="box-shadow: 2px 2px 2px #eeeeee; width: 100%; border-collapse: collapse;">
-    <tr>
-        <td style="text-align: center; padding: 10px 0;">
+<table style="width: 75%; margin: 0 auto; border-collapse: collapse; position: relative;">
+    <!-- PC端盾牌图标（表格左侧） -->
+    <div class="pc-logos-01" style="position: absolute; right: 76%; top: 58%; transform: translateY(-50%); white-space: nowrap; margin-right: 10px;">
+        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">
+        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">
+    </div>
+
+    <!-- 移动端盾牌图标（MEMBERS上方） -->
+    <div class="mobile-logos-01" style="display: none; text-align: center; margin-bottom: -20px;">
+        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">
+        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">
+    </div>
+
+
+                <tr>
+                    <td style="text-align: center; padding: 10px 0;">
             <table align="center" border="0" cellpadding="0" cellspacing="25vw" style="margin: 0 auto;">
                 <tr>
                     <td><a href="#MEMBERS">
@@ -380,12 +400,12 @@ function scrollFunction() {
           <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">法政大学理工学部経営システム工学科 学科主任</a><br>
           <strong>出　身</strong> 　中国内モンゴル自治区<br>
           <strong>学　位</strong> 　京都大学経済学博士<br>
-          <strong>研　究</strong>
-          <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">　学術論文 <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
-            <strong style="color:#007acc;">　　　</strong>
-            <a class="color1" href="https://github.com/Qingfeng-Liu/Qingfeng-Liu.github.io" >　学習資料・コード集 (ML・AI) <img src="icons/iconmonstr-save-as-lined-240.png" alt="CV icon" class="pdf-icon"></a><br>
+          <strong>研　究</strong>　
+          <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">学術論文 <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+            <strong style="color:#007acc;">　　　</strong>　
+            <a class="color1" href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit" >学習資料・コード集 (ML・AI) <img src="icons/iconmonstr-save-as-lined-240.png" alt="CV icon" class="pdf-icon"></a><br>
           <strong>趣　味</strong> 　バトミントン, 園芸<br>
-          <strong>詩文集</strong> <a class="color1" href="https://qingfeng-liu.github.io/Analects.html">　論語新篇 <img src="icons/iconmonstr-book-1-240.png" alt="Analects icon" class="pdf-icon"></a> <a class="color1" href="https://qingfeng-liu.github.io/poems.html">凡璞瑰珍集 <img src="icons/iconmonstr-cat-6-240.png" alt="POEM icon" class="pdf-icon"></a><br>
+          <strong>詩文集</strong> 　<a class="color1" href="https://qingfeng-liu.github.io/Analects.html">論語新篇 <img src="icons/iconmonstr-book-1-240.png" alt="Analects icon" class="pdf-icon"></a> <a class="color1" href="https://qingfeng-liu.github.io/poems.html">凡璞瑰珍集 <img src="icons/iconmonstr-cat-6-240.png" alt="POEM icon" class="pdf-icon"></a><br>
           <strong>E-mail</strong> 　qliu[at]hosei.ac.jp
         </div>
       </td>　

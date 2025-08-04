@@ -278,7 +278,7 @@ span.s5 {
   margin-right: 0.4em;
 }
 /* PDFアイコンとタイトルのスタイル */
-.pdf-icon {
+.pdf-icon, .github-icon  {
   width: 1em;
   height: 1em;
   margin-right: 0.3em;
@@ -301,11 +301,11 @@ span.s5 {
 /*  margin-right: 0.3em;*/
 /*  vertical-align: middle;*/
 /*}*/
-.pdf-icon, .github-icon {
-  width: 1em;
-  height: 1em;
-  margin-right: 0.3em;
-}
+/*.pdf-icon, .github-icon {*/
+/*  width: 1em;*/
+/*  height: 1em;*/
+/*  margin-right: 0.3em;*/
+/*}*/
 
 
 

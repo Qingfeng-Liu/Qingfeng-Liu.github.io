@@ -11,19 +11,61 @@
   <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
 
 
-    <style>
+   <style>
   /* 既存CSSを上書きせず、モバイル用スタイルのみ追加 */
   @media (max-width: 768px) {
     .ai-section {
       flex-direction: column;
-      width: 100% !important;
+      width: 90% !important;
+      margin: 0 auto !important; /* 中央揃え */
+      text-align: center !important; /* テキスト中央揃え */
     }
     .ai-column {
-      width: 100% !important;
-      margin-bottom: 20px;
+      width: 90% !important;
+      margin: 0 auto 20px !important; /* 上下の余白を保持しつつ中央揃え */
+      text-align: center !important;
+    }
+    .ai-title-container {
+      justify-content: center !important;
     }
     .ai-text {
       font-size: 0.9rem !important;
+      text-align: center !important;
+      margin: 0 auto !important;
+    }
+    .ai-title, .pdf-title, .github-title {
+      justify-content: center !important;
+      text-align: center !important;
+    }
+    .ai-img-trimmed, .ai-column img {
+      margin: 0 auto !important;
+      display: block !important;
+    }
+  }
+
+  /* 全デバイス共通のアイコンサイズ調整 */
+  .pdf-icon, .github-icon {
+    width: 25px;  /* 元の20pxから40%拡大（PCに最適化） */
+    height: 25px;
+    margin-right: 12px;  /* 余白も拡大 */
+    transition: all 0.3s;  /* スムーズなアニメーション追加 */
+  }
+
+  /* ホバー効果（PCのみ） */
+  @media (hover: hover) {
+    .pdf-icon:hover, .github-icon:hover {
+      transform: scale(1.1);  /* ホバー時少し拡大 */
+    }
+  }
+
+  /* モバイル用調整（768px以下） */
+  @media (max-width: 768px) {
+    .pdf-icon, .github-icon {
+      width: 28px;  /* モバイルではさらに大きく */
+      height: 28px;
+    }
+    .pdf-title, .github-title {
+      font-size: 1.4rem !important;  /* モバイル用文字サイズ */
     }
   }
 </style>
@@ -230,14 +272,14 @@ function scrollFunction() {
                                                                       href="https://signate.jp/competitions/1106">SIGNATEコンペティション<br></a>第７位入賞
                                             (2023).<br>
                                             2024/04/01 ゼミ募集 <a href="semi_intro.pdf">PDF</a> <a
-                                                href="semi_intro.pptx">スライド</a> <a
-                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">動画</a>
+                                                href="semi_intro.pptx">SLIDE</a> <a
+                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">VIDEO</a>
                                             劉ゼミ3年生募集開始.<br>
                                             <span id="dots2"></span><span
                                                 id="more2">
                                                 2022/04/03 ゼミ募集 <a href="semi_intro.pdf">PDF</a> <a
-                                                href="semi_intro.pptx">スライド</a> <a
-                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">動画</a>
+                                                href="semi_intro.pptx">SLIDE</a> <a
+                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">VIDEO</a>
                                                 劉ゼミ3年生募集開始.<br>
                                                 2022/04/03 研究室ウェブページ公開. <br><br></span>
                                             &#9656;
@@ -549,7 +591,7 @@ function scrollFunction() {
                     [1] 汎化性能を考慮した食品パッケージの画像分類, 鴇田優太, (2024). <a class="color1"
                                                                                 href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">概要</a>
                     <a class="color1" href="thesis_tokita.pdf">  <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">本文</a>
-                    <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"><a class="color1" href="beamer_tokita.pdf">スライド</a><br>
+                    <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"><a class="color1" href="beamer_tokita.pdf">SLIDE</a><br>
                     [2] 会計監査における分析的手続への不正検知を目的とした機械学習手法の導入可能性, 舟橋純平, (2024). <a
                         class="color1" href="202302.pdf"></a>
                     <br>

@@ -9,6 +9,26 @@
   <link href="teds.css" rel="stylesheet">
   <!-- 以下は既存のまま維持 -->
   <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
+
+
+    <style>
+  /* 既存CSSを上書きせず、モバイル用スタイルのみ追加 */
+  @media (max-width: 768px) {
+    .ai-section {
+      flex-direction: column;
+      width: 100% !important;
+    }
+    .ai-column {
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+    .ai-text {
+      font-size: 0.9rem !important;
+    }
+  }
+</style>
+
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
   <script>/* 既存のGoogle Analyticsコード */</script>
   <meta name="keywords" content="劉 慶豊, 刘庆丰, Qingfeng Liu, 機械学習, 人工知能, 計量経済学">
@@ -314,20 +334,19 @@ function scrollFunction() {
       </td>
       <td style="padding-left: 1vw; vertical-align: top;">
         <div style="line-height: 1.8; text-align: left;">
-          <strong>教　授</strong> 劉 慶豊　
-          <a class="color1" href="CV.pdf">CV</a><br>
+          <strong>教　授</strong> 　劉 慶豊 <a class="color1" href="CV.pdf"> <img src="icons/iconmonstr-cv-4-240.png" alt="CV icon" class="pdf-icon"></a><br>
           <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">法政大学理工学部経営システム工学科 学科主任</a><br>
-          <strong>出　身</strong> 中国内モンゴル自治区<br>
-          <strong>学　位</strong> 京都大学経済学博士<br>
+          <strong>出　身</strong> 　中国内モンゴル自治区<br>
+          <strong>学　位</strong> 　京都大学経済学博士<br>
           <strong>研　究</strong>
-          <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en" style="color:#007acc;">学術論文</a><br>
+          <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">　学術論文 <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
             <strong style="color:#007acc;">　　　</strong>
-            <a class="color1" href="https://github.com/Qingfeng-Liu/Qingfeng-Liu.github.io" style="color:#007acc;">学習資料・コード集 (ML & AI)</a><br>
-          <strong>趣　味</strong> バスケットボール, 囲碁<br>
-          <strong>詩文集</strong> <a class="color1" href="https://qingfeng-liu.github.io/Analects.html">論語新篇</a> <a class="color1" href="https://qingfeng-liu.github.io/poems.html">凡璞瑰珍集</a><br>
-          <strong>E-mail</strong> qliu[at]hosei.ac.jp
+            <a class="color1" href="https://github.com/Qingfeng-Liu/Qingfeng-Liu.github.io" >　学習資料・コード集 (ML・AI) <img src="icons/iconmonstr-save-as-lined-240.png" alt="CV icon" class="pdf-icon"></a><br>
+          <strong>趣　味</strong> 　バトミントン, 園芸<br>
+          <strong>詩文集</strong> <a class="color1" href="https://qingfeng-liu.github.io/Analects.html">　論語新篇 <img src="icons/iconmonstr-book-1-240.png" alt="Analects icon" class="pdf-icon"></a> <a class="color1" href="https://qingfeng-liu.github.io/poems.html">凡璞瑰珍集 <img src="icons/iconmonstr-cat-6-240.png" alt="POEM icon" class="pdf-icon"></a><br>
+          <strong>E-mail</strong> 　qliu[at]hosei.ac.jp
         </div>
-      </td>
+      </td>　
     </tr>
   </table>
 <h1></h1>
@@ -360,16 +379,24 @@ function scrollFunction() {
 
   <!-- Column 1: One Image -->
   <div class="ai-column">
-    <img src="Figures/ai_trend.png" alt="AI Trend", class="ai-img-trimmed">
+    <img src="Figures/ai_trend.png" alt="AI Trend" class="ai-img-trimmed">
   </div>
 
   <!-- Column 2: Text (DX・AI Business) -->
   <div class="ai-column">
-    <div class="ai-title"><a href="AI_Driven_Business.pdf"><h1>DX・AI Business</h1></a></div>
+    <div class="ai-title-container">  <!-- 追加 -->
+      <div class="ai-title">
+        <a href="AI_Driven_Business.pdf">
+          <h1 class="pdf-title">
+            <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon">
+          DX・AI Edge
+          </h1>
+        </a>
+      </div>
+    </div>
     <div class="ai-text">
-      経営意思決定支援、営業・マーケティング、<br>
-      サプライチェーン管理、人事労務、<br>
-      顧客対応、財務会計、経営戦略シミュレーション
+      経営意思決定支援<br>営業サポート<br>市場開発個人化<br>Supply Chain<br>
+        採用・労務人事<br>顧客対応自動化<br>財務最適化<br>AI生産システム
     </div>
   </div>
 
@@ -381,11 +408,19 @@ function scrollFunction() {
 
   <!-- Column 4: Text (ML・AI Toolkit) -->
   <div class="ai-column">
-    <div class="ai-title"><a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit"><h1>ML・AI Toolkit</h1></a></div>
+    <div class="ai-title-container">  <!-- 追加 -->
+      <div class="ai-title">
+        <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit">
+          <h1 class="github-title">
+            <img src="icons/iconmonstr-github-3-240.png" alt="icon" class="github-icon">
+            ML・AI Tools
+          </h1>
+        </a>
+      </div>
+    </div>
     <div class="ai-text">
-      DNN 深層学習、Classification、<br>
-      因果推論、生産システム最適、<br>
-      マーケティング予測、LLM、ChatGPT API
+      DNN深層学習<br>強化学習<br>ML因果推論<br>LLMテキスト処理
+        <br>ChatGPT Script<br>OpenAI API<br>画像認識異常検知<br>Semantic Search
     </div>
   </div>
 
@@ -393,59 +428,6 @@ function scrollFunction() {
 
 
 
-
-
-<h1></h1>
-<div>
-    <table align="center" border="0" width="75%">
-        <tr>
-            <td style="padding-bottom: 0vmax; padding-top: 2vmax; padding-left: 0vmax;
-            padding-right: 0vmax;" width="100%">
-
-                <table align="center" border="0" cellspacing="0" id="demo_1"
-                       style="font-size: 1.2vmax; text-justify:auto;"
-                       width="100%">
-                    <tbody>
-                    <tr>
-                        <td align="left" style="box-shadow: 0 0 0 0px #c4c4c4 inset;vertical-align: middle;
-                        border-top-width: 10px; border-left-width: 0px; border-right-width: 0px;
-                        border-bottom-width: 0px; border-color: #ffffff;" valign="top" width="48%">
-                            <figure>
-                                <img border="0"
-                                     src="Ensemble_Learning.png"
-                                     style="border-bottom: 0px solid #c4c4ce;"
-                                     width="100%">
-                                <figcaption><p style="text-align:center">
-                                    Three types of Ensemble Learning
-                                </p></figcaption>
-                            </figure>
-                        </td>
-                        <td align="center" style="padding-bottom: 2vmax;" valign="top" width="4%">
-                            <font color=#ffffff>abc</font></td>
-                        <td align="left" style="box-shadow: 0 0 0 0px #c4c4c4 inset;vertical-align: bottom;
-                        border-top-width: 10px; border-left-width: 0px; border-right-width: 0px;
-                        border-bottom-width: 0px; border-color: #ffffff;" valign="top" width="48%">
-                            <hr style="border: 0px solid transparent; margin-top: -10px; padding-top: 10px; padding-bottom: 0px;">
-                            <figure>
-                                <img src="mac.jpg"
-                                     style="border-bottom: 0px solid #c4c4ce;"
-                                     width="100%">
-                                <hr style="border: 0px solid transparent; margin-top: -10px; padding-top: 40px; padding-bottom: 0px;">
-                                <figcaption style="vertical-align : bottom;">
-                                    <p style="text-align:center">
-                                        Machine Collaboration of two base machines
-                                    </p>
-                                </figcaption>
-                            </figure>
-                        <td align="center" valign="top" width="0%"></td>
-                    </tr>
-                    </tbody>
-                </table>
-
-            </td>
-        </tr>
-    </table>
-</div>
 <h1></h1>
 <h2>Awards 受賞など</h2>
 <div>
@@ -538,16 +520,16 @@ function scrollFunction() {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] 機械学習を用いた順位予測モデルの構築と精度評価：競馬予測を事例として, 岩﨑照英, 田中幸佑, 徳丸颯太, (2025).
-                    <a class="color1" href="20X4026_1.pdf">概要</a><br>
+                    <a class="color1" href="20X4026_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
 
                     [2] テクニカル指標と株価変動の関連性に関する実証分析, 久保村光汰, (2025).
-                    <a class="color1" href="abstract_tokita_2023.pdf">概要</a><br>
+                    <a class="color1" href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
 
                     [3] サッカーにおける戦略策定を目的としたデータ分析, 下村勘太, 林雅哉, (2025).
-                    <a class="color1" href="21X4029_1.pdf">概要</a><br>
+                    <a class="color1" href="21X4029_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
 
                     [4] 機械学習を用いた不正会計の検出と分析, 田嶋俊紀, 平田円, (2025).
-                    <a class="color1" href="21X4037_1.pdf">概要</a><br>
+                    <a class="color1" href="21X4037_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
                 </div>
             </td>
         </tr>
@@ -565,9 +547,9 @@ function scrollFunction() {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] 汎化性能を考慮した食品パッケージの画像分類, 鴇田優太, (2024). <a class="color1"
-                                                                                href="abstract_tokita_2023.pdf">概要</a>
-                    <a class="color1" href="thesis_tokita.pdf"> 本文</a>
-                    <a class="color1" href="beamer_tokita.pdf"> スライド</a><br>
+                                                                                href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">概要</a>
+                    <a class="color1" href="thesis_tokita.pdf">  <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">本文</a>
+                    <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"><a class="color1" href="beamer_tokita.pdf">スライド</a><br>
                     [2] 会計監査における分析的手続への不正検知を目的とした機械学習手法の導入可能性, 舟橋純平, (2024). <a
                         class="color1" href="202302.pdf"></a>
                     <br>
@@ -588,11 +570,11 @@ function scrollFunction() {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] ツイートデータとインデックスデータを併用した株価騰落予測, 黒崎地大, 山田壮雄, (2023). <a class="color1"
-                                                                                            href="202201.pdf">概要</a><br>
+                                                                                            href="202201.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
                     [2] 人口問題におけるテレワーク推進と移住支援策がもたらす効果について, 大島宙也, 前田翼, (2023). <a class="color1"
-                                                                                                   href="202202.pdf">概要</a><br>
+                                                                                                   href="202202.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
                     [3] サッカーの勝敗要因に関するデータ分析 伊藤光毅, 鹿野紘樹, 北林良太, (2023). <a class="color1"
-                                                                                           href="202203.pdf">概要</a>
+                                                                                           href="202203.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a>
                     <br>
                 </div>
             </td>
@@ -615,10 +597,10 @@ function scrollFunction() {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] Adversarial Autoencoderを用いたVertical Federated Learning, 黄凱, (2025修了予定).
-                    <a class="color1" href="2024_huang.pdf">概要</a><br>
+                    <a class="color1" href="2024_huang.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
 
                     [2] Differential Machine Learningを用いたラフ・ボラティリティモデルのキャリブレーション, 黒崎地大, (2025修了予定).
-                    <a class="color1" href="2024_kurosaki.pdf">概要</a>
+                    <a class="color1" href="2024_kurosaki.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a>
                     <br>
                 </div>
             </td>

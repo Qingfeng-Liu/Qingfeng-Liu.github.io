@@ -4,18 +4,32 @@
 body {
   margin: 0 0;
   background: #fff;
-  font-family: 'Noto Sans JP', sans-serif;
   font-weight: normal;
   line-height: 1.0;
   color:#C4C4C4;
   height: 100%;
   -webkit-text-size-adjust:100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.8;
   color: #333;
   background-color: #f9f9f9;
+  /* フォント設定を1つに統合 */
+  font-family:
+    "Noto Sans JP",     /* Googleフォント（日本語） */
+    "Hiragino Sans",    /* macOS用 */
+    "Yu Gothic",        /* Windows用 */
+    Meiryo,
+    /* 欧文フォントフォールバック */
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-
+strong, b {
+  font-weight: 700;  /* 日本語の太字を強調 */
+}
 .image {
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
@@ -61,7 +75,7 @@ h2 {
   text-transform: uppercase;
   font-weight: Normal;
   font-size: 1.5vmax;
-  color: #EE490D;
+  color: #1a5276;
   margin-left: auto;
   margin-right: auto;
 }
@@ -96,7 +110,7 @@ h5 {
   text-transform: uppercase;
   font-weight: Normal;
   font-size: 1vmax;
-  color: #EE490D;
+  color: #1a5276;
   margin-left: auto;
   margin-right: auto;
 }
@@ -104,8 +118,8 @@ h5 {
 p.p3 {
   margin: 0.0px 0.0px 0.0px 0.0px;
   font: 1vw '"franklin_gothic"';
-  color: #0000e9;
-  -webkit-text-stroke: #0000e9;
+  color: #1a5276;
+  -webkit-text-stroke: #1a5276;
 }
 
 p.p4 {
@@ -129,7 +143,7 @@ div.p5 {
   font-size: 1.5vh;
   font-weight: Bold;
   font-family: 'Noto Sans JP', sans-serif;
-  color: #EE490D;
+  color: #1a5276;
 }
 
 div.p6 {
@@ -154,7 +168,7 @@ p.p7 {
   font-size: 1.5vmax;
   font-weight: Bold;
   font-family: 'Noto Sans JP', sans-serif;
-  color: #EE490D;
+  color: #1a5276;
   font-family: 'STIX Two Text', serif;
   letter-spacing: 0.05em;
 }
@@ -197,21 +211,34 @@ span.s5 {
   font-family: 'Noto Sans JP', sans-serif;
   color: #353535;
 }
+/*.ai-section {*/
+/*      width: 75%;*/
+/*      margin: auto;*/
+/*      display: flex;*/
+/*      justify-content: space-between;*/
+/*      gap: 1vw;*/
+/*      box-sizing: border-box;*/
+/*      padding: 1vw 0;*/
+/*    }*/
+/* 4列レイアウト維持 */
 .ai-section {
-      width: 75%;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 1vw;
-      box-sizing: border-box;
-      padding: 1vw 0;
-    }
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+  gap: 1vw;
+}
 
-    .ai-column {
-      width: 24%;
-      box-sizing: border-box;
-    }
-
+    /*.ai-column {*/
+    /*  width: 24%;*/
+    /*  box-sizing: border-box;*/
+    /*}*/
+.ai-column {
+  width: 24%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
     .ai-column img {
       width: 100%;
       height: auto;
@@ -226,11 +253,66 @@ span.s5 {
   object-position: top;
   clip-path: inset(0 0 0% 0); /* 裁剪下部 10% */
 }
+    /* タイトルコンテナ追加 */
+.ai-title-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
     .ai-title {
       font-weight: bold;
-      color: #0033cc;
+      color: #1a5276;
       margin-bottom: 0.5em;
+      display: inline-block;
     }
+    .ai-title h1 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.ai-title img {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.4em;
+}
+/* PDFアイコンとタイトルのスタイル */
+.pdf-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+  vertical-align: middle;
+}
+
+.pdf-title, .github-title {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  white-space: nowrap;
+  justify-content: center; /* 追加 */
+}
+
+/* GitHubアイコンとタイトルのスタイル（既存） */
+/*.github-icon {*/
+/*  width: 1em;*/
+/*  height: 1em;*/
+/*  margin-right: 0.3em;*/
+/*  vertical-align: middle;*/
+/*}*/
+.pdf-icon, .github-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+}
+
+
+
+.ai-title a {
+  text-decoration: none;
+  color: inherit;
+}
 
     .ai-text {
   font-size: 80%;        /* サイズ8割 */
@@ -242,7 +324,7 @@ span.s5 {
     .ai-section h1 {
   color: #1a5276;
   margin-top: 0;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #1a5276;
   padding-bottom: 8px;
 }
     .figure-caption {
@@ -365,14 +447,14 @@ div, dl, dt, dd, ul, ol, li, h4, h5, h6, pre, form, fieldset, blockquote {
 }
 
 a:link {
-  color: #3498DB;
+  color: #1a5276;
   text-decoration:none;
   font-weight: Bold;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
 
 a:visited {
-  color: #3498DB;
+  color: #1a5276;
   text-decoration:underline;
   font-weight: Bold;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
@@ -393,7 +475,7 @@ a.color1:link {
   text-decoration:underline;
   font-weight: Bold;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
-  color: #3498db;
+  color: #1a5276;
   text-decoration: none;
 }
 
@@ -457,7 +539,7 @@ a.color1:active {
   position: relative;
   margin: 0em 0;
   padding: 1em 2em;
-  border: solid 3px #3498DB;
+  border: solid 3px #1a5276;
   border-radius: 8px;
   min-height: 17vmax;
   z-index: 0;
@@ -473,7 +555,7 @@ td .box-title {
   font-size: 1.2vmax;
   font-weight: Normal;
   font-family: 'Noto Sans JP', sans-serif;
-  color: #EE490D;
+  color: #1a5276;
   background: #FFF;
 }
 

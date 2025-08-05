@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1.0 " name="viewport">
 
+
 body {
   margin: 0 0;
   background: #fff;
@@ -29,6 +30,15 @@ body {
 }
 strong, b {
   font-weight: 700;  /* 日本語の太字を強調 */
+}
+.profile-box {
+  font-family: 'Noto Sans JP', Meiryo, sans-serif;
+  font-weight: 550;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 1.1vmax;  /* お好みで調整 */
+  color: #353535;
+  line-height: 1.6;
 }
 .image {
   margin-right: calc(50% - 50vw);
@@ -131,7 +141,7 @@ p.p4 {
 p.p5 {
   margin: 0.0px 0.0px 0.0px 0.0px;
   font-size: 1.5vh;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: 'Noto Sans JP', sans-serif;
   color: black;
   font-family: 'Oswald', sans-serif;
@@ -141,7 +151,7 @@ p.p5 {
 div.p5 {
   margin: 0.0px 0.0px 0.0px 0.0px;
   font-size: 1.5vh;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: 'Noto Sans JP', sans-serif;
   color: #1a5276;
 }
@@ -156,7 +166,7 @@ div.p6 {
 p.p6 {
   margin: 0.0px 0.0px 0.0px 0.0px;
   font-size: 1.5vmax;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: 'Noto Sans JP', sans-serif;
   margin-left: auto;
   margin-right: auto;
@@ -166,7 +176,7 @@ p.p6 {
 p.p7 {
   margin: 0.0px 0.0px 0.0px 0.0px;
   font-size: 1.5vmax;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: 'Noto Sans JP', sans-serif;
   color: #1a5276;
   font-family: 'STIX Two Text', serif;
@@ -176,7 +186,7 @@ p.p7 {
 p.p8 {
   margin: 0.0px 0.0px 0.0px 0.0px;
   font-size: 1.5vmax;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: 'Noto Sans JP', sans-serif;
   margin-left: auto;
   margin-right: auto;
@@ -261,7 +271,7 @@ span.s5 {
 }
 
     .ai-title {
-      font-weight: bold;
+      font-weight: 550;
       color: #1a5276;
       margin-bottom: 0.5em;
       display: inline-block;
@@ -344,12 +354,15 @@ span.s5 {
   width: 50%;
 }
 .main {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: Extra-light;
   margin-left: auto;
   margin-right: auto;
-  line-height:1.2;
-  color: #353535;
+  font-weight: normal;
+  line-height: 1.0;
+  height: 100%;
+  -webkit-text-size-adjust:100%;
+  line-height: 1.8;
+
+
 }
 
 .main2 {
@@ -449,14 +462,14 @@ div, dl, dt, dd, ul, ol, li, h4, h5, h6, pre, form, fieldset, blockquote {
 a:link {
   color: #1a5276;
   text-decoration:none;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
 
 a:visited {
   color: #1a5276;
   text-decoration:underline;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
 
@@ -473,7 +486,7 @@ a:active {
 a.color1:link {
   color: #626567;
   text-decoration:underline;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
   color: #1a5276;
   text-decoration: none;
@@ -482,7 +495,7 @@ a.color1:link {
 a.color1:visited {
   color: #626567;
   text-decoration:underline;
-  font-weight: Bold;
+  font-weight: 550;
   font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
 
@@ -595,7 +608,7 @@ table#demo_1 td:last-child {
 }
 
 table#demo_1 th {
-  font-weight: bold;
+  font-weight: 550;
   vertical-align: top;
 }
 
@@ -746,7 +759,7 @@ strong {
   }
 
   table#demo_1 td .thTitle {
-    font-weight: bold;
+    font-weight: 550;
     width: 20%;
   }
 

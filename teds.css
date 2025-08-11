@@ -83,7 +83,7 @@ h2 {
   width: 75%;
 margin-left: auto;
 margin-right: auto;
-font-size: 1.5vh;
+font-size: 2.5vh;
 font-weight: 550;
 font-family: 'Oswald', sans-serif;
 letter-spacing: 0.1em;
@@ -288,12 +288,14 @@ span.s5 {
   height: 1.2em;
   margin-right: 0.4em;
 }
-/* PDFアイコンとタイトルのスタイル */
-.pdf-icon, .github-icon  {
-  width: 1em;
-  height: 1em;
+.pdf-icon,
+.github-icon {
+  display: inline-block;     /* Keep it inline */
+  width: 1.5em !important;     /* Force to font size */
+  height: 1.5em !important;    /* Force to font size */
   margin-right: 0.3em;
-  vertical-align: middle;
+  vertical-align: -0.15em;
+  object-fit: contain;
 }
 
 .pdf-title, .github-title {
@@ -326,11 +328,18 @@ span.s5 {
 }
 
     .ai-text {
-  font-size: 80%;        /* サイズ8割 */
+  font-size: 100%;        /* サイズ8割 */
   line-height: 1.6;
-  width: 80%;             /* 行の幅を9割に */
+  width: 100%;             /* 行の幅を9割に */
   box-sizing: border-box;
   margin: 0 auto;        /* 中央揃え */
+}
+
+    /* アイコン＋テキストを1行に・中央揃えに・改行させない */
+.ai-text a {
+  display: inline-flex;     /* 1行で横並び */
+  align-items: center;      /* 縦位置を中央に */
+  white-space: nowrap;      /* 途中改行を禁止 */
 }
     .ai-section h1 {
   color: #1a5276;

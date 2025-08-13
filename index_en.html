@@ -77,7 +77,7 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
     <script>/* Existing Google Analytics code */</script>
-    <meta name="keywords" content="Qingfeng Liu, Machine Learning, Artificial Intelligence, Econometrics">
+    <meta content="Qingfeng Liu, Machine Learning, Artificial Intelligence, Econometrics" name="keywords">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Keep existing font links -->
@@ -89,60 +89,81 @@
     <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
 </head>
 <style id="mobile-clamp">
-/* 強制：スマホ時は主要ブロックを表示幅の85%に制限（はみ出し要素も抑制） */
-@media (max-width: 768px) {
-  html, body { overflow-x: hidden; }
+    /* 強制：スマホ時は主要ブロックを表示幅の85%に制限（はみ出し要素も抑制） */
+    @media (max-width: 768px) {
+        html, body {
+            overflow-x: hidden;
+        }
 
-  /* ナビのはみ出しを抑える */
-  #navbar table {
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
+        /* ナビのはみ出しを抑える */
+        #navbar table {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
 
-  /* 主要ブロックを85vwに固定（インラインwidthやHTML属性より優先） */
-  .main, table.main, #HEADER .main, .container, .ai-section,
-  h1, h2, h5, p.p6, p.p8,
-  table[width], table[style*="width:"] {
-    width: 85vw !important;
-    max-width: 85vw !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+        /* 主要ブロックを85vwに固定（インラインwidthやHTML属性より優先） */
+        .main, table.main, #HEADER .main, .container, .ai-section,
+        h1, h2, h5, p.p6, p.p8,
+        table[width], table[style*="width:"] {
+            width: 85vw !important;
+            max-width: 85vw !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
 
-  /* 内側のテーブルは親幅いっぱいで折り返し */
-  .main table, table.main table, #demo_1, #demo_2,
-  table[style*="width: 100%"], table[width="100%"] {
-    width: 100% !important;
-  }
+        /* 内側のテーブルは親幅いっぱいで折り返し */
+        .main table, table.main table, #demo_1, #demo_2,
+        table[style*="width: 100%"], table[width="100%"] {
+            width: 100% !important;
+        }
 
-  /* 4カラム→縦積み */
-  .ai-section {
-    flex-direction: column !important;
-    gap: 2vw !important;
-  }
-  .ai-column { width: 100% !important; }
+        /* 4カラム→縦積み */
+        .ai-section {
+            flex-direction: column !important;
+            gap: 2vw !important;
+        }
 
-  /* 巨大なcellspacingをCSSで上書き（属性より優先される） */
-  table[cellspacing] {
-    border-collapse: separate !important;
-    border-spacing: 3vw !important;  /* 必要に応じて調整 */
-  }
+        .ai-column {
+            width: 100% !important;
+        }
 
-  /* 画像のはみ出し防止 */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
-/* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
-img[src$="MyJP_SIM_2.png"] {
-  height: 5em !important;
-  width: auto !important;
-  margin-right: 10px !important;
-}
-@media (max-width: 768px) {
-  img[src$="MyJP_SIM_2.png"] { height: 5em !important; }
-}
+        /* 巨大なcellspacingをCSSで上書き（属性より優先される） */
+        table[cellspacing] {
+            border-collapse: separate !important;
+            border-spacing: 3vw !important; /* 必要に応じて調整 */
+        }
+
+        /* 画像のはみ出し防止 */
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    /* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
+    img[src$="MyJP_SIM_2.png"] {
+        height: 5em !important;
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+
+    @media (max-width: 768px) {
+        img[src$="MyJP_SIM_2.png"] {
+            height: 5em !important;
+        }
+    }
+
+    img[src$="TEDS_Emblem_light.png"] {
+        height: 5em !important;
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+
+    @media (max-width: 768px) {
+        img[src$="TEDS_Emblem_light.png"] {
+            height: 5em !important;
+        }
+    }
 </style>
 
 <body>
@@ -154,8 +175,8 @@ img[src$="MyJP_SIM_2.png"] {
         <tr>
             <!-- PC view - logos on the left -->
             <td class="shield-container pc-logos" style="text-align: right; white-space: nowrap;">
-                <img src="Figures/hosei_shield.png" alt="Hosei University" class="shield-logo">
-                <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo" style="margin-left: 8px;">
+                <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png">
+                <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png" style="margin-left: 8px;">
             </td>
 
             <td class="nav-item">
@@ -262,13 +283,13 @@ img[src$="MyJP_SIM_2.png"] {
                     <td colspan="6" style="padding-top: 0px;">
                         <table align="center" border="0" cellpadding="0" cellspacing="8vw" style="margin: 0 auto;">
                             <tr>
-                                <td><a href="https://qingfeng-liu.github.io/index.html" class="color1">
+                                <td><a class="color1" href="https://qingfeng-liu.github.io/index.html">
                                     <div style="font-size: 1vmax;">JAPANESE</div>
                                 </a></td>
-                                <td><a href="https://qingfeng-liu.github.io/index_en.html" class="color1">
+                                <td><a class="color1" href="https://qingfeng-liu.github.io/index_en.html">
                                     <div style="font-size: 1vmax;">ENGLISH</div>
                                 </a></td>
-                                <td><a href="https://qingfeng-liu.github.io/index_cn.html" class="color1">
+                                <td><a class="color1" href="https://qingfeng-liu.github.io/index_cn.html">
                                     <div style="font-size: 1vmax;">CHINESE</div>
                                 </a></td>
                             </tr>
@@ -335,26 +356,26 @@ img[src$="MyJP_SIM_2.png"] {
                                             competition</a>
                                             (2023).<br>
                                             2024/04/01 Seminar recruitment <a href="semi_intro.pdf">PDF <img
-                                                src="icons/iconmonstr-file-34-240.png" alt="PAPER icon"
-                                                class="pdf-icon"></a> <a
+                                                alt="PAPER icon" class="pdf-icon"
+                                                src="icons/iconmonstr-file-34-240.png"></a> <a
                                                 href="semi_intro.pptx">SLIDE <img
-                                                src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon"
-                                                class="pdf-icon"></a> <a
+                                                alt="SLIDE icon" class="pdf-icon"
+                                                src="icons/iconmonstr-school-27-240.png"></a> <a
                                                 href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img
-                                                src="icons/iconmonstr-youtube-3-240.png" alt="YOUTUBE icon"
-                                                class="pdf-icon"></a>
+                                                alt="YOUTUBE icon" class="pdf-icon"
+                                                src="icons/iconmonstr-youtube-3-240.png"></a>
                                             Recruitment for Liu Seminar (3rd year) begins.<br>
                                             <span id="dots2"></span><span
                                                 id="more2">
                                                 2022/04/03 Seminar recruitment <a href="semi_intro.pdf">PDF <img
-                                                src="icons/iconmonstr-file-34-240.png" alt="PAPER icon"
-                                                class="pdf-icon"></a> <a
+                                                alt="PAPER icon" class="pdf-icon"
+                                                src="icons/iconmonstr-file-34-240.png"></a> <a
                                                 href="semi_intro.pptx">SLIDE <img
-                                                src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon"
-                                                class="pdf-icon"></a> <a
+                                                alt="SLIDE icon" class="pdf-icon"
+                                                src="icons/iconmonstr-school-27-240.png"></a> <a
                                                 href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img
-                                                src="icons/iconmonstr-youtube-3-240.png" alt="YOUTUBE icon"
-                                                class="pdf-icon"></a>
+                                                alt="YOUTUBE icon" class="pdf-icon"
+                                                src="icons/iconmonstr-youtube-3-240.png"></a>
                                                 Recruitment for Liu Seminar (3rd year) begins.<br>
                                                 2022/04/03 Laboratory website launched. <br><br></span>
                                             &#9656;
@@ -377,9 +398,9 @@ img[src$="MyJP_SIM_2.png"] {
                                                 Forthcoming Meeting
                                             </p>
                                         </div>
-                                        <div style="padding-bottom: 15px; display: flex; align-items: center;">
-                                            <img src="icons/MyJP_SIM_2.png" alt="MyJP_SIM_2_icon"
-                                                 style="height: 5.2em; margin-right: 10px;">
+                                        <div style="padding-bottom: 15px; display: flex;">
+                                            <img alt="MyJP_SIM_2_icon" src="icons/MyJP_SIM_2.png"
+                                                 style="padding-top: 5px; height: 5.5em; margin-right: 10px;">
                                             <div>
                                                 Meeting You in Japan — Symposium on Innovative Mathematical Minds
                                                 (MyJP-SIM<sup>2</sup>), organized under the
@@ -393,12 +414,15 @@ img[src$="MyJP_SIM_2.png"] {
                                                 Seminar Series
                                             </p>
                                         </div>
-                                        <div style="padding-bottom: 15px">
+                                        <div style="padding-bottom: 15px; display: flex; ">
+                                            <img alt="TEDS_Emblem_light" src="Figures/TEDS_Emblem_light.png"
+                                                 style="padding-top: 5px; height: 5.5em; margin-right: 10px;">
+                                            <div style="padding-bottom: 15px">
 
-                                            <a class="color1" href="https://teds-datascience.github.io/seminars/"
-                                               style="text-decoration:underline;">
-                                                Transdisciplinary Econometrics & Data Science Seminar</a>
-                                            (Interdisciplinary Co-Creation Econometrics & Data Science Seminar)
+                                                <a class="color1" href="https://teds-datascience.github.io/seminars/"
+                                                   style="text-decoration:underline;">
+                                                    Transdisciplinary Econometrics & Data Science Seminar</a>
+                                            </div>
                                         </div>
 
                                         <div align="left"
@@ -456,21 +480,21 @@ img[src$="MyJP_SIM_2.png"] {
 
         <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
             <tr>
-                <td style="padding-right: 2vw; vertical-align: top;" width="25%">
+                <td style="padding-right: 2vw; vertical-align: top;" width="20%">
                     <img alt="Prof. Qingfeng Liu" src="Qingfeng_Liu.jpg" width="100%">
                 </td>
                 <td style="padding-left: 1vw; vertical-align: top;">
                 <td style="padding-left: 1vw; vertical-align: top;">
                     <div style="width: 100%; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
                         <strong>Professor</strong> Qingfeng Liu <a class="color1" href="CV.pdf"> <img
-                            src="icons/iconmonstr-cv-4-240.png" alt="CV icon" class="pdf-icon"></a><br>
+                            alt="CV icon" class="pdf-icon" src="icons/iconmonstr-cv-4-240.png"></a><br>
                         <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">Chair, Department of Industrial and
                             Systems Engineering, Faculty of Science and Engineering, Hosei University</a><br>
                         <strong>Origin</strong> Inner Mongolia, China<br>
                         <strong>Degree</strong> Ph.D. in Economics, Kyoto University<br>
                         <strong>Research</strong>
                         <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">Academic
-                            Publications <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                            Publications <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a><br>
                         <strong>Hobbies</strong> Badminton, Gardening<br>
                         <strong>E-mail</strong> qliu[at]hosei.ac.jp
                     </div>
@@ -483,7 +507,7 @@ img[src$="MyJP_SIM_2.png"] {
 
             <!-- Column 1: One Image -->
             <div class="ai-column">
-                <img src="Figures/my_thoughts.png" alt="MY THOUGHTS" class="ai-img-trimmed">
+                <img alt="MY THOUGHTS" class="ai-img-trimmed" src="Figures/my_thoughts.png">
             </div>
 
             <!-- Column 2: Text (DX・AI Business) -->
@@ -496,22 +520,22 @@ img[src$="MyJP_SIM_2.png"] {
                     </div>
                 </div>
                 <div class="ai-text">
-                    <a href="My_Thoughts/Double_Descents.pdf"><img src="icons/iconmonstr-file-34-240.png"
-                                                                   alt="PAPER icon" class="pdf-icon"> Why Double
+                    <a href="My_Thoughts/Double_Descents.pdf"><img alt="PAPER icon"
+                                                                   class="pdf-icon" src="icons/iconmonstr-file-34-240.png"> Why Double
                         Descent?</a>
                     <br>
                     <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit"><img
-                            src="icons/iconmonstr-save-as-lined-240.png" alt="Code icon" class="pdf-icon"> Code
+                            alt="Code icon" class="pdf-icon" src="icons/iconmonstr-save-as-lined-240.png"> Code
                         Repository (ML/AI)</a>
                     <br>
-                    <a href="AI_Driven_Business.pdf"><img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon"
-                                                          class="pdf-icon"> DX/AI Edge</a>
+                    <a href="AI_Driven_Business.pdf"><img alt="SLIDE icon" class="pdf-icon"
+                                                          src="icons/iconmonstr-school-27-240.png"> DX/AI Edge</a>
                 </div>
             </div>
 
             <!-- Column 3: One Image -->
             <div class="ai-column">
-                <img src="Figures/my_mind.png" alt="MY MIND" class="ai-img-trimmed">
+                <img alt="MY MIND" class="ai-img-trimmed" src="Figures/my_mind.png">
             </div>
 
             <!-- Column 4: Text (My Mind) -->
@@ -524,12 +548,12 @@ img[src$="MyJP_SIM_2.png"] {
                     </div>
                 </div>
                 <div class="ai-text">
-                    <a href="https://qingfeng-liu.github.io/Analects.html"><img src="icons/iconmonstr-book-26-240.png"
-                                                                                alt="Analects icon" class="pdf-icon">
+                    <a href="https://qingfeng-liu.github.io/Analects.html"><img alt="Analects icon"
+                                                                                class="pdf-icon" src="icons/iconmonstr-book-26-240.png">
                         New Analects</a>
                     <br>
-                    <a href="https://qingfeng-liu.github.io/poems.html"><img src="icons/iconmonstr-cat-6-240.png"
-                                                                             alt="Poem icon" class="pdf-icon"> Collected
+                    <a href="https://qingfeng-liu.github.io/poems.html"><img alt="Poem icon"
+                                                                             class="pdf-icon" src="icons/iconmonstr-cat-6-240.png"> Collected
                         Poems & Gems</a>
                 </div>
             </div>
@@ -577,7 +601,7 @@ img[src$="MyJP_SIM_2.png"] {
 
     <!-- Column 1: One Image -->
     <div class="ai-column">
-        <img src="Figures/ai_trend.png" alt="AI Trend" class="ai-img-trimmed">
+        <img alt="AI Trend" class="ai-img-trimmed" src="Figures/ai_trend.png">
     </div>
 
     <!-- Column 2: Text (DX・AI Business) -->
@@ -586,7 +610,7 @@ img[src$="MyJP_SIM_2.png"] {
             <div class="ai-title">
                 <a href="AI_Driven_Business.pdf">
                     <h1 class="pdf-title">
-                        <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon">DX/AI Edge
+                        <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">DX/AI Edge
                     </h1>
                 </a>
             </div>
@@ -599,8 +623,8 @@ img[src$="MyJP_SIM_2.png"] {
 
     <!-- Column 3: Two Images Stacked -->
     <div class="ai-column">
-        <img src="Figures/ChatGPT.png" alt="What is AI">
-        <img src="Figures/img-course_detail02.png" alt="ML Graphic">
+        <img alt="What is AI" src="Figures/ChatGPT.png">
+        <img alt="ML Graphic" src="Figures/img-course_detail02.png">
     </div>
 
     <!-- Column 4: Text (ML/AI Toolkit) -->
@@ -609,7 +633,7 @@ img[src$="MyJP_SIM_2.png"] {
             <div class="ai-title">
                 <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit">
                     <h1 class="github-title">
-                        <img src="icons/iconmonstr-github-3-240.png" alt="GitHub icon" class="github-icon">
+                        <img alt="GitHub icon" class="github-icon" src="icons/iconmonstr-github-3-240.png">
                         ML/AI Tools
                     </h1>
                 </a>
@@ -677,22 +701,22 @@ img[src$="MyJP_SIM_2.png"] {
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] Building and Evaluating a Ranking Prediction Model Using Machine Learning: A Case Study of
                     Horse-Racing Prediction, Teruhide Iwasaki, Kosuke Tanaka, Sota Tokumaru, (2025).
-                    <a class="color1" href="20X4026_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon"
-                                                                 class="pdf-icon"></a><br>
+                    <a class="color1" href="20X4026_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [2] An Empirical Analysis of the Relationship Between Technical Indicators and Stock Price
                     Movements, Kota Kubomura, (2025).
-                    <a class="color1" href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                            alt="PAPER icon" class="pdf-icon"></a><br>
+                    <a class="color1" href="abstract_tokita_2023.pdf"> <img alt="PAPER icon"
+                                                                            class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [3] Data Analysis for Strategy Formulation in Soccer, Kanta Shimomura, Masaya Hayashi, (2025).
-                    <a class="color1" href="21X4029_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon"
-                                                                 class="pdf-icon"></a><br>
+                    <a class="color1" href="21X4029_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [4] Detecting and Analyzing Accounting Fraud Using Machine Learning, Toshinori Tajima, Madoka
                     Hirata, (2025).
-                    <a class="color1" href="21X4037_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon"
-                                                                 class="pdf-icon"></a><br>
+                    <a class="color1" href="21X4037_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
                 </div>
             </td>
         </tr>
@@ -711,11 +735,11 @@ img[src$="MyJP_SIM_2.png"] {
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] Image Classification of Food Packages with Generalization Performance Considered, Yuta Tokita,
                     (2024). <a class="color1"
-                               href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                     alt="PAPER icon" class="pdf-icon">Abstract</a>
-                    <a class="color1" href="thesis_tokita.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                     alt="PAPER icon" class="pdf-icon">Full Text</a>
-                    <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"><a class="color1"
+                               href="abstract_tokita_2023.pdf"> <img alt="PAPER icon"
+                                                                     class="pdf-icon" src="icons/iconmonstr-file-34-240.png">Abstract</a>
+                    <a class="color1" href="thesis_tokita.pdf"> <img alt="PAPER icon"
+                                                                     class="pdf-icon" src="icons/iconmonstr-file-34-240.png">Full Text</a>
+                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png"><a class="color1"
                                                                                                        href="beamer_tokita.pdf">SLIDES</a><br>
                     [2] Introducing Machine Learning for Fraud Detection in Analytical Procedures of Financial Audits,
                     Jumpei Funabashi, (2024). <a
@@ -739,16 +763,16 @@ img[src$="MyJP_SIM_2.png"] {
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] Stock Price Rise/Fall Prediction Using Combined Tweet and Index Data, Chihiro Kurosaki, Takeo
                     Yamada, (2023). <a class="color1"
-                                       href="202201.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon"
-                                                               class="pdf-icon"></a><br>
+                                       href="202201.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                               src="icons/iconmonstr-file-34-240.png"></a><br>
                     [2] The Impact of Telework Promotion and Migration Support Policies on Population Issues, Chuya
                     Oshima, Tsubasa Maeda, (2023). <a class="color1"
-                                                      href="202202.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                              alt="PAPER icon" class="pdf-icon"></a><br>
+                                                      href="202202.pdf"> <img alt="PAPER icon"
+                                                                              class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a><br>
                     [3] Data Analysis of Factors Determining Soccer Match Outcomes, Koki Ito, Hiroki Kano, Ryota
                     Kitabayashi, (2023). <a class="color1"
-                                            href="202203.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                    alt="PAPER icon" class="pdf-icon"></a>
+                                            href="202203.pdf"> <img alt="PAPER icon"
+                                                                    class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a>
                     <br>
                 </div>
             </td>
@@ -771,13 +795,13 @@ img[src$="MyJP_SIM_2.png"] {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] Vertical Federated Learning Using Adversarial Autoencoders, Kai Huang, (Grad. 2025).
-                    <a class="color1" href="2024_huang.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                  alt="PAPER icon" class="pdf-icon"></a><br>
+                    <a class="color1" href="2024_huang.pdf"> <img alt="PAPER icon"
+                                                                  class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [2] Calibration of Rough Volatility Models Using Differential Machine Learning, Chihiro Kurosaki,
                     (EGrad. 2025).
-                    <a class="color1" href="2024_kurosaki.pdf"> <img src="icons/iconmonstr-file-34-240.png"
-                                                                     alt="PAPER icon" class="pdf-icon"></a>
+                    <a class="color1" href="2024_kurosaki.pdf"> <img alt="PAPER icon"
+                                                                     class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a>
                     <br>
                 </div>
             </td>
@@ -819,7 +843,7 @@ img[src$="MyJP_SIM_2.png"] {
                     <table style="width: 100%; border-collapse: collapse;">
                         <tr>
                             <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
-                                <img src="qingsong_yao.jpg" alt="Qingsong Yao"
+                                <img alt="Qingsong Yao" src="qingsong_yao.jpg"
                                      style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
                             </td>
                             <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
@@ -830,7 +854,7 @@ img[src$="MyJP_SIM_2.png"] {
                         </tr>
                         <tr>
                             <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
-                                <img src="ziyan_zhao.jpg" alt="Ziyan Zhao"
+                                <img alt="Ziyan Zhao" src="ziyan_zhao.jpg"
                                      style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
                             </td>
                             <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
@@ -857,7 +881,7 @@ img[src$="MyJP_SIM_2.png"] {
     <hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 30px; padding-bottom: 0px;
             padding-left: 0px;padding-right: 0px;">
 
-     <table border="0" class="main" width="90%">
+    <table border="0" class="main" width="90%">
         <tr>
             <td width="100%">
                 <p class="p7" style="font-size: 2.0vmax; text-align: justify; text-justify:auto;"><font
@@ -875,7 +899,7 @@ img[src$="MyJP_SIM_2.png"] {
                     <font color=#ffffff>Swim freely in the open sea.
                         <br>
                         <br>
-                        </font>
+                    </font>
                 </p>
             </td>
         </tr>
@@ -883,7 +907,7 @@ img[src$="MyJP_SIM_2.png"] {
 
 
     <hr color="#FFFFFF" style="margin: 0px auto 0; width: 90%; border: none; border-top: 1px solid #fff;">
-    <table class="main" width="90%" style="margin: 0 auto 30px;">
+    <table class="main" style="margin: 0 auto 30px;" width="90%">
         <tr>
             <td><p class="p7" style="text-align: right; margin: 0; font-size: 1vmax; line-height: 1.5vmax;"><span
                     style="color:#ffffff;">E-mail: </span> <a href="mailto:tedsseminars@gmail.com"

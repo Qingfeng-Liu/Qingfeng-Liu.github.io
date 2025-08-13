@@ -2,156 +2,184 @@
 <html>
 
 <head>
-  <!-- 変更前 -->
-  <!-- <style>タグで直接CSSが記述されていた部分を完全削除 -->
+    <!-- 変更前 -->
+    <!-- <style>タグで直接CSSが記述されていた部分を完全削除 -->
 
-  <!-- 変更後 -->
-  <link href="teds.css" rel="stylesheet">
-  <!-- 以下は既存のまま維持 -->
-  <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
-
-
-   <style>
-  /* 既存CSSを上書きせず、モバイル用スタイルのみ追加 */
-  @media (max-width: 768px) {
-    .ai-section {
-      flex-direction: column;
-      width: 83% !important;
-      margin: 0 auto !important; /* 中央揃え */
-      text-align: center !important; /* テキスト中央揃え */
-    }
-    .ai-column {
-      width: 90% !important;
-      margin: 0 auto 20px !important; /* 上下の余白を保持しつつ中央揃え */
-      text-align: center !important;
-    }
-    .ai-title-container {
-      justify-content: center !important;
-    }
-    .ai-text {
-      font-size: 0.9rem !important;
-      text-align: center !important;
-      margin: 0 auto !important;
-    }
-    .ai-title, .pdf-title, .github-title {
-      justify-content: center !important;
-      text-align: center !important;
-    }
-    .ai-img-trimmed, .ai-column img {
-      margin: 0 auto !important;
-      display: block !important;
-    }
-  }
-
-  /* 全デバイス共通のアイコンサイズ調整 */
-  .pdf-icon, .github-icon {
-    width: 25px;  /* 元の20pxから40%拡大（PCに最適化） */
-    height: 25px;
-    margin-right: 12px;  /* 余白も拡大 */
-    transition: all 0.3s;  /* スムーズなアニメーション追加 */
-  }
-
-  /* ホバー効果（PCのみ） */
-  @media (hover: hover) {
-    .pdf-icon:hover, .github-icon:hover {
-      transform: scale(1.1);  /* ホバー時少し拡大 */
-    }
-  }
-
-  /* モバイル用調整（768px以下） */
-  @media (max-width: 768px) {
-    .pdf-icon, .github-icon {
-      width: 28px;  /* モバイルではさらに大きく */
-      height: 28px;
-    }
-    .pdf-title, .github-title {
-      font-size: 1.4rem !important;  /* モバイル用文字サイズ */
-    }
-  }
-</style>
+    <!-- 変更後 -->
+    <link href="teds.css" rel="stylesheet">
+    <!-- 以下は既存のまま維持 -->
+    <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
 
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
-  <script>/* 既存のGoogle Analyticsコード */</script>
-  <meta name="keywords" content="劉 慶豊, 刘庆丰, Qingfeng Liu, 機械学習, 人工知能, 計量経済学">
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- 既存のフォントリンクは維持 -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+    <style>
+        /* 既存CSSを上書きせず、モバイル用スタイルのみ追加 */
+        @media (max-width: 768px) {
+            .ai-section {
+                flex-direction: column;
+                width: 83% !important;
+                margin: 0 auto !important; /* 中央揃え */
+                text-align: center !important; /* テキスト中央揃え */
+            }
+
+            .ai-column {
+                width: 90% !important;
+                margin: 0 auto 20px !important; /* 上下の余白を保持しつつ中央揃え */
+                text-align: center !important;
+            }
+
+            .ai-title-container {
+                justify-content: center !important;
+            }
+
+            .ai-text {
+                font-size: 0.9rem !important;
+                text-align: center !important;
+                margin: 0 auto !important;
+            }
+
+            .ai-title, .pdf-title, .github-title {
+                justify-content: center !important;
+                text-align: center !important;
+            }
+
+            .ai-img-trimmed, .ai-column img {
+                margin: 0 auto !important;
+                display: block !important;
+            }
+        }
+
+        /* 全デバイス共通のアイコンサイズ調整 */
+        .pdf-icon, .github-icon {
+            width: 25px; /* 元の20pxから40%拡大（PCに最適化） */
+            height: 25px;
+            margin-right: 12px; /* 余白も拡大 */
+            transition: all 0.3s; /* スムーズなアニメーション追加 */
+        }
+
+        /* ホバー効果（PCのみ） */
+        @media (hover: hover) {
+            .pdf-icon:hover, .github-icon:hover {
+                transform: scale(1.1); /* ホバー時少し拡大 */
+            }
+        }
+
+        /* モバイル用調整（768px以下） */
+        @media (max-width: 768px) {
+            .pdf-icon, .github-icon {
+                width: 28px; /* モバイルではさらに大きく */
+                height: 28px;
+            }
+
+            .pdf-title, .github-title {
+                font-size: 1.4rem !important; /* モバイル用文字サイズ */
+            }
+        }
+    </style>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
+    <script>/* 既存のGoogle Analyticsコード */</script>
+    <meta content="劉 慶豊, 刘庆丰, Qingfeng Liu, 機械学習, 人工知能, 計量経済学" name="keywords">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- 既存のフォントリンクは維持 -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
 </head>
 
 <style id="mobile-clamp">
-/* 強制：スマホ時は主要ブロックを表示幅の85%に制限（はみ出し要素も抑制） */
-@media (max-width: 768px) {
-  html, body { overflow-x: hidden; }
+    /* 強制：スマホ時は主要ブロックを表示幅の85%に制限（はみ出し要素も抑制） */
+    @media (max-width: 768px) {
+        html, body {
+            overflow-x: hidden;
+        }
 
-  /* ナビのはみ出しを抑える */
-  #navbar table {
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
+        /* ナビのはみ出しを抑える */
+        #navbar table {
+            width: 100% !important;
+            margin-left: 0 !important;
+        }
 
-  /* 主要ブロックを85vwに固定（インラインwidthやHTML属性より優先） */
-  .main, table.main, #HEADER .main, .container, .ai-section,
-  h1, h2, h5, p.p6, p.p8,
-  table[width], table[style*="width:"] {
-    width: 85vw !important;
-    max-width: 85vw !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+        /* 主要ブロックを85vwに固定（インラインwidthやHTML属性より優先） */
+        .main, table.main, #HEADER .main, .container, .ai-section,
+        h1, h2, h5, p.p6, p.p8,
+        table[width], table[style*="width:"] {
+            width: 85vw !important;
+            max-width: 85vw !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
 
-  /* 内側のテーブルは親幅いっぱいで折り返し */
-  .main table, table.main table, #demo_1, #demo_2,
-  table[style*="width: 100%"], table[width="100%"] {
-    width: 100% !important;
-  }
+        /* 内側のテーブルは親幅いっぱいで折り返し */
+        .main table, table.main table, #demo_1, #demo_2,
+        table[style*="width: 100%"], table[width="100%"] {
+            width: 100% !important;
+        }
 
-  /* 4カラム→縦積み */
-  .ai-section {
-    flex-direction: column !important;
-    gap: 2vw !important;
-  }
-  .ai-column { width: 100% !important; }
+        /* 4カラム→縦積み */
+        .ai-section {
+            flex-direction: column !important;
+            gap: 2vw !important;
+        }
 
-  /* 巨大なcellspacingをCSSで上書き（属性より優先される） */
-  table[cellspacing] {
-    border-collapse: separate !important;
-    border-spacing: 3vw !important;  /* 必要に応じて調整 */
-  }
+        .ai-column {
+            width: 100% !important;
+        }
 
-  /* 画像のはみ出し防止 */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
-/* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
-img[src$="MyJP_SIM_2.png"] {
-  height: 5em !important;
-  width: auto !important;
-  margin-right: 10px !important;
-}
-@media (max-width: 768px) {
-  img[src$="MyJP_SIM_2.png"] { height: 5em !important; }
-}
+        /* 巨大なcellspacingをCSSで上書き（属性より優先される） */
+        table[cellspacing] {
+            border-collapse: separate !important;
+            border-spacing: 3vw !important; /* 必要に応じて調整 */
+        }
+
+        /* 画像のはみ出し防止 */
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    /* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
+    img[src$="MyJP_SIM_2.png"] {
+        height: 5em !important;
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+
+    @media (max-width: 768px) {
+        img[src$="MyJP_SIM_2.png"] {
+            height: 5em !important;
+        }
+    }
+
+    img[src$="TEDS_Emblem_light.png"] {
+        height: 5em !important;
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+
+    @media (max-width: 768px) {
+        img[src$="TEDS_Emblem_light.png"] {
+            height: 5em !important;
+        }
+    }
 </style>
 <body>
 <div id="navbar" style="overflow: visible;"> <!-- 关键修改 -->
-  <table align="center" border="0" cellpadding="0"
-         style="box-shadow: 0 2px 2px #eeeeee;  /* 只保留底部阴影 */
+    <table align="center" border="0" cellpadding="0"
+           style="box-shadow: 0 2px 2px #eeeeee;  /* 只保留底部阴影 */
                 width: calc(100% + 2px);       /* 左右各扩展1px */
                 margin-left: -8px;">
         <tr>
             <!-- PC端显示 - 图标在左侧 -->
             <td class="shield-container pc-logos" style="text-align: right; white-space: nowrap;">
-    <img src="Figures/hosei_shield.png" alt="Hosei University" class="shield-logo">
-    <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo" style="margin-left: 8px;">
-</td>
+                <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png">
+                <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png" style="margin-left: 8px;">
+            </td>
 
 
             <td class="nav-item">
@@ -233,21 +261,21 @@ img[src$="MyJP_SIM_2.png"] {
     </div>
 </div>
 <table style="width: 75%; margin: 0 auto; border-collapse: collapse; position: relative;">
-<!--    &lt;!&ndash; PC端盾牌图标（表格左侧） &ndash;&gt;-->
-<!--    <div class="pc-logos-01" style="position: absolute; right: 76%; top: 58%; transform: translateY(-50%); white-space: nowrap; margin-right: 10px;">-->
-<!--        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">-->
-<!--        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">-->
-<!--    </div>-->
+    <!--    &lt;!&ndash; PC端盾牌图标（表格左侧） &ndash;&gt;-->
+    <!--    <div class="pc-logos-01" style="position: absolute; right: 76%; top: 58%; transform: translateY(-50%); white-space: nowrap; margin-right: 10px;">-->
+    <!--        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">-->
+    <!--        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">-->
+    <!--    </div>-->
 
-<!--    &lt;!&ndash; 移动端盾牌图标（MEMBERS上方） &ndash;&gt;-->
-<!--    <div class="mobile-logos-01" style="display: none; text-align: center; margin-bottom: -20px;">-->
-<!--        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">-->
-<!--        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">-->
-<!--    </div>-->
+    <!--    &lt;!&ndash; 移动端盾牌图标（MEMBERS上方） &ndash;&gt;-->
+    <!--    <div class="mobile-logos-01" style="display: none; text-align: center; margin-bottom: -20px;">-->
+    <!--        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">-->
+    <!--        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">-->
+    <!--    </div>-->
 
 
-                <tr>
-                    <td style="text-align: center; padding: 10px 0;">
+    <tr>
+        <td style="text-align: center; padding: 10px 0;">
             <table align="center" border="0" cellpadding="0" cellspacing="25vw" style="margin: 0 auto;">
                 <tr>
                     <td><a href="#MEMBERS">
@@ -273,13 +301,13 @@ img[src$="MyJP_SIM_2.png"] {
                     <td colspan="6" style="padding-top: 0px;"> <!-- 間隔を0pxに調整 -->
                         <table align="center" border="0" cellpadding="0" cellspacing="8vw" style="margin: 0 auto;">
                             <tr>
-                                <td><a href="https://qingfeng-liu.github.io/index.html" class="color1">
+                                <td><a class="color1" href="https://qingfeng-liu.github.io/index.html">
                                     <div style="font-size: 1vmax;">JAPANESE</div>
                                 </a></td>
-                                <td><a href="https://qingfeng-liu.github.io/index_en.html" class="color1">
+                                <td><a class="color1" href="https://qingfeng-liu.github.io/index_en.html">
                                     <div style="font-size: 1vmax;">ENGLISH</div>
                                 </a></td>
-                                <td><a href="https://qingfeng-liu.github.io/index_cn.html" class="color1">
+                                <td><a class="color1" href="https://qingfeng-liu.github.io/index_cn.html">
                                     <div style="font-size: 1vmax;">CHINESE</div>
                                 </a></td>
                             </tr>
@@ -293,16 +321,18 @@ img[src$="MyJP_SIM_2.png"] {
 
 
 <script>
-// When the user scrolls down 20px from the top of the document, slide down the navbar
-window.onscroll = function() {scrollFunction()};
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    window.onscroll = function () {
+        scrollFunction()
+    };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-100px";
-  }
-}
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-100px";
+        }
+    }
 
 
 </script>
@@ -345,17 +375,29 @@ function scrollFunction() {
                                             <i>stat</i>. <a class="color1"
                                                             href="https://arxiv.org/abs/2105.02569">PDF</a><br>
                                             鴇田 優太 (2022年入ゼミ) <a class="color1"
-                                                                      href="https://signate.jp/competitions/1106">SIGNATEコンペティション<br></a>第７位入賞
+                                                                        href="https://signate.jp/competitions/1106">SIGNATEコンペティション<br></a>第７位入賞
                                             (2023).<br>
-                                            2024/04/01 ゼミ募集 <a href="semi_intro.pdf">PDF <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a> <a
-                                                href="semi_intro.pptx">SLIDE <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"></a> <a
-                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img src="icons/iconmonstr-youtube-3-240.png" alt="SLIDE icon" class="pdf-icon"></a>
+                                            2024/04/01 ゼミ募集 <a href="semi_intro.pdf">PDF <img alt="PAPER icon"
+                                                                                                  class="pdf-icon"
+                                                                                                  src="icons/iconmonstr-file-34-240.png"></a>
+                                            <a
+                                                    href="semi_intro.pptx">SLIDE <img alt="SLIDE icon" class="pdf-icon"
+                                                                                      src="icons/iconmonstr-school-27-240.png"></a>
+                                            <a
+                                                    href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img
+                                                    alt="SLIDE icon" class="pdf-icon"
+                                                    src="icons/iconmonstr-youtube-3-240.png"></a>
                                             劉ゼミ3年生募集開始.<br>
                                             <span id="dots2"></span><span
                                                 id="more2">
-                                                2022/04/03 ゼミ募集 <a href="semi_intro.pdf">PDF <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a> <a
-                                                href="semi_intro.pptx">SLIDE <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"></a> <a
-                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img src="icons/iconmonstr-youtube-3-240.png" alt="SLIDE icon" class="pdf-icon"></a>
+                                                2022/04/03 ゼミ募集 <a href="semi_intro.pdf">PDF <img alt="PAPER icon"
+                                                                                                      class="pdf-icon"
+                                                                                                      src="icons/iconmonstr-file-34-240.png"></a> <a
+                                                href="semi_intro.pptx">SLIDE <img alt="SLIDE icon" class="pdf-icon"
+                                                                                  src="icons/iconmonstr-school-27-240.png"></a> <a
+                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img
+                                                alt="SLIDE icon" class="pdf-icon"
+                                                src="icons/iconmonstr-youtube-3-240.png"></a>
                                                 劉ゼミ3年生募集開始.<br>
                                                 2022/04/03 研究室ウェブページ公開. <br><br></span>
                                             &#9656;
@@ -378,14 +420,15 @@ function scrollFunction() {
                                                 Forthcoming Meeting
                                             </p>
                                         </div>
-                                        <div style="padding-bottom: 15px; display: flex; align-items: center;">
-    <img src="icons/MyJP_SIM_2.png" alt="MyJP_SIM_2_icon"
-         style="height: 5.2em; margin-right: 10px;">
-    <div>
-        Meeting You in Japan-Symposium on Innovative Mathematical Minds (MyJP-SIM<sup>2</sup>), organized under the
-        umbrella of TEDS. Tokyo, 2026.
-    </div>
-</div>
+                                        <div style="padding-bottom: 15px; display: flex;">
+                                            <img alt="MyJP_SIM_2_icon" src="icons/MyJP_SIM_2.png"
+                                                 style="padding-top: 5px; height: 5.2em; margin-right: 10px;">
+                                            <div>
+                                                Meeting You in Japan-Symposium on Innovative Mathematical Minds
+                                                (MyJP-SIM<sup>2</sup>), organized under the
+                                                umbrella of TEDS. Tokyo, 2026.
+                                            </div>
+                                        </div>
                                         <div align="left"
                                              style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
                                     text-transform: uppercase;">
@@ -393,29 +436,33 @@ function scrollFunction() {
                                                 研究会シリーズ
                                             </p>
                                         </div>
-                                        <div style="padding-bottom: 15px">
 
-                                            <a class="color1" href="https://teds-datascience.github.io/seminars/"
-                                               style="text-decoration:underline;">
-                                                Transdisciplinary Econometrics & Data Science Seminar</a>
-                                            （学際共創計量経済学・データサイエンスセミナー）
+                                        <div style="padding-bottom: 15px; display: flex; ">
+                                            <img alt="TEDS_Emblem_light" src="Figures/TEDS_Emblem_light.png"
+                                                 style="padding-top: 5px; height: 5.2em; margin-right: 10px;">
+                                            <div style="padding-bottom: 15px">
+
+                                                <a class="color1" href="https://teds-datascience.github.io/seminars/"
+                                                   style="text-decoration:underline;">
+                                                    Transdisciplinary Econometrics & Data Science Seminar</a>
+                                                （学際共創計量経済学・データサイエンスセミナー）
+                                            </div>
                                         </div>
-
-
 
                                         <div align="left"
                                              style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
                                     text-transform: uppercase;">
                                             <strong style="font-size: 1.1em; color: #333;">
-                                                The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB 2025)</strong><br>
+                                                The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB
+                                                2025)</strong><br>
                                         </div>
                                         <div style="padding-bottom: 15px">
-                                             <a class="color1" href="https://yangfengstat.github.io/snab2025/"
+                                            <a class="color1" href="https://yangfengstat.github.io/snab2025/"
                                                style="text-decoration:underline;">
-                                               The SNAB 2025 will take place on June 2-4, 2025 at the renowned Hotel New Otani in Tokyo, Japan.
-                                             </a>
+                                                The SNAB 2025 will take place on June 2-4, 2025 at the renowned Hotel
+                                                New Otani in Tokyo, Japan.
+                                            </a>
                                         </div>
-
 
 
                                         <div align="left"
@@ -456,154 +503,170 @@ function scrollFunction() {
 <div>
     <h1></h1>
     <div class="anchor" id="MEMBERS"></div>
-   <div style="width:100%; height:100%;">
-  <h2>Faculty Member</h2>
+    <div style="width:100%; height:100%;">
+        <h2>Faculty Member</h2>
 
-  <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
-    <tr>
-      <td style="padding-right: 2vw; vertical-align: top;" width="25%">
-        <img alt="Prof. Qingfeng Liu" src="Qingfeng_Liu.jpg" width="100%">
-      </td>
-      <td style="padding-left: 1vw; vertical-align: top;">
-  <td style="padding-left: 1vw; vertical-align: top;">
-  <div style="width: 100%; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
-    <strong>教　授</strong> 　劉 慶豊 <a class="color1" href="CV.pdf"> <img src="icons/iconmonstr-cv-4-240.png" alt="CV icon" class="pdf-icon"></a><br>
-    <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">法政大学理工学部経営システム工学科 学科主任</a><br>
-    <strong>出　身</strong> 　中国内モンゴル自治区<br>
-    <strong>学　位</strong> 　京都大学経済学博士<br>
-    <strong>研　究</strong>　
-    <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">学術論文 <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
-    <strong>趣　味</strong> 　バトミントン・園芸<br>
-      <strong>E-mail</strong> 　qliu[at]hosei.ac.jp
-  </div>
-</td>
-    </tr>
-  </table>
-       <h1></h1>
-       <h2>Things in a Human Brain</h2>
+        <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+            <tr>
+                <td style="padding-right: 2vw; vertical-align: top;" width="20%">
+                    <img alt="Prof. Qingfeng Liu" src="Qingfeng_Liu.jpg" width="100%">
+                </td>
+                <td style="padding-left: 1vw; vertical-align: top;">
+                <td style="padding-left: 1vw; vertical-align: top;">
+                    <div style="width: 100%; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
+                        <strong>教　授</strong> 　劉 慶豊 <a class="color1" href="CV.pdf"> <img alt="CV icon"
+                                                                                              class="pdf-icon"
+                                                                                              src="icons/iconmonstr-cv-4-240.png"></a><br>
+                        <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">法政大学理工学部経営システム工学科
+                            学科主任</a><br>
+                        <strong>出　身</strong> 　中国内モンゴル自治区<br>
+                        <strong>学　位</strong> 　京都大学経済学博士<br>
+                        <strong>研　究</strong>　
+                        <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">学術論文
+                            <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a><br>
+                        <strong>趣　味</strong> 　バトミントン・園芸<br>
+                        <strong>E-mail</strong> 　qliu[at]hosei.ac.jp
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h1></h1>
+        <h2>Things in a Human Brain</h2>
+        <div class="ai-section">
+
+            <!-- Column 1: One Image -->
+            <div class="ai-column">
+                <img alt="MY THOUGHTS" class="ai-img-trimmed" src="Figures/my_thoughts.png">
+            </div>
+
+            <!-- Column 2: Text (DX・AI Business) -->
+            <div class="ai-column">
+                <div class="ai-title-container">
+                    <div class="ai-title">
+                        <h1 class="pdf-title">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学習資料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </h1>
+                    </div>
+                </div>
+                <div class="ai-text">
+                    <a href="My_Thoughts/Double_Descents.pdf"><img alt="PAPER icon" class="pdf-icon"
+                                                                   src="icons/iconmonstr-file-34-240.png">　Why Double
+                        Descent?</a>
+                    <br>
+                    <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit"><img alt="CV icon"
+                                                                                            class="pdf-icon"
+                                                                                            src="icons/iconmonstr-save-as-lined-240.png">　資料コード集
+                        (ML・AI)</a>
+                    <br>
+                    <a href="AI_Driven_Business.pdf"><img alt="SLIDE icon" class="pdf-icon"
+                                                          src="icons/iconmonstr-school-27-240.png">　DX・AI Edge</a>
+                </div>
+            </div>
+
+            <!-- Column 3: One Image -->
+            <div class="ai-column">
+                <img alt="MY MIND" class="ai-img-trimmed" src="Figures/my_mind.png">
+            </div>
+
+            <!-- Column 4: Text (My Mind) -->
+            <div class="ai-column">
+                <div class="ai-title-container">
+                    <div class="ai-title">
+                        <h1 class="pdf-title">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;詩文雑感&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </h1>
+                    </div>
+                </div>
+                <div class="ai-text">
+                    <a href="https://qingfeng-liu.github.io/Analects.html"><img alt="Analects icon" class="pdf-icon"
+                                                                                src="icons/iconmonstr-book-26-240.png">　論語新篇</a>
+                    <br>
+                    <a href="https://qingfeng-liu.github.io/poems.html"><img alt="Poem icon" class="pdf-icon"
+                                                                             src="icons/iconmonstr-cat-6-240.png">　凡璞瑰珍集</a>
+                </div>
+            </div>
+
+        </div>
+        <h1></h1>
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div style="width:75%; margin-top: -1vmax; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
+                <div class="justified-text">
+                    <p>
+                        劉慶豊教授は、データサイエンス、計量経済学、機械学習（人工知能の基盤となる技術の一つ）の分野で研究を行っています。現在、法政大学理工学部の教授を務めており、ニューヨーク大学グローバル公衆衛生学院の共同研究員も兼任しています。2007年に京都大学で経済学博士号を取得し、その後Princeton
+                        Universityでポスドク研究員を務めました。これまでに、京都大学やアメリカのColumbia
+                        Universityで客員教授や訪問学者として研究を行った経験があります。研究成果をJournal of Business &
+                        Economic StatisticsやEconometric Reviewsなどの国際誌に論文として掲載し、また、EconomicsやOpen
+                        Economicsなどの国際誌の編集委員も務めています。
+                        受賞歴として、新潟大学経済学会賞、ACIEK(Winter)-IMIP
+                        2024の傑出した貢献賞やIEOM2024東京大会の優秀会議賞などがあります。近年は、機械学習と計量経済学の融合を進め、日本学術振興会（JSPS）の科研費と全国銀行学術研究振興財団の学術研究助成を得て、連合学習（Federated
+                        Machine Learning）というプライバシー保護を重視した経済分析の新しい機械学習の手法を探求しています。
+                        劉教授は、データサイエンスの分野で、経済問題の解決と産業技術の発展のために、機械学習と計量経済学の手法を開発し、IoT、ビッグデータ解析、フィンテックなどを活用して、第四次産業革命とSociety5.0に向けたソリューションを提供することを目指しています。
+                    </p>
+                </div>
+
+                <p>
+                    <strong>信　条</strong>　やると決めたら楽しくやる、やるからには必ず極める。<br>
+                    <strong>預　言</strong>　日本経済は匠の精神で蘇る。<br>
+                    <strong>心　得</strong>　対立するより、仲間に迎える。
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<h1></h1>
+
 <div class="ai-section">
 
-  <!-- Column 1: One Image -->
-  <div class="ai-column">
-    <img src="Figures/my_thoughts.png" alt="MY THOUGHTS" class="ai-img-trimmed">
-  </div>
+    <!-- Column 1: One Image -->
+    <div class="ai-column">
+        <img alt="AI Trend" class="ai-img-trimmed" src="Figures/ai_trend.png">
+    </div>
 
-  <!-- Column 2: Text (DX・AI Business) -->
-  <div class="ai-column">
-    <div class="ai-title-container">
-      <div class="ai-title">
-          <h1 class="pdf-title">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学習資料&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </h1>
-      </div>
+    <!-- Column 2: Text (DX・AI Business) -->
+    <div class="ai-column">
+        <div class="ai-title-container">
+            <div class="ai-title">
+                <a href="AI_Driven_Business.pdf">
+                    <h1 class="pdf-title">
+                        <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">DX・AI Edge
+                    </h1>
+                </a>
+            </div>
+        </div>
+        <div class="ai-text">
+            経営意思決定支援<br>営業サポート<br>市場開発個人化<br>Supply Chain<br>
+            採用・労務人事<br>顧客対応自動化<br>財務最適化<br>AI生産システム
+        </div>
     </div>
-    <div class="ai-text">
-      <a href="My_Thoughts/Double_Descents.pdf"><img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">　Why Double Descent?</a>
-        <br>
-        <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit"><img src="icons/iconmonstr-save-as-lined-240.png" alt="CV icon" class="pdf-icon">　資料コード集 (ML・AI)</a>
-        <br>
-        <a href="AI_Driven_Business.pdf"><img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon">　DX・AI Edge</a>
-    </div>
-  </div>
 
-  <!-- Column 3: One Image -->
-  <div class="ai-column">
-    <img src="Figures/my_mind.png" alt="MY MIND" class="ai-img-trimmed">
-  </div>
+    <!-- Column 3: Two Images Stacked -->
+    <div class="ai-column">
+        <img alt="What is AI" src="Figures/ChatGPT.png">
+        <img alt="ML Graphic" src="Figures/img-course_detail02.png">
+    </div>
 
-  <!-- Column 4: Text (My Mind) -->
-  <div class="ai-column">
-    <div class="ai-title-container">
-      <div class="ai-title">
-          <h1 class="pdf-title">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;詩文雑感&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </h1>
-      </div>
+    <!-- Column 4: Text (ML・AI Toolkit) -->
+    <div class="ai-column">
+        <div class="ai-title-container">  <!-- 追加 -->
+            <div class="ai-title">
+                <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit">
+                    <h1 class="github-title">
+                        <img alt="icon" class="github-icon" src="icons/iconmonstr-github-3-240.png">
+                        ML・AI Tools
+                    </h1>
+                </a>
+            </div>
+        </div>
+        <div class="ai-text">
+            DNN深層学習<br>強化学習<br>ML因果推論<br>LLMテキスト処理
+            <br>ChatGPT Script<br>OpenAI API<br>画像認識異常検知<br>Semantic Search
+        </div>
     </div>
-    <div class="ai-text">
-      <a href="https://qingfeng-liu.github.io/Analects.html"><img src="icons/iconmonstr-book-26-240.png" alt="Analects icon" class="pdf-icon">　論語新篇</a>
-        <br>
-        <a href="https://qingfeng-liu.github.io/poems.html"><img src="icons/iconmonstr-cat-6-240.png" alt="Poem icon" class="pdf-icon">　凡璞瑰珍集</a>
-    </div>
-  </div>
 
 </div>
-<h1></h1>
-  <div style="width: 100%; display: flex; justify-content: center;">
-  <div style="width:75%; margin-top: -1vmax; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
-      <div class="justified-text">
-    <p>
-      劉慶豊教授は、データサイエンス、計量経済学、機械学習（人工知能の基盤となる技術の一つ）の分野で研究を行っています。現在、法政大学理工学部の教授を務めており、ニューヨーク大学グローバル公衆衛生学院の共同研究員も兼任しています。2007年に京都大学で経済学博士号を取得し、その後Princeton Universityでポスドク研究員を務めました。これまでに、京都大学やアメリカのColumbia Universityで客員教授や訪問学者として研究を行った経験があります。研究成果をJournal of Business & Economic StatisticsやEconometric Reviewsなどの国際誌に論文として掲載し、また、EconomicsやOpen Economicsなどの国際誌の編集委員も務めています。
-      受賞歴として、新潟大学経済学会賞、ACIEK(Winter)-IMIP 2024の傑出した貢献賞やIEOM2024東京大会の優秀会議賞などがあります。近年は、機械学習と計量経済学の融合を進め、日本学術振興会（JSPS）の科研費と全国銀行学術研究振興財団の学術研究助成を得て、連合学習（Federated Machine Learning）というプライバシー保護を重視した経済分析の新しい機械学習の手法を探求しています。 劉教授は、データサイエンスの分野で、経済問題の解決と産業技術の発展のために、機械学習と計量経済学の手法を開発し、IoT、ビッグデータ解析、フィンテックなどを活用して、第四次産業革命とSociety5.0に向けたソリューションを提供することを目指しています。
-    </p>
-          </div>
-
-    <p>
-      <strong>信　条</strong>　やると決めたら楽しくやる、やるからには必ず極める。<br>
-      <strong>預　言</strong>　日本経済は匠の精神で蘇る。<br>
-      <strong>心　得</strong>　対立するより、仲間に迎える。
-    </p>
-  </div>
-</div>
-</div>
-
-</div>
-
-
-
-
-<h1></h1>
-
-<div class="ai-section">
-
-  <!-- Column 1: One Image -->
-  <div class="ai-column">
-    <img src="Figures/ai_trend.png" alt="AI Trend" class="ai-img-trimmed">
-  </div>
-
-  <!-- Column 2: Text (DX・AI Business) -->
-  <div class="ai-column">
-    <div class="ai-title-container">
-      <div class="ai-title">
-        <a href="AI_Driven_Business.pdf">
-          <h1 class="pdf-title">
-  <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon">DX・AI Edge
-</h1>
-        </a>
-      </div>
-    </div>
-    <div class="ai-text">
-      経営意思決定支援<br>営業サポート<br>市場開発個人化<br>Supply Chain<br>
-        採用・労務人事<br>顧客対応自動化<br>財務最適化<br>AI生産システム
-    </div>
-  </div>
-
-  <!-- Column 3: Two Images Stacked -->
-  <div class="ai-column">
-    <img src="Figures/ChatGPT.png" alt="What is AI">
-    <img src="Figures/img-course_detail02.png" alt="ML Graphic">
-  </div>
-
-  <!-- Column 4: Text (ML・AI Toolkit) -->
-  <div class="ai-column">
-    <div class="ai-title-container">  <!-- 追加 -->
-      <div class="ai-title">
-        <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit">
-          <h1 class="github-title">
-            <img src="icons/iconmonstr-github-3-240.png" alt="icon" class="github-icon">
-            ML・AI Tools
-          </h1>
-        </a>
-      </div>
-    </div>
-    <div class="ai-text">
-      DNN深層学習<br>強化学習<br>ML因果推論<br>LLMテキスト処理
-        <br>ChatGPT Script<br>OpenAI API<br>画像認識異常検知<br>Semantic Search
-    </div>
-  </div>
-
-</div>
-
 
 
 <h1></h1>
@@ -628,12 +691,13 @@ function scrollFunction() {
                             >
                             </div>
                             <figure class="figure-caption">
-  <figcaption class="left">ACIEK(winter)-IMIP2024<br>Outstanding Contribution Award
-  </figcaption>
-  <figcaption class="right">鴇田 優太 (2022年入ゼミ) <a class="color1" href="https://signate.jp/competitions/1106">
-      <br>SIGNATEコンペティション第７位入賞 (2023)</a>
-  </figcaption>
-</figure>
+                                <figcaption class="left">ACIEK(winter)-IMIP2024<br>Outstanding Contribution Award
+                                </figcaption>
+                                <figcaption class="right">鴇田 優太 (2022年入ゼミ) <a class="color1"
+                                                                                      href="https://signate.jp/competitions/1106">
+                                    <br>SIGNATEコンペティション第７位入賞 (2023)</a>
+                                </figcaption>
+                            </figure>
 
                     </tr>
                     </tbody>
@@ -642,10 +706,6 @@ function scrollFunction() {
         </tr>
     </table>
 </div>
-
-
-
-
 
 
 <div>
@@ -663,17 +723,22 @@ function scrollFunction() {
                     </p>
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] 機械学習を用いた順位予測モデルの構築と精度評価：競馬予測を事例として, 岩﨑照英, 田中幸佑, 徳丸颯太, (2025).
-                    <a class="color1" href="20X4026_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                    [1] 機械学習を用いた順位予測モデルの構築と精度評価：競馬予測を事例として, 岩﨑照英, 田中幸佑, 徳丸颯太,
+                    (2025).
+                    <a class="color1" href="20X4026_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [2] テクニカル指標と株価変動の関連性に関する実証分析, 久保村光汰, (2025).
-                    <a class="color1" href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                    <a class="color1" href="abstract_tokita_2023.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                            src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [3] サッカーにおける戦略策定を目的としたデータ分析, 下村勘太, 林雅哉, (2025).
-                    <a class="color1" href="21X4029_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                    <a class="color1" href="21X4029_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
 
                     [4] 機械学習を用いた不正会計の検出と分析, 田嶋俊紀, 平田円, (2025).
-                    <a class="color1" href="21X4037_1.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                    <a class="color1" href="21X4037_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
                 </div>
             </td>
         </tr>
@@ -691,9 +756,12 @@ function scrollFunction() {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] 汎化性能を考慮した食品パッケージの画像分類, 鴇田優太, (2024). <a class="color1"
-                                                                                href="abstract_tokita_2023.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">概要</a>
-                    <a class="color1" href="thesis_tokita.pdf">  <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon">本文</a>
-                    <img src="icons/iconmonstr-school-27-240.png" alt="SLIDE icon" class="pdf-icon"><a class="color1" href="beamer_tokita.pdf">SLIDE</a><br>
+                                                                                         href="abstract_tokita_2023.pdf">
+                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">概要</a>
+                    <a class="color1" href="thesis_tokita.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                     src="icons/iconmonstr-file-34-240.png">本文</a>
+                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png"><a class="color1"
+                                                                                                       href="beamer_tokita.pdf">SLIDE</a><br>
                     [2] 会計監査における分析的手続への不正検知を目的とした機械学習手法の導入可能性, 舟橋純平, (2024). <a
                         class="color1" href="202302.pdf"></a>
                     <br>
@@ -713,12 +781,17 @@ function scrollFunction() {
                     </p>
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] ツイートデータとインデックスデータを併用した株価騰落予測, 黒崎地大, 山田壮雄, (2023). <a class="color1"
-                                                                                            href="202201.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
-                    [2] 人口問題におけるテレワーク推進と移住支援策がもたらす効果について, 大島宙也, 前田翼, (2023). <a class="color1"
-                                                                                                   href="202202.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                    [1] ツイートデータとインデックスデータを併用した株価騰落予測, 黒崎地大, 山田壮雄, (2023). <a
+                        class="color1"
+                        href="202201.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                src="icons/iconmonstr-file-34-240.png"></a><br>
+                    [2] 人口問題におけるテレワーク推進と移住支援策がもたらす効果について, 大島宙也, 前田翼, (2023). <a
+                        class="color1"
+                        href="202202.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                src="icons/iconmonstr-file-34-240.png"></a><br>
                     [3] サッカーの勝敗要因に関するデータ分析 伊藤光毅, 鹿野紘樹, 北林良太, (2023). <a class="color1"
-                                                                                           href="202203.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a>
+                                                                                                      href="202203.pdf">
+                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a>
                     <br>
                 </div>
             </td>
@@ -741,10 +814,13 @@ function scrollFunction() {
                 </div>
                 <div style="line-height: 2vmax; padding-bottom: 15px">
                     [1] Adversarial Autoencoderを用いたVertical Federated Learning, 黄凱, (2025修了予定).
-                    <a class="color1" href="2024_huang.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a><br>
+                    <a class="color1" href="2024_huang.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                  src="icons/iconmonstr-file-34-240.png"></a><br>
 
-                    [2] Differential Machine Learningを用いたラフ・ボラティリティモデルのキャリブレーション, 黒崎地大, (2025修了予定).
-                    <a class="color1" href="2024_kurosaki.pdf"> <img src="icons/iconmonstr-file-34-240.png" alt="PAPER icon" class="pdf-icon"></a>
+                    [2] Differential Machine Learningを用いたラフ・ボラティリティモデルのキャリブレーション, 黒崎地大,
+                    (2025修了予定).
+                    <a class="color1" href="2024_kurosaki.pdf"> <img alt="PAPER icon" class="pdf-icon"
+                                                                     src="icons/iconmonstr-file-34-240.png"></a>
                     <br>
                 </div>
             </td>
@@ -777,14 +853,15 @@ function scrollFunction() {
     <h1></h1>
     <h2>指導した博士号取得者</h2>
 
-     <table border="0" class="main" style="font-size: 1.2vmax; width: 75%; margin: 0 auto;">
+    <table border="0" class="main" style="font-size: 1.2vmax; width: 75%; margin: 0 auto;">
         <tr>
             <td>
                 <div style="line-height: 1.6;">
                     <table style="width: 100%; border-collapse: collapse;">
                         <tr>
                             <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
-                                <img src="qingsong_yao.jpg" alt="Qingsong Yao" style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
+                                <img alt="Qingsong Yao" src="qingsong_yao.jpg"
+                                     style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
                             </td>
                             <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
                                 <strong style="font-size: 1.1em; color: #333;">Dr. Qingsong YAO</strong><br>
@@ -794,7 +871,8 @@ function scrollFunction() {
                         </tr>
                         <tr>
                             <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
-                                <img src="ziyan_zhao.jpg" alt="Ziyan Zhao" style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
+                                <img alt="Ziyan Zhao" src="ziyan_zhao.jpg"
+                                     style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
                             </td>
                             <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
                                 <strong style="font-size: 1.1em; color: #333;">Dr. Ziyan ZHAO</strong><br>
@@ -807,10 +885,10 @@ function scrollFunction() {
             </td>
         </tr>
     </table>
-    </div>
-            </td>
-        </tr>
-    </table>
+</div>
+</td>
+</tr>
+</table>
 </div>
 
 <h1></h1>
@@ -860,46 +938,40 @@ function scrollFunction() {
 
 
 <script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
-
-
-
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
 
 
 </script>
 <script>
-function moreFunction() {
-  var dots2 = document.getElementById("dots2");
-  var moreText2 = document.getElementById("more2");
-  var btnText2 = document.getElementById("myBtn2");
+    function moreFunction() {
+        var dots2 = document.getElementById("dots2");
+        var moreText2 = document.getElementById("more2");
+        var btnText2 = document.getElementById("myBtn2");
 
-  if (dots2.style.display === "none") {
-    dots2.style.display = "inline";
-    btnText2.innerHTML = "Read more";
-    moreText2.style.display = "none";
-  } else {
-    dots2.style.display = "none";
-    btnText2.innerHTML = "Read less";
-    moreText2.style.display = "inline";
-  }
-}
-
-
-
+        if (dots2.style.display === "none") {
+            dots2.style.display = "inline";
+            btnText2.innerHTML = "Read more";
+            moreText2.style.display = "none";
+        } else {
+            dots2.style.display = "none";
+            btnText2.innerHTML = "Read less";
+            moreText2.style.display = "inline";
+        }
+    }
 
 
 </script>

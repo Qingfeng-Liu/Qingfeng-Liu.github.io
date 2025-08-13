@@ -84,6 +84,62 @@
   <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
 </head>
 
+<style id="mobile-clamp">
+/* 強制：スマホ時は主要ブロックを表示幅の85%に制限（はみ出し要素も抑制） */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+
+  /* ナビのはみ出しを抑える */
+  #navbar table {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* 主要ブロックを85vwに固定（インラインwidthやHTML属性より優先） */
+  .main, table.main, #HEADER .main, .container, .ai-section,
+  h1, h2, h5, p.p6, p.p8,
+  table[width], table[style*="width:"] {
+    width: 85vw !important;
+    max-width: 85vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 内側のテーブルは親幅いっぱいで折り返し */
+  .main table, table.main table, #demo_1, #demo_2,
+  table[style*="width: 100%"], table[width="100%"] {
+    width: 100% !important;
+  }
+
+  /* 4カラム→縦積み */
+  .ai-section {
+    flex-direction: column !important;
+    gap: 2vw !important;
+  }
+  .ai-column { width: 100% !important; }
+
+  /* 巨大なcellspacingをCSSで上書き（属性より優先される） */
+  table[cellspacing] {
+    border-collapse: separate !important;
+    border-spacing: 3vw !important;  /* 必要に応じて調整 */
+  }
+
+  /* 画像のはみ出し防止 */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+/* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
+img[src$="MyJP_SIM_2.png"] {
+  height: 5em !important;
+  width: auto !important;
+  margin-right: 10px !important;
+}
+@media (max-width: 768px) {
+  img[src$="MyJP_SIM_2.png"] { height: 5em !important; }
+}
+</style>
 <body>
 <div id="navbar" style="overflow: visible;"> <!-- 关键修改 -->
   <table align="center" border="0" cellpadding="0"
@@ -355,13 +411,13 @@ function scrollFunction() {
                                         </div>
                                         <div style="padding-bottom: 15px">
                                              <a class="color1" href="https://yangfengstat.github.io/snab2025/"
-                                               style="text-decoration:underline;"> 
+                                               style="text-decoration:underline;">
                                                The SNAB 2025 will take place on June 2-4, 2025 at the renowned Hotel New Otani in Tokyo, Japan.
                                              </a>
                                         </div>
 
 
-                                        
+
                                         <div align="left"
                                              style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
                                     text-transform: uppercase;">

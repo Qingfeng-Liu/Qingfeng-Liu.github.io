@@ -626,6 +626,46 @@ table#demo_1 td .thTitle {
   display: none;
 }
 
+table#demo_2 {
+  border: none;
+  border-top: 0px solid #5DE4BF;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 0px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table#demo_2 th,
+table#demo_2 td {
+  border-bottom: 0px solid #DDD;
+  font-size: 1.2vmax;
+  line-height: 1.5vmax;
+  padding: 0px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table#demo_2 th:first-child,
+table#demo_2 td:first-child {
+  padding-left: 0;
+}
+
+table#demo_2 th:last-child,
+table#demo_2 td:last-child {
+  padding-right: 0;
+}
+
+table#demo_2 th {
+  font-weight: 550;
+  vertical-align: top;
+}
+
+table#demo_2 td .thTitle {
+  display: none;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -795,6 +835,86 @@ strong {
     padding: 10px 0 0;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  table#demo_2,
+  table#demo_2 caption,
+  table#demo_2 tbody,
+  table#demo_2 tfoot,
+  table#demo_2 tr,
+  table#demo_2 th,
+  table#demo_2 td {
+    display: block;
+    width: 100% !important;
+  }
+
+  table#demo_2 th,
+  table#demo_2 td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  table#demo_2 th {
+    display: block;
+  }
+
+  table#demo_2 td {
+    border: none;
+    text-align: left;
+  }
+
+  table#demo_2 td {
+    border-bottom: 0px solid #DDD;
+  }
+
+  table#demo_2 td:first-child {
+    font-weight: normal;
+  }
+
+  table#demo_2 td:last-child {
+    border-bottom: 0px solid #DDD;
+    font-weight: normal;
+  }
+
+  table#demo_2 td .inner {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  table#demo_2 td .thTitle,
+  table#demo_2 td .tdContents {
+    display: table-cell;
+  }
+
+  table#demo_2 td .thTitle {
+    font-weight: 550;
+    width: 20%;
+  }
+
+  table#demo_2 td .tdContents {
+    padding-left: 0px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  table#demo_2 td .inner,
+  table#demo_2 td .thTitle,
+  table#demo_2 td .tdContents {
+    display: block;
+    width: 100%;
+  }
+
+  table#demo_2 td .inner {
+    table-layout: auto;
+  }
+
+  table#demo_2 td .tdContents {
+    padding: 10px 0 0;
+  }
+}
+
 
 @media (max-width: 768px) {
   .container {

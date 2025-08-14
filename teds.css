@@ -239,7 +239,119 @@ span.s5 {
     font-family: 'Noto Sans JP', sans-serif;
     color: #353535;
 }
+/* 通常レイアウト */
+#navbar {
+  box-shadow: 0 2px 2px #eeeeee;
+}
 
+#navbar table {
+  width: 80%;
+  margin: -0.5vmax auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#navbar td {
+  white-space: nowrap;
+}
+
+#navbar td:first-child {
+  width: 22%;
+  padding-left: 3vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+}
+
+#navbar img.shield-logo {
+  height: 2.5vmax;    /* 固定高さにして幅は自動 */
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+#navbar img.shield-logo + img {
+  margin-left: 6px;
+}
+
+#navbar td:nth-child(2) div {
+  display: inline-block;
+  margin: -0.2vmax auto -0.3vmax auto;
+}
+
+#navbar td:nth-child(2) table {
+  margin: 0 auto;
+  border-collapse: separate;
+}
+
+#navbar td:nth-child(2) .p5 {
+  font-size: 1.2vmax;
+  line-height: 1.1;
+}
+
+#navbar td:last-child {
+  width: 22%;
+}
+
+
+@media (max-width: 768px) {
+  /* 左ロゴ列を少し詰める、右ダミー列は消す */
+  #navbar td:first-child { width: auto; padding-left: 2vw; }
+  #navbar td:last-child { display: none; }
+
+  /* ロゴはスマホでは少し小さめにして余白を作る */
+  #navbar img.shield-logo { height: 4.6vmax; }
+
+  /* 中央メニューを等間隔にして横スクロールなしで収める */
+  #navbar td:nth-child(2) table {
+    width: 100%;
+    table-layout: fixed;           /* 等分する鍵 */
+    border-collapse: collapse;
+  }
+  #navbar td:nth-child(2) table tr td {
+    width: calc(100% / 6);         /* 6項目を等分 */
+    padding: 0;                    /* 余白を削減 */
+    text-align: center;
+  }
+
+  /* 文字サイズを自動調整（小さすぎ防止＋はみ出し防止） */
+  #navbar td:nth-child(2) .p5 {
+    display: block;
+    font-size: clamp(10px, 2.35vw, 13px);
+    line-height: 1.2;
+    letter-spacing: .01em;
+    white-space: nowrap;
+  }
+
+  /* 中央メニューラッパの余計なマージンを殺す（あなたのHTMLの -0.2vmax を打ち消し） */
+  #navbar td:nth-child(2) > div {
+    margin: 0 auto !important;
+  }
+}
+
+    /* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
+    img[src$="MyJP_SIM_2.png"] {
+        height: 5em !important;
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+
+    @media (max-width: 768px) {
+        img[src$="MyJP_SIM_2.png"] {
+            height: 5em !important;
+        }
+    }
+
+    img[src$="TEDS_Emblem_light.png"] {
+        height: 5em !important;
+        width: auto !important;
+        margin-right: 10px !important;
+    }
+
+    @media (max-width: 768px) {
+        img[src$="TEDS_Emblem_light.png"] {
+            height: 5em !important;
+        }
+    }
 /*.ai-section {*/
 /*      width: 75%;*/
 /*      margin: auto;*/

@@ -6,71 +6,6 @@
     <link href="teds.css" rel="stylesheet">
 
     <title>Qingfeng Liu, DATA SCIENCE & Econometrics Lab, Hosei University DSELab</title>
-
-    <style>
-        @media (max-width: 768px) {
-            .ai-section {
-                flex-direction: column;
-                width: 83% !important;
-                margin: 0 auto !important; /* center */
-                text-align: center !important; /* center text */
-            }
-
-            .ai-column {
-                width: 90% !important;
-                margin: 0 auto 20px !important; /* keep vertical spacing and center */
-                text-align: center !important;
-            }
-
-            .ai-title-container {
-                justify-content: center !important;
-            }
-
-            .ai-text {
-                font-size: 0.9rem !important;
-                text-align: center !important;
-                margin: 0 auto !important;
-            }
-
-            .ai-title, .pdf-title, .github-title {
-                justify-content: center !important;
-                text-align: center !important;
-            }
-
-            .ai-img-trimmed, .ai-column img {
-                margin: 0 auto !important;
-                display: block !important;
-            }
-        }
-
-        /* Icon size (all devices) */
-        .pdf-icon, .github-icon {
-            width: 25px;
-            height: 25px;
-            margin-right: 12px;
-            transition: all 0.3s;
-        }
-
-        /* Hover effect (PC only) */
-        @media (hover: hover) {
-            .pdf-icon:hover, .github-icon:hover {
-                transform: scale(1.1);
-            }
-        }
-
-        /* Mobile tweaks (<=768px) */
-        @media (max-width: 768px) {
-            .pdf-icon, .github-icon {
-                width: 28px;
-                height: 28px;
-            }
-
-            .pdf-title, .github-title {
-                font-size: 1.4rem !important;
-            }
-        }
-    </style>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
     <script>/* Existing Google Analytics code */</script>
     <meta content="Qingfeng Liu, Machine Learning, Artificial Intelligence, Econometrics" name="keywords">
@@ -84,112 +19,32 @@
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
 </head>
-<style id="mobile-clamp">
-    /* 強制：スマホ時は主要ブロックを表示幅の85%に制限（はみ出し要素も抑制） */
-    @media (max-width: 768px) {
-        html, body {
-            overflow-x: hidden;
-        }
-
-        /* ナビのはみ出しを抑える */
-        #navbar table {
-            width: 100% !important;
-            margin-left: 0 !important;
-        }
-
-        /* 主要ブロックを85vwに固定（インラインwidthやHTML属性より優先） */
-        .main, table.main, #HEADER .main, .container, .ai-section,
-        h1, h2, h5, p.p6, p.p8,
-        table[width], table[style*="width:"] {
-            width: 85vw !important;
-            max-width: 85vw !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        /* 内側のテーブルは親幅いっぱいで折り返し */
-        .main table, table.main table, #demo_1, #demo_2,
-        table[style*="width: 100%"], table[width="100%"] {
-            width: 100% !important;
-        }
-
-        /* 4カラム→縦積み */
-        .ai-section {
-            flex-direction: column !important;
-            gap: 2vw !important;
-        }
-
-        .ai-column {
-            width: 100% !important;
-        }
-
-        /* 巨大なcellspacingをCSSで上書き（属性より優先される） */
-        table[cellspacing] {
-            border-collapse: separate !important;
-            border-spacing: 3vw !important; /* 必要に応じて調整 */
-        }
-
-        /* 画像のはみ出し防止 */
-        img {
-            max-width: 100% !important;
-            height: auto !important;
-        }
-    }
-
-    /* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
-    img[src$="MyJP_SIM_2.png"] {
-        height: 5em !important;
-        width: auto !important;
-        margin-right: 10px !important;
-    }
-
-    @media (max-width: 768px) {
-        img[src$="MyJP_SIM_2.png"] {
-            height: 5em !important;
-        }
-    }
-
-    img[src$="TEDS_Emblem_light.png"] {
-        height: 5em !important;
-        width: auto !important;
-        margin-right: 10px !important;
-    }
-
-    @media (max-width: 768px) {
-        img[src$="TEDS_Emblem_light.png"] {
-            height: 5em !important;
-        }
-    }
-</style>
 
 <body>
-<div id="navbar" style="box-shadow:0 2px 2px #eeeeee;">
-  <table style="width:100%; margin:0 auto; border-collapse:separate; border-spacing:0;">
+<div id="navbar">
+  <table class="navbar-table">
     <tr>
-      <td style="width:22%; padding-left:3vw; padding-top:0; padding-bottom:0; text-align:left; white-space:nowrap;">
-        <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png"
-             style="max-height:4vmax; vertical-align:middle;">
-        <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png"
-             style="max-height:4vmax; vertical-align:middle; margin-left:6px;">
+      <td class="navbar-left">
+        <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png">
+        <img alt="TEDS" class="shield-logo shield-logo-second" src="Figures/TEDS_Emblem_light_2.png">
       </td>
 
-      <td style="text-align:center; white-space:nowrap;">
-          <div style="display:inline-block; margin: -0.2vmax auto -0.3vmax auto;">
-        <table style="margin:0 auto; border-collapse:separate;">
-          <tr>
-            <td><a href="#MEMBERS"><div class="p5" style="font-size:1.2vmax; line-height:1.1;">MEMBERS</div></a></td>
-            <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ"><div class="p5" style="font-size:1.2vmax; line-height:1.1;">RESEARCH</div></a></td>
-            <td><a href="#NEWS"><div class="p5" style="font-size:1.2vmax; line-height:1.1;">NEWS</div></a></td>
-            <td><a href="#CONFER"><div class="p5" style="font-size:1.2vmax; line-height:1.1;">CONFERENCE</div></a></td>
-            <td><a href="https://ise-hp.ws.hosei.ac.jp"><div class="p5" style="font-size:1.2vmax; line-height:1.1;">HOSEI</div></a></td>
-            <td><a href="#HEADER"><div class="p5" style="font-size:1.2vmax; line-height:1.1;">TOP</div></a></td>
-          </tr>
-        </table>
-          </div>
+      <td class="navbar-center">
+        <div class="navbar-menu-wrapper">
+          <table class="navbar-menu">
+            <tr>
+              <td><a href="#MEMBERS"><div class="p5">MEMBERS</div></a></td>
+              <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ"><div class="p5">RESEARCH</div></a></td>
+              <td><a href="#NEWS"><div class="p5">NEWS</div></a></td>
+              <td><a href="#CONFER"><div class="p5">CONFERENCE</div></a></td>
+              <td><a href="https://ise-hp.ws.hosei.ac.jp"><div class="p5">HOSEI</div></a></td>
+              <td><a href="#HEADER"><div class="p5">TOP</div></a></td>
+            </tr>
+          </table>
+        </div>
       </td>
 
-      <!-- 右：バランス用の余白 -->
-      <td style="width:22%;"></td>
+      <td class="navbar-right"></td>
     </tr>
   </table>
 </div>

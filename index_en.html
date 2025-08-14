@@ -2,16 +2,12 @@
 <html>
 
 <head>
-    <!-- 変更前 -->
-    <!-- <style>タグで直接CSSが記述されていた部分を完全削除 -->
 
-    <!-- 変更後 -->
     <link href="teds.css" rel="stylesheet">
-    <!-- 以下は既存のまま維持 -->
+
     <title>Qingfeng Liu, DATA SCIENCE & Econometrics Lab, Hosei University DSELab</title>
 
     <style>
-        /* Do not override existing CSS; add mobile-only styles */
         @media (max-width: 768px) {
             .ai-section {
                 flex-direction: column;
@@ -167,56 +163,43 @@
 </style>
 
 <body>
-<div id="navbar" style="overflow: visible;"> <!-- Key change -->
-    <table align="center" border="0" cellpadding="0"
-           style="box-shadow: 0 2px 2px #eeeeee;  /* keep only bottom shadow */
-                width: calc(100% + 2px);       /* extend 1px on both sides */
-                margin-left: -8px;">
-        <tr>
-            <!-- PC view - logos on the left -->
-            <td class="shield-container pc-logos" style="text-align: right; white-space: nowrap;">
-                <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png">
-                <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png" style="margin-left: 8px;">
-            </td>
+<div id="navbar" style="box-shadow:0 2px 2px #eeeeee;">
+  <table style="width:100%; margin:0 auto; border-collapse:separate; border-spacing:0;">
+    <tr>
+      <td style="width:22%; padding-left:3vw; padding-top:0; padding-bottom:0; text-align:left; white-space:nowrap;">
+        <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png"
+             style="max-height:4vmax; vertical-align:middle;">
+        <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png"
+             style="max-height:4vmax; vertical-align:middle; margin-left:6px;">
+      </td>
 
-            <td class="nav-item">
-                <a href="#MEMBERS">
-                    <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
-                </a>
-            </td>
+      <td style="text-align:center; white-space:nowrap;">
+          <div style="display:inline-block; margin: -1vmax auto -1.8vmax auto;">
+        <table style="margin:0 auto; border-collapse:separate;">
+          <tr>
+            <td><a href="#MEMBERS"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">MEMBERS</div></a></td>
+            <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">RESEARCH</div></a></td>
+            <td><a href="#NEWS"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">NEWS</div></a></td>
+            <td><a href="#CONFER"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">CONFERENCE</div></a></td>
+            <td><a href="https://ise-hp.ws.hosei.ac.jp"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">HOSEI</div></a></td>
+            <td><a href="#HEADER"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">TOP</div></a></td>
+          </tr>
+        </table>
+          </div>
+      </td>
 
-            <td width="6vw"></td>
-            <td><a href="#NEWS">
-                <div class="p5" style="font-size: 1vmax;">NEWS
-                </div>
-            </a></td>
-            <td width="6vw"></td>
-            <td><a href="#CONFER">
-                <div class="p5" style="font-size: 1vmax;">CONFERENCE
-                </div>
-            </a>
-            <td width="6vw"></td>
-            <td><a href="https://ise-hp.ws.hosei.ac.jp">
-                <div class="p5" style="font-size: 1vmax;">HOSEI
-                </div>
-            </a>
-                </a>
-            </td>
-            <td width="6vw"></td>
-            <td><a href="#HEADER">
-                <div class="p5" style="font-size: 1vmax;">TOP
-                </div>
-            </a>
-            </td>
-        </tr>
-    </table>
+      <!-- 右：バランス用の余白 -->
+      <td style="width:22%;"></td>
+    </tr>
+  </table>
 </div>
+
 
 <!--================-->
 <!--     HEADER     -->
 <!--================-->
 <div id="HEADER">
-    <!--<img style="position: absolute; left: 100px; top: 100px; z-index: 1;" src="eo_hosei.jpg" width="200">-->
+    <!--<img style="position: absolute; left: 100px; top: 100px; z-index: 1; "src="eo_hosei.jpg" width="200">-->
     <!--style="border-style: solid; border-width: 0px; border-top-width: 5px; border-color: #EE490D;"-->
     <div class="container2" id="next" style="text-align: left;">
         <hr style="border: 1px solid transparent; margin-top: -10px; padding-top: 10px; padding-bottom: 0px;">
@@ -224,7 +207,7 @@
             <tr>
                 <td width="100%">
                     <p class="p7"
-                       style="font-size: 2.2vmax; text-align: justify; text-align: Center;
+                       style="font-size: 3vmax; text-align: justify; text-align: Center;
                        text-justify:auto; margin-top: 7vmin;margin-bottom: 0.8vmin; line-height:1.5; ">
                         <font color=#ffffff>
                             Data Science & Econometrics Laboratory - DSELab
@@ -240,7 +223,7 @@
         <table border="0" class="main" width="80%">
             <tr>
                 <td>
-                    <p class="p7" style="font-size: 1.5vmax; text-align: Center;
+                    <p class="p7" style="font-size: 2.2vmax; text-align: Center;
                 text-justify:auto;  margin-top: 2.5vmin; margin-bottom: 1.5vmax;line-height:1.8;">
                         <font color=#ffffff>
                             Research in Data Science and Econometrics<br>
@@ -258,39 +241,39 @@
 
     <tr>
         <td style="text-align: center; padding: 10px 0;">
-            <table align="center" border="0" cellpadding="0" cellspacing="25vw" style="margin: 0 auto;">
+            <table style="margin:0 auto; border-collapse:separate; border-spacing:3vw 0.5vw;">
                 <tr>
                     <td><a href="#MEMBERS">
-                        <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
+                        <div class="p5" style="font-size: 1.5vmax;">MEMBERS</div>
                     </a></td>
                     <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
-                        <div class="p5" style="font-size: 1vmax;">RESEARCH</div>
+                        <div class="p5" style="font-size: 1.5vmax;">RESEARCH</div>
                     </a></td>
                     <td><a href="#NEWS">
-                        <div class="p5" style="font-size: 1vmax;">NEWS</div>
+                        <div class="p5" style="font-size: 1.5vmax;">NEWS</div>
                     </a></td>
                     <td><a href="#CONFER">
-                        <div class="p5" style="font-size: 1vmax;">CONFERENCE</div>
+                        <div class="p5" style="font-size: 1.5vmax;">CONFERENCE</div>
                     </a></td>
                     <td><a href="https://ise-hp.ws.hosei.ac.jp">
-                        <div class="p5" style="font-size: 1vmax;">HOSEI</div>
+                        <div class="p5" style="font-size: 1.5vmax;">HOSEI</div>
                     </a></td>
                     <td><a href="#HEADER">
-                        <div class="p5" style="font-size: 1vmax;">TOP</div>
+                        <div class="p5" style="font-size: 1.5vmax;">TOP</div>
                     </a></td>
                 </tr>
                 <tr>
                     <td colspan="6" style="padding-top: 0px;">
-                        <table align="center" border="0" cellpadding="0" cellspacing="8vw" style="margin: 0 auto;">
+                        <table style="margin:0 auto; border-collapse:separate; border-spacing:3vw 0;">
                             <tr>
                                 <td><a class="color1" href="https://qingfeng-liu.github.io/index.html">
-                                    <div style="font-size: 1vmax;">JAPANESE</div>
+                                    <div style="font-size: 1.5vmax;">JAPANESE</div>
                                 </a></td>
                                 <td><a class="color1" href="https://qingfeng-liu.github.io/index_en.html">
-                                    <div style="font-size: 1vmax;">ENGLISH</div>
+                                    <div style="font-size: 1.5vmax;">ENGLISH</div>
                                 </a></td>
                                 <td><a class="color1" href="https://qingfeng-liu.github.io/index_cn.html">
-                                    <div style="font-size: 1vmax;">CHINESE</div>
+                                    <div style="font-size: 1.5vmax;">CHINESE</div>
                                 </a></td>
                             </tr>
                         </table>
@@ -480,12 +463,12 @@
 
         <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
             <tr>
-                <td style="padding-top: 10pt; padding-right: 2vw; vertical-align: top;" width="25%">
+                <td style="padding-right: 2vw; vertical-align: top;" width="22%">
                     <img alt="Prof. Qingfeng Liu" src="Qingfeng_Liu.jpg" width="100%">
                 </td>
                 <td style="padding-left: 1vw; vertical-align: top;">
                 <td style="padding-left: 1vw; vertical-align: top;">
-                    <div style="width: 100%; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
+                    <div style="width: 100%; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
                         <strong>Professor</strong> Qingfeng Liu <a class="color1" href="CV.pdf"> <img
                             alt="CV icon" class="pdf-icon" src="icons/iconmonstr-cv-4-240.png"></a><br>
                         <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">Chair, Department of Industrial and
@@ -515,7 +498,7 @@
                 <div class="ai-title-container">
                     <div class="ai-title">
                         <h1 class="pdf-title">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learning Materials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Learning Materials
                         </h1>
                     </div>
                 </div>
@@ -543,7 +526,7 @@
                 <div class="ai-title-container">
                     <div class="ai-title">
                         <h1 class="pdf-title">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essays & Reflections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Essays & Reflections
                         </h1>
                     </div>
                 </div>
@@ -561,8 +544,8 @@
         </div>
         <h1></h1>
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div style="width:75%; margin-top: -1vmax; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
-                <div class="justified-text">
+            <div style="width:75%; margin-top: 0vmax; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
+                <div class="justified-text"; style="font-weight: 500; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
                     <p>
                         Professor Qingfeng Liu conducts research in data science, econometrics, and machine learning (a
                         foundational technology of artificial intelligence). He is currently a professor at the Faculty
@@ -585,9 +568,9 @@
                 </div>
 
                 <p>
-                    <strong>Credo</strong> Enjoy what you commit to; master what you undertake.<br>
-                    <strong>Prediction</strong> Japan’s economy will be revitalized by craftsmanship.<br>
-                    <strong>Motto</strong> Welcome others as allies rather than oppose them.
+                    <strong>CREDO</strong> Enjoy what you commit to; master what you undertake.<br>
+                    <strong>PREDICTION</strong> Japan’s economy will be revitalized by craftsmanship.<br>
+                    <strong>MOTTO</strong> Welcome others as allies rather than oppose them.
                 </p>
             </div>
         </div>
@@ -615,7 +598,7 @@
                 </a>
             </div>
         </div>
-        <div class="ai-text">
+        <div class="ai-text" style="font-weight: 500; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
             Decision Support for Management<br>Sales Assistance<br>Personalized Market Development<br>Supply Chain<br>
             Hiring & HR<br>Automated Customer Support<br>Financial Optimization<br>AI Production Systems
         </div>
@@ -639,7 +622,7 @@
                 </a>
             </div>
         </div>
-        <div class="ai-text">
+        <div class="ai-text" style="font-weight: 500; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
             Deep Neural Networks<br>Reinforcement Learning<br>ML-based Causal Inference<br>LLM Text Processing
             <br>ChatGPT Scripts<br>OpenAI API<br>Image Anomaly Detection<br>Semantic Search
         </div>

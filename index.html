@@ -2,10 +2,6 @@
 <html>
 
 <head>
-    <!-- 変更前 -->
-    <!-- <style>タグで直接CSSが記述されていた部分を完全削除 -->
-
-    <!-- 変更後 -->
     <link href="teds.css" rel="stylesheet">
     <!-- 以下は既存のまま維持 -->
     <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
@@ -52,7 +48,7 @@
         .pdf-icon, .github-icon {
             width: 25px; /* 元の20pxから40%拡大（PCに最適化） */
             height: 25px;
-            margin-right: 12px; /* 余白も拡大 */
+            margin-right: 10px; /* 余白も拡大 */
             transition: all 0.3s; /* スムーズなアニメーション追加 */
         }
 
@@ -169,54 +165,39 @@
     }
 </style>
 <body>
-<div id="navbar" style="overflow: visible;"> <!-- 关键修改 -->
-    <table align="center" border="0" cellpadding="0"
-           style="box-shadow: 0 2px 2px #eeeeee;  /* 只保留底部阴影 */
-                width: calc(100% + 2px);       /* 左右各扩展1px */
-                margin-left: -8px;">
-        <tr>
-            <!-- PC端显示 - 图标在左侧 -->
-            <td class="shield-container pc-logos" style="text-align: right; white-space: nowrap;">
-                <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png">
-                <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png" style="margin-left: 8px;">
-            </td>
 
 
-            <td class="nav-item">
+<div id="navbar" style="box-shadow:0 2px 2px #eeeeee;">
+  <table style="width:100%; margin:0 auto; border-collapse:separate; border-spacing:0;">
+    <tr>
+      <td style="width:22%; padding-left:3vw; padding-top:0; padding-bottom:0; text-align:left; white-space:nowrap;">
+        <img alt="Hosei University" class="shield-logo" src="Figures/hosei_shield.png"
+             style="max-height:4vmax; vertical-align:middle;">
+        <img alt="TEDS" class="shield-logo" src="Figures/TEDS_Emblem_light_2.png"
+             style="max-height:4vmax; vertical-align:middle; margin-left:6px;">
+      </td>
 
-                <a href="#MEMBERS">
-                    <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
-                </a>
-            </td>
+      <td style="text-align:center; white-space:nowrap;">
+          <div style="display:inline-block; margin: -1vmax auto -1.8vmax auto;">
+        <table style="margin:0 auto; border-collapse:separate;">
+          <tr>
+            <td><a href="#MEMBERS"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">MEMBERS</div></a></td>
+            <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">RESEARCH</div></a></td>
+            <td><a href="#NEWS"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">NEWS</div></a></td>
+            <td><a href="#CONFER"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">CONFERENCE</div></a></td>
+            <td><a href="https://ise-hp.ws.hosei.ac.jp"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">HOSEI</div></a></td>
+            <td><a href="#HEADER"><div class="p5" style="font-size:1.5vmax; line-height:1.1;">TOP</div></a></td>
+          </tr>
+        </table>
+          </div>
+      </td>
 
-            <td width="6vw"></td>
-            <td><a href="#NEWS">
-                <div class="p5" style="font-size: 1vmax;">NEWS
-                </div>
-            </a></td>
-            <td width="6vw"></td>
-            <td><a href="#CONFER">
-                <div class="p5" style="font-size: 1vmax;">CONFERENCE
-                </div>
-            </a>
-            <td width="6vw"></td>
-            <td><a href="https://ise-hp.ws.hosei.ac.jp">
-                <div class="p5" style="font-size: 1vmax;">HOSEI
-                </div>
-            </a>
-                </a>
-            </td>
-            <td width="6vw"></td>
-            <td><a href="#HEADER">
-                <div class="p5" style="font-size: 1vmax;">TOP
-                </div>
-            </a>
-            </td>
-
-
-        </tr>
-    </table>
+      <!-- 右：バランス用の余白 -->
+      <td style="width:22%;"></td>
+    </tr>
+  </table>
 </div>
+
 
 <!--================-->
 <!--　　HEADER　　-->
@@ -230,7 +211,7 @@
             <tr>
                 <td width="100%">
                     <p class="p7"
-                       style="font-size: 2.0vmax; text-align: justify; text-align: Center;
+                       style="font-size: 2.2vmax; font-weight: 700; text-align: justify; text-align: Center;
                        text-justify:auto; margin-top: 7vmin;margin-bottom: 0.8vmin; line-height:1.5; ">
                         <font color=#ffffff>法政大学データサイエンス＆計量経済学研究室<br>
                             Data Science & Econometrics Laboratory - DSELab
@@ -246,7 +227,7 @@
         <table border="0" class="main" width="80%">
             <tr>
                 <td>
-                    <p class="p7" style="font-size: 1.5vmax; text-align: Center;
+                    <p class="p7" style="font-size: 1.8vmax; font-weight: 700; text-align: Center;
                 text-justify:auto;  margin-top: 2.5vmin; margin-bottom: 1.5vmax;line-height:1.8;">
                         <font color=#ffffff>
                             データサイエンスと計量経済学に関する研究を展開<br>
@@ -261,54 +242,42 @@
     </div>
 </div>
 <table style="width: 75%; margin: 0 auto; border-collapse: collapse; position: relative;">
-    <!--    &lt;!&ndash; PC端盾牌图标（表格左侧） &ndash;&gt;-->
-    <!--    <div class="pc-logos-01" style="position: absolute; right: 76%; top: 58%; transform: translateY(-50%); white-space: nowrap; margin-right: 10px;">-->
-    <!--        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">-->
-    <!--        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">-->
-    <!--    </div>-->
-
-    <!--    &lt;!&ndash; 移动端盾牌图标（MEMBERS上方） &ndash;&gt;-->
-    <!--    <div class="mobile-logos-01" style="display: none; text-align: center; margin-bottom: -20px;">-->
-    <!--        <img src="Figures/hosei_shield.png" alt="Hosei" class="shield-logo-01">-->
-    <!--        <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" class="shield-logo-01" style="margin-left: 5px;">-->
-    <!--    </div>-->
-
 
     <tr>
         <td style="text-align: center; padding: 10px 0;">
-            <table align="center" border="0" cellpadding="0" cellspacing="25vw" style="margin: 0 auto;">
+            <table style="margin:0 auto; border-collapse:separate; border-spacing:3vw 0.5vw;">
                 <tr>
                     <td><a href="#MEMBERS">
-                        <div class="p5" style="font-size: 1vmax;">MEMBERS</div>
+                        <div class="p5" style="font-size: 1.5vmax;">MEMBERS</div>
                     </a></td>
                     <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
-                        <div class="p5" style="font-size: 1vmax;">RESEARCH</div>
+                        <div class="p5" style="font-size: 1.5vmax;">RESEARCH</div>
                     </a></td>
                     <td><a href="#NEWS">
-                        <div class="p5" style="font-size: 1vmax;">NEWS</div>
+                        <div class="p5" style="font-size: 1.5vmax;">NEWS</div>
                     </a></td>
                     <td><a href="#CONFER">
-                        <div class="p5" style="font-size: 1vmax;">CONFERENCE</div>
+                        <div class="p5" style="font-size: 1.5vmax;">CONFERENCE</div>
                     </a></td>
                     <td><a href="https://ise-hp.ws.hosei.ac.jp">
-                        <div class="p5" style="font-size: 1vmax;">HOSEI</div>
+                        <div class="p5" style="font-size: 1.5vmax;">HOSEI</div>
                     </a></td>
                     <td><a href="#HEADER">
-                        <div class="p5" style="font-size: 1vmax;">TOP</div>
+                        <div class="p5" style="font-size: 1.5vmax;">TOP</div>
                     </a></td>
                 </tr>
                 <tr>
-                    <td colspan="6" style="padding-top: 0px;"> <!-- 間隔を0pxに調整 -->
-                        <table align="center" border="0" cellpadding="0" cellspacing="8vw" style="margin: 0 auto;">
+                    <td colspan="6" style="padding-top: 0px;">
+                        <table style="margin:0 auto; border-collapse:separate; border-spacing:3vw 0;">
                             <tr>
                                 <td><a class="color1" href="https://qingfeng-liu.github.io/index.html">
-                                    <div style="font-size: 1vmax;">JAPANESE</div>
+                                    <div style="font-size: 1.5vmax;">JAPANESE</div>
                                 </a></td>
                                 <td><a class="color1" href="https://qingfeng-liu.github.io/index_en.html">
-                                    <div style="font-size: 1vmax;">ENGLISH</div>
+                                    <div style="font-size: 1.5vmax;">ENGLISH</div>
                                 </a></td>
                                 <td><a class="color1" href="https://qingfeng-liu.github.io/index_cn.html">
-                                    <div style="font-size: 1vmax;">CHINESE</div>
+                                    <div style="font-size: 1.5vmax;">CHINESE</div>
                                 </a></td>
                             </tr>
                         </table>
@@ -346,7 +315,7 @@
         <div>
             <table border="0" class="main" width="75%">
                 <tr>
-                    <td style="padding-top: 1vmax; padding-bottom: 1vmax;" width="100%">
+                    <td style="padding-top: 1.2vmax; padding-bottom: 1vmax;" width="100%">
                         <table align="center" border="0" cellspacing="0" id="demo_1"
                                style="font-size: 1.2vmax; text-justify:auto;"
                                width="100%">
@@ -443,7 +412,7 @@
                                             <div style="padding-bottom: 15px">
 
                                                 <a class="color1" href="https://teds-datascience.github.io/seminars/"
-                                                   style="text-decoration:underline;">
+                                                   style="text-decoration:underline; font-size: 1.2vmax;">
                                                     Transdisciplinary Econometrics & Data Science Seminar</a>
                                                 （学際共創計量経済学・データサイエンスセミナー）
                                             </div>
@@ -452,11 +421,11 @@
                                         <div align="left"
                                              style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
                                     text-transform: uppercase;">
-                                            <strong style="font-size: 1.1em; color: #333;">
+                                            <strong style="font-size: 1.2vmax; color: #333;">
                                                 The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB
                                                 2025)</strong><br>
                                         </div>
-                                        <div style="padding-bottom: 15px">
+                                        <div style="padding-bottom: 15px; font-size: 1.2vmax;">
                                             <a class="color1" href="https://yangfengstat.github.io/snab2025/"
                                                style="text-decoration:underline;">
                                                 The SNAB 2025 will take place on June 2-4, 2025 at the renowned Hotel
@@ -468,7 +437,7 @@
                                         <div align="left"
                                              style="font-size: 1.2vmax; font-family: Oswald; color: #EE490D;
                                     text-transform: uppercase;">
-                                            <strong style="font-size: 1.1em; color: #333;">
+                                            <strong style="font-size: 1.2vmax; color: #333;">
                                                 ACIEK(winter) - IMIP2024
                                             </strong>
                                         </div>
@@ -506,14 +475,14 @@
     <div style="width:100%; height:100%;">
         <h2>Faculty Member</h2>
 
-        <table border="0" class="main" style="font-size: 1.2vmax;" width="75%">
+        <table border="0" class="main" style="font-size: 1.5vmax;" width="75%">
             <tr>
-                <td style="padding-top: 10pt; padding-right: 2vw; vertical-align: top;" width="25%">
+                <td style="padding-top: 0pt; padding-right: 2vw; vertical-align: top;" width="25%">
                     <img alt="Prof. Qingfeng Liu" src="Qingfeng_Liu.jpg" width="100%">
                 </td>
                 <td style="padding-left: 1vw; vertical-align: top;">
                 <td style="padding-left: 1vw; vertical-align: top;">
-                    <div style="width: 100%; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
+                    <div style="width: 100%; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
                         <strong>教　授</strong> 　劉 慶豊 <a class="color1" href="CV.pdf"> <img alt="CV icon"
                                                                                               class="pdf-icon"
                                                                                               src="icons/iconmonstr-cv-4-240.png"></a><br>
@@ -548,18 +517,18 @@
                         </h1>
                     </div>
                 </div>
-                <div class="ai-text">
+                <div class="ai-text" style="font-weight: 500; font-size: 1.2vmax;">
                     <a href="My_Thoughts/Double_Descents.pdf"><img alt="PAPER icon" class="pdf-icon"
-                                                                   src="icons/iconmonstr-file-34-240.png">　Why Double
+                                                                   src="icons/iconmonstr-file-34-240.png"> Why Double
                         Descent?</a>
                     <br>
                     <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit"><img alt="CV icon"
                                                                                             class="pdf-icon"
-                                                                                            src="icons/iconmonstr-save-as-lined-240.png">　資料コード集
-                        (ML・AI)</a>
+                                                                                            src="icons/iconmonstr-save-as-lined-240.png"> ML・AI資料コード集
+                        </a>
                     <br>
                     <a href="AI_Driven_Business.pdf"><img alt="SLIDE icon" class="pdf-icon"
-                                                          src="icons/iconmonstr-school-27-240.png">　DX・AI Edge</a>
+                                                          src="icons/iconmonstr-school-27-240.png"> DX・AI Edge</a>
                 </div>
             </div>
 
@@ -577,12 +546,12 @@
                         </h1>
                     </div>
                 </div>
-                <div class="ai-text">
+                <div class="ai-text" style="font-weight: 500; font-size: 1.2vmax;">
                     <a href="https://qingfeng-liu.github.io/Analects.html"><img alt="Analects icon" class="pdf-icon"
-                                                                                src="icons/iconmonstr-book-26-240.png">　論語新篇</a>
+                                                                                src="icons/iconmonstr-book-26-240.png"> 論語新篇</a>
                     <br>
                     <a href="https://qingfeng-liu.github.io/poems.html"><img alt="Poem icon" class="pdf-icon"
-                                                                             src="icons/iconmonstr-cat-6-240.png">　凡璞瑰珍集</a>
+                                                                             src="icons/iconmonstr-cat-6-240.png"> 凡璞瑰珍集</a>
                 </div>
             </div>
 
@@ -590,8 +559,8 @@
         <h1></h1>
         <div style="width: 100%; display: flex; justify-content: center;">
             <div style="width:75%; margin-top: -1vmax; font-size: 1.1vmax; line-height: 1.8; text-align: left;">
-                <div class="justified-text">
-                    <p>
+                <div>
+                    <p style="font-weight: 500; font-size: 1.2vmax;">
                         劉慶豊教授は、データサイエンス、計量経済学、機械学習（人工知能の基盤となる技術の一つ）の分野で研究を行っています。現在、法政大学理工学部の教授を務めており、ニューヨーク大学グローバル公衆衛生学院の共同研究員も兼任しています。2007年に京都大学で経済学博士号を取得し、その後Princeton
                         Universityでポスドク研究員を務めました。これまでに、京都大学やアメリカのColumbia
                         Universityで客員教授や訪問学者として研究を行った経験があります。研究成果をJournal of Business &
@@ -604,7 +573,7 @@
                     </p>
                 </div>
 
-                <p>
+                <p style="font-weight: 500; font-size: 1.2vmax;">
                     <strong>信　条</strong>　やると決めたら楽しくやる、やるからには必ず極める。<br>
                     <strong>預　言</strong>　日本経済は匠の精神で蘇る。<br>
                     <strong>心　得</strong>　対立するより、仲間に迎える。
@@ -628,15 +597,16 @@
     <!-- Column 2: Text (DX・AI Business) -->
     <div class="ai-column">
         <div class="ai-title-container">
+
             <div class="ai-title">
                 <a href="AI_Driven_Business.pdf">
                     <h1 class="pdf-title">
-                        <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">DX・AI Edge
+                        <img alt="SLIDE icon"  src="icons/iconmonstr-school-27-240.png">DX・AI Edge
                     </h1>
                 </a>
             </div>
         </div>
-        <div class="ai-text">
+        <div class="main" style="font-size: 1.2vmax; margin-left:3vw;">
             経営意思決定支援<br>営業サポート<br>市場開発個人化<br>Supply Chain<br>
             採用・労務人事<br>顧客対応自動化<br>財務最適化<br>AI生産システム
         </div>
@@ -660,7 +630,7 @@
                 </a>
             </div>
         </div>
-        <div class="ai-text">
+        <div class="main" style="font-size: 1.2vmax; margin-left:3vw;">
             DNN深層学習<br>強化学習<br>ML因果推論<br>LLMテキスト処理
             <br>ChatGPT Script<br>OpenAI API<br>画像認識異常検知<br>Semantic Search
         </div>

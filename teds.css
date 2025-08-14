@@ -1,21 +1,4 @@
-<
-meta charset
-
-=
-"UTF-8"
->
-
-<
-meta content
-
-=
-"width=device-width, initial-scale=1.0 "
-name
-
-=
-"viewport"
->
-    /* Mobile: force content width to 85% (override) */
+ /* Mobile: force content width to 85% (override) */
 
 @media (max-width: 768px) {
     .main,
@@ -40,7 +23,7 @@ name
 body {
     margin: 0 0;
     background: #fff;
-    font-weight: normal;
+    font-weight: 550;
     line-height: 1.0;
     color: #C4C4C4;
     height: 100%;
@@ -367,7 +350,7 @@ span.s5 {
 }
 
 .ai-text {
-    font-size: 100%; /* サイズ8割 */
+    /*font-size: 100%;*/ /* サイズ8割 */
     line-height: 1.6;
     width: 100%; /* 行の幅を9割に */
     box-sizing: border-box;
@@ -419,7 +402,7 @@ span.s5 {
 
 .main2 {
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: Extra-light;
+    font-weight: 550;
     margin-left: auto;
     margin-right: auto;
 }
@@ -434,7 +417,7 @@ span.s5 {
 table.sample {
     text-align: justify;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: Normal;
+    font-weight: 550;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8;
@@ -444,7 +427,7 @@ table.sample {
 table.sample2 {
     text-align: justify;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: Normal;
+    font-weight: 550;
     margin-left: auto;
     margin-right: auto;
 }
@@ -452,7 +435,7 @@ table.sample2 {
 .sample3 {
     text-align: justify;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: Extra-light;
+    font-weight: 550;
     margin-left: auto;
     margin-right: auto;
     table-layout: auto;
@@ -462,7 +445,7 @@ table.sample2 {
 table.sample4 {
     text-align: justify;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: Extra-light;
+    font-weight: 550;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8;
@@ -618,7 +601,7 @@ td .box-title {
     padding: 0 0px;
     line-height: 1;
     font-size: 1.2vmax;
-    font-weight: Normal;
+    font-weight: 550;
     font-family: 'Noto Sans JP', sans-serif;
     color: #1a5276;
     background: #FFF;
@@ -831,12 +814,12 @@ strong {
     }
 
     table#demo_1 td:first-child {
-        font-weight: normal;
+        font-weight: 550;
     }
 
     table#demo_1 td:last-child {
         border-bottom: 0px solid #DDD;
-        font-weight: normal;
+        font-weight: 550;
     }
 
     table#demo_1 td .inner {
@@ -910,12 +893,12 @@ strong {
     }
 
     table#demo_2 td:first-child {
-        font-weight: normal;
+        font-weight: 550;
     }
 
     table#demo_2 td:last-child {
         border-bottom: 0px solid #DDD;
-        font-weight: normal;
+        font-weight: 550;
     }
 
     table#demo_2 td .inner {

@@ -1,4 +1,4 @@
- /* Mobile: force content width to 85% (override) */
+/* Mobile: force content width to 85% (override) */
 
 @media (max-width: 768px) {
     .main,
@@ -7,14 +7,14 @@
     .ai-section,
     h1, h2, h5, p.p6, p.p8,
     .container {
-        width: 100% !important;
+        width: 80% !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
     table[style="width:"],
     table[width] {
-        width: 100% !important;
+        width: 80% !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -85,7 +85,7 @@ strong, b {
 }
 
 h1 {
-    width: 75%;
+    width: 80%;
     font-family: "Roboto";
     text-transform: uppercase;
     font-weight: Normal;
@@ -97,10 +97,10 @@ h1 {
 }
 
 h2 {
-    width: 75%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 2.5vh;
+    font-size: 1.5vmax;
     font-weight: 550;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 0.1em;
@@ -133,7 +133,7 @@ h3[id] {
 }
 
 h5 {
-    width: 75%;
+    width: 80%;
     font-family: "Roboto";
     text-transform: uppercase;
     font-weight: Normal;
@@ -188,7 +188,7 @@ p.p6 {
     font-family: 'Noto Sans JP', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 80%;
 }
 
 p.p7 {
@@ -208,7 +208,7 @@ p.p8 {
     font-family: 'Noto Sans JP', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 80%;
 }
 
 span.s1 {
@@ -239,133 +239,111 @@ span.s5 {
     font-family: 'Noto Sans JP', sans-serif;
     color: #353535;
 }
+
 /* 通常レイアウト */
 #navbar {
-  box-shadow: 0 2px 2px #eeeeee;
+    box-shadow: 0 2px 2px #eeeeee;
 }
 
 #navbar table {
-  width: 80%;
-  margin: -0.5vmax auto;
-  border-collapse: separate;
-  border-spacing: 0;
+    width: 80%;
+    margin: -0.5vmax auto;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 #navbar td {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
 #navbar td:first-child {
-  width: 22%;
-  padding-left: 3vw;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: left;
+    width: 22%;
+    padding-left: 3vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
 }
 
 #navbar img.shield-logo {
-  height: 2.5vmax;    /* 固定高さにして幅は自動 */
-  width: auto;
-  vertical-align: middle;
-  display: inline-block;
+    height: 2.5vmax; /* 固定高さにして幅は自動 */
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
 }
+
 #navbar img.shield-logo + img {
-  margin-left: 6px;
+    margin-left: 6px;
 }
 
 #navbar td:nth-child(2) div {
-  display: inline-block;
-  margin: -0.2vmax auto -0.3vmax auto;
+    display: inline-block;
+    margin: -0.2vmax auto -0.3vmax auto;
 }
 
 #navbar td:nth-child(2) table {
-  margin: 0 auto;
-  border-collapse: separate;
+    margin: 0 auto;
+    border-collapse: separate;
 }
 
 #navbar td:nth-child(2) .p5 {
-  font-size: 1.2vmax;
-  line-height: 1.1;
+    font-size: 1.2vmax;
+    line-height: 1.1;
 }
 
 #navbar td:last-child {
-  width: 22%;
+    width: 22%;
 }
 
 
 @media (max-width: 768px) {
-  /* 左ロゴ列を少し詰める、右ダミー列は消す */
-  #navbar td:first-child { width: auto; padding-left: 2vw; }
-  #navbar td:last-child { display: none; }
+    /* 左ロゴ列を少し詰める、右ダミー列は消す */
+    #navbar td:first-child {
+        width: auto;
+        padding-left: 2vw;
+    }
 
-  /* ロゴはスマホでは少し小さめにして余白を作る */
-  #navbar img.shield-logo { height: 4.6vmax; }
+    #navbar td:last-child {
+        display: none;
+    }
 
-  /* 中央メニューを等間隔にして横スクロールなしで収める */
-  #navbar td:nth-child(2) table {
-    width: 100%;
-    table-layout: fixed;           /* 等分する鍵 */
-    border-collapse: collapse;
-  }
-  #navbar td:nth-child(2) table tr td {
-    width: calc(100% / 6);         /* 6項目を等分 */
-    padding: 0;                    /* 余白を削減 */
-    text-align: center;
-  }
+    /* ロゴはスマホでは少し小さめにして余白を作る */
+    #navbar img.shield-logo {
+        height: 4.6vmax;
+    }
 
-  /* 文字サイズを自動調整（小さすぎ防止＋はみ出し防止） */
-  #navbar td:nth-child(2) .p5 {
-    display: block;
-    font-size: clamp(10px, 2.35vw, 13px);
-    line-height: 1.2;
-    letter-spacing: .01em;
-    white-space: nowrap;
-  }
+    /* 中央メニューを等間隔にして横スクロールなしで収める */
+    #navbar td:nth-child(2) table {
+        width: 100%;
+        table-layout: fixed; /* 等分する鍵 */
+        border-collapse: collapse;
+    }
 
-  /* 中央メニューラッパの余計なマージンを殺す（あなたのHTMLの -0.2vmax を打ち消し） */
-  #navbar td:nth-child(2) > div {
-    margin: 0 auto !important;
-  }
+    #navbar td:nth-child(2) table tr td {
+        width: calc(100% / 6); /* 6項目を等分 */
+        padding: 0; /* 余白を削減 */
+        text-align: center;
+    }
+
+    /* 文字サイズを自動調整（小さすぎ防止＋はみ出し防止） */
+    #navbar td:nth-child(2) .p5 {
+        display: block;
+        font-size: clamp(10px, 2.35vw, 13px);
+        line-height: 1.2;
+        letter-spacing: .01em;
+        white-space: nowrap;
+    }
+
+    /* 中央メニューラッパの余計なマージンを殺す（あなたのHTMLの -0.2vmax を打ち消し） */
+    #navbar td:nth-child(2) > div {
+        margin: 0 auto !important;
+    }
 }
 
-    /* MyJP-SIM2 アイコンだけサイズを固定（インライン5.2emを上書き） */
-    img[src$="MyJP_SIM_2.png"] {
-        height: 5em !important;
-        width: auto !important;
-        margin-right: 10px !important;
-    }
-
-    @media (max-width: 768px) {
-        img[src$="MyJP_SIM_2.png"] {
-            height: 5em !important;
-        }
-    }
-
-    img[src$="TEDS_Emblem_light.png"] {
-        height: 5em !important;
-        width: auto !important;
-        margin-right: 10px !important;
-    }
-
-    @media (max-width: 768px) {
-        img[src$="TEDS_Emblem_light.png"] {
-            height: 5em !important;
-        }
-    }
-/*.ai-section {*/
-/*      width: 75%;*/
-/*      margin: auto;*/
-/*      display: flex;*/
-/*      justify-content: space-between;*/
-/*      gap: 1vw;*/
-/*      box-sizing: border-box;*/
-/*      padding: 1vw 0;*/
-/*    }*/
 /* 4列レイアウト維持 */
 .ai-section {
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     gap: 1vw;
 }
@@ -404,22 +382,27 @@ span.s5 {
     width: 100%;
 }
 
-.ai-title {
-    font-weight: 550;
-    color: #1a5276;
-    margin-bottom: 0.5em;
-    display: inline-block;
+
+/* ai-title 里的 H1 撑满整行并居中 .ai-title { display:block; width:100%; text-align:center; }  */
+.ai-title h1 {
+    display: block; /* 占满一整行 */
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: 0; /* 去默认外边距 */
+    font-size: 1.2vmax; /* 原值 */
+    line-height: 1.2; /* 原值 */
+    /* 可选：做满宽色带/下划线
+    background: rgba(0,0,0,.06);
+    padding: .4em 0;
+    border-bottom: 1px solid #ddd;
+    */
 }
 
-.ai-title h1 {
-    display: flex;
-    align-items: center;
-    margin: 0;
-}
 
 .ai-title img {
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.5vmax;
+    height: 1.5vmax;
     margin-right: 0.4em;
 }
 
@@ -442,39 +425,98 @@ span.s5 {
     justify-content: center; /* 追加 */
 }
 
-/* GitHubアイコンとタイトルのスタイル（既存） */
-/*.github-icon {*/
-/*  width: 1em;*/
-/*  height: 1em;*/
-/*  margin-right: 0.3em;*/
-/*  vertical-align: middle;*/
-/*}*/
-/*.pdf-icon, .github-icon {*/
-/*  width: 1em;*/
-/*  height: 1em;*/
-/*  margin-right: 0.3em;*/
-/*}*/
+/* 全部中央揃え */
+.ai-text {
+    line-height: 1.6;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center; /* 文字＆リンク居中 */
+}
+
+/* アイコン＋テキスト 1 行中央 */
+.ai-text a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* 中央揃え */
+    white-space: nowrap;
+}
 
 
+/* 让整行可点且内容居中 */
 .ai-title a {
+    display: block;
+    width: 100%;
+    font-size: 1.2vmax;
+    text-align: center;
     text-decoration: none;
     color: inherit;
+    margin: 1em 0 .5em;
 }
 
-.ai-text {
-    /*font-size: 100%;*/ /* サイズ8割 */
-    line-height: 1.6;
-    width: 100%; /* 行の幅を9割に */
-    box-sizing: border-box;
-    margin: 0 auto; /* 中央揃え */
+/* 图标 + 标题同一行、垂直居中 */
+.ai-title a h1.title {
+    display: inline-flex; /* 关键：一行内排布 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    gap: .4em; /* 图标与文字间距 */
+    margin: 0;
+    line-height: 1.2;
+    font-size: 1.2vmax;
 }
 
-/* アイコン＋テキストを1行に・中央揃えに・改行させない */
-.ai-text a {
-    display: inline-flex; /* 1行で横並び */
-    align-items: center; /* 縦位置を中央に */
-    white-space: nowrap; /* 途中改行を禁止 */
+/* 统一放大 */
+.ai-title a > h1 {
+    font-size: 1.5vmax !important; /* 原来 1.2vmax */
+    line-height: 1.2;
+    margin: 0;
 }
+
+/* 图标跟着放大 */
+.ai-title a > h1 img {
+    height: 1.1em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: .35em;
+}
+
+/* 统一放大 */
+.ai-title h1 {
+    font-size: 1.5vmax !important; /* 原来 1.2vmax */
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* 图标跟着放大 */
+.ai-title h1 img {
+    height: 1.1em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: .35em;
+}
+
+
+/* 覆盖 ai-section 的通用 img 规则，避免图标被拉满/换行 */
+.ai-title a h1.title img {
+    display: inline-block !important;
+    height: 2em !important; /* 随文字大小缩放 */
+    width: auto !important;
+    vertical-align: middle;
+}
+
+
+/* タイトル本体：中央＆上に 1em 下げる（=1文字ぶん） */
+.ai-title {
+    width: 80%;
+    display: block; /* 親幅で中央制御しやすく */
+    text-align: center;
+    font-weight: 550;
+    font-size: 1.2vmax;
+    color: #1a5276;
+    margin-top: 1em; /* ここで1文字分下げる */
+    margin-bottom: 0.5em;
+}
+
 
 .ai-section h1 {
     color: #1a5276;
@@ -482,6 +524,30 @@ span.s5 {
     border-bottom: 2px solid #1a5276;
     padding-bottom: 8px;
 }
+
+/* 手机端：ai-section 两列布局（每行两个 column 并排） */
+@media (max-width: 768px) {
+    .ai-section {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem; /* 行列间距 */
+        align-items: start;
+    }
+
+    .ai-section .ai-column {
+        width: 100% !important; /* 交给网格控制宽度 */
+        margin: 0 !important;
+        float: none !important;
+    }
+}
+
+/* 可选：特窄屏改回单列 */
+@media (max-width: 380px) {
+    .ai-section {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .figure-caption {
     display: flex;

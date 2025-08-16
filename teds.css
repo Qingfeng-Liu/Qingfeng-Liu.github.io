@@ -980,7 +980,6 @@ strong {
         display: block;
         width: 100% !important;
     }
-
     table#demo_1 th,
     table#demo_2 th,
     table#demo_1 td,
@@ -988,53 +987,45 @@ strong {
         padding-left: 0;
         padding-right: 0;
     }
-
     table#demo_1 th,
     table#demo_2 th {
         display: block;
     }
-
     table#demo_1 td,
     table#demo_2 td {
         border: none;
         text-align: left;
         border-bottom: 0px solid #DDD;
     }
-
     table#demo_1 td:first-child,
     table#demo_2 td:first-child,
     table#demo_1 td:last-child,
     table#demo_2 td:last-child {
         font-weight: 550;
     }
-
     table#demo_1 td .inner,
     table#demo_2 td .inner {
         display: table;
         table-layout: fixed;
         width: 100%;
     }
-
     table#demo_1 td .thTitle,
     table#demo_2 td .thTitle,
     table#demo_1 td .tdContents,
     table#demo_2 td .tdContents {
         display: table-cell;
     }
-
     table#demo_1 td .thTitle,
     table#demo_2 td .thTitle {
         font-weight: 550;
         width: 20%;
     }
-
     table#demo_1 td .tdContents,
     table#demo_2 td .tdContents {
         padding-left: 0px;
         width: 80%;
     }
 }
-
 @media screen and (max-width: 480px) {
     table#demo_1 td .inner,
     table#demo_2 td .inner,
@@ -1045,12 +1036,10 @@ strong {
         display: block;
         width: 100%;
     }
-
     table#demo_1 td .inner,
     table#demo_2 td .inner {
         table-layout: auto;
     }
-
     table#demo_1 td .tdContents,
     table#demo_2 td .tdContents {
         padding: 10px 0 0;
@@ -1065,86 +1054,114 @@ strong {
     }
 }
 
-/* ------------------ Shield Logo Styles ------------------ */
-.shield-logo {
-    height: 2.6em;
-    width: auto;
-    vertical-align: middle;
-    transition: transform 0.3s;
-}
-
-.shield-logo:last-child {
-    margin-right: 0;
-}
-
-.shield-logo:hover {
-    transform: scale(1.1);
-}
-
-/* ------------------ Shield Logo Variants ------------------ */
-.shield-logo-01 {
-    height: 5em;
+/* ------------------ Shield Logo Styles (Base & Variants) ------------------ */
+.shield-logo,
+.shield-logo-01,
+.shield-logo-02,
+.shield-logo-03 {
     width: auto;
     display: inline-block;
     vertical-align: middle;
+    transition: transform 0.3s;
+}
+.shield-logo {
+    height: 3em;
+}
+.shield-logo-01 {
+    height: 5em;
     transition: transform 0.3s ease;
 }
+.shield-logo-02 {
+    height: 3em;
+}
+.shield-logo-03 {
+    height: 3.5em;
+}
+.shield-logo:last-child,
+.shield-logo-01:last-child,
+.shield-logo-02:last-child,
+.shield-logo-03:last-child {
+    margin-right: 0;
+}
 
+/* ------------------ Shield Logo Hover (Base & Variants) ------------------ */
+.shield-logo:hover,
+.shield-logo-01:hover,
+.shield-logo-02:hover,
+.shield-logo-03:hover {
+    transform: scale(1.1);
+}
 .shield-logo-01:hover {
     transform: scale(1.15);
 }
 
 /* ------------------ Shield Container and Spacing ------------------ */
-.shield-container-01 {
-    padding-right: 0em;
+.shield-container,
+.shield-container-01,
+.shield-container-02,
+.shield-container-03 {
     line-height: 1;
 }
-
+.shield-container-01 {
+    padding-right: 0em;
+}
 .shield-logo-01:not(:last-child) {
     margin-right: 0.5em;
 }
-
 @media (max-width: 768px) {
-    .shield-container {
+    .shield-container,
+    .shield-container-01,
+    .shield-container-02,
+    .shield-container-03 {
         padding-right: 0.5em;
     }
-
     .shield-logo-01:not(:last-child) {
         margin-right: 0.3em;
     }
 }
 
 /* ------------------ Display Control for PC & Mobile ------------------ */
-.pc-logos, .pc-logos-01 {
+.pc-logos,
+.pc-logos-01,
+.pc-logos-02,
+.pc-logos-03 {
     display: table-cell !important;
 }
-
-.mobile-logos, .mobile-logos-01 {
+.mobile-logos,
+.mobile-logos-01,
+.mobile-logos-02,
+.mobile-logos-03 {
     display: none !important;
 }
-
 @media (max-width: 768px) {
-    .pc-logos, .pc-logos-01 {
+    /* PC logo classes hidden, mobile logo classes shown */
+    .pc-logos,
+    .pc-logos-01,
+    .pc-logos-02,
+    .pc-logos-03 {
         display: none !important;
     }
-
-    .mobile-logos, .mobile-logos-01 {
+    .mobile-logos,
+    .mobile-logos-01,
+    .mobile-logos-02,
+    .mobile-logos-03 {
         display: table-row !important;
     }
-
+    /* Icon sizes (mobile) */
     .shield-logo {
-        height: 1.1em;
+        height: 2em !important;
     }
-
+    .shield-logo-01 {
+        height: 1.1em !important;
+    }
+    .shield-logo-02 {
+        height: 1.3em !important;
+    }
+    .shield-logo-03 {
+        height: 1.5em !important;
+    }
+    /* Navbar table width adaptation */
     #navbar table {
         width: auto !important;
-    }
-
-    table[style*="width:  100%"] {
-        width: 100% !important;
-    }
-
-    table[style*="cellspacing="] {
-        cellspacing: 15vw !important;
     }
 }

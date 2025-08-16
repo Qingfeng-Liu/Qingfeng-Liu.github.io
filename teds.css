@@ -273,6 +273,7 @@ span.s5 {
 
 #navbar img.shield-logo + img {
     margin-left: 6px;
+    height: 2.7vmax;
 }
 
 #navbar td:nth-child(2) div {
@@ -960,63 +961,75 @@ strong {
     color: #2c3e50;
 }
 
+/* ------------------ Responsive Table: #demo_1 & #demo_2 ------------------ */
 @media screen and (max-width: 1000px) {
     table#demo_1,
+    table#demo_2,
     table#demo_1 caption,
+    table#demo_2 caption,
     table#demo_1 tbody,
+    table#demo_2 tbody,
     table#demo_1 tfoot,
+    table#demo_2 tfoot,
     table#demo_1 tr,
+    table#demo_2 tr,
     table#demo_1 th,
-    table#demo_1 td {
+    table#demo_2 th,
+    table#demo_1 td,
+    table#demo_2 td {
         display: block;
         width: 100% !important;
     }
 
     table#demo_1 th,
-    table#demo_1 td {
+    table#demo_2 th,
+    table#demo_1 td,
+    table#demo_2 td {
         padding-left: 0;
         padding-right: 0;
     }
 
-    table#demo_1 th {
+    table#demo_1 th,
+    table#demo_2 th {
         display: block;
     }
 
-    table#demo_1 td {
+    table#demo_1 td,
+    table#demo_2 td {
         border: none;
         text-align: left;
-    }
-
-    table#demo_1 td {
         border-bottom: 0px solid #DDD;
     }
 
-    table#demo_1 td:first-child {
+    table#demo_1 td:first-child,
+    table#demo_2 td:first-child,
+    table#demo_1 td:last-child,
+    table#demo_2 td:last-child {
         font-weight: 550;
     }
 
-    table#demo_1 td:last-child {
-        border-bottom: 0px solid #DDD;
-        font-weight: 550;
-    }
-
-    table#demo_1 td .inner {
+    table#demo_1 td .inner,
+    table#demo_2 td .inner {
         display: table;
         table-layout: fixed;
         width: 100%;
     }
 
     table#demo_1 td .thTitle,
-    table#demo_1 td .tdContents {
+    table#demo_2 td .thTitle,
+    table#demo_1 td .tdContents,
+    table#demo_2 td .tdContents {
         display: table-cell;
     }
 
-    table#demo_1 td .thTitle {
+    table#demo_1 td .thTitle,
+    table#demo_2 td .thTitle {
         font-weight: 550;
         width: 20%;
     }
 
-    table#demo_1 td .tdContents {
+    table#demo_1 td .tdContents,
+    table#demo_2 td .tdContents {
         padding-left: 0px;
         width: 80%;
     }
@@ -1024,101 +1037,27 @@ strong {
 
 @media screen and (max-width: 480px) {
     table#demo_1 td .inner,
-    table#demo_1 td .thTitle,
-    table#demo_1 td .tdContents {
-        display: block;
-        width: 100%;
-    }
-
-    table#demo_1 td .inner {
-        table-layout: auto;
-    }
-
-    table#demo_1 td .tdContents {
-        padding: 10px 0 0;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    table#demo_2,
-    table#demo_2 caption,
-    table#demo_2 tbody,
-    table#demo_2 tfoot,
-    table#demo_2 tr,
-    table#demo_2 th,
-    table#demo_2 td {
-        display: block;
-        width: 100% !important;
-    }
-
-    table#demo_2 th,
-    table#demo_2 td {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    table#demo_2 th {
-        display: block;
-    }
-
-    table#demo_2 td {
-        border: none;
-        text-align: left;
-    }
-
-    table#demo_2 td {
-        border-bottom: 0px solid #DDD;
-    }
-
-    table#demo_2 td:first-child {
-        font-weight: 550;
-    }
-
-    table#demo_2 td:last-child {
-        border-bottom: 0px solid #DDD;
-        font-weight: 550;
-    }
-
-    table#demo_2 td .inner {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-    }
-
-    table#demo_2 td .thTitle,
-    table#demo_2 td .tdContents {
-        display: table-cell;
-    }
-
-    table#demo_2 td .thTitle {
-        font-weight: 550;
-        width: 20%;
-    }
-
-    table#demo_2 td .tdContents {
-        padding-left: 0px;
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 480px) {
     table#demo_2 td .inner,
+    table#demo_1 td .thTitle,
     table#demo_2 td .thTitle,
+    table#demo_1 td .tdContents,
     table#demo_2 td .tdContents {
         display: block;
         width: 100%;
     }
 
+    table#demo_1 td .inner,
     table#demo_2 td .inner {
         table-layout: auto;
     }
 
+    table#demo_1 td .tdContents,
     table#demo_2 td .tdContents {
         padding: 10px 0 0;
     }
 }
 
-
+/* ------------------ Container Responsive Width ------------------ */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -1126,7 +1065,7 @@ strong {
     }
 }
 
-/* 图标基础样式 */
+/* ------------------ Shield Logo Styles ------------------ */
 .shield-logo {
     height: 2.6em;
     width: auto;
@@ -1134,96 +1073,40 @@ strong {
     transition: transform 0.3s;
 }
 
-/* 最后一个图标不需要右边距 */
 .shield-logo:last-child {
     margin-right: 0;
 }
 
-/* PC端默认显示 */
-.pc-logos {
-    display: table-cell !important;
-}
-
-.mobile-logos {
-    display: none !important;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .pc-logos {
-        display: none !important;
-    }
-
-    .mobile-logos {
-        display: table-row !important;
-    }
-
-    /* 移动端调整 */
-    .shield-logo {
-        height: 1.1em;
-    }
-
-    #navbar table {
-        width: auto !important;
-    }
-}
-
-/* 悬停效果 */
 .shield-logo:hover {
     transform: scale(1.1);
 }
 
+/* ------------------ Shield Logo Variants ------------------ */
 .shield-logo-01 {
-    height: 5em; /* 与文字等高 */
-    width: auto; /* 保持原始比例 */
+    height: 5em;
+    width: auto;
     display: inline-block;
     vertical-align: middle;
     transition: transform 0.3s ease;
 }
 
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .pc-logos-01 {
-        display: none !important;
-    }
-
-    .mobile-logos-01 {
-        display: block !important;
-    }
-
-    /* 调整表格宽度 */
-    table[style*="width:  100%" ] {
-        width: 100% !important;
-    }
-
-    /* 调整菜单项间距 */
-    table[style*="cellspacing="] {
-        cellspacing: 15vw !important;
-    }
+.shield-logo-01:hover {
+    transform: scale(1.15);
 }
 
-/* PC端适配 */
-@media (min-width: 769px) {
-    .mobile-logos-01 {
-        display: none !important;
-    }
-}
-
-/* 图标容器 */
+/* ------------------ Shield Container and Spacing ------------------ */
 .shield-container-01 {
-    padding-right: 0em; /* 与文字间距 */
-    line-height: 1; /* 防止额外高度 */
+    padding-right: 0em;
+    line-height: 1;
 }
 
-/* 图标间距 */
 .shield-logo-01:not(:last-child) {
     margin-right: 0.5em;
 }
 
-/* 响应式调整 */
 @media (max-width: 768px) {
     .shield-container {
-        padding-right: 0.5em; /* 移动端缩小间距 */
+        padding-right: 0.5em;
     }
 
     .shield-logo-01:not(:last-child) {
@@ -1231,7 +1114,37 @@ strong {
     }
 }
 
-/* 悬停效果 */
-.shield-logo-01:hover {
-    transform: scale(1.15); /* 更细腻的放大效果 */
+/* ------------------ Display Control for PC & Mobile ------------------ */
+.pc-logos, .pc-logos-01 {
+    display: table-cell !important;
+}
+
+.mobile-logos, .mobile-logos-01 {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .pc-logos, .pc-logos-01 {
+        display: none !important;
+    }
+
+    .mobile-logos, .mobile-logos-01 {
+        display: table-row !important;
+    }
+
+    .shield-logo {
+        height: 1.1em;
+    }
+
+    #navbar table {
+        width: auto !important;
+    }
+
+    table[style*="width:  100%"] {
+        width: 100% !important;
+    }
+
+    table[style*="cellspacing="] {
+        cellspacing: 15vw !important;
+    }
 }

@@ -1,5 +1,9 @@
 /* Mobile: force content width to 85% (override) */
-
+img.logo {
+            width: 20vmax;
+            margin: auto auto;
+            display: block;
+        }
 @media (max-width: 768px) {
     .main,
     table.main,
@@ -1068,14 +1072,17 @@ strong {
     height: 3em;
 }
 .shield-logo-01 {
-    height: 5em;
+    height: 3em;
     transition: transform 0.3s ease;
 }
 .shield-logo-02 {
-    height: 3em;
+    height: 3.6em; !important;
 }
 .shield-logo-03 {
-    height: 3.5em;
+    height: 3.2em;
+}
+.shield-logo-04 {
+    height: 3.2em;
 }
 .shield-logo:last-child,
 .shield-logo-01:last-child,
@@ -1118,6 +1125,10 @@ strong {
     .shield-logo-01:not(:last-child) {
         margin-right: 0.3em;
     }
+    .shield-logo-02 {
+
+        margin-right: 0.3em;
+    }
 }
 
 /* ------------------ Display Control for PC & Mobile ------------------ */
@@ -1152,13 +1163,13 @@ strong {
         height: 2em !important;
     }
     .shield-logo-01 {
-        height: 1.1em !important;
+        height: 2em !important;
     }
     .shield-logo-02 {
-        height: 1.3em !important;
+        height: 2.4em !important;
     }
     .shield-logo-03 {
-        height: 1.5em !important;
+        height: 2em !important;
     }
     /* Navbar table width adaptation */
     #navbar table {

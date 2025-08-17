@@ -11,14 +11,14 @@ img.logo {
     .ai-section,
     h1, h2, h5, p.p6, p.p8,
     .container {
-        width: 80% !important;
+        width: 90% !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
     table[style="width:"],
     table[width] {
-        width: 80% !important;
+        width: 90% !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -89,7 +89,7 @@ strong, b {
 }
 
 h1 {
-    width: 80%;
+    width: 90%;
     font-family: "Roboto";
     text-transform: uppercase;
     font-weight: Normal;
@@ -101,7 +101,7 @@ h1 {
 }
 
 h2 {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.5vmax;
@@ -137,7 +137,7 @@ h3[id] {
 }
 
 h5 {
-    width: 80%;
+    width: 90%;
     font-family: "Roboto";
     text-transform: uppercase;
     font-weight: Normal;
@@ -192,7 +192,7 @@ p.p6 {
     font-family: 'Noto Sans JP', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
 }
 
 p.p7 {
@@ -212,7 +212,7 @@ p.p8 {
     font-family: 'Noto Sans JP', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
 }
 
 span.s1 {
@@ -250,7 +250,7 @@ span.s5 {
 }
 
 #navbar table {
-    width: 80%;
+    width: 90%;
     margin: -0.5vmax auto;
     border-collapse: separate;
     border-spacing: 0;
@@ -348,7 +348,7 @@ span.s5 {
 .ai-section {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     gap: 1vw;
 }
@@ -512,7 +512,7 @@ span.s5 {
 
 /* タイトル本体：中央＆上に 1em 下げる（=1文字ぶん） */
 .ai-title {
-    width: 80%;
+    width: 90%;
     display: block; /* 親幅で中央制御しやすく */
     text-align: center;
     font-weight: 550;
@@ -558,7 +558,7 @@ span.s5 {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    font-size: 80%;
+    font-size: 90%;
     margin: 0 auto;
     line-height: 2;
 }
@@ -734,7 +734,7 @@ a.color1:active {
     width: 100%;
     background: linear-gradient(to bottom left, #000066 2%, #006666 100%);
     font-family: 'Noto Sans JP', sans-serif;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -1027,7 +1027,7 @@ strong {
     table#demo_1 td .tdContents,
     table#demo_2 td .tdContents {
         padding-left: 0px;
-        width: 80%;
+        width: 90%;
     }
 }
 @media screen and (max-width: 480px) {

@@ -1,9 +1,45 @@
-/* Mobile: force content width to 85% (override) */
+/* =========================
+   Global fonts & base rules
+   ========================= */
+
+/* Base: Noto Sans (JP/SC/TC) を最優先し、各OS標準にフォールバック */
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 400;
+    line-height: 1.8;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    font-family:
+        "Noto Sans JP",
+        "Noto Sans SC",
+        "Noto Sans TC",
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Microsoft YaHei",
+        "PingFang SC",
+        "Heiti SC",
+        Meiryo,
+        Arial, Helvetica, sans-serif;
+}
+
+strong, b { font-weight: 700; }
+
+/* ================
+   Responsive base
+   ================ */
+
+/* Mobile: logo */
 img.logo {
-            width: 20vmax;
-            margin: auto auto;
-            display: block;
-        }
+    width: 20vmax;
+    margin: auto;
+    display: block;
+}
+
+/* Mobile: force content width to 90% */
 @media (max-width: 768px) {
     .main,
     table.main,
@@ -24,109 +60,55 @@ img.logo {
     }
 }
 
-body {
-    margin: 0 0;
-    background: #fff;
-    font-weight: 550;
-    line-height: 1.0;
-    color: #C4C4C4;
-    height: 100%;
-    -webkit-text-size-adjust: 100%;
-    line-height: 1.8;
-    color: #333;
-    background-color: #f9f9f9;
-    /* フォント設定を1つに統合 */
-    font-family: "Noto Sans JP", /* Googleフォント（日本語） */ "Hiragino Sans", /* macOS用 */ "Yu Gothic", /* Windows用 */ Meiryo,
-        /* 欧文フォントフォールバック */ 'Segoe UI',
-    Tahoma,
-    Geneva,
-    Verdana,
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+/* ===============
+   Type hierarchy
+   =============== */
+
+/* 見出しは Oswald を優先（多言語Fallbackを付与） */
+h1, h2, h3, h4, h5, .title, .navbar-menu span, .navbar-menu a span, .ai-title h1 {
+    font-family:
+        "Oswald",
+        "Noto Sans JP",
+        "Noto Sans SC",
+        "Noto Sans TC",
+        "Hiragino Sans",
+        "Yu Gothic",
+        Meiryo, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
-strong, b {
-    font-weight: 700; /* 日本語の太字を強調 */
-}
-
-.profile-box {
-    font-family: 'Noto Sans JP', Meiryo, sans-serif;
-    font-weight: 550;
-    -webkit-font-smoothing: subpixel-antialiased;
-    text-rendering: optimizeLegibility;
-    font-size: 1.1vmax; /* お好みで調整 */
-    color: #353535;
-    line-height: 1.6;
-}
-
-.image {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-}
-
-.image img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.image2 img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.same_height {
-    display: flex;
-    justify-content: space-between;
-}
-
-.same_height img {
-    object-fit: cover;
-    width: calc(100% / 2);
-    width: 49%;
-}
-
+/* h1: セクション見出し */
 h1 {
     width: 90%;
-    font-family: "Roboto";
     text-transform: uppercase;
-    font-weight: Normal;
+    font-weight: 600;
     font-size: 1.5vmax;
-    color: black;
+    color: #000;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px solid #C4C4C4;
 }
 
+/* h2: セクション小見出し（ブランドカラー） */
 h2 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.5vmax;
-    font-weight: 550;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 0.1em;
+    font-weight: 600;
     color: #1a5276;
     text-transform: uppercase;
 }
 
-h4 {
-    font-size: 1vw;
-    font-family: "franklin_gothic";
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
+/* h3/h4 は未使用っぽい指定を安全側で整える */
 h3 {
-    font-size: 0vw;
+    font-size: 1.1vmax;
     text-align: center;
-    font-family: "franklin_gothic";
-    font-weight: Extra-light;
     text-transform: uppercase;
-    border-bottom: 0px solid #FFFFFF;
     margin-top: 12px;
+    border-bottom: 0;
+    font-weight: 500;
 }
 
 h3[id] {
@@ -136,117 +118,121 @@ h3[id] {
     content: "";
 }
 
+h4 {
+    font-size: 1vmax;
+    margin: 30px 0;
+    font-weight: 500;
+}
+
+/* 補助見出し */
 h5 {
     width: 90%;
-    font-family: "Roboto";
     text-transform: uppercase;
-    font-weight: Normal;
+    font-weight: 500;
     font-size: 1vmax;
     color: #1a5276;
     margin-left: auto;
     margin-right: auto;
 }
 
-p.p3 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 1vw '"franklin_gothic"';
-    color: #1a5276;
-    -webkit-text-stroke: #1a5276;
+/* 汎用テキスト系（重複を整理） */
+p.p5, div.p5, div.p6, p.p6, p.p7, p.p8, span.s5,
+table.sample, table.sample2, .sample3, table.sample4,
+.main2, .justified-text, .profile-box, a, a.color1 {
+    font-family:
+        "Noto Sans JP",
+        "Noto Sans SC",
+        "Noto Sans TC",
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Microsoft YaHei",
+        "PingFang SC",
+        "Heiti SC",
+        Meiryo,
+        Arial, Helvetica, sans-serif;
 }
 
-p.p4 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
-    font: 12.0px '"franklin_gothic"';
-    color: #000000;
-}
-
-p.p5 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
+/* p.p5: ナビやメタ用の小さめ太字 */
+p.p5, div.p5 {
     font-size: 1.5vh;
     font-weight: 550;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: black;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 0.1em;
-}
-
-div.p5 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
-    font-size: 1.5vh;
-    font-weight: 550;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #1a5276;
-}
-
-div.p6 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
-    font-size: 1.2vmax;
-    font-weight: Normal;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-p.p6 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
-    font-size: 1.5vmax;
-    font-weight: 550;
-    font-family: 'Noto Sans JP', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
-p.p7 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
-    font-size: 1.5vmax;
-    font-weight: 550;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #1a5276;
-    font-family: 'STIX Two Text', serif;
     letter-spacing: 0.05em;
+    color: #1a5276;
 }
 
-p.p8 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
+/* p.p6/p.p8: コンテンツ本文系 */
+div.p6 {
+    font-size: 1.2vmax;
+    font-weight: 400;
+}
+p.p6, p.p8 {
     font-size: 1.5vmax;
-    font-weight: 550;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 
-span.s1 {
-    font-kerning: none;
+/* p.p7: 英文イタリック系を想定していたが serif 競合を解消して本文系に統一 */
+p.p7 {
+    font-size: 1.5vmax;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #1a5276;
 }
 
-span.s2 {
-    text-decoration: underline;
-    font-kerning: none;
-}
-
-span.s3 {
+/* スパン系の微調整 */
+span.s1 { font-kerning: none; }
+span.s2 { text-decoration: underline; font-kerning: none; }
+span.s3, span.s4 {
     display: inline-block;
     font-size: 1.2vmax;
-    Width: 15vw;
 }
-
-span.s4 {
-    display: inline-block;
-    font-size: 1.2vmax;
-    Width: 85vw;
-}
-
+span.s3 { width: 15vw; }
+span.s4 { width: 85vw; }
 span.s5 {
-    margin: 0.0px 0.0px 0.0px 0.0px;
     font-size: 1.2vmax;
-    font-weight: Normal;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
     color: #353535;
 }
 
-/* 通常レイアウト */
+/* ===============
+   Layout & images
+   =============== */
+
+.image,
+.image2 {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+}
+.image img, .image2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.same_height {
+    display: flex;
+    justify-content: space-between;
+}
+.same_height img {
+    object-fit: cover;
+    width: 49%;
+}
+
+/* =========
+   Navbar
+   ========= */
+
 #navbar {
-    box-shadow: 0 2px 2px #eeeeee;
+    background-color: #fff;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 1000;
+    box-shadow: 2px 2px 2px #eee;
 }
 
 #navbar table {
@@ -255,11 +241,7 @@ span.s5 {
     border-collapse: separate;
     border-spacing: 0;
 }
-
-#navbar td {
-    white-space: nowrap;
-}
-
+#navbar td { white-space: nowrap; }
 #navbar td:first-child {
     width: 22%;
     padding-left: 3vw;
@@ -267,69 +249,41 @@ span.s5 {
     padding-bottom: 0;
     text-align: left;
 }
+#navbar img.shield-logo { height: 2.5vmax; width: auto; vertical-align: middle; display: inline-block; }
+#navbar img.shield-logo + img { margin-left: 6px; height: 2.7vmax; }
+#navbar td:nth-child(2) div { display: inline-block; margin: -0.2vmax auto -0.3vmax auto; }
+#navbar td:nth-child(2) table { margin: 0 auto; border-collapse: separate; }
+#navbar td:nth-child(2) .p5 { font-size: 1.2vmax; line-height: 1.1; }
+#navbar td:last-child { width: 22%; }
 
-#navbar img.shield-logo {
-    height: 2.5vmax; /* 固定高さにして幅は自動 */
-    width: auto;
-    vertical-align: middle;
-    display: inline-block;
+#navbar a {
+    float: left;
+    display: block;
+    color: #1a5276;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 1.5vmax;
+    font-weight: 600;
 }
+#navbar a:hover { background-color: #ddd; color: #000; }
 
-#navbar img.shield-logo + img {
-    margin-left: 6px;
-    height: 2.7vmax;
-}
-
-#navbar td:nth-child(2) div {
-    display: inline-block;
-    margin: -0.2vmax auto -0.3vmax auto;
-}
-
-#navbar td:nth-child(2) table {
-    margin: 0 auto;
-    border-collapse: separate;
-}
-
-#navbar td:nth-child(2) .p5 {
-    font-size: 1.2vmax;
-    line-height: 1.1;
-}
-
-#navbar td:last-child {
-    width: 22%;
-}
-
-
+/* Navbar mobile tuning */
 @media (max-width: 768px) {
-    /* 左ロゴ列を少し詰める、右ダミー列は消す */
-    #navbar td:first-child {
-        width: auto;
-        padding-left: 2vw;
-    }
+    #navbar td:first-child { width: auto; padding-left: 2vw; }
+    #navbar td:last-child { display: none; }
+    #navbar img.shield-logo { height: 4.6vmax; }
 
-    #navbar td:last-child {
-        display: none;
-    }
-
-    /* ロゴはスマホでは少し小さめにして余白を作る */
-    #navbar img.shield-logo {
-        height: 4.6vmax;
-    }
-
-    /* 中央メニューを等間隔にして横スクロールなしで収める */
     #navbar td:nth-child(2) table {
         width: 100%;
-        table-layout: fixed; /* 等分する鍵 */
+        table-layout: fixed;
         border-collapse: collapse;
     }
-
     #navbar td:nth-child(2) table tr td {
-        width: calc(100% / 6); /* 6項目を等分 */
-        padding: 0; /* 余白を削減 */
+        width: calc(100% / 6);
+        padding: 0;
         text-align: center;
     }
-
-    /* 文字サイズを自動調整（小さすぎ防止＋はみ出し防止） */
     #navbar td:nth-child(2) .p5 {
         display: block;
         font-size: clamp(10px, 2.35vw, 13px);
@@ -337,222 +291,13 @@ span.s5 {
         letter-spacing: .01em;
         white-space: nowrap;
     }
-
-    /* 中央メニューラッパの余計なマージンを殺す（あなたのHTMLの -0.2vmax を打ち消し） */
-    #navbar td:nth-child(2) > div {
-        margin: 0 auto !important;
-    }
+    #navbar td:nth-child(2) > div { margin: 0 auto !important; }
+    #navbar table { width: auto !important; }
 }
 
-/* 4列レイアウト維持 */
-.ai-section {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    gap: 1vw;
-}
-
-/*.ai-column {*/
-/*  width: 24%;*/
-/*  box-sizing: border-box;*/
-/*}*/
-.ai-column {
-    width: 24%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-.ai-column img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 0vw;
-}
-
-.ai-img-trimmed {
-    height: 100%;
-    max-height: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: top;
-    clip-path: inset(0 0 0% 0); /* 裁剪下部 10% */
-}
-
-/* タイトルコンテナ追加 */
-.ai-title-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-
-/* ai-title 里的 H1 撑满整行并居中 .ai-title { display:block; width:100%; text-align:center; }  */
-.ai-title h1 {
-    display: block; /* 占满一整行 */
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    margin: 0; /* 去默认外边距 */
-    font-size: 1.2vmax; /* 原值 */
-    line-height: 1.2; /* 原值 */
-    /* 可选：做满宽色带/下划线
-    background: rgba(0,0,0,.06);
-    padding: .4em 0;
-    border-bottom: 1px solid #ddd;
-    */
-}
-
-
-.ai-title img {
-    width: 1.5vmax;
-    height: 1.5vmax;
-    margin-right: 0.4em;
-}
-
-.pdf-icon,
-.github-icon {
-    display: inline-block; /* Keep it inline */
-    width: 1.5em !important; /* Force to font size */
-    height: 1.5em !important; /* Force to font size */
-    margin-right: 0.3em;
-    vertical-align: -0.15em;
-    object-fit: contain;
-}
-
-.pdf-title, .github-title {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    white-space: nowrap;
-    justify-content: center; /* 追加 */
-}
-
-/* 全部中央揃え */
-.ai-text {
-    line-height: 1.6;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    text-align: center; /* 文字＆リンク居中 */
-}
-
-/* アイコン＋テキスト 1 行中央 */
-.ai-text a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center; /* 中央揃え */
-    white-space: nowrap;
-}
-
-
-/* 让整行可点且内容居中 */
-.ai-title a {
-    display: block;
-    width: 100%;
-    font-size: 1.2vmax;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    margin: 1em 0 .5em;
-}
-
-/* 图标 + 标题同一行、垂直居中 */
-.ai-title a h1.title {
-    display: inline-flex; /* 关键：一行内排布 */
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-    gap: .4em; /* 图标与文字间距 */
-    margin: 0;
-    line-height: 1.2;
-    font-size: 1.2vmax;
-}
-
-/* 统一放大 */
-.ai-title a > h1 {
-    font-size: 1.5vmax !important; /* 原来 1.2vmax */
-    line-height: 1.2;
-    margin: 0;
-}
-
-/* 图标跟着放大 */
-.ai-title a > h1 img {
-    height: 1.1em;
-    width: auto;
-    vertical-align: middle;
-    margin-right: .35em;
-}
-
-/* 统一放大 */
-.ai-title h1 {
-    font-size: 1.5vmax !important; /* 原来 1.2vmax */
-    line-height: 1.2;
-    margin: 0;
-}
-
-/* 图标跟着放大 */
-.ai-title h1 img {
-    height: 1.1em;
-    width: auto;
-    vertical-align: middle;
-    margin-right: .35em;
-}
-
-
-/* 覆盖 ai-section 的通用 img 规则，避免图标被拉满/换行 */
-.ai-title a h1.title img {
-    display: inline-block !important;
-    height: 2em !important; /* 随文字大小缩放 */
-    width: auto !important;
-    vertical-align: middle;
-}
-
-
-/* タイトル本体：中央＆上に 1em 下げる（=1文字ぶん） */
-.ai-title {
-    width: 90%;
-    display: block; /* 親幅で中央制御しやすく */
-    text-align: center;
-    font-weight: 550;
-    font-size: 1.2vmax;
-    color: #1a5276;
-    margin-top: 1em; /* ここで1文字分下げる */
-    margin-bottom: 0.5em;
-}
-
-
-.ai-section h1 {
-    color: #1a5276;
-    margin-top: 0;
-    border-bottom: 2px solid #1a5276;
-    padding-bottom: 8px;
-}
-
-/* 手机端：ai-section 两列布局（每行两个 column 并排） */
-@media (max-width: 768px) {
-    .ai-section {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem; /* 行列间距 */
-        align-items: start;
-    }
-
-    .ai-section .ai-column {
-        width: 100% !important; /* 交给网格控制宽度 */
-        margin: 0 !important;
-        float: none !important;
-    }
-}
-
-/* 可选：特窄屏改回单列 */
-@media (max-width: 380px) {
-    .ai-section {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* =========
+   Sections
+   ========= */
 
 .figure-caption {
     display: flex;
@@ -562,29 +307,19 @@ span.s5 {
     margin: 0 auto;
     line-height: 2;
 }
-
-.figure-caption .left {
-    width: 50%;
-}
-
-.figure-caption .right {
-    width: 50%;
-}
+.figure-caption .left,
+.figure-caption .right { width: 50%; }
 
 .main {
     margin-left: auto;
     margin-right: auto;
-    font-weight: normal;
-    line-height: 1.0;
+    font-weight: 400;
+    line-height: 1.8;
     height: 100%;
     -webkit-text-size-adjust: 100%;
-    line-height: 1.8;
-
-
 }
 
 .main2 {
-    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 550;
     margin-left: auto;
     margin-right: auto;
@@ -597,151 +332,36 @@ span.s5 {
     line-height: 1.8;
 }
 
-table.sample {
-    text-align: justify;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 550;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8;
-    color: #353535;
-}
-
-table.sample2 {
-    text-align: justify;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 550;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sample3 {
-    text-align: justify;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 550;
-    margin-left: auto;
-    margin-right: auto;
-    table-layout: auto;
-    margin-bottom: 0.3em;
-}
-
-table.sample4 {
-    text-align: justify;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 550;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.8;
-    color: #353535;
-}
-
-div.anchor {
-    display: block;
-    padding-top: 90px;
-    margin-top: -90px;
-}
-
+/* Anchors & header */
+div.anchor { display: block; padding-top: 90px; margin-top: -90px; }
 div#HEADER {
     margin-bottom: 3px;
-    border-bottom: solid 0px #DCDCDA;
+    border-bottom: 0 solid #DCDCDA;
     background: #FFFFFF;
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
 }
 
-ul#PAN {
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    text-align: right;
-}
-
-#INDEX ul#PAN {
-    display: none;
-}
-
-#PAN li {
-    display: inline;
-}
-
-#PAN a {
-    text-decoration: none;
-}
-
-#PAN a:after {
-    content: "->";
-}
-
-div, dl, dt, dd, ul, ol, li, h4, h5, h6, pre, form, fieldset, blockquote {
-    margin: 0;
-    padding: 0;
-}
-
-a:link {
+/* Links */
+a:link, a:visited, a.color1:link, a.color1:visited {
     color: #1a5276;
     text-decoration: none;
     font-weight: 550;
-    font-family: Roboto, 'Noto Sans JP', sans-serif;
 }
+a:hover, a.color1:hover { color: #626567; text-decoration: underline; }
+a:active, a.color1:active { color: #626567; text-decoration: underline; }
 
-a:visited {
-    color: #1a5276;
-    text-decoration: underline;
-    font-weight: 550;
-    font-family: Roboto, 'Noto Sans JP', sans-serif;
-}
-
-a:hover {
-    color: #626567;
-    text-decoration: underline;
-}
-
-a:active {
-    color: #626567;
-    text-decoration: underline;
-}
-
-a.color1:link {
-    color: #626567;
-    text-decoration: underline;
-    font-weight: 550;
-    font-family: Roboto, 'Noto Sans JP', sans-serif;
-    color: #1a5276;
-    text-decoration: none;
-}
-
-a.color1:visited {
-    color: #626567;
-    text-decoration: underline;
-    font-weight: 550;
-    font-family: Roboto, 'Noto Sans JP', sans-serif;
-}
-
-a.color1:hover {
-    color: #A0A19E;
-    text-decoration: none;
-    text-decoration: underline;
-}
-
-a.color1:active {
-    color: #A0A19E;
-    text-decoration: underline;
-}
-
+/* Containers */
 .container {
     position: relative;
     height: 100%;
-    width: 100%;
-    background: linear-gradient(to bottom left, #000066 2%, #006666 100%);
-    font-family: 'Noto Sans JP', sans-serif;
     width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
     border-radius: 8px;
 }
-
 .container2 {
     position: relative;
     width: 100%;
@@ -750,7 +370,6 @@ a.color1:active {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .container3 {
     position: relative;
     width: 100%;
@@ -759,298 +378,100 @@ a.color1:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Noto Sans JP', sans-serif;
 }
 
-.wrap {
-    display: flex;
-}
-
+/* Box */
+.wrap { display: flex; }
 .box26 {
     position: relative;
-    margin: 0em 0;
+    margin: 0;
     padding: 1em 2em;
-    border: solid 3px #1a5276;
+    border: 3px solid #1a5276;
     border-radius: 8px;
     min-height: 17vmax;
     z-index: 0;
 }
-
 td .box-title {
     position: absolute;
     display: inline-block;
     top: -0.9vmax;
     left: 10px;
-    padding: 0 0px;
+    padding: 0;
     line-height: 1;
     font-size: 1.2vmax;
     font-weight: 550;
-    font-family: 'Noto Sans JP', sans-serif;
     color: #1a5276;
     background: #FFF;
 }
+.box26 p { margin: 0; padding: 0; }
 
-.box26 p {
-    margin: 0;
+/* Tables */
+table#demo_1, table#demo_2 {
+    border: none;
+    border-top: 0 solid #5DE4BF;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+table#demo_1 th, table#demo_1 td,
+table#demo_2 th, table#demo_2 td {
+    border-bottom: 0 solid #DDD;
+    font-size: 1.2vmax;
+    line-height: 1.5vmax;
     padding: 0;
-}
-
-table#demo_1 {
-    border: none;
-    border-top: 0px solid #5DE4BF;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 0px;
-    table-layout: fixed;
-    width: 100%;
-}
-
-table#demo_1 th,
-table#demo_1 td {
-    border-bottom: 0px solid #DDD;
-    font-size: 1.2vmax;
-    line-height: 1.5vmax;
-    padding: 0px;
     text-align: left;
     vertical-align: top;
 }
+table#demo_1 th:first-child, table#demo_1 td:first-child,
+table#demo_2 th:first-child, table#demo_2 td:first-child { padding-left: 0; }
+table#demo_1 th:last-child, table#demo_1 td:last-child,
+table#demo_2 th:last-child, table#demo_2 td:last-child { padding-right: 0; }
+table#demo_1 th, table#demo_2 th { font-weight: 550; vertical-align: top; }
+table#demo_1 td .thTitle, table#demo_2 td .thTitle { display: none; }
 
-table#demo_1 th:first-child,
-table#demo_1 td:first-child {
-    padding-left: 0;
-}
-
-table#demo_1 th:last-child,
-table#demo_1 td:last-child {
-    padding-right: 0;
-}
-
-table#demo_1 th {
-    font-weight: 550;
-    vertical-align: top;
-}
-
-table#demo_1 td .thTitle {
-    display: none;
-}
-
-table#demo_2 {
-    border: none;
-    border-top: 0px solid #5DE4BF;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 0px;
-    table-layout: fixed;
-    width: 100%;
-}
-
-table#demo_2 th,
-table#demo_2 td {
-    border-bottom: 0px solid #DDD;
-    font-size: 1.2vmax;
-    line-height: 1.5vmax;
-    padding: 0px;
-    text-align: left;
-    vertical-align: top;
-}
-
-table#demo_2 th:first-child,
-table#demo_2 td:first-child {
-    padding-left: 0;
-}
-
-table#demo_2 th:last-child,
-table#demo_2 td:last-child {
-    padding-right: 0;
-}
-
-table#demo_2 th {
-    font-weight: 550;
-    vertical-align: top;
-}
-
-table#demo_2 td .thTitle {
-    display: none;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
-
-.subcolumn1 {
-    float: left;
-    width: 30%;
-    padding: 0px;
-    background-color: #ffffff;
-}
-
-.subcolumn2 {
-    float: left;
-    width: 70%;
-    padding-left: 20px;
-    background-color: #ffffff;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#navbar {
-    background-color: #FFFFFF;
-    position: fixed;
-    top: -30vmax;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
-    z-index: 1;
-    box-shadow: 2px 2px 2px #eeeeee;
-    position: fixed;
-    top: -100px;
-    width: 100%;
-    transition: top 0.3s;
-    z-index: 1000;
-}
-
-#navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 30px;
-    text-decoration: none;
-    font-size: 1.5vmax;
-}
-
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-#more {
-    display: none;
-}
-
-#more2 {
-    display: none;
-}
-
-figure {
-    border: 0px #ffffff solid;
-    padding: 0px;
-    margin: auto;
-    margin: 0;
-}
-
-figcaption {
-    background-color: white;
-    color: black;
-    font-style: normal;
-    padding: 2px;
-    text-align: center;
-    font-size: 1vmax;
-    color: #666;
-    padding: 5px 0;
-}
-
-strong {
-    color: #2c3e50;
-}
-
-/* ------------------ Responsive Table: #demo_1 & #demo_2 ------------------ */
+/* Responsive tables */
 @media screen and (max-width: 1000px) {
-    table#demo_1,
-    table#demo_2,
-    table#demo_1 caption,
-    table#demo_2 caption,
-    table#demo_1 tbody,
-    table#demo_2 tbody,
-    table#demo_1 tfoot,
-    table#demo_2 tfoot,
-    table#demo_1 tr,
-    table#demo_2 tr,
-    table#demo_1 th,
-    table#demo_2 th,
-    table#demo_1 td,
-    table#demo_2 td {
+    table#demo_1, table#demo_2,
+    table#demo_1 caption, table#demo_2 caption,
+    table#demo_1 tbody, table#demo_2 tbody,
+    table#demo_1 tfoot, table#demo_2 tfoot,
+    table#demo_1 tr, table#demo_2 tr,
+    table#demo_1 th, table#demo_2 th,
+    table#demo_1 td, table#demo_2 td {
         display: block;
         width: 100% !important;
     }
-    table#demo_1 th,
-    table#demo_2 th,
-    table#demo_1 td,
-    table#demo_2 td {
+    table#demo_1 th, table#demo_2 th,
+    table#demo_1 td, table#demo_2 td {
         padding-left: 0;
         padding-right: 0;
-    }
-    table#demo_1 th,
-    table#demo_2 th {
-        display: block;
-    }
-    table#demo_1 td,
-    table#demo_2 td {
         border: none;
         text-align: left;
-        border-bottom: 0px solid #DDD;
+        border-bottom: 0 solid #DDD;
     }
-    table#demo_1 td:first-child,
-    table#demo_2 td:first-child,
-    table#demo_1 td:last-child,
-    table#demo_2 td:last-child {
-        font-weight: 550;
-    }
-    table#demo_1 td .inner,
-    table#demo_2 td .inner {
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-    }
-    table#demo_1 td .thTitle,
-    table#demo_2 td .thTitle,
-    table#demo_1 td .tdContents,
-    table#demo_2 td .tdContents {
-        display: table-cell;
-    }
-    table#demo_1 td .thTitle,
-    table#demo_2 td .thTitle {
-        font-weight: 550;
-        width: 20%;
-    }
-    table#demo_1 td .tdContents,
-    table#demo_2 td .tdContents {
-        padding-left: 0px;
-        width: 90%;
-    }
+    table#demo_1 td:first-child, table#demo_2 td:first-child,
+    table#demo_1 td:last-child, table#demo_2 td:last-child { font-weight: 550; }
+
+    table#demo_1 td .inner, table#demo_2 td .inner { display: table; table-layout: fixed; width: 100%; }
+    table#demo_1 td .thTitle, table#demo_2 td .thTitle,
+    table#demo_1 td .tdContents, table#demo_2 td .tdContents { display: table-cell; }
+    table#demo_1 td .thTitle, table#demo_2 td .thTitle { font-weight: 550; width: 20%; }
+    table#demo_1 td .tdContents, table#demo_2 td .tdContents { padding-left: 0; width: 90%; }
 }
 @media screen and (max-width: 480px) {
-    table#demo_1 td .inner,
-    table#demo_2 td .inner,
-    table#demo_1 td .thTitle,
-    table#demo_2 td .thTitle,
-    table#demo_1 td .tdContents,
-    table#demo_2 td .tdContents {
+    table#demo_1 td .inner, table#demo_2 td .inner,
+    table#demo_1 td .thTitle, table#demo_2 td .thTitle,
+    table#demo_1 td .tdContents, table#demo_2 td .tdContents {
         display: block;
         width: 100%;
     }
-    table#demo_1 td .inner,
-    table#demo_2 td .inner {
-        table-layout: auto;
-    }
-    table#demo_1 td .tdContents,
-    table#demo_2 td .tdContents {
-        padding: 10px 0 0;
-    }
+    table#demo_1 td .inner, table#demo_2 td .inner { table-layout: auto; }
+    table#demo_1 td .tdContents, table#demo_2 td .tdContents { padding: 10px 0 0; }
 }
 
-/* ------------------ Container Responsive Width ------------------ */
+/* Container responsive width */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -1058,7 +479,9 @@ strong {
     }
 }
 
-/* ------------------ Shield Logo Styles (Base & Variants) ------------------ */
+/* ==============
+   Shields / logos
+   ============== */
 .shield-logo,
 .shield-logo-01,
 .shield-logo-02,
@@ -1066,113 +489,225 @@ strong {
     width: auto;
     display: inline-block;
     vertical-align: middle;
-    transition: transform 0.3s;
-}
-.shield-logo {
-    height: 3em;
-}
-.shield-logo-01 {
-    height: 3em;
     transition: transform 0.3s ease;
 }
-.shield-logo-02 {
-    height: 3.6em; !important;
-}
-.shield-logo-03 {
-    height: 3.2em;
-}
-.shield-logo-04 {
-    height: 3.2em;
-}
+.shield-logo { height: 3em; }
+.shield-logo-01 { height: 3em; }
+.shield-logo-02 { height: 3.6em; }
+.shield-logo-03 { height: 3.2em; }
+.shield-logo-04 { height: 3.2em; }
+
 .shield-logo:last-child,
 .shield-logo-01:last-child,
 .shield-logo-02:last-child,
-.shield-logo-03:last-child {
-    margin-right: 0;
-}
+.shield-logo-03:last-child { margin-right: 0; }
 
-/* ------------------ Shield Logo Hover (Base & Variants) ------------------ */
 .shield-logo:hover,
 .shield-logo-01:hover,
 .shield-logo-02:hover,
-.shield-logo-03:hover {
-    transform: scale(1.1);
-}
-.shield-logo-01:hover {
-    transform: scale(1.15);
-}
+.shield-logo-03:hover { transform: scale(1.1); }
+.shield-logo-01:hover { transform: scale(1.15); }
 
-/* ------------------ Shield Container and Spacing ------------------ */
 .shield-container,
 .shield-container-01,
 .shield-container-02,
-.shield-container-03 {
-    line-height: 1;
-}
-.shield-container-01 {
-    padding-right: 0em;
-}
-.shield-logo-01:not(:last-child) {
-    margin-right: 0.5em;
-}
+.shield-container-03 { line-height: 1; }
+
+.shield-container-01 { padding-right: 0; }
+.shield-logo-01:not(:last-child) { margin-right: 0.5em; }
+
 @media (max-width: 768px) {
     .shield-container,
     .shield-container-01,
     .shield-container-02,
-    .shield-container-03 {
-        padding-right: 0.5em;
-    }
-    .shield-logo-01:not(:last-child) {
-        margin-right: 0.3em;
-    }
-    .shield-logo-02 {
+    .shield-container-03 { padding-right: 0.5em; }
+    .shield-logo-01:not(:last-child) { margin-right: 0.3em; }
+    .shield-logo-02 { margin-right: 0.3em; }
 
-        margin-right: 0.3em;
-    }
+    /* icon sizes (mobile) */
+    .shield-logo,
+    .shield-logo-01,
+    .shield-logo-02,
+    .shield-logo-03 { height: 2em !important; }
 }
 
-/* ------------------ Display Control for PC & Mobile ------------------ */
-.pc-logos,
-.pc-logos-01,
-.pc-logos-02,
-.pc-logos-03 {
-    display: table-cell !important;
-}
-.mobile-logos,
-.mobile-logos-01,
-.mobile-logos-02,
-.mobile-logos-03 {
-    display: none !important;
-}
+/* Display control for PC & Mobile */
+.pc-logos, .pc-logos-01, .pc-logos-02, .pc-logos-03 { display: table-cell !important; }
+.mobile-logos, .mobile-logos-01, .mobile-logos-02, .mobile-logos-03 { display: none !important; }
 @media (max-width: 768px) {
-    /* PC logo classes hidden, mobile logo classes shown */
-    .pc-logos,
-    .pc-logos-01,
-    .pc-logos-02,
-    .pc-logos-03 {
-        display: none !important;
+    .pc-logos, .pc-logos-01, .pc-logos-02, .pc-logos-03 { display: none !important; }
+    .mobile-logos, .mobile-logos-01, .mobile-logos-02, .mobile-logos-03 { display: table-row !important; }
+}
+
+/* =========
+   AI section
+   ========= */
+
+.ai-section {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1vw;
+}
+.ai-column {
+    width: 24%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.ai-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
+}
+.ai-img-trimmed {
+    height: 100%;
+    max-height: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+    clip-path: inset(0 0 0 0);
+}
+
+/* タイトル行は Oswald 指定済み（上のh系） */
+.ai-title-container { display: flex; justify-content: center; width: 100%; }
+.ai-title {
+    width: 90%;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2vmax;
+    color: #1a5276;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+.ai-title img { width: 1.5vmax; height: 1.5vmax; margin-right: 0.4em; }
+
+.pdf-icon, .github-icon {
+    display: inline-block;
+    width: 1.5em !important;
+    height: 1.5em !important;
+    margin-right: 0.3em;
+    vertical-align: -0.15em;
+    object-fit: contain;
+}
+.pdf-title, .github-title {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+/* AI text links */
+.ai-text {
+    line-height: 1.6;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+.ai-text a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.ai-title a {
+    display: block;
+    width: 100%;
+    font-size: 1.2vmax;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    margin: 1em 0 .5em;
+}
+.ai-title a h1.title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4em;
+    margin: 0;
+    line-height: 1.2;
+    font-size: 1.2vmax;
+}
+.ai-title a > h1,
+.ai-title h1 {
+    font-size: 1.5vmax !important;
+    line-height: 1.2;
+    margin: 0;
+}
+.ai-title a > h1 img,
+.ai-title h1 img {
+    height: 1.1em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: .35em;
+}
+.ai-title a h1.title img {
+    display: inline-block !important;
+    height: 2em !important;
+    width: auto !important;
+    vertical-align: middle;
+}
+
+/* AI section responsive */
+@media (max-width: 768px) {
+    .ai-section {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        align-items: start;
     }
-    .mobile-logos,
-    .mobile-logos-01,
-    .mobile-logos-02,
-    .mobile-logos-03 {
-        display: table-row !important;
-    }
-    /* Icon sizes (mobile) */
-    .shield-logo {
-        height: 2em !important;
-    }
-    .shield-logo-01 {
-        height: 2em !important;
-    }
-    .shield-logo-02 {
-        height: 2.4em !important;
-    }
-    .shield-logo-03 {
-        height: 2em !important;
-    }
-    /* Navbar table width adaptation */
-    #navbar table {
-        width: auto !important;
+    .ai-section .ai-column {
+        width: 100% !important;
+        margin: 0 !important;
+        float: none !important;
     }
 }
+@media (max-width: 380px) {
+    .ai-section { grid-template-columns: 1fr; }
+}
+
+/* =========
+   Others
+   ========= */
+
+#more, #more2 { display: none; }
+
+figure {
+    border: 0 solid #fff;
+    padding: 0;
+    margin: 0;
+}
+figcaption {
+    background-color: #fff;
+    color: #666;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 1vmax;
+}
+
+* { box-sizing: border-box; }
+
+.column { float: left; width: 50%; padding: 10px; }
+.subcolumn1 { float: left; width: 30%; padding: 0; background-color: #fff; }
+.subcolumn2 { float: left; width: 70%; padding-left: 20px; background-color: #fff; }
+.row:after { content: ""; display: table; clear: both; }
+
+/* Tables (extra samples) */
+table.sample, table.sample2, .sample3, table.sample4 {
+    text-align: justify;
+    font-weight: 550;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    color: #353535;
+}
+.sample3 { table-layout: auto; margin-bottom: 0.3em; }
+
+/* Header block */
+div#HEADER { background: #fff; }

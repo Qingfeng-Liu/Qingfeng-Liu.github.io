@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <link href="teds.css" rel="stylesheet">
-    <!-- 以下は既存のまま維持 -->
     <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
     <meta content="劉 慶豊, 刘庆丰, Qingfeng Liu, 機械学習, 人工知能, 計量経済学" name="keywords">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- 既存のフォントリンクは維持 -->
+
+    <!-- Google Fonts (existing + multilingual) -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Unified font stacks for JP / EN / ZH -->
+    <style>
+        :root {
+            /* JP first, then SC/TC, then platform fallbacks */
+            --base-font: "Noto Sans JP", "Noto Sans SC", "Noto Sans TC",
+                         "Hiragino Sans", "Yu Gothic",
+                         "Microsoft YaHei", "PingFang SC", "Heiti SC",
+                         "Meiryo", Arial, Helvetica, sans-serif;
+        }
+        html, body, p, span, a, li, td, th, div, h1, h2, h3, h4, h5, h6, strong, em, sup, sub, figcaption {
+            font-family: var(--base-font);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        /* Keep existing English display fonts where explicitly used */
+        .navbar-menu span,
+        .navbar-menu a span,
+        span[style*="Oswald"],
+        .p5 span[style*="Oswald"] {
+            font-family: Oswald, Arial, Helvetica, sans-serif !important;
+        }
+        [style*="font-family: Roboto"] {
+            font-family: Roboto, Arial, Helvetica, sans-serif !important;
+        }
+        strong { font-weight: 700; }
+    </style>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-JHSLM57DKB');
 </script>
 
@@ -206,8 +234,6 @@
             document.getElementById("navbar").style.top = "-100px";
         }
     }
-
-
 </script>
 
 
@@ -562,7 +588,7 @@
 
     <!-- Column 4: Text (ML・AI Toolkit) -->
     <div class="ai-column">
-        <div class="ai-title-container">  <!-- 追加 -->
+        <div class="ai-title-container">
             <div class="ai-title">
                 <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit">
                     <h1 class="title" style="font-size: 1.2vmax;">
@@ -865,8 +891,6 @@
             moreText.style.display = "inline";
         }
     }
-
-
 </script>
 <script>
     function moreFunction() {
@@ -884,8 +908,6 @@
             moreText2.style.display = "inline";
         }
     }
-
-
 </script>
 
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"

@@ -2,7 +2,7 @@
    Global fonts & base rules
    ========================= */
 
-/* Base: Noto Sans (JP/SC/TC) を最優先し、各OS標準にフォールバック */
+/* Base: JP最優先、英字は :lang(en) でRobotoに。SC/TCも最適フォールバック */
 body {
     margin: 0;
     background-color: #f9f9f9;
@@ -13,20 +13,53 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 
+    /* 和文ベース（英字は下の :lang(en) で上書き） */
     font-family:
         "Noto Sans JP",
-        "Noto Sans SC",
-        "Noto Sans TC",
         "Hiragino Sans",
-        "Yu Gothic",
-        "Microsoft YaHei",
-        "PingFang SC",
-        "Heiti SC",
+        "Yu Gothic UI", "Yu Gothic",
+        Meiryo,
+        /* 中国語簡体/繁体 フォールバック */
+        "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Heiti SC",
+        "Noto Sans TC",
+        /* 欧文・最終 */
+        "Roboto", Arial, Helvetica, sans-serif;
+
+    /* 可読性調整 */
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "palt" 1;
+}
+
+strong, b { font-weight: 700; }
+
+/* 英文ブロックは自然に Roboto に切替（要素に lang="en" があれば自動適用） */
+:lang(en) {
+    font-family:
+        "Roboto",
+        "Noto Sans JP",
+        "Hiragino Sans",
+        "Yu Gothic UI", "Yu Gothic",
         Meiryo,
         Arial, Helvetica, sans-serif;
 }
 
-strong, b { font-weight: 700; }
+/* 中国語（簡体） */
+:lang(zh-CN), :lang(zh-Hans) {
+    font-family:
+        "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Heiti SC",
+        "Noto Sans JP",
+        "Yu Gothic UI", "Yu Gothic", Meiryo,
+        Arial, Helvetica, sans-serif;
+}
+
+/* 中国語（繁体） */
+:lang(zh-TW), :lang(zh-Hant) {
+    font-family:
+        "Noto Sans TC",
+        "Noto Sans JP",
+        "Yu Gothic UI", "Yu Gothic", Meiryo,
+        Arial, Helvetica, sans-serif;
+}
 
 /* ================
    Responsive base
@@ -64,18 +97,19 @@ img.logo {
    Type hierarchy
    =============== */
 
-/* 見出しは Oswald を優先（多言語Fallbackを付与） */
+/* 見出しは Oswald を優先。日本語は自動で Noto Sans JP にフォールバック */
 h1, h2, h3, h4, h5, .title, .navbar-menu span, .navbar-menu a span, .ai-title h1 {
     font-family:
         "Oswald",
         "Noto Sans JP",
-        "Noto Sans SC",
-        "Noto Sans TC",
         "Hiragino Sans",
-        "Yu Gothic",
-        Meiryo, Arial, Helvetica, sans-serif;
+        "Yu Gothic UI", "Yu Gothic",
+        Meiryo,
+        "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 600;
     letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "palt" 1;
 }
 
 /* h1: セクション見出し */
@@ -101,7 +135,7 @@ h2 {
     text-transform: uppercase;
 }
 
-/* h3/h4 は未使用っぽい指定を安全側で整える */
+/* h3/h4 は安全側 */
 h3 {
     font-size: 1.1vmax;
     text-align: center;
@@ -135,24 +169,23 @@ h5 {
     margin-right: auto;
 }
 
-/* 汎用テキスト系（重複を整理） */
+/* 汎用テキスト（重複を整理） */
 p.p5, div.p5, div.p6, p.p6, p.p7, p.p8, span.s5,
 table.sample, table.sample2, .sample3, table.sample4,
 .main2, .justified-text, .profile-box, a, a.color1 {
     font-family:
         "Noto Sans JP",
-        "Noto Sans SC",
-        "Noto Sans TC",
         "Hiragino Sans",
-        "Yu Gothic",
-        "Microsoft YaHei",
-        "PingFang SC",
-        "Heiti SC",
+        "Yu Gothic UI", "Yu Gothic",
         Meiryo,
-        Arial, Helvetica, sans-serif;
+        "Noto Sans SC", "Microsoft YaHei", "PingFang SC", "Heiti SC",
+        "Noto Sans TC",
+        "Roboto", Arial, Helvetica, sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "palt" 1;
 }
 
-/* p.p5: ナビやメタ用の小さめ太字 */
+/* p.p5: ナビ/メタ用の小さめ太字 */
 p.p5, div.p5 {
     font-size: 1.5vh;
     font-weight: 550;
@@ -160,7 +193,7 @@ p.p5, div.p5 {
     color: #1a5276;
 }
 
-/* p.p6/p.p8: コンテンツ本文系 */
+/* p.p6/p.p8: コンテンツ本文 */
 div.p6 {
     font-size: 1.2vmax;
     font-weight: 400;
@@ -173,7 +206,7 @@ p.p6, p.p8 {
     width: 90%;
 }
 
-/* p.p7: 英文イタリック系を想定していたが serif 競合を解消して本文系に統一 */
+/* p.p7: 本文系に統一 */
 p.p7 {
     font-size: 1.5vmax;
     font-weight: 500;
@@ -181,20 +214,16 @@ p.p7 {
     color: #1a5276;
 }
 
-/* スパン系の微調整 */
+/* スパン微調整 */
 span.s1 { font-kerning: none; }
 span.s2 { text-decoration: underline; font-kerning: none; }
-span.s3, span.s4 {
-    display: inline-block;
-    font-size: 1.2vmax;
-}
+span.s3, span.s4 { display: inline-block; font-size: 1.2vmax; }
 span.s3 { width: 15vw; }
 span.s4 { width: 85vw; }
-span.s5 {
-    font-size: 1.2vmax;
-    font-weight: 400;
-    color: #353535;
-}
+span.s5 { font-size: 1.2vmax; font-weight: 400; color: #353535; }
+
+/* 以降（レイアウト・画像・ナビなど）は既存どおり。フォント指定は上記が全体に効きます。 */
+
 
 /* ===============
    Layout & images

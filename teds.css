@@ -32,9 +32,9 @@ body {
 /* スマホ時に #mobile-boost 以下の見た目を1.5倍 */
 @media (max-width: 768px){
   #mobile-boost{
-    transform: scale(1.5);
+    transform: scale(1.2);
     transform-origin: top left;   /* 左上基準で拡大 */
-    width: calc(100% / 1.5);      /* 横あふれ防止の補正 */
+    width: calc(100% / 1.2);      /* 横あふれ防止の補正 */
   }
 }
 

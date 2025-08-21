@@ -29,6 +29,14 @@ body {
     font-variant-numeric: tabular-nums;
     font-feature-settings: "palt" 1;
 }
+/* スマホ時に #mobile-boost 以下の見た目を1.5倍 */
+@media (max-width: 768px){
+  #mobile-boost{
+    transform: scale(1.5);
+    transform-origin: top left;   /* 左上基準で拡大 */
+    width: calc(100% / 1.5);      /* 横あふれ防止の補正 */
+  }
+}
 
 strong, b { font-weight: 700; }
 
@@ -386,10 +394,8 @@ a:active, a.color1:active { color: #626567; text-decoration: underline; }
     height: 100%;
     width: 90%;
     margin: 0 auto;
-    padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
-    border-radius: 8px;
 }
 .container2 {
     position: relative;

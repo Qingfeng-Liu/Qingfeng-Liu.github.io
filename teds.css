@@ -621,7 +621,7 @@ table#demo_1 td .thTitle, table#demo_2 td .thTitle { display: none; }
     font-size: 1.2vmax;
     color: #1a5276;
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 .ai-title img { width: 1.5vmax; height: 1.5vmax; margin-right: 0.4em; }
 

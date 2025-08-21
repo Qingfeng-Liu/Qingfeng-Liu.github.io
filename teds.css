@@ -621,7 +621,7 @@ table#demo_1 td .thTitle, table#demo_2 td .thTitle { display: none; }
     font-size: 1.2vmax;
     color: #1a5276;
     margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 .ai-title img { width: 1.5vmax; height: 1.5vmax; margin-right: 0.4em; }
 
@@ -665,34 +665,25 @@ table#demo_1 td .thTitle, table#demo_2 td .thTitle { display: none; }
     color: inherit;
     margin: 1em 0 .5em;
 }
-.ai-title a h1.title {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: .4em;
-    margin: 0;
-    line-height: 1.2;
-    font-size: 1.2vmax;
-}
-.ai-title a > h1,
 .ai-title h1 {
-    font-size: 1.5vmax !important;
-    line-height: 1.2;
-    margin: 0;
+  margin: 0.5em 0;       /* 上下に余白をつける */
+  line-height: 2;      /* 行間を広めにして“ゆとり”を出す */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  font-size: 1.5vmax;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* ← 影を付けたいならここに追加 */
 }
-.ai-title a > h1 img,
+
 .ai-title h1 img {
-    height: 1.1em;
-    width: auto;
-    vertical-align: middle;
-    margin-right: .35em;
+  display: inline-block;
+  height: 1.6em;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.4em;
 }
-.ai-title a h1.title img {
-    display: inline-block !important;
-    height: 2em !important;
-    width: auto !important;
-    vertical-align: middle;
-}
+
 
 /* AI section responsive */
 @media (max-width: 768px) {
@@ -751,6 +742,7 @@ table.sample, table.sample2, .sample3, table.sample4 {
 
 /* Header block */
 div#HEADER { background: #fff; }
+
 .hero {
   width: 100%;
   text-align: center;   /* 居中对齐，避免跑偏 */
@@ -764,35 +756,31 @@ div#HEADER { background: #fff; }
 }
 
 .hero__title {
-  font-size: clamp(26px, 4vw, 50px);
+  font-size: clamp(21px, 3.2vw, 40px);  /* 26→21, 4vw→3.2vw, 50→40 */
   font-weight: 600;
   margin-bottom: 0.6em;
-    color: #ffffff;       /* 纯白色文字 */
-  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* 阴影保证在背景海面上也清晰 */
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
 }
 
 .hero__subtitle {
-  font-size: clamp(20px, 3vw, 40px);
+  font-size: clamp(16px, 2.4vw, 32px);  /* 20→16, 3vw→2.4vw, 40→32 */
   font-weight: 600;
   margin-bottom: 0.6em;
-    color: #ffffff;       /* 纯白色文字 */
-  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* 阴影保证在背景海面上也清晰 */
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
 }
 
 .hero__subsubtitle {
-  font-size: clamp(15px, 2vw, 30px);
+  font-size: clamp(12px, 1.6vw, 24px);  /* 15→12, 2vw→1.6vw, 30→24 */
   font-weight: 600;
   margin-bottom: 0.6em;
-    color: #ffffff;       /* 纯白色文字 */
-  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* 阴影保证在背景海面上也清晰 */
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
 }
 
-
-
-
-
 .hero__tagline {
-  font-size: clamp(15px, 1.6vw, 22px);
+  font-size: clamp(12px, 1.28vw, 18px); /* 15→12, 1.6vw→1.28vw, 22→18 */
   margin-bottom: 1.2em;
 }
 
@@ -805,11 +793,12 @@ div#HEADER { background: #fff; }
 
 .hero__meta {
   margin-top: .8em;
-    color: #ffffff;       /* 纯白色文字 */
-  font-size: clamp(12px, 1.3vw, 16px);
+  color: #ffffff;
+  font-size: clamp(10px, 1.04vw, 13px); /* 12→10, 1.3vw→1.04vw, 16→13 */
 }
 
 .hero__email {
-  color: #ffffff;       /* 纯白色文字 */
+  color: #ffffff;
   text-decoration: underline;
 }
+

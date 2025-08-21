@@ -29,6 +29,10 @@ body {
     font-variant-numeric: tabular-nums;
     font-feature-settings: "palt" 1;
 }
+/* 本文内の見出しだけに影を付ける */
+h1, h2, h3, h4, h5 {
+  text-shadow: 0 0.5px 1px rgba(0,0,0,.4);
+}
 /* スマホ時に #mobile-boost 以下の見た目を1.5倍 */
 @media (max-width: 768px){
   #mobile-boost{
@@ -277,6 +281,7 @@ span.s5 { font-size: 1.2vmax; font-weight: 400; color: #353535; }
     margin: -0.5vmax auto;
     border-collapse: separate;
     border-spacing: 0;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 #navbar td { white-space: nowrap; }
 #navbar td:first-child {
@@ -746,3 +751,65 @@ table.sample, table.sample2, .sample3, table.sample4 {
 
 /* Header block */
 div#HEADER { background: #fff; }
+.hero {
+  width: 100%;
+  text-align: center;   /* 居中对齐，避免跑偏 */
+  color: #ffffff;       /* 纯白色文字 */
+}
+
+.hero__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+}
+
+.hero__title {
+  font-size: clamp(26px, 4vw, 50px);
+  font-weight: 600;
+  margin-bottom: 0.6em;
+    color: #ffffff;       /* 纯白色文字 */
+  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* 阴影保证在背景海面上也清晰 */
+}
+
+.hero__subtitle {
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 600;
+  margin-bottom: 0.6em;
+    color: #ffffff;       /* 纯白色文字 */
+  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* 阴影保证在背景海面上也清晰 */
+}
+
+.hero__subsubtitle {
+  font-size: clamp(15px, 2vw, 30px);
+  font-weight: 600;
+  margin-bottom: 0.6em;
+    color: #ffffff;       /* 纯白色文字 */
+  text-shadow: 0 2px 6px rgba(0,0,0,.4); /* 阴影保证在背景海面上也清晰 */
+}
+
+
+
+
+
+.hero__tagline {
+  font-size: clamp(15px, 1.6vw, 22px);
+  margin-bottom: 1.2em;
+}
+
+.hero__rule {
+  border: none;
+  border-top: 1px solid #fff;
+  width: 80%;
+  margin: 0 auto 1.2em;
+}
+
+.hero__meta {
+  margin-top: .8em;
+    color: #ffffff;       /* 纯白色文字 */
+  font-size: clamp(12px, 1.3vw, 16px);
+}
+
+.hero__email {
+  color: #ffffff;       /* 纯白色文字 */
+  text-decoration: underline;
+}

@@ -405,7 +405,7 @@ a:active, a.color1:active { color: #626567; text-decoration: underline; }
 .container2 {
     position: relative;
     width: 100%;
-    background-image: url('bottom.png');
+    background-image: url('bottom.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -414,7 +414,7 @@ a:active, a.color1:active { color: #626567; text-decoration: underline; }
     position: relative;
     width: 100%;
     height: 10%;
-    background-image: url('bottom.png');
+    background-image: url('bottom.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

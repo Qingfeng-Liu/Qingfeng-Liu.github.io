@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyJP-SIM² | Meeting You in JAPAN - Symposium on Innovative Mathematical Minds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --bg: #f7f3ea;
+            --primary: #c4581c;
+            --accent: #244055;
+            --text: #222222;
+            --link: #1f4b7a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Noto Sans JP", "Hiragino Sans",
+                         "Yu Gothic", Meiryo, -apple-system,
+                         BlinkMacSystemFont, system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* 上段ナビ */
+        .nav-row {
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0.45rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        nav li a {
+            padding: 0.3rem 0.5rem;
+            border-radius: 999px;
+            color: var(--accent);
+        }
+
+        nav li a:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        /* 下段タイトル */
+        .title-row {
+            padding: 0.55rem 0.75rem 0.75rem 0.75rem;
+        }
+
+        /* タイトル行全体を強化 */
+/* タイトル行 */
+.title-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0.7rem 0.8rem 0.9rem 0.8rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ロゴ：少し小さめに */
+.title-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* メインタイトル：少し小さくして整える */
+.main-title {
+    font-size: 2.0rem;       /* ここを小さくした（元は 2.3rem） */
+    font-weight: 700;
+    color: var(--primary);   /* 学会オレンジ */
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+}
+
+/* サブタイトル */
+.sub-title {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.25rem;
+    line-height: 1.3;
+}
+
+/* nav 行は現状のまま調和しているので変更なし */
+
+
+/* モバイル対応：中央寄せ */
+@media (max-width: 700px) {
+    .title-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6rem;
+    }
+    .main-title {
+        font-size: 1.8rem;
+    }
+    .title-logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 1.5rem 1.25rem 3rem 1.25rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        section h1,
+        section h2,
+        section h3 {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        section h1 {
+            font-size: 1.9rem;
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+        }
+
+        section h3 {
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .hero-logo-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo {
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+        }
+
+        .hero-lead {
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero-info {
+            font-size: 0.95rem;
+            color: #555555;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: #777777;
+            margin-bottom: 0.4rem;
+        }
+        .teds-link {
+            color: var(--primary);            /* 学会オレンジで統一 */
+            font-weight: 600;                 /* 太くして目立たせる */
+            text-decoration: underline;       /* 常時下線で一目でリンクと分かる */
+            text-underline-offset: 2px;       /* 下線を少し離して美しく */
+        }
+        .pill {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: rgba(196, 88, 28, 0.08);
+            color: var(--primary);
+            margin-top: 0.4rem;
+        }
+
+        .divider {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.25rem;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+            gap: 1.5rem;
+        }
+
+        .organizers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 0.7rem;
+        }
+
+        .organizer-card {
+            padding: 0.7rem 0.8rem;
+            background: #ffffff;
+            border-radius: 0.6rem;
+            border: 1px solid #e0dfd8;
+        }
+
+        .organizer-name {
+            font-size: 1rem;
+            color: var(--accent);
+        }
+
+        .organizer-affil {
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        .logos-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 0.8rem;
+        }
+
+        .logo-badge {
+            height: 64px;
+            width: auto;
+        }
+
+        .venue-card,
+        .info-card {
+            background: #ffffff;
+            border-radius: 0.6rem;
+            border: 1px solid #e0dfd8;
+            padding: 0.9rem 1rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 1rem 1.25rem 1.5rem 1.25rem;
+            font-size: 0.8rem;
+            color: #777777;
+            background: #f0ebe0;
+        }
+
+        footer .footer-inner {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero,
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                padding-top: 0.35rem;
+                padding-bottom: 0.35rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .title-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title-text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="title-row">
+        <div class="title-container">
+            <img src="icons/MyJP_SIM_2.png" alt="MyJP-SIM2 Logo" class="title-logo">
+
+            <div class="title-text">
+                <div class="main-title">MyJP-SIM²</div>
+                <div class="sub-title">
+                    Meeting You in JAPAN – Symposium on Innovative Mathematical Minds
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下段：ナビゲーション -->
+    <div class="nav-row">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="#organizers">Organizers</a></li>
+                    <li><a href="#venue">Venue</a></li>
+                    <li><a href="#logistics">Logistics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section id="home">
+        <div class="hero">
+            <div>
+
+                <h1>MyJP-SIM²</h1>
+                <h2>Meeting You in JAPAN - Symposium on Innovative Mathematical Minds</h2>
+
+                <p class="hero-lead">
+                    March 26–29, 2026<br>
+                    Hosei University, Koganei Campus, Tokyo, Japan
+                </p>
+
+                <p class="hero-info">
+                    MyJP-SIM² is an international symposium organized under the
+                    Transdisciplinary Econometrics & Data Science Seminar (TEDS),
+                    providing a compact forum for creative ideas in statistics,
+                    econometrics, data science, machine learning, and related fields.
+                </p>
+
+                <p class="pill">
+                    No registration fee · Partner hotel with discounted rate · Self-funded dinner gathering
+                </p>
+            </div>
+
+            <div class="hero-logo-wrapper">
+                <img src="icons/MyJP_SIM_2.png" alt="MyJP-SIM2 Logo" class="hero-logo">
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section id="about">
+        <h2>About the Symposium</h2>
+        <p>
+            MyJP-SIM²: Symposium on Innovative Mathematical Minds aims to bring together
+            researchers working at the frontier of mathematical statistics, econometrics,
+            and data science. The meeting is intentionally compact, encouraging ample
+            discussion time, informal exchanges, and the exploration of new ideas
+            across disciplines.
+        </p>
+        <p>
+            The symposium is held at Hosei University’s Koganei Campus in Tokyo, Japan.
+            A partner hotel will be designated for participants, and a self-funded
+            dinner gathering will be organized to promote networking in a relaxed setting.
+        </p>
+    </section>
+
+    <section id="topics">
+        <h2>Topics of Interest</h2>
+        <ul>
+            <li>Modern statistical theory and methodology</li>
+            <li>Econometrics and financial econometrics</li>
+            <li>High-dimensional and nonparametric modeling</li>
+            <li>Machine learning and causal inference</li>
+            <li>Network analysis and complex systems</li>
+            <li>Federated learning, privacy, and robust AI</li>
+            <li>Applications in economics, finance, and the social sciences</li>
+            <li>Transdisciplinary approaches linking data science and real-world policy</li>
+        </ul>
+    </section>
+
+    <section id="organizers">
+        <h2>Organizers</h2>
+
+        <div class="two-columns">
+            <div>
+                <h3>Scientific and Organizing Committee</h3>
+
+                <div class="organizers-grid">
+                    <div class="organizer-card">
+                        <div class="organizer-name">Qingfeng Liu</div>
+                        <div class="organizer-affil">Hosei University, JP</div>
+                    </div>
+                    <div class="organizer-card">
+                        <div class="organizer-name">Yang Feng</div>
+                        <div class="organizer-affil">New York University, USA</div>
+                    </div>
+                </div>
+
+                <p style="margin-top:0.8rem;font-size:0.9rem;">
+                    MyJP-SIM² is part of the broader TEDS initiative, which aims to
+                    foster collaboration across econometrics, statistics, and data science.
+                </p>
+            </div>
+
+            <div>
+                <h3>Hosted by TEDS</h3>
+                <div class="logos-row">
+                    <img src="Figures/TEDS_Emblem_light.png" alt="TEDS Emblem" class="logo-badge">
+                </div>
+                <p style="margin-top:0.6rem;font-size:0.9rem;">
+                    <a href="https://teds-seminar.github.io" target="_blank" class="teds-link">TEDS</a>
+                    stands for Transdisciplinary Econometrics & Data Science Seminar.
+                    It serves as an umbrella for thematic workshops and focused symposia
+                    that connect theory, computation, and applications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="venue">
+        <h2>Venue</h2>
+        <div class="venue-card">
+            <p>
+                Hosei University, Koganei Campus<br>
+                3-7-2 Kajino-cho, Koganei-shi, Tokyo 184-8584, Japan
+            </p>
+            <p style="margin-top:0.5rem;">
+                The campus is located in western Tokyo, with convenient access from
+                central Tokyo by JR Chuo Line and local transportation. Detailed
+                access information and campus maps will be provided closer to the date.
+            </p>
+        </div>
+    </section>
+
+    <section id="logistics">
+        <h2>Logistics</h2>
+
+        <div class="two-columns">
+            <div class="info-card">
+                <h3>Registration</h3>
+                <p>
+                    Invited participants are kindly requested to complete the online
+                    registration form by January 20, 2026.
+                </p>
+                <p style="margin-top:0.4rem;">
+                    Registration link will be provided in the official invitation email.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Accommodation and Fees</h3>
+                <ul>
+                    <li>No registration fee will be charged.</li>
+                    <li>A partner hotel will be designated with a discounted rate.</li>
+                    <li>Meals are not provided during the workshop.</li>
+                    <li>A self-funded dinner gathering will be organized for participants.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            For inquiries about MyJP-SIM², please contact:
+        </p>
+        <ul class="contact-list">
+            <li>Dr. Qingfeng Liu (Hosei University, Japan)</li>
+            <li>Email: <a href="mailto:qliu@hosei.ac.jp">qliu@hosei.ac.jp</a></li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>
+            © MyJP-SIM² · Symposium on Innovative Mathematical Minds · 2026
+        </div>
+        <div>
+            Organized under TEDS: Transdisciplinary Econometrics &amp; Data Science Seminar
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

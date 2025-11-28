@@ -22,8 +22,8 @@
 
         body {
             font-family: "Noto Sans JP", "Hiragino Sans",
-                         "Yu Gothic", Meiryo, -apple-system,
-                         BlinkMacSystemFont, system-ui, sans-serif;
+            "Yu Gothic", Meiryo, -apple-system,
+            BlinkMacSystemFont, system-ui, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
@@ -52,7 +52,7 @@
         }
 
         .nav-container {
-            max-width: 980px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0.45rem 1.25rem;
             display: flex;
@@ -83,63 +83,65 @@
         }
 
         /* タイトル行全体を強化 */
-/* タイトル行 */
-.title-container {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0.7rem 0.8rem 0.9rem 0.8rem;
+        /* タイトル行 */
+        .title-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.7rem 0.8rem 0.9rem 0.8rem;
 
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-/* ロゴ：少し小さめに */
-.title-logo {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-    image-rendering: -webkit-optimize-contrast;
-}
+        /* ロゴ：少し小さめに */
+        .title-logo {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
+        }
 
-/* メインタイトル：少し小さくして整える */
-.main-title {
-    font-size: 2.0rem;       /* ここを小さくした（元は 2.3rem） */
-    font-weight: 700;
-    color: var(--primary);   /* 学会オレンジ */
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-}
+        /* メインタイトル：少し小さくして整える */
+        .main-title {
+            font-size: 2.0rem; /* ここを小さくした（元は 2.3rem） */
+            font-weight: 700;
+            color: var(--primary); /* 学会オレンジ */
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
 
-/* サブタイトル */
-.sub-title {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 0.25rem;
-    line-height: 1.3;
-}
+        /* サブタイトル */
+        .sub-title {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 0.25rem;
+            line-height: 1.3;
+        }
 
-/* nav 行は現状のまま調和しているので変更なし */
+        /* nav 行は現状のまま調和しているので変更なし */
 
 
-/* モバイル対応：中央寄せ */
-@media (max-width: 700px) {
-    .title-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.6rem;
-    }
-    .main-title {
-        font-size: 1.8rem;
-    }
-    .title-logo {
-        width: 64px;
-        height: 64px;
-    }
-}
+        /* モバイル対応：中央寄せ */
+        @media (max-width: 700px) {
+            .title-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.6rem;
+            }
+
+            .main-title {
+                font-size: 1.8rem;
+            }
+
+            .title-logo {
+                width: 64px;
+                height: 64px;
+            }
+        }
 
         main {
-            max-width: 980px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1.5rem 1.25rem 3rem 1.25rem;
         }
@@ -203,12 +205,14 @@
             color: #777777;
             margin-bottom: 0.4rem;
         }
+
         .teds-link {
-            color: var(--primary);            /* 学会オレンジで統一 */
-            font-weight: 600;                 /* 太くして目立たせる */
-            text-decoration: underline;       /* 常時下線で一目でリンクと分かる */
-            text-underline-offset: 2px;       /* 下線を少し離して美しく */
+            color: var(--primary); /* 学会オレンジで統一 */
+            font-weight: 600; /* 太くして目立たせる */
+            text-decoration: underline; /* 常時下線で一目でリンクと分かる */
+            text-underline-offset: 2px; /* 下線を少し離して美しく */
         }
+
         .pill {
             display: inline-block;
             padding: 0.25rem 0.6rem;
@@ -336,6 +340,38 @@
                 text-align: center;
             }
         }
+
+        .fullwidth-image-wrapper {
+    width: 100%;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.fullwidth-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;    /* ← main と同じ幅 */
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.6rem;
+}
+.sakura-16x9 {
+    width: 100%;
+    max-width: 1200px;         /* main と同じ幅 */
+    margin: 2rem auto 1.5rem;
+    aspect-ratio: 16 / 9;      /* ここで 16:9 を指定 */
+    overflow: hidden;          /* はみ出した上側をカット */
+    border-radius: 0;
+}
+
+.sakura-16x9 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* 枠いっぱいに拡大してトリミング */
+    object-position: center bottom; /* 下側を残して上をカット */
+    display: block;
+}
+
+
     </style>
 </head>
 <body>
@@ -388,7 +424,8 @@
 
                 <p class="hero-info">
                     MyJP-SIM² is an international symposium organized under the
-                    Transdisciplinary Econometrics & Data Science Seminar (<a href="https://teds-datascience.github.io/seminars/" target="_blank" class="teds-link">TEDS</a>),
+                    Transdisciplinary Econometrics & Data Science Seminar (<a
+                        href="https://teds-datascience.github.io/seminars/" target="_blank" class="teds-link">TEDS</a>),
                     providing a compact forum for creative ideas in statistics,
                     econometrics, data science, machine learning, and related fields.
                 </p>
@@ -403,6 +440,16 @@
             </div>
         </div>
     </section>
+    <!-- Full-width Sakura Photo -->
+    <!--
+<div class="fullwidth-image-wrapper">
+    <img src="Figures/sakura.jpg" alt="Sakura in Japan" class="fullwidth-image">
+</div>
+-->
+    <div class="sakura-16x9">
+    <img src="Figures/sakura.jpg" alt="Sakura in Japan">
+</div>
+
 
     <hr class="divider">
 
@@ -423,43 +470,106 @@
     </section>
 
     <section id="topics">
-    <h2>Topics of Interest</h2>
-    <p>We welcome research contributions across a broad range of areas, including but not limited to:</p>
-    <ul>
-        <li>Modern statistical theory and methodology</li>
-        <li>Machine learning, deep learning, and representation learning</li>
-        <li>Generative AI, foundation models, and multimodal learning</li>
-        <li>Causal inference, reinforcement learning, and decision intelligence</li>
-        <li>High-dimensional statistics, sparsity, and nonparametric modeling</li>
-        <li>Econometrics, financial econometrics, and computational economics</li>
-        <li>Network analysis, graph learning, and complex systems</li>
-        <li>Federated learning, privacy-preserving modeling, and robust/secure AI</li>
-        <li>Applications in economics, finance, policy analysis, and the social sciences</li>
-        <li>Transdisciplinary approaches linking data science, mathematics, and real-world policy challenges</li>
-    </ul>
-</section>
+        <h2>Topics of Interest</h2>
+        <p>We welcome research contributions across a broad range of areas, including but not limited to:</p>
+        <ul>
+            <li>Modern statistical theory and methodology</li>
+            <li>Machine learning, deep learning, and representation learning</li>
+            <li>Generative AI, foundation models, and multimodal learning</li>
+            <li>Causal inference, reinforcement learning, and decision intelligence</li>
+            <li>High-dimensional statistics, sparsity, and nonparametric modeling</li>
+            <li>Econometrics, financial econometrics, and computational economics</li>
+            <li>Network analysis, graph learning, and complex systems</li>
+            <li>Federated learning, privacy-preserving modeling, and robust/secure AI</li>
+            <li>Applications in economics, finance, policy analysis, and the social sciences</li>
+            <li>Transdisciplinary approaches linking data science, mathematics, and real-world policy challenges</li>
+        </ul>
+    </section>
     <section id="organizers">
         <h2>Organizers</h2>
 
         <div class="two-columns">
             <div>
-                <h3>Scientific and Organizing Committee</h3>
+                <h3>General Chair</h3>
 
                 <div class="organizers-grid">
                     <div class="organizer-card">
-                        <div class="organizer-name">Qingfeng Liu</div>
-                        <div class="organizer-affil">Hosei University, JP</div>
+                        <div class="organizer-name">
+                            <a href="https://qingfeng-liu.github.io/index_en.html" target="_blank" rel="noopener">
+                                Qingfeng Liu
+                            </a>
+                        </div>
+                        <div class="organizer-affil">Hosei University</div>
                     </div>
+
                     <div class="organizer-card">
-                        <div class="organizer-name">Yang Feng</div>
-                        <div class="organizer-affil">New York University, USA</div>
+                        <div class="organizer-name">
+                            <a href="https://publichealth.nyu.edu/faculty/yang-feng" target="_blank" rel="noopener">
+                                Yang Feng
+                            </a>
+                        </div>
+                        <div class="organizer-affil">New York University</div>
                     </div>
                 </div>
 
-                <p style="margin-top:0.8rem;font-size:0.9rem;">
-                    MyJP-SIM² is part of the broader TEDS initiative, which aims to
-                    foster collaboration across econometrics, statistics, and data science.
-                </p>
+                <h3 style="margin-top:1.2rem;">Program Committee</h3>
+
+                <div class="organizers-grid">
+                    <!-- L -->
+                    <div class="organizer-card">
+                        <div class="organizer-name">
+                            <a href="https://www.polyu.edu.hk/dsai/People/Academic-Staff/LiuCatherine?sc_lang=en"
+                               target="_blank" rel="noopener">
+                                Chunling Liu
+                            </a>
+                        </div>
+                        <div class="organizer-affil">The Hong Kong Polytechnic University</div>
+                    </div>
+
+                    <!-- S -->
+                    <div class="organizer-card">
+                        <div class="organizer-name">
+                            <a href="https://sph.umich.edu/faculty-profiles/song-peter.html"
+                               target="_blank" rel="noopener">
+                                Peter X. Song
+                            </a>
+                        </div>
+                        <div class="organizer-affil">University of Michigan</div>
+                    </div>
+
+                    <!-- W -->
+                    <div class="organizer-card">
+                        <div class="organizer-name">
+                            <a href="https://sites.google.com/site/wenjiemetrics/home"
+                               target="_blank" rel="noopener">
+                                Wenjie Wang
+                            </a>
+                        </div>
+                        <div class="organizer-affil">Nanyang Technological University</div>
+                    </div>
+
+                    <!-- Y -->
+                    <div class="organizer-card">
+                        <div class="organizer-name">
+                            <a href="http://www.uni-goettingen.de/en/114620.html"
+                               target="_blank" rel="noopener">
+                                Xiaohua Yu
+                            </a>
+                        </div>
+                        <div class="organizer-affil">University of Göttingen</div>
+                    </div>
+
+                    <!-- Z -->
+                    <div class="organizer-card">
+                        <div class="organizer-name">
+                            <a href="http://homepage.amss.ac.cn/research/homePage/dc8f0ecc0eb548d88443b15d46ca8569/myHomePage.html"
+                               target="_blank" rel="noopener">
+                                Xinyu Zhang
+                            </a>
+                        </div>
+                        <div class="organizer-affil">Chinese Academy of Sciences</div>
+                    </div>
+                </div>
             </div>
 
             <div>
@@ -472,6 +582,12 @@
                     stands for Transdisciplinary Econometrics & Data Science Seminar.
                     It serves as an umbrella for thematic workshops and focused symposia
                     that connect theory, computation, and applications.
+                </p>
+
+                <p style="margin-top:0.6rem;font-size:0.9rem;">
+                    MyJP-SIM² is part of the broader TEDS initiative,
+                    which aims to foster collaboration across econometrics,
+                    statistics, and data science.
                 </p>
             </div>
         </div>

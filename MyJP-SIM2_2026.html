@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MyJP-SIM² | Meeting You in JAPAN - Symposium on Innovative Mathematical Minds</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <style>
         :root {
@@ -354,21 +354,35 @@
     margin: 0 auto;
     border-radius: 0.6rem;
 }
-.sakura-16x9 {
+/* 共通：画像をトリミングしながらフィットさせる */
+.sakura-responsive {
     width: 100%;
-    max-width: 1200px;         /* main と同じ幅 */
+    max-width: 1200px;
     margin: 2rem auto 1.5rem;
-    aspect-ratio: 21 / 9;      /* ここで 16:9 を指定 */
-    overflow: hidden;          /* はみ出した上側をカット */
+    overflow: hidden;
     border-radius: 0;
 }
 
-.sakura-16x9 img {
+.sakura-responsive img {
     width: 100%;
     height: 100%;
-    object-fit: cover;         /* 枠いっぱいに拡大してトリミング */
-    object-position: center bottom; /* 下側を残して上をカット */
+    object-fit: cover;
+    object-position: center bottom; /* 下側を残す */
     display: block;
+}
+
+/* スマホ：16:9 */
+@media (max-width: 768px) {
+    .sakura-responsive {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* PC：21:9（より映画的で広く美しい） */
+@media (min-width: 769px) {
+    .sakura-responsive {
+        aspect-ratio: 21 / 9;
+    }
 }
 
 
@@ -379,7 +393,7 @@
 <header>
     <div class="title-row">
         <div class="title-container">
-            <img src="icons/MyJP_SIM_2.png" alt="MyJP-SIM2 Logo" class="title-logo">
+            <img alt="MyJP-SIM2 Logo" class="title-logo" src="icons/MyJP_SIM_2.png">
 
             <div class="title-text">
                 <div class="main-title">MyJP-SIM²</div>
@@ -425,7 +439,7 @@
                 <p class="hero-info">
                     MyJP-SIM² is an international symposium organized under the
                     Transdisciplinary Econometrics & Data Science Seminar (<a
-                        href="https://teds-datascience.github.io/seminars/" target="_blank" class="teds-link">TEDS</a>),
+                        class="teds-link" href="https://teds-datascience.github.io/seminars/" target="_blank">TEDS</a>),
                     providing a compact forum for creative ideas in statistics,
                     econometrics, data science, machine learning, and related fields.
                 </p>
@@ -436,7 +450,7 @@
             </div>
 
             <div class="hero-logo-wrapper">
-                <img src="icons/MyJP_SIM_2.png" alt="MyJP-SIM2 Logo" class="hero-logo">
+                <img alt="MyJP-SIM2 Logo" class="hero-logo" src="icons/MyJP_SIM_2.png">
             </div>
         </div>
     </section>
@@ -446,9 +460,9 @@
     <img src="Figures/sakura.jpg" alt="Sakura in Japan" class="fullwidth-image">
 </div>
 -->
-    <div class="sakura-16x9">
-    <img src="Figures/sakura.jpg" alt="Sakura in Japan">
-</div>
+    <div class="sakura-responsive">
+        <img alt="Sakura in Japan" src="Figures/sakura.jpg">
+    </div>
 
 
     <hr class="divider">
@@ -495,7 +509,7 @@
                 <div class="organizers-grid">
                     <div class="organizer-card">
                         <div class="organizer-name">
-                            <a href="https://qingfeng-liu.github.io/index_en.html" target="_blank" rel="noopener">
+                            <a href="https://qingfeng-liu.github.io/index_en.html" rel="noopener" target="_blank">
                                 Qingfeng Liu
                             </a>
                         </div>
@@ -504,7 +518,7 @@
 
                     <div class="organizer-card">
                         <div class="organizer-name">
-                            <a href="https://publichealth.nyu.edu/faculty/yang-feng" target="_blank" rel="noopener">
+                            <a href="https://publichealth.nyu.edu/faculty/yang-feng" rel="noopener" target="_blank">
                                 Yang Feng
                             </a>
                         </div>
@@ -519,7 +533,7 @@
                     <div class="organizer-card">
                         <div class="organizer-name">
                             <a href="https://www.polyu.edu.hk/dsai/People/Academic-Staff/LiuCatherine?sc_lang=en"
-                               target="_blank" rel="noopener">
+                               rel="noopener" target="_blank">
                                 Chunling Liu
                             </a>
                         </div>
@@ -530,7 +544,7 @@
                     <div class="organizer-card">
                         <div class="organizer-name">
                             <a href="https://sph.umich.edu/faculty-profiles/song-peter.html"
-                               target="_blank" rel="noopener">
+                               rel="noopener" target="_blank">
                                 Peter X. Song
                             </a>
                         </div>
@@ -541,7 +555,7 @@
                     <div class="organizer-card">
                         <div class="organizer-name">
                             <a href="https://sites.google.com/site/wenjiemetrics/home"
-                               target="_blank" rel="noopener">
+                               rel="noopener" target="_blank">
                                 Wenjie Wang
                             </a>
                         </div>
@@ -552,7 +566,7 @@
                     <div class="organizer-card">
                         <div class="organizer-name">
                             <a href="http://www.uni-goettingen.de/en/114620.html"
-                               target="_blank" rel="noopener">
+                               rel="noopener" target="_blank">
                                 Xiaohua Yu
                             </a>
                         </div>
@@ -563,7 +577,7 @@
                     <div class="organizer-card">
                         <div class="organizer-name">
                             <a href="http://homepage.amss.ac.cn/research/homePage/dc8f0ecc0eb548d88443b15d46ca8569/myHomePage.html"
-                               target="_blank" rel="noopener">
+                               rel="noopener" target="_blank">
                                 Xinyu Zhang
                             </a>
                         </div>
@@ -575,10 +589,10 @@
             <div>
                 <h3>Hosted by TEDS</h3>
                 <div class="logos-row">
-                    <img src="Figures/TEDS_Emblem_light.png" alt="TEDS Emblem" class="logo-badge">
+                    <img alt="TEDS Emblem" class="logo-badge" src="Figures/TEDS_Emblem_light.png">
                 </div>
                 <p style="margin-top:0.6rem;font-size:0.9rem;">
-                    <a href="https://teds-datascience.github.io/seminars/" target="_blank" class="teds-link">TEDS</a>
+                    <a class="teds-link" href="https://teds-datascience.github.io/seminars/" target="_blank">TEDS</a>
                     stands for Transdisciplinary Econometrics & Data Science Seminar.
                     It serves as an umbrella for thematic workshops and focused symposia
                     that connect theory, computation, and applications.

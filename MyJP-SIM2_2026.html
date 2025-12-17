@@ -45,11 +45,42 @@
             top: 0;
             z-index: 1000;
         }
+        section h3 {
+  font-size: 1.1rem;
+  margin-top: 1.2rem;   /* 上も下も同じ基準にする */
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+}
+.organizer-photo{
+  width:160px;
+  height:200px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#fff;
+  margin-bottom:0.6rem; /* 任意：文字との間 */
+}
+
+.organizer-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 50%; /* デフォルト中央 */
+  display:block;
+  border-radius:0; /* 丸は枠側で作る */
+}
+
+/* Nishiyama を左へ20%相当 → 中央50%から30%へ */
+.organizer-photo.shift-left img{
+  object-position: 70% 0%;  /* 左へ寄せる：確実に目に見える */
+}
 
         /* 上段ナビ */
         .nav-row {
             border-bottom: 1px solid #eee;
         }
+        .nav-row {
+    margin-top: -0.6rem;
+}
 
         .nav-container {
             max-width: 1200px;
@@ -79,7 +110,7 @@
 
         /* 下段タイトル */
         .title-row {
-            padding: 0.55rem 0.75rem 0.75rem 0.75rem;
+            padding: 0.55rem 0.75rem 0.25rem 0.75rem;
         }
 
         /* タイトル行全体を強化 */
@@ -169,24 +200,30 @@
             font-size: 1.1rem;
         }
 
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-            gap: 1.5rem;
-            align-items: center;
-        }
+        .hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 画面の左右半分 */
+  gap: 1.5rem;
+  align-items: center;
+}
 
-        .hero-logo-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+ .hero-logo-wrapper{
+  width: 100%;
+  height: 100%;
+  border-radius: 0;      /* ← 角を丸くしない */
+  overflow: visible;    /* ← 切らない */
+}
 
-        .hero-logo {
-            max-width: 220px;
-            width: 100%;
-            height: auto;
-        }
+.hero-logo{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;      /* ← 念のため img 側も */
+}
+.hero-logo{
+  max-width: 90%;
+  margin-left: auto;
+}
 
         .hero-lead {
             font-size: 1rem;
@@ -299,21 +336,54 @@
         }
 
         footer {
-            border-top: 1px solid #ddd;
-            padding: 1rem 1.25rem 1.5rem 1.25rem;
-            font-size: 0.8rem;
-            color: #777777;
-            background: #f0ebe0;
-        }
+    border-top: 1px solid #ddd;
+    padding: 1rem 1.25rem 1.5rem 1.25rem;
+    font-size: 1rem;
+    color: #777777;
+    background: #f0ebe0;
+}
 
-        footer .footer-inner {
-            max-width: 980px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 0.75rem;
-        }
+/* footer-inner を 2column に固定 */
+footer .footer-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* SIM / TEDS の2カラム */
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* それぞれのブロック（ロゴ左・2行テキスト右） */
+.footer-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo.sim{
+    height: 3.2em;
+    flex-shrink: 0;
+}
+
+.footer-logo.teds{
+    height: 3.0em;
+    flex-shrink: 0;
+}
+
+.footer-text2{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+    font-size: 0.9rem;
+    color: #777777;
+}
+
+/* スマホでは縦に戻す */
+@media (max-width: 600px){
+    footer .footer-inner{
+        grid-template-columns: 1fr;
+    }
+}
 
         @media (max-width: 768px) {
             .hero,
@@ -450,7 +520,7 @@
             </div>
 
             <div class="hero-logo-wrapper">
-                <img alt="MyJP-SIM2 Logo" class="hero-logo" src="icons/MyJP_SIM_2.png">
+                <img alt="MyJP-SIM2 Logo" class="hero-logo" src="Figures/SIM2.png">
             </div>
         </div>
     </section>
@@ -460,9 +530,10 @@
     <img src="Figures/sakura.jpg" alt="Sakura in Japan" class="fullwidth-image">
 </div>
 -->
-    <div class="sakura-responsive">
+    <!-- <div class="sakura-responsive">
         <img alt="Sakura in Japan" src="Figures/sakura.jpg">
     </div>
+    -->
 
 
     <hr class="divider">
@@ -504,6 +575,37 @@
 
         <div class="two-columns">
             <div>
+                <h3>Advisory Chair</h3>
+
+<div class="organizers-grid">
+    <div class="organizer-card">
+        <div class="organizer-photo">
+            <img src="https://fan.princeton.edu/sites/g/files/toruqf5476/files/Fan2_0.jpg"
+                 alt="Jianqing Fan">
+        </div>
+        <div class="organizer-name">
+            <a href="https://fan.princeton.edu/" rel="noopener" target="_blank">
+                Jianqing Fan
+            </a>
+        </div>
+        <div class="organizer-affil">Princeton University</div>
+    </div>
+
+    <div class="organizer-card">
+        <div class="organizer-photo shift-left">
+  <img src="https://www.kier.kyoto-u.ac.jp/wp/wp-content/uploads/2020/11/faculty_mv_nishiyama.jpg"
+       alt="Yoshihiko Nishiyama">
+</div>
+        <div class="organizer-name">
+            <a href="https://www.kier.kyoto-u.ac.jp/en/faculty/387/"
+               rel="noopener" target="_blank">
+                Yoshihiko Nishiyama
+            </a>
+        </div>
+        <div class="organizer-affil">Kyoto University</div>
+    </div>
+</div>
+
                 <h3>General Chair</h3>
 
                 <div class="organizers-grid">
@@ -675,18 +777,24 @@
 </main>
 
 <footer>
-    <div class="footer-inner" style="line-height:1.6;">
-        <div>
-            <img src="icons/MyJP_SIM_2.png" alt="SIM icon"
-                 style="height:2em; vertical-align:middle; margin-right:8px;">
-            © MyJP-SIM² · Meeting You in JAPAN - Symposium on Innovative Mathematical Minds
+    <div class="footer-inner footer-2col">
+
+        <div class="footer-item">
+            <img src="icons/MyJP_SIM_2.png" alt="SIM icon" class="footer-logo sim">
+            <div class="footer-text2">
+                <div>© MyJP-SIM²</div>
+                <div>Meeting You in JAPAN – Symposium on Innovative Mathematical Minds</div>
+            </div>
         </div>
 
-        <div>
-            <img src="Figures/TEDS_Emblem_light.png" alt="TEDS icon"
-                 style="height:2.15em; vertical-align:middle; margin-right:8px;">
-            Organized under TEDS: Transdisciplinary Econometrics &amp; Data Science Seminar
+        <div class="footer-item">
+            <img src="Figures/TEDS_Emblem_light.png" alt="TEDS icon" class="footer-logo teds">
+            <div class="footer-text2">
+                <div>Organized under TEDS</div>
+                <div>Transdisciplinary Econometrics &amp; Data Science Seminar</div>
+            </div>
         </div>
+
     </div>
 </footer>
 

@@ -384,6 +384,14 @@ footer .footer-inner {
         grid-template-columns: 1fr;
     }
 }
+        @media (max-width: 600px){
+  .footer-logo.sim,
+  .footer-logo.teds{
+    width: 64px;        /* ← 左端基準を固定 */
+    height: auto;
+    display: block;
+  }
+}
 
         @media (max-width: 768px) {
             .hero,

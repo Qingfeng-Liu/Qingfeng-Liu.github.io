@@ -132,7 +132,11 @@
             object-fit: contain;
             image-rendering: -webkit-optimize-contrast;
         }
-
+@media (max-width: 768px){
+  header nav ul{
+    row-gap: 0.15rem;   /* ← ここだけ詰める（0.1〜0.2で微調整可） */
+  }
+}
         /* メインタイトル：少し小さくして整える */
         .main-title {
             font-size: 2.0rem; /* ここを小さくした（元は 2.3rem） */

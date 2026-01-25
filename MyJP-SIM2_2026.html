@@ -760,6 +760,315 @@ footer .footer-inner {
         </div>
     </section>
 
+    <!-- Speakers (sorted by last name) -->
+<section id="speakers">
+  <h2>Speakers</h2>
+
+  <div class="info-card" style="margin-top:1rem;">
+    <p style="margin:0;">
+      Speaker list (affiliation and tentative title). Updates will be reflected as they become available.
+    </p>
+  </div>
+
+  <style>
+    .speakers-wrap{margin-top:1.2rem;}
+    .speakers-toolbar{
+      display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center;
+      margin: 0.8rem 0 0.9rem 0;
+    }
+    .speakers-search{
+      flex: 1 1 260px;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid #e0dfd8;
+      border-radius: 0.5rem;
+      background: #fff;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .speakers-search:focus{border-color: rgba(36,64,85,0.45);}
+    .speakers-note{font-size:0.85rem; color:#666; flex: 0 0 auto;}
+
+    .speakers-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 0.6rem;
+    }
+    .speaker-card{
+      padding: 0.8rem 0.9rem;
+      background:#ffffff;
+      border-radius:0.6rem;
+      border:1px solid #e0dfd8;
+    }
+    .speaker-name{
+      font-size: 1.02rem;
+      color: var(--accent);
+      margin-bottom: 0.15rem;
+    }
+    .speaker-affil{
+      font-size: 0.9rem;
+      color:#666666;
+      margin-bottom: 0.45rem;
+    }
+    .speaker-title{
+      font-size: 0.95rem;
+      color:#222;
+    }
+    .speaker-title.tba{color:#777;}
+    .speaker-meta{
+      margin-top:0.55rem;
+      font-size:0.78rem;
+      color:#777;
+    }
+    .speaker-tags{
+      display:flex; flex-wrap:wrap; gap:0.35rem;
+      margin-top:0.55rem;
+    }
+    .speaker-tag{
+      display:inline-block;
+      padding: 0.18rem 0.55rem;
+      border-radius:999px;
+      font-size:0.72rem;
+      background: rgba(196, 88, 28, 0.08);
+      color: var(--primary);
+      white-space:nowrap;
+    }
+  </style>
+
+  <div class="speakers-wrap">
+    <div class="speakers-toolbar">
+      <input id="speakerSearch" class="speakers-search" type="search"
+             placeholder="Search by name, affiliation, or title..." aria-label="Search speakers">
+      <div class="speakers-note" id="speakerCount"></div>
+    </div>
+
+    <div class="speakers-grid" id="speakersGrid">
+
+      <!-- A -->
+      <div class="speaker-card" data-text="shunta akiyama cyberagent inc tba">
+        <div class="speaker-name">Shunta Akiyama</div>
+        <div class="speaker-affil">CyberAgent, Inc.</div>
+        <div class="speaker-title tba">TBA</div>
+      </div>
+
+      <!-- B -->
+      <div class="speaker-card" data-text="guillaume braun riken aip spectral gradient descent mitigates anisotropy-driven misalignment a case study in phase retrieval">
+        <div class="speaker-name">Guillaume Braun</div>
+        <div class="speaker-affil">RIKEN AIP</div>
+        <div class="speaker-title">Spectral Gradient Descent Mitigates Anisotropy-Driven Misalignment: A Case Study in Phase Retrieval</div>
+        <div class="speaker-tags"><span class="speaker-tag">Optimization</span></div>
+      </div>
+
+      <!-- D -->
+      <div class="speaker-card" data-text="ben dai the chinese university of hong kong rehline regularized composite relu rehu loss minimization with linear computation and linear convergence">
+        <div class="speaker-name">Ben Dai</div>
+        <div class="speaker-affil">The Chinese University of Hong Kong</div>
+        <div class="speaker-title">ReHLine: Regularized Composite ReLU-ReHU Loss Minimization with Linear Computation and Linear Convergence</div>
+        <div class="speaker-tags"><span class="speaker-tag">Optimization</span></div>
+      </div>
+
+      <!-- F -->
+
+      <div class="speaker-card" data-text="yang feng new york university unsupervised federated multi-task learning for heterogeneous tasks">
+        <div class="speaker-name">Yang Feng</div>
+        <div class="speaker-affil">New York University</div>
+        <div class="speaker-title">Unsupervised Federated Multi-task Learning for Heterogeneous Tasks</div>
+        <div class="speaker-tags"><span class="speaker-tag">Federated learning</span></div>
+      </div>
+
+      <!-- K -->
+      <div class="speaker-card" data-text="kengo kato cornell university statistical theory for gromov-wasserstein distances">
+        <div class="speaker-name">Kengo Kato</div>
+        <div class="speaker-affil">Cornell University</div>
+        <div class="speaker-title">Statistical theory for Gromov-Wasserstein distances</div>
+        <div class="speaker-tags"><span class="speaker-tag">Optimal transport</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="daisuke kurisu the university of tokyo geodesic difference-in-differences">
+        <div class="speaker-name">Daisuke Kurisu</div>
+        <div class="speaker-affil">The University of Tokyo</div>
+        <div class="speaker-title">Geodesic Difference-in-Differences</div>
+        <div class="speaker-tags"><span class="speaker-tag">Causal inference</span></div>
+      </div>
+
+      <!-- L -->
+      <div class="speaker-card" data-text="catherine chunling liu the hong kong polytechnic university changepoint detection under the heterogeneous factor strength">
+        <div class="speaker-name">Catherine Chunling Liu</div>
+        <div class="speaker-affil">The Hong Kong Polytechnic University</div>
+        <div class="speaker-title">Changepoint detection under the heterogeneous factor strength</div>
+        <div class="speaker-tags"><span class="speaker-tag">Changepoint</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="chu-an liu academia sinica least squares averaging estimation of additive partially linear models with imputed covariates">
+        <div class="speaker-name">Chu-An Liu</div>
+        <div class="speaker-affil">Academia Sinica</div>
+        <div class="speaker-title">Least Squares Averaging Estimation of Additive Partially Linear Models with Imputed Covariates</div>
+        <div class="speaker-tags"><span class="speaker-tag">Econometrics</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="liu yuhong school of business and management jilin university">
+        <div class="speaker-name">Liu Yuhong</div>
+        <div class="speaker-affil">School of Business and Management, Jilin University</div>
+        <div class="speaker-title tba">TBA</div>
+      </div>
+
+      <div class="speaker-card" data-text="ziang liu hosei university">
+        <div class="speaker-name">Ziang Liu</div>
+        <div class="speaker-affil">Hosei University</div>
+        <div class="speaker-title tba">TBA</div>
+      </div>
+
+      <div class="speaker-card" data-text="wei luo zhejiang university on non-redundant and linear operator-based nonlinear dimension reduction">
+        <div class="speaker-name">Wei Luo</div>
+        <div class="speaker-affil">Zhejiang University</div>
+        <div class="speaker-title">On non-redundant and linear operator-based nonlinear dimension reduction</div>
+        <div class="speaker-tags"><span class="speaker-tag">Dimension reduction</span></div>
+      </div>
+
+      <!-- M -->
+      <div class="speaker-card" data-text="takeru matsuda university of tokyo tba">
+        <div class="speaker-name">Takeru Matsuda</div>
+        <div class="speaker-affil">University of Tokyo</div>
+        <div class="speaker-title tba">TBA</div>
+      </div>
+
+      <!-- S -->
+      <div class="speaker-card" data-text="shosei sakaguchi university of tokyo the identification power of combining experimental and observational data for distributional treatment effect parameters">
+        <div class="speaker-name">Shosei Sakaguchi</div>
+        <div class="speaker-affil">University of Tokyo</div>
+        <div class="speaker-title">The Identification Power of Combining Experimental and Observational Data for Distributional Treatment Effect Parameters</div>
+        <div class="speaker-tags"><span class="speaker-tag">Causal inference</span></div>
+      </div>
+
+      <!-- T -->
+      <div class="speaker-card" data-text="xin tong the university of hong kong stance drift how ai middlemen change what we mean">
+        <div class="speaker-name">Xin Tong</div>
+        <div class="speaker-affil">The University of Hong Kong</div>
+        <div class="speaker-title">Stance Drift: How AI Middlemen Change What We Mean</div>
+        <div class="speaker-tags"><span class="speaker-tag">AI</span><span class="speaker-tag">LLM</span></div>
+      </div>
+
+      <!-- W -->
+      <div class="speaker-card" data-text="junhui wang chinese university of hong kong learning nonparametric graphical model on heterogeneous network-linked data">
+        <div class="speaker-name">Junhui Wang</div>
+        <div class="speaker-affil">Chinese University of Hong Kong</div>
+        <div class="speaker-title">Learning nonparametric graphical model on heterogeneous network-linked data</div>
+        <div class="speaker-tags"><span class="speaker-tag">Graphical models</span><span class="speaker-tag">Networks</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="wenjie wang nanyang technological university cluster-robust inference for quadratic forms">
+        <div class="speaker-name">Wenjie Wang</div>
+        <div class="speaker-affil">Nanyang Technological University</div>
+        <div class="speaker-title">Cluster-Robust Inference for Quadratic Forms</div>
+        <div class="speaker-tags"><span class="speaker-tag">Inference</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="yichao wu university of illinois chicago variable selection for partially linear models and partially global frechet regression">
+        <div class="speaker-name">Yichao Wu</div>
+        <div class="speaker-affil">University of Illinois Chicago</div>
+        <div class="speaker-title">Variable selection for partially linear models and partially global Fréchet regression</div>
+        <div class="speaker-tags"><span class="speaker-tag">Semiparametric</span></div>
+      </div>
+
+      <!-- X -->
+      <div class="speaker-card" data-text="dacheng xiu university of chicago recurrent neural networks for nonlinear time series">
+        <div class="speaker-name">Dacheng Xiu</div>
+        <div class="speaker-affil">University of Chicago</div>
+        <div class="speaker-title">Recurrent Neural Networks for Nonlinear Time Series</div>
+        <div class="speaker-tags"><span class="speaker-tag">Time series</span><span class="speaker-tag">Deep learning</span></div>
+      </div>
+
+      <!-- Y -->
+      <div class="speaker-card" data-text="xiaohua yu university of goettingen forecasting food prices with machine learning">
+        <div class="speaker-name">Xiaohua Yu</div>
+        <div class="speaker-affil">University of Göttingen</div>
+        <div class="speaker-title">Forecasting Food Prices with Machine Learning</div>
+        <div class="speaker-tags"><span class="speaker-tag">Forecasting</span><span class="speaker-tag">ML</span></div>
+      </div>
+
+      <!-- Z -->
+      <div class="speaker-card" data-text="jin-ting zhang national university of singapore distance-based anova for testing equality of distribution">
+        <div class="speaker-name">Jin-Ting Zhang</div>
+        <div class="speaker-affil">National University of Singapore</div>
+        <div class="speaker-title">Distance-Based ANOVA for Testing Equality of Distribution</div>
+        <div class="speaker-tags"><span class="speaker-tag">Testing</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="zhengjun zhang beijing university of chinese medicine university of chinese academy of sciences university of wisconsin the near-optimality of naive portfolios and the reconciliation of empirical optimal allocations">
+        <div class="speaker-name">Zhengjun Zhang</div>
+        <div class="speaker-affil">Beijing University of Chinese Medicine / University of Chinese Academy of Sciences / University of Wisconsin</div>
+        <div class="speaker-title">The Near-Optimality of Naïve Portfolios and the Reconciliation of Empirical Optimal Allocations</div>
+        <div class="speaker-tags"><span class="speaker-tag">Finance</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="wen zhou new york university a latent semiparametric mixture model for robust heterogeneity learning in high dimensions">
+        <div class="speaker-name">Wen Zhou</div>
+        <div class="speaker-affil">New York University</div>
+        <div class="speaker-title">A latent semiparametric mixture model for robust heterogeneity learning in high dimensions</div>
+        <div class="speaker-tags"><span class="speaker-tag">High-dimensional</span><span class="speaker-tag">Robust</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="wen zhou new york university optimal comparison of network effects for sparse directed networks with dependent edges">
+        <div class="speaker-name">Wen Zhou</div>
+        <div class="speaker-affil">New York University</div>
+        <div class="speaker-title">Optimal Comparison of Network Effects for Sparse Directed Networks with Dependent Edges</div>
+        <div class="speaker-tags"><span class="speaker-tag">Networks</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="masaaki imaizumi the university of tokyo riken aip analysis on dynamics of deep neural network with high-dimensional structure report other than 3 28">
+        <div class="speaker-name">Masaaki Imaizumi</div>
+        <div class="speaker-affil">The University of Tokyo / RIKEN AIP</div>
+        <div class="speaker-title">Analysis on dynamics of deep neural network with high-dimensional structure</div>
+        <div class="speaker-meta">Note: not on 3/28</div>
+        <div class="speaker-tags"><span class="speaker-tag">Deep learning</span></div>
+      </div>
+
+      <div class="speaker-card" data-text="jinjia zhou hosei university japan tba">
+        <div class="speaker-name">Jinjia Zhou</div>
+        <div class="speaker-affil">Hosei University, Japan</div>
+        <div class="speaker-title tba">TBA</div>
+      </div>
+
+      <div class="speaker-card" data-text="zudi lu city university of hong kong statistical random forests modelling for nonlinear time series">
+        <div class="speaker-name">Zudi Lu</div>
+        <div class="speaker-affil">City University of Hong Kong</div>
+        <div class="speaker-title">Statistical Random Forests Modelling for Nonlinear Time Series</div>
+        <div class="speaker-tags"><span class="speaker-tag">Time series</span><span class="speaker-tag">RF</span></div>
+      </div>
+
+    </div>
+
+    <script>
+      (function(){
+        const input = document.getElementById('speakerSearch');
+        const grid = document.getElementById('speakersGrid');
+        const cards = Array.from(grid.querySelectorAll('.speaker-card'));
+        const count = document.getElementById('speakerCount');
+
+        function updateCount(visible){
+          count.textContent = visible + " speakers";
+        }
+
+        function filter(){
+          const q = (input.value || "").trim().toLowerCase();
+          let visible = 0;
+          cards.forEach(card=>{
+            const hay = (card.getAttribute('data-text') || "").toLowerCase();
+            const show = q === "" || hay.indexOf(q) !== -1;
+            card.style.display = show ? "" : "none";
+            if(show) visible++;
+          });
+          updateCount(visible);
+        }
+
+        updateCount(cards.length);
+        input.addEventListener('input', filter);
+      })();
+    </script>
+  </div>
+</section>
+
+
     <section id="logistics">
         <h2>Logistics</h2>
 

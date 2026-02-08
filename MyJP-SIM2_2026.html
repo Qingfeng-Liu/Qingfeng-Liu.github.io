@@ -577,7 +577,245 @@ footer .footer-inner {
             dinner gathering will be organized to promote networking in a relaxed setting.
         </p>
     </section>
+<section id="speakers">
+  <h2>Speakers</h2>
 
+  <div class="info-card" style="margin-top:1rem;">
+    <p style="margin:0;">
+      Speaker list (affiliation and title), sorted by last name.
+    </p>
+  </div>
+
+  <style>
+    .speakers-wrap{margin-top:1.2rem;}
+    .speakers-toolbar{
+      display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center;
+      margin:0.8rem 0 0.6rem 0;
+    }
+    .speakers-search{
+      flex:1 1 260px;
+      padding:0.55rem 0.7rem;
+      border:1px solid #e0dfd8;
+      border-radius:0.5rem;
+      background:#fff;
+      font-size:0.95rem;
+      outline:none;
+    }
+    .speakers-search:focus{border-color:rgba(36,64,85,0.45);}
+    .speakers-note{font-size:0.85rem;color:#666;}
+
+    .speaker-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:0.6rem;
+      margin-top:0.4rem;
+    }
+    .speaker-item{
+      background:#fff;
+      border:1px solid #e0dfd8;
+      border-radius:0.6rem;
+      padding:0.7rem 0.8rem;
+      line-height:1.35;
+    }
+    .speaker-item .name{
+      font-size:1.0rem;
+      color:var(--accent);
+    }
+    .speaker-item .affil{
+      font-size:0.85rem;
+      color:#666;
+      margin-top:0.1rem;
+    }
+    .speaker-item .title{
+      font-size:0.92rem;
+      color:#222;
+      margin-top:0.35rem;
+    }
+  </style>
+
+  <div class="speakers-wrap">
+    <div class="speakers-toolbar">
+      <input id="speakerSearch" class="speakers-search" type="search"
+             placeholder="Search by name, affiliation, or title">
+      <div class="speakers-note" id="speakerCount"></div>
+    </div>
+
+    <div class="speaker-list" id="speakerList"></div>
+
+    <!-- Speaker data: 28 entries, no email/payment, no date note, no department -->
+    <div id="speakersData" style="display:none;">
+
+      <div class="speaker-card" data-name="Xin Tong"
+           data-affil="The University of Hong Kong"
+           data-title="Stance Drift: How AI Middlemen Change What We Mean"></div>
+
+      <div class="speaker-card" data-name="Qian Wu"
+           data-affil="Hosei University"
+           data-title="A Freudian Structural Account of Large Language Model Training Philosophy"></div>
+
+      <div class="speaker-card" data-name="Masaaki Imaizumi"
+           data-affil="The University of Tokyo"
+           data-title="Analysis on dynamics of deep neural network with high-dimensional structure"></div>
+
+      <div class="speaker-card" data-name="Shi Chen"
+           data-affil="Waseda University"
+           data-title="Nonlinear independent component analysis by AI methods"></div>
+
+      <div class="speaker-card" data-name="Wen Zhou"
+           data-affil="New York University"
+           data-title="Optimal Comparison of Network Effects for Sparse Directed Networks with Dependent Edges"></div>
+
+      <div class="speaker-card" data-name="Junhui Wang"
+           data-affil="The Chinese University of Hong Kong"
+           data-title="Learning nonparametric graphical model on heterogeneous network-linked data"></div>
+
+      <div class="speaker-card" data-name="Yingying Li"
+           data-affil="Hong Kong University of Science and Technology"
+           data-title="Site Percolation Network Models for Event-Driven Systems"></div>
+
+      <div class="speaker-card" data-name="Wei Luo"
+           data-affil="Zhejiang University"
+           data-title="On non-redundant and linear operator-based nonlinear dimension reduction"></div>
+
+      <div class="speaker-card" data-name="Kengo Kato"
+           data-affil="Cornell University"
+           data-title="Statistical theory for Gromov-Wasserstein distances"></div>
+
+      <div class="speaker-card" data-name="Daisuke Kurisu"
+           data-affil="The University of Tokyo"
+           data-title="Geodesic Difference-in-Differences"></div>
+
+      <div class="speaker-card" data-name="Shosei Sakaguchi"
+           data-affil="The University of Tokyo"
+           data-title="The Identification Power of Combining Experimental and Observational Data for Distributional Treatment Effect Parameters"></div>
+
+      <div class="speaker-card" data-name="Xiaohua Yu"
+           data-affil="University of Göttingen"
+           data-title="Forecasting Food Prices with Machine Learning"></div>
+
+      <div class="speaker-card" data-name="Zudi Lu"
+           data-affil="City University of Hong Kong"
+           data-title="Statistical Random Forests Modelling for Nonlinear Time Series"></div>
+
+      <div class="speaker-card" data-name="Dacheng Xiu"
+           data-affil="University of Chicago"
+           data-title="Recurrent Neural Networks for Nonlinear Time Series"></div>
+
+      <div class="speaker-card" data-name="Catherine Chunling Liu"
+           data-affil="The Hong Kong Polytechnic University"
+           data-title="Changepoint detection under the heterogeneous factor strength"></div>
+
+      <div class="speaker-card" data-name="Andrey Vasnev"
+           data-affil="University of Sydney"
+           data-title="Corrected Forecast Combinations"></div>
+
+      <div class="speaker-card" data-name="Zhengjun Zhang"
+           data-affil="Beijing University of Chinese Medicine / University of Chinese Academy of Sciences / University of Wisconsin"
+           data-title="The Near-Optimality of Naïve Portfolios and the Reconciliation of Empirical Optimal Allocations"></div>
+
+      <div class="speaker-card" data-name="Jin-Ting Zhang"
+           data-affil="National University of Singapore"
+           data-title="Distance-Based ANOVA for Testing Equality of Distribution"></div>
+
+      <div class="speaker-card" data-name="Binyan Jiang"
+           data-affil="The Hong Kong Polytechnic University"
+           data-title="False Discovery Rate Control via Bi-Gaussian Mirrors"></div>
+
+      <div class="speaker-card" data-name="Wenjie Wang"
+           data-affil="Nanyang Technological University"
+           data-title="Cluster-Robust Inference for Quadratic Forms"></div>
+
+      <div class="speaker-card" data-name="Yichao Wu"
+           data-affil="University of Illinois Chicago"
+           data-title="Variable selection for partially linear models and partially global Fréchet regression"></div>
+
+      <div class="speaker-card" data-name="Chu-An Liu"
+           data-affil="Academia Sinica"
+           data-title="Least Squares Averaging Estimation of Additive Partially Linear Models with Imputed Covariates"></div>
+
+      <div class="speaker-card" data-name="Takeru Matsuda"
+           data-affil="The University of Tokyo"
+           data-title="A Study of Statistical Theory"></div>
+
+      <div class="speaker-card" data-name="Jinjia Zhou"
+           data-affil="Hosei University"
+           data-title="A Study on AI for Computer Vision"></div>
+
+      <div class="speaker-card" data-name="Guillaume Braun"
+           data-affil="RIKEN AIP"
+           data-title="Spectral Gradient Descent Mitigates Anisotropy-Driven Misalignment: A Case Study in Phase Retrieval"></div>
+
+      <div class="speaker-card" data-name="Ziang Liu"
+           data-affil="Hosei University"
+           data-title="Integrating Machine Learning and Optimization for Decision Making in Supply Chain Management"></div>
+
+      <div class="speaker-card" data-name="Ben Dai"
+           data-affil="The Chinese University of Hong Kong"
+           data-title="ReHLine: Regularized Composite ReLU-ReHU Loss Minimization with Linear Computation and Linear Convergence"></div>
+
+      <div class="speaker-card" data-name="Shunta Akiyama"
+           data-affil="CyberAgent, Inc."
+           data-title="A study on AI model"></div>
+
+    </div>
+
+    <script>
+      (function(){
+        const input = document.getElementById('speakerSearch');
+        const listEl = document.getElementById('speakerList');
+        const countEl = document.getElementById('speakerCount');
+
+        const speakers = Array.from(document.querySelectorAll('#speakersData .speaker-card'))
+          .map(el=>{
+            const name = (el.dataset.name || "").trim();
+            const parts = name.split(/\s+/).filter(Boolean);
+            const last = (parts.length ? parts[parts.length - 1] : "").toLowerCase();
+            const affil = (el.dataset.affil || "").trim();
+            const title = (el.dataset.title || "").trim();
+            return {
+              name, last, affil, title,
+              text: (name + " " + affil + " " + title).toLowerCase()
+            };
+          })
+          .sort((a,b)=>{
+            if(a.last < b.last) return -1;
+            if(a.last > b.last) return 1;
+            return a.name.localeCompare(b.name);
+          });
+
+        function escapeHtml(s){
+          return String(s)
+            .replaceAll("&","&amp;")
+            .replaceAll("<","&lt;")
+            .replaceAll(">","&gt;")
+            .replaceAll('"',"&quot;")
+            .replaceAll("'","&#039;");
+        }
+
+        function render(list){
+          listEl.innerHTML="";
+          list.forEach(s=>{
+            const d=document.createElement('div');
+            d.className="speaker-item";
+            d.innerHTML = `
+              <div class="name">${escapeHtml(s.name)}</div>
+              <div class="affil">${escapeHtml(s.affil)}</div>
+              <div class="title">${escapeHtml(s.title)}</div>`;
+            listEl.appendChild(d);
+          });
+          countEl.textContent = list.length + " speakers";
+        }
+
+        input.addEventListener('input',()=>{
+          const q=(input.value||"").toLowerCase().trim();
+          render(q ? speakers.filter(s=>s.text.includes(q)) : speakers);
+        });
+
+        render(speakers);
+      })();
+    </script>
+  </div>
+</section>
     <section id="topics">
         <h2>Topics of Interest</h2>
         <p>We welcome research contributions across a broad range of areas, including but not limited to:</p>
@@ -759,531 +997,6 @@ footer .footer-inner {
             </p>
         </div>
     </section>
-
-    <!-- Speakers (sorted by last name) -->
-<section id="speakers">
-  <h2>Speakers</h2>
-
-  <div class="info-card" style="margin-top:1rem;">
-    <p style="margin:0;">
-      Speaker list (affiliation and tentative title). Updates will be reflected as they become available.
-    </p>
-  </div>
-
-  <style>
-    .speakers-wrap{margin-top:1.2rem;}
-    .speakers-toolbar{
-      display:flex; flex-wrap:wrap; gap:0.6rem; align-items:center;
-      margin: 0.8rem 0 0.6rem 0;
-    }
-    .speakers-search{
-      flex: 1 1 260px;
-      padding: 0.55rem 0.7rem;
-      border: 1px solid #e0dfd8;
-      border-radius: 0.5rem;
-      background: #fff;
-      font-size: 0.95rem;
-      outline: none;
-    }
-    .speakers-search:focus{border-color: rgba(36,64,85,0.45);}
-    .speakers-note{font-size:0.85rem; color:#666; flex: 0 0 auto;}
-
-    .speaker-list{
-      margin-top: 0.4rem;
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 0.6rem;
-    }
-    .speaker-item{
-      background:#fff;
-      border:1px solid #e0dfd8;
-      border-radius:0.6rem;
-      padding: 0.55rem 0.7rem;
-      cursor:pointer;
-      text-align:left;
-      color: var(--accent);
-      font-size: 0.95rem;
-      line-height: 1.35;
-    }
-    .speaker-item:hover{background: rgba(0,0,0,0.02);}
-    .speaker-item[aria-pressed="true"]{
-      border-color: rgba(196, 88, 28, 0.55);
-      box-shadow: 0 0 0 2px rgba(196, 88, 28, 0.12);
-    }
-    .speaker-item .affil{
-      display:block;
-      margin-top: 0.15rem;
-      font-size: 0.85rem;
-      color:#666;
-    }
-
-    .speaker-detail{
-      margin-top: 1rem;
-      background:#ffffff;
-      border:1px solid #e0dfd8;
-      border-radius:0.6rem;
-      padding: 0.9rem 1rem;
-      display:none;
-    }
-    .speaker-detail.show{display:block;}
-
-    .speaker-detail .name{
-      font-size: 1.08rem;
-      color: var(--accent);
-      margin-bottom: 0.15rem;
-    }
-    .speaker-detail .affil{
-      font-size: 0.92rem;
-      color:#666;
-      margin-bottom: 0.55rem;
-    }
-    .speaker-detail .title{
-      font-size: 0.98rem;
-      color:#222;
-    }
-    .speaker-detail .title.tba{color:#777;}
-    .speaker-detail .meta{
-      margin-top:0.55rem;
-      font-size:0.82rem;
-      color:#777;
-    }
-    .speaker-detail .tags{
-      display:flex; flex-wrap:wrap; gap:0.35rem;
-      margin-top:0.55rem;
-    }
-    .speaker-detail .tag{
-      display:inline-block;
-      padding: 0.18rem 0.55rem;
-      border-radius:999px;
-      font-size:0.72rem;
-      background: rgba(196, 88, 28, 0.08);
-      color: var(--primary);
-      white-space:nowrap;
-    }
-
-    .speaker-detail .actions{
-      margin-top: 0.8rem;
-      display:flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .speaker-detail .btn{
-      appearance:none;
-      border: 1px solid #e0dfd8;
-      background:#fff;
-      border-radius: 999px;
-      padding: 0.35rem 0.7rem;
-      cursor:pointer;
-      font-size: 0.85rem;
-      color: var(--accent);
-    }
-    .speaker-detail .btn:hover{background: rgba(0,0,0,0.03);}
-  </style>
-
-  <div class="speakers-wrap">
-    <div class="speakers-toolbar">
-      <input id="speakerSearch" class="speakers-search" type="search"
-             placeholder="Search by name, affiliation, or title..." aria-label="Search speakers">
-      <div class="speakers-note" id="speakerCount"></div>
-    </div>
-
-    <!-- Clickable speaker list -->
-    <div class="speaker-list" id="speakerList"></div>
-
-    <!-- Detail panel (appears after click) -->
-    <div class="speaker-detail" id="speakerDetail" aria-live="polite"></div>
-
-    <!-- Data store (hidden) -->
-    <div id="speakersData" style="display:none;">
-
-      <!-- A -->
-      <div class="speaker-card"
-           data-id="akiyama-shunta"
-           data-last="Akiyama"
-           data-name="Shunta Akiyama"
-           data-affil="CyberAgent, Inc."
-           data-title="TBA"
-           data-tags=""
-           data-meta=""
-           data-text="shunta akiyama cyberagent inc tba"></div>
-
-      <!-- B -->
-      <div class="speaker-card"
-           data-id="braun-guillaume"
-           data-last="Braun"
-           data-name="Guillaume Braun"
-           data-affil="RIKEN AIP"
-           data-title="Spectral Gradient Descent Mitigates Anisotropy-Driven Misalignment: A Case Study in Phase Retrieval"
-           data-tags="Optimization"
-           data-meta=""
-           data-text="guillaume braun riken aip spectral gradient descent mitigates anisotropy-driven misalignment a case study in phase retrieval"></div>
-
-      <!-- D -->
-      <div class="speaker-card"
-           data-id="dai-ben"
-           data-last="Dai"
-           data-name="Ben Dai"
-           data-affil="The Chinese University of Hong Kong"
-           data-title="ReHLine: Regularized Composite ReLU-ReHU Loss Minimization with Linear Computation and Linear Convergence"
-           data-tags="Optimization"
-           data-meta=""
-           data-text="ben dai the chinese university of hong kong rehline regularized composite relu rehu loss minimization with linear computation and linear convergence"></div>
-
-
-      <!-- F -->
-
-      <div class="speaker-card"
-           data-id="feng-yang"
-           data-last="Feng"
-           data-name="Yang Feng"
-           data-affil="New York University"
-           data-title="Unsupervised Federated Multi-task Learning for Heterogeneous Tasks"
-           data-tags="Federated learning"
-           data-meta=""
-           data-text="yang feng new york university unsupervised federated multi-task learning for heterogeneous tasks"></div>
-
-      <!-- K -->
-      <div class="speaker-card"
-           data-id="kato-kengo"
-           data-last="Kato"
-           data-name="Kengo Kato"
-           data-affil="Cornell University"
-           data-title="Statistical theory for Gromov-Wasserstein distances"
-           data-tags="Optimal transport"
-           data-meta=""
-           data-text="kengo kato cornell university statistical theory for gromov-wasserstein distances"></div>
-
-      <div class="speaker-card"
-           data-id="kurisu-daisuke"
-           data-last="Kurisu"
-           data-name="Daisuke Kurisu"
-           data-affil="The University of Tokyo"
-           data-title="Geodesic Difference-in-Differences"
-           data-tags="Causal inference"
-           data-meta=""
-           data-text="daisuke kurisu the university of tokyo geodesic difference-in-differences"></div>
-
-      <!-- L -->
-      <div class="speaker-card"
-           data-id="liu-catherine"
-           data-last="Liu"
-           data-name="Catherine Chunling Liu"
-           data-affil="The Hong Kong Polytechnic University"
-           data-title="Changepoint detection under the heterogeneous factor strength"
-           data-tags="Changepoint"
-           data-meta=""
-           data-text="catherine chunling liu the hong kong polytechnic university changepoint detection under the heterogeneous factor strength"></div>
-
-      <div class="speaker-card"
-           data-id="liu-chu-an"
-           data-last="Liu"
-           data-name="Chu-An Liu"
-           data-affil="Academia Sinica"
-           data-title="Least Squares Averaging Estimation of Additive Partially Linear Models with Imputed Covariates"
-           data-tags="Econometrics"
-           data-meta=""
-           data-text="chu-an liu academia sinica least squares averaging estimation of additive partially linear models with imputed covariates"></div>
-
-
-      <div class="speaker-card"
-           data-id="liu-ziang"
-           data-last="Liu"
-           data-name="Ziang Liu"
-           data-affil="Hosei University"
-           data-title="TBA"
-           data-tags=""
-           data-meta=""
-           data-text="ziang liu hosei university"></div>
-
-      <div class="speaker-card"
-           data-id="luo-wei"
-           data-last="Luo"
-           data-name="Wei Luo"
-           data-affil="Zhejiang University"
-           data-title="On non-redundant and linear operator-based nonlinear dimension reduction"
-           data-tags="Dimension reduction"
-           data-meta=""
-           data-text="wei luo zhejiang university on non-redundant and linear operator-based nonlinear dimension reduction"></div>
-
-      <!-- M -->
-      <div class="speaker-card"
-           data-id="matsuda-takeru"
-           data-last="Matsuda"
-           data-name="Takeru Matsuda"
-           data-affil="University of Tokyo"
-           data-title="TBA"
-           data-tags=""
-           data-meta=""
-           data-text="takeru matsuda university of tokyo tba"></div>
-
-      <!-- S -->
-      <div class="speaker-card"
-           data-id="sakaguchi-shosei"
-           data-last="Sakaguchi"
-           data-name="Shosei Sakaguchi"
-           data-affil="University of Tokyo"
-           data-title="The Identification Power of Combining Experimental and Observational Data for Distributional Treatment Effect Parameters"
-           data-tags="Causal inference"
-           data-meta=""
-           data-text="shosei sakaguchi university of tokyo the identification power of combining experimental and observational data for distributional treatment effect parameters"></div>
-
-      <!-- T -->
-      <div class="speaker-card"
-           data-id="tong-xin"
-           data-last="Tong"
-           data-name="Xin Tong"
-           data-affil="The University of Hong Kong"
-           data-title="Stance Drift: How AI Middlemen Change What We Mean"
-           data-tags="AI,LLM"
-           data-meta=""
-           data-text="xin tong the university of hong kong stance drift how ai middlemen change what we mean"></div>
-
-      <!-- W -->
-      <div class="speaker-card"
-           data-id="wang-junhui"
-           data-last="Wang"
-           data-name="Junhui Wang"
-           data-affil="Chinese University of Hong Kong"
-           data-title="Learning nonparametric graphical model on heterogeneous network-linked data"
-           data-tags="Graphical models,Networks"
-           data-meta=""
-           data-text="junhui wang chinese university of hong kong learning nonparametric graphical model on heterogeneous network-linked data"></div>
-
-      <div class="speaker-card"
-           data-id="wang-wenjie"
-           data-last="Wang"
-           data-name="Wenjie Wang"
-           data-affil="Nanyang Technological University"
-           data-title="Cluster-Robust Inference for Quadratic Forms"
-           data-tags="Inference"
-           data-meta=""
-           data-text="wenjie wang nanyang technological university cluster-robust inference for quadratic forms"></div>
-
-      <div class="speaker-card"
-           data-id="wu-yichao"
-           data-last="Wu"
-           data-name="Yichao Wu"
-           data-affil="University of Illinois Chicago"
-           data-title="Variable selection for partially linear models and partially global Fréchet regression"
-           data-tags="Semiparametric"
-           data-meta=""
-           data-text="yichao wu university of illinois chicago variable selection for partially linear models and partially global frechet regression"></div>
-
-      <!-- X -->
-      <div class="speaker-card"
-           data-id="xiu-dacheng"
-           data-last="Xiu"
-           data-name="Dacheng Xiu"
-           data-affil="University of Chicago"
-           data-title="Recurrent Neural Networks for Nonlinear Time Series"
-           data-tags="Time series,Deep learning"
-           data-meta=""
-           data-text="dacheng xiu university of chicago recurrent neural networks for nonlinear time series"></div>
-
-      <!-- Y -->
-      <div class="speaker-card"
-           data-id="yu-xiaohua"
-           data-last="Yu"
-           data-name="Xiaohua Yu"
-           data-affil="University of Göttingen"
-           data-title="Forecasting Food Prices with Machine Learning"
-           data-tags="Forecasting,ML"
-           data-meta=""
-           data-text="xiaohua yu university of goettingen forecasting food prices with machine learning"></div>
-
-      <!-- Z -->
-      <div class="speaker-card"
-           data-id="zhang-jin-ting"
-           data-last="Zhang"
-           data-name="Jin-Ting Zhang"
-           data-affil="National University of Singapore"
-           data-title="Distance-Based ANOVA for Testing Equality of Distribution"
-           data-tags="Testing"
-           data-meta=""
-           data-text="jin-ting zhang national university of singapore distance-based anova for testing equality of distribution"></div>
-
-      <div class="speaker-card"
-           data-id="zhang-zhengjun"
-           data-last="Zhang"
-           data-name="Zhengjun Zhang"
-           data-affil="Beijing University of Chinese Medicine / University of Chinese Academy of Sciences / University of Wisconsin"
-           data-title="The Near-Optimality of Naïve Portfolios and the Reconciliation of Empirical Optimal Allocations"
-           data-tags="Finance"
-           data-meta=""
-           data-text="zhengjun zhang beijing university of chinese medicine university of chinese academy of sciences university of wisconsin the near-optimality of naive portfolios and the reconciliation of empirical optimal allocations"></div>
-
-      <div class="speaker-card"
-           data-id="zhou-wen"
-           data-last="Zhou"
-           data-name="Wen Zhou"
-           data-affil="New York University"
-           data-title="Optimal Comparison of Network Effects for Sparse Directed Networks with Dependent Edges"
-           data-tags="Networks"
-           data-meta=""
-           data-text="wen zhou new york university optimal comparison of network effects for sparse directed networks with dependent edges"></div>
-
-      <div class="speaker-card"
-           data-id="lu-zudi"
-           data-last="Lu"
-           data-name="Zudi Lu"
-           data-affil="City University of Hong Kong"
-           data-title="Statistical Random Forests Modelling for Nonlinear Time Series"
-           data-tags="Time series,RF"
-           data-meta=""
-           data-text="zudi lu city university of hong kong statistical random forests modelling for nonlinear time series"></div>
-
-      <div class="speaker-card"
-           data-id="zhou-jinjia"
-           data-last="Zhou"
-           data-name="Jinjia Zhou"
-           data-affil="Hosei University, Japan"
-           data-title="TBA"
-           data-tags=""
-           data-meta=""
-           data-text="jinjia zhou hosei university japan tba"></div>
-
-      <div class="speaker-card"
-           data-id="imaizumi-masaaki"
-           data-last="Imaizumi"
-           data-name="Masaaki Imaizumi"
-           data-affil="The University of Tokyo / RIKEN AIP"
-           data-title="Analysis on dynamics of deep neural network with high-dimensional structure"
-           data-tags="Deep learning"
-           data-meta="Note: not on 3/28"
-           data-text="masaaki imaizumi the university of tokyo riken aip analysis on dynamics of deep neural network with high-dimensional structure report other than 3 28"></div>
-
-    </div>
-
-    <script>
-      (function(){
-        const input = document.getElementById('speakerSearch');
-        const listEl = document.getElementById('speakerList');
-        const detailEl = document.getElementById('speakerDetail');
-        const countEl = document.getElementById('speakerCount');
-
-        const dataEls = Array.from(document.querySelectorAll('#speakersData .speaker-card'));
-
-        // Build speaker objects
-        const speakers = dataEls.map(el => ({
-          id: el.dataset.id,
-          last: (el.dataset.last || "").trim(),
-          name: (el.dataset.name || "").trim(),
-          affil: (el.dataset.affil || "").trim(),
-          title: (el.dataset.title || "").trim(),
-          tags: (el.dataset.tags || "").split(',').map(x=>x.trim()).filter(Boolean),
-          meta: (el.dataset.meta || "").trim(),
-          text: (el.dataset.text || "").toLowerCase()
-        }));
-
-        // Sort by last name, then full name, then id
-        speakers.sort((a,b)=>{
-          const la = a.last.toLowerCase(), lb = b.last.toLowerCase();
-          if(la < lb) return -1;
-          if(la > lb) return 1;
-          const na = a.name.toLowerCase(), nb = b.name.toLowerCase();
-          if(na < nb) return -1;
-          if(na > nb) return 1;
-          return (a.id||"").localeCompare(b.id||"");
-        });
-
-        function renderList(filtered){
-          listEl.innerHTML = "";
-          filtered.forEach(sp=>{
-            const btn = document.createElement('button');
-            btn.type = "button";
-            btn.className = "speaker-item";
-            btn.setAttribute("data-id", sp.id);
-            btn.setAttribute("aria-pressed", "false");
-            btn.innerHTML = `
-              <span class="name">${escapeHtml(sp.name)}</span>
-              <span class="affil">${escapeHtml(sp.affil)}</span>
-            `;
-            btn.addEventListener('click', ()=>selectSpeaker(sp.id, filtered));
-            listEl.appendChild(btn);
-          });
-          countEl.textContent = filtered.length + " speakers";
-        }
-
-        function selectSpeaker(id, currentFiltered){
-          // update pressed state
-          const btns = Array.from(listEl.querySelectorAll('.speaker-item'));
-          btns.forEach(b=>{
-            const pressed = b.getAttribute("data-id") === id;
-            b.setAttribute("aria-pressed", pressed ? "true" : "false");
-          });
-
-          const sp = currentFiltered.find(x=>x.id===id) || speakers.find(x=>x.id===id);
-          if(!sp) return;
-
-          const isTBA = !sp.title || sp.title.toLowerCase()==="tba";
-          const tagsHtml = sp.tags.length
-            ? `<div class="tags">${sp.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>`
-            : "";
-
-          const metaHtml = sp.meta ? `<div class="meta">${escapeHtml(sp.meta)}</div>` : "";
-
-          detailEl.innerHTML = `
-            <div class="name">${escapeHtml(sp.name)}</div>
-            <div class="affil">${escapeHtml(sp.affil)}</div>
-            <div class="title ${isTBA ? "tba" : ""}">${escapeHtml(isTBA ? "TBA" : sp.title)}</div>
-            ${metaHtml}
-            ${tagsHtml}
-            <div class="actions">
-              <button type="button" class="btn" id="speakerClose">Close</button>
-              <button type="button" class="btn" id="speakerNext">Next</button>
-            </div>
-          `;
-          detailEl.classList.add("show");
-
-          // actions
-          document.getElementById('speakerClose').addEventListener('click', ()=>{
-            detailEl.classList.remove("show");
-            btns.forEach(b=>b.setAttribute("aria-pressed","false"));
-          });
-          document.getElementById('speakerNext').addEventListener('click', ()=>{
-            const idx = currentFiltered.findIndex(x=>x.id===id);
-            if(idx === -1) return;
-            const next = currentFiltered[(idx+1) % currentFiltered.length];
-            selectSpeaker(next.id, currentFiltered);
-            // scroll a bit to keep panel visible
-            detailEl.scrollIntoView({behavior:"smooth", block:"nearest"});
-          });
-
-          // ensure detail is visible (esp. mobile)
-          detailEl.scrollIntoView({behavior:"smooth", block:"nearest"});
-        }
-
-        function escapeHtml(s){
-          return String(s)
-            .replaceAll("&","&amp;")
-            .replaceAll("<","&lt;")
-            .replaceAll(">","&gt;")
-            .replaceAll('"',"&quot;")
-            .replaceAll("'","&#039;");
-        }
-
-        function applyFilter(){
-          const q = (input.value || "").trim().toLowerCase();
-          const filtered = q ? speakers.filter(sp => sp.text.includes(q)) : speakers.slice();
-          renderList(filtered);
-
-          // If selected speaker is filtered out, hide detail
-          const pressed = listEl.querySelector('.speaker-item[aria-pressed="true"]');
-          if(!pressed){
-            detailEl.classList.remove("show");
-          }
-        }
-
-        input.addEventListener('input', applyFilter);
-
-        // initial
-        renderList(speakers);
-      })();
-    </script>
-  </div>
-</section>
-
-
     <section id="logistics">
         <h2>Logistics</h2>
 

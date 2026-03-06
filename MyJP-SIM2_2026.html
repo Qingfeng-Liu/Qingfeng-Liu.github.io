@@ -480,6 +480,122 @@ footer .footer-inner {
   }
 }
 
+        html {
+    scroll-padding-top: 150px;
+}
+
+section[id] {
+    scroll-margin-top: 150px;
+}
+
+
+.home-hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1.8rem;
+    align-items:center;
+}
+
+.hero-image-card{
+    position:relative;
+    width:100%;
+    border-radius:0;
+    overflow:hidden;
+}
+
+.hero-main-image{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.hero-image-actions{
+    position:absolute;
+    left:50%;
+    bottom:22px;
+    transform:translateX(-50%);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    width:calc(100% - 40px);
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 24px;
+    border-radius:999px;
+    font-weight:600;
+    text-decoration:none;
+    border:1px solid transparent;
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:#c79a44;
+    color:#1d2430;
+    box-shadow:0 10px 24px rgba(199,154,68,.28);
+}
+
+.btn-primary:hover{
+    background:#d7aa53;
+    transform:translateY(-1px);
+    text-decoration:none;
+}
+
+.btn-ghost{
+    background:rgba(255,255,255,.10);
+    color:#fff;
+    border-color:rgba(255,255,255,.35);
+    backdrop-filter:blur(6px);
+}
+
+.btn-ghost:hover{
+    background:rgba(255,255,255,.16);
+    text-decoration:none;
+}
+
+@media (max-width: 768px){
+    .home-hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image-actions{
+        bottom:14px;
+        width:calc(100% - 24px);
+        gap:10px;
+    }
+
+    .btn{
+        padding:11px 18px;
+        font-size:0.95rem;
+    }
+}
+        .hero-title-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.program-badge{
+    background:#c79a44;
+    color:#1d2430;
+    font-weight:700;
+    letter-spacing:.05em;
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:0.8rem;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    transition:.2s;
+}
+
+.program-badge:hover{
+    background:#d7aa53;
+    transform:translateY(-1px);
+}
     </style>
 </head>
 <body>
@@ -505,7 +621,7 @@ footer .footer-inner {
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="MyJP-SIM2_2026_program.html">Program</a></li>
                     <li><a href="#organizers">Organizers</a></li>
                     <li><a href="#venue">Venue</a></li>
                     <li><a href="#logistics">Logistics</a></li>
@@ -519,35 +635,43 @@ footer .footer-inner {
 <main>
 
     <section id="home">
-        <div class="hero">
-            <div>
-
+    <div class="hero home-hero">
+        <div>
+            <div class="hero-title-row">
                 <h1>MyJP-SIM²</h1>
-                <h2>Meeting You in JAPAN - Symposium on Innovative Mathematical Minds</h2>
+    <a class="program-badge" href="MyJP-SIM2_2026_program.html">PROGRAM</a>
 
-                <p class="hero-lead">
-                    March 26–29, 2026<br>
-                    Hosei University, Koganei Campus, Tokyo, Japan
-                </p>
+</div>
+            <h2>Meeting You in JAPAN - Symposium on Innovative Mathematical Minds</h2>
 
-                <p class="hero-info">
-                    MyJP-SIM² is an international symposium organized under the
-                    Transdisciplinary Econometrics & Data Science Seminar (<a
-                        class="teds-link" href="https://teds-datascience.github.io/seminars/" target="_blank">TEDS</a>),
-                    providing a compact forum for creative ideas in statistics,
-                    econometrics, data science, machine learning, and related fields.
-                </p>
+            <p class="hero-lead">
+                March 26–29, 2026<br>
+                Hosei University, Koganei Campus, Tokyo, Japan
+            </p>
 
-                <p class="pill">
-                    No registration fee · Partner hotel with discounted rate · Self-funded dinner gathering
-                </p>
-            </div>
+            <p class="hero-info">
+                MyJP-SIM² is an international symposium organized under the
+                Transdisciplinary Econometrics & Data Science Seminar
+                (<a class="teds-link" href="https://teds-datascience.github.io/seminars/" target="_blank">TEDS</a>),
+                providing a compact forum for creative ideas in statistics,
+                econometrics, data science, machine learning, and related fields.
+            </p>
 
-            <div class="hero-logo-wrapper">
-                <img alt="MyJP-SIM2 Logo" class="hero-logo" src="Figures/SIM2.png">
+            <p class="pill">
+                No registration fee · Partner hotel with discounted rate · Self-funded dinner gathering
+            </p>
+        </div>
+
+        <div class="hero-image-card">
+            <img alt="MyJP-SIM² visual" class="hero-main-image" src="Figures/SIM2.png">
+
+            <div class="hero-image-actions">
+                <a class="btn btn-primary" href="MyJP-SIM2_2026_program.html">Program Page</a>
+                <a class="btn btn-ghost" href="#venue">Venue</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Full-width Sakura Photo -->
     <!--
 <div class="fullwidth-image-wrapper">
@@ -577,7 +701,7 @@ footer .footer-inner {
             dinner gathering will be organized to promote networking in a relaxed setting.
         </p>
     </section>
-<section id="speakers">
+<!--<section id="speakers">
   <h2>Speakers</h2>
 
   <div class="info-card" style="margin-top:1rem;">
@@ -642,7 +766,7 @@ footer .footer-inner {
 
     <div class="speaker-list" id="speakerList"></div>
 
-    <!-- Speaker data: 28 entries, no email/payment, no date note, no department -->
+
     <div id="speakersData" style="display:none;">
 
       <div class="speaker-card" data-name="Xin Tong"
@@ -816,7 +940,7 @@ footer .footer-inner {
       })();
     </script>
   </div>
-</section>
+</section>-->
     <section id="topics">
         <h2>Topics of Interest</h2>
         <p>We welcome research contributions across a broad range of areas, including but not limited to:</p>

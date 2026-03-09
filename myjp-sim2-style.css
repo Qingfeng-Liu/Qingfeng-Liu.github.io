@@ -199,3 +199,32 @@ tbody tr:hover td{background:#fffcf5}
   .section{padding:56px 0}
   thead th, tbody td{padding:13px 12px}
 }
+.map-link{
+  display:inline-block;
+  padding:7px 11px;
+  background:#c79a44;
+  color:#1d2430;
+  font-weight:700;
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(199,154,68,.28);
+  transition:0.2s ease;
+}
+
+.map-link:hover{
+  background:#d7aa53;
+  transform:translateY(-1px);
+  text-decoration:none;
+}
+
+.map-link:visited{
+  color:#1d2430;
+}
+
+#venue{
+  padding-bottom:30px;
+}
+
+#schedule{
+  padding-top:30px;
+}

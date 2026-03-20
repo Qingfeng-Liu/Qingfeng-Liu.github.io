@@ -537,10 +537,83 @@
   padding: 6px 10px;
   border-radius: 10px;
 }
+/* ===== header split base ===== */
+.header-top,
+.header-bottom {
+  position: static;
+}
+
+/* ===== PC（元デザイン完全維持） ===== */
+@media (min-width: 821px) {
+
+  .header-bottom {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/* ===== スマホ ===== */
+@media (max-width: 820px) {
+
+  /* 親headerは固定しない */
+  .site-header {
+    position: static;
+    top: auto;
+    z-index: auto;
+    backdrop-filter: none;
+    background: transparent;
+    border-bottom: none;
+  }
+
+  /* 上段：完全固定（消えない） */
+  .header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: rgba(7, 17, 31, 0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* 上段に隠れないように下げる */
+  .header-bottom {
+    margin-top: 92px;
+    position: static;
+    background: rgba(7, 17, 31, 0.85);
+  }
+
+  /* ナビ切替 */
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  /* スマホ用ナビ整形 */
+  .header-bottom .nav {
+    gap: 16px 18px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+}
   </style>
 </head>
 <body>
   <header class="site-header">
+
+  <!-- 上段（スマホで固定したい部分） -->
+  <div class="header-top">
     <div class="container header-inner">
       <div style="display:flex; align-items:center; gap:16px;">
         <img src="Figures/DSELab_logo/DSELab_logo_02.webp"
@@ -552,21 +625,43 @@
         </div>
       </div>
 
-      <nav class="nav">
+      <!-- PCではここにナビを一体化させる -->
+      <nav class="nav nav-desktop">
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#conferences">Conferences</a>
         <a href="#projects">Projects</a>
-        <!--<a href="#members">Members</a>-->
         <a href="#contact">Contact</a>
-          <div class="lang-switch">
-  <a href="https://qingfeng-liu.github.io/index.html">JP</a>
-  <a href="https://qingfeng-liu.github.io/index_en.html">EN</a>
-  <a href="https://translate.google.com/translate?sl=auto&tl=zh-CN&u=https://qingfeng-liu.github.io/index.html" target="_blank">中文</a>
-</div>
+
+        <div class="lang-switch">
+          <a href="https://qingfeng-liu.github.io/index.html">JP</a>
+          <a href="https://qingfeng-liu.github.io/index_en.html">EN</a>
+          <a href="https://translate.google.com/translate?sl=auto&tl=zh-CN&u=https://qingfeng-liu.github.io/index.html" target="_blank">中文</a>
+        </div>
       </nav>
     </div>
-  </header>
+  </div>
+
+  <!-- 下段（スマホ専用ナビ） -->
+  <div class="header-bottom">
+    <div class="container">
+      <nav class="nav nav-mobile">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+        <div class="lang-switch">
+          <a href="https://qingfeng-liu.github.io/index.html">JP</a>
+          <a href="https://qingfeng-liu.github.io/index_en.html">EN</a>
+          <a href="https://translate.google.com/translate?sl=auto&tl=zh-CN&u=https://qingfeng-liu.github.io/index.html" target="_blank">中文</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+</header>
 
   <main>
     <section class="hero">

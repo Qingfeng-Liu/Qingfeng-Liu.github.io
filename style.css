@@ -1,0 +1,91 @@
+body{
+    margin:0;
+    font-family:"Noto Sans JP", sans-serif;
+    color:#222;
+}
+
+/* NAV */
+.nav{
+    position:fixed;
+    width:100%;
+    background:#fff;
+    border-bottom:1px solid #eee;
+    z-index:1000;
+}
+.nav-inner{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+}
+.nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    background:url("shikotsuko01.png") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+.hero h1{
+    font-size:3vw;
+}
+
+/* SECTION */
+.section{
+    padding:80px 10%;
+}
+.section.dark{
+    background:#111;
+    color:white;
+}
+
+/* GRID */
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+.card{
+    padding:20px;
+    border:1px solid #eee;
+    background:#fafafa;
+}
+
+/* LIST */
+.list{
+    line-height:2;
+}
+
+/* TEXT */
+.text{
+    line-height:1.9;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .grid-2{grid-template-columns:1fr;}
+    .cards{grid-template-columns:1fr;}
+    .hero h1{font-size:6vw;}
+}

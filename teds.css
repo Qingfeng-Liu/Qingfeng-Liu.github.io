@@ -800,3 +800,19 @@ div#HEADER { background: #fff; }
   text-decoration: underline;
 }
 
+/* ===== Academic polish ===== */
+
+body{
+    background:#ffffff;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* whitespace improvement */
+.section{
+    margin-top:80px;
+    margin-bottom:80px;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Qingfeng Liu | Data Science & Econometrics</title>
+<link rel="stylesheet" href="teds.css">
+
+<style>
+/* ===== Academic Minimal Layout ===== */
+
+body{
+    background:#ffffff;
+}
+
+/* ===== HERO ===== */
+.hero{
+    height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:url('Figures/shikotsuko01.png') center/cover;
+    color:white;
+}
+
+.hero h1{
+    font-size:3.5vw;
+    letter-spacing:0.1em;
+}
+
+.hero p{
+    font-size:1.2vw;
+    margin-top:1vw;
+}
+
+/* ===== SECTION ===== */
+.section{
+    width:70%;
+    margin:5vw auto;
+}
+
+.section-title{
+    font-size:1.5vw;
+    border-bottom:1px solid #ccc;
+    padding-bottom:0.5vw;
+    margin-bottom:2vw;
+    letter-spacing:0.1em;
+}
+
+/* ===== GRID ===== */
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3vw;
+}
+
+@media(max-width:768px){
+    .section{width:90%;}
+    .hero h1{font-size:6vw;}
+    .hero p{font-size:3vw;}
+    .grid-2{grid-template-columns:1fr;}
+}
+
+/* ===== CARD ===== */
+.card{
+    background:#fafafa;
+    padding:2vw;
+    border:1px solid #eee;
+}
+
+/* ===== TEXT ===== */
+.text{
+    line-height:1.9;
+    font-size:1.05vw;
+}
+
+@media(max-width:768px){
+    .text{font-size:3.5vw;}
+}
+
+/* ===== NAV ===== */
+.nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    gap:2vw;
+    padding:1vw;
+    z-index:1000;
+    border-bottom:1px solid #eee;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#333;
+    font-size:0.9vw;
+    letter-spacing:0.1em;
+}
+
+@media(max-width:768px){
+    .nav a{font-size:2.8vw;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+<a href="#about">ABOUT</a>
+<a href="#research">RESEARCH</a>
+<a href="#projects">PROJECTS</a>
+<a href="#news">NEWS</a>
+<a href="#contact">CONTACT</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<h1>DATA SCIENCE & ECONOMETRICS</h1>
+<p>Qingfeng Liu Laboratory | Hosei University</p>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+<div class="section-title">ABOUT</div>
+
+<div class="grid-2">
+<div>
+<img src="Figures/profile.jpeg" width="100%">
+</div>
+
+<div class="text">
+Qingfeng Liu is a Professor at Hosei University, working in
+Data Science, Econometrics, and Machine Learning.
+
+His research focuses on the integration of statistical learning
+and economic modeling, including federated learning,
+causal inference, and AI-driven economic systems.
+
+He has served as Associate Editor for JASA and published
+in leading journals such as JBES and Econometric Reviews.
+</div>
+</div>
+</div>
+
+<!-- RESEARCH -->
+<div class="section" id="research">
+<div class="section-title">RESEARCH</div>
+
+<div class="grid-2">
+<div class="card text">
+• Machine Learning & Econometrics<br>
+• Federated Learning<br>
+• AI-driven Economic Systems<br>
+• Causal Inference
+</div>
+
+<div class="card">
+<img src="Figures/ai_trend.png" width="100%">
+</div>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+<div class="section-title">PROJECTS</div>
+
+<div class="text">
+• Retail Advertising Prediction (BERT + DL)<br>
+• Stock Forecasting (TCN + LightGBM)<br>
+• AI Image Classification Systems<br>
+• Sentiment Analysis for Product Optimization
+</div>
+</div>
+
+<!-- NEWS -->
+<div class="section" id="news">
+<div class="section-title">NEWS</div>
+
+<div class="text">
+2026: Associate Editor, JASA<br>
+2024: INFORMS Journal publication<br>
+2024: Machine Collaboration (stat)<br>
+2023: SIGNATE Competition Award
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<div class="section-title">CONTACT</div>
+
+<div class="text">
+qliu[at]hosei.ac.jp<br>
+Hosei University, Tokyo
+</div>
+</div>
+
+</body>
+</html>

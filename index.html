@@ -1,983 +1,1125 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <link href="teds.css" rel="stylesheet">
-    <title>劉 慶豊, Qingfeng Liu, 刘庆丰, DATA SCIENCE & Econometrics Lab, 法政大学劉ゼミ</title>
-    <meta content="劉 慶豊, 刘庆丰, Qingfeng Liu, 機械学習, 人工知能, 計量経済学" name="keywords">
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Science & Econometrics Lab</title>
+  <meta name="description" content="Data Science と AI を中核に据えた高度な研究室ウェブページ" />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0c1830;
+      --panel: rgba(255,255,255,0.06);
+      --panel-strong: rgba(255,255,255,0.09);
+      --line: rgba(255,255,255,0.12);
+      --text: #edf4ff;
+      --muted: #a8b7cf;
+      --accent: #7dd3fc;
+      --accent-2: #93c5fd;
+      --accent-3: #a78bfa;
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --maxw: 1240px;
+    }
 
-    <!-- Google Fonts (existing + multilingual) -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=STIX+Two+Text&Merriweather&Oswald:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    * { box-sizing: border-box; }
 
-    <!-- Unified font stacks for JP / EN / ZH -->
-    <style>
-        :root {
-            /* JP first, then SC/TC, then platform fallbacks */
-            --base-font: "Noto Sans JP", "Noto Sans SC", "Noto Sans TC",
-                         "Hiragino Sans", "Yu Gothic",
-                         "Microsoft YaHei", "PingFang SC", "Heiti SC",
-                         "Meiryo", Arial, Helvetica, sans-serif;
-        }
-        html, body, p, span, a, li, td, th, div, h1, h2, h3, h4, h5, h6, strong, em, sup, sub, figcaption {
+    html {
+      scroll-behavior: smooth;
+    }
 
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-        /* Keep existing English display fonts where explicitly used */
-        .navbar-menu span,
-        .navbar-menu a span,
-        span[style*="Oswald"],
-        .p5 span[style*="Oswald"] {
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(125, 211, 252, 0.14), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.12), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.10), transparent 26%),
+        linear-gradient(180deg, #06101d 0%, #091527 48%, #07111f 100%);
+      color: var(--text);
+      line-height: 1.75;
+    }
 
-        }
-        [style*=" "] {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        }
-        strong { font-weight: 700; }
-    </style>
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 17, 31, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 78px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-top {
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .brand-title {
+      font-size: 21px;
+      letter-spacing: 0.03em;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-size: 14px;
+      color: var(--muted);
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav a:hover {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+  padding: 42px 0 42px;
+}
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.10);
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      color: #d7f3ff;
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 78px);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      max-width: 12.5em;
+    }
+
+    .hero .gradient {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      margin-top: 24px;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f8fbff 0%, #dfefff 100%);
+      color: #07111f;
+      box-shadow: 0 10px 35px rgba(255,255,255,0.14);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      font-size: 14px;
+      color: #d9e8fb;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .panel-inner {
+      padding: 28px;
+    }
+
+    .mini-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--accent);
+    }
+
+    .vision-title {
+      margin-top: 12px;
+      font-size: 28px;
+      line-height: 1.25;
+    }
+
+    .vision-text,
+    .card p,
+    .section-intro,
+    .about-text,
+    .contact-text,
+    .foot-note {
+      color: var(--muted);
+    }
+
+    .dual-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .metric {
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 24px;
+      background: linear-gradient(180deg, rgba(125, 211, 252, 0.14), rgba(255,255,255,0.03));
+      min-height: 160px;
+    }
+
+    .metric:nth-child(2) {
+      background: linear-gradient(180deg, rgba(167, 139, 250, 0.16), rgba(255,255,255,0.03));
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 38px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-box {
+      padding: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      margin: 10px 0 0;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card-grid-2,
+    .card-grid-3,
+    .card-grid-4 {
+      display: grid;
+      gap: 22px;
+    }
+
+    .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(125, 211, 252, 0.30);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .bar {
+      width: 62px;
+      height: 6px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-3));
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.28;
+    }
+
+    .list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .list-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 20px 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .list-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      background: rgba(125, 211, 252, 0.10);
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      color: #dff6ff;
+      flex: 0 0 auto;
+    }
+
+    .members-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.28), rgba(167, 139, 250, 0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 16px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 22px;
+    }
+
+    .contact-meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .meta-box {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .meta-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .identity-list {
+      margin: 22px 0 0;
+      padding-left: 20px;
+      color: #dce9fa;
+    }
+
+    .identity-list li {
+      margin-bottom: 8px;
+    }
+
+    .site-footer {
+      padding: 28px 0 42px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 24px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .pub-link {
+      color: #dff4ff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .pub-link:hover {
+      color: #ffffff;
+    }
+
+    .pub-block {
+      display: grid;
+      gap: 10px;
+    }
+
+    .pub-subtitle {
+      color: #dcecff;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .pub-item {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav {
+        gap: 16px 18px;
+      }
+
+      .card-grid-2,
+      .card-grid-3,
+      .card-grid-4,
+      .dual-box,
+      .contact-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+
+      .panel-inner,
+      .section-box,
+      .card {
+        padding: 22px;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(var(--maxw), calc(100% - 24px));
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .brand-title {
+        font-size: 18px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+    .lang-switch {
+  display: flex;
+  gap: 12px;
+}
+
+.lang-switch a {
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+  </style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JHSLM57DKB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JHSLM57DKB');
-</script>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <img src="Figures/DSELab_logo/DSELab_logo_02.webp"
+             alt="Lab Logo"
+             style="height:70px;">
+        <div class="brand">
+          <div class="brand-top">Research Laboratory</div>
+          <div class="brand-title">Data Science &amp; Econometrics Lab</div>
+        </div>
+      </div>
 
-
-<div id="navbar">
-    <table class="navbar-table">
-        <tr>
-            <td class="navbar-left">
-
-                <img alt="Hosei University" class="shield-logo-01" src="Figures/hosei_shield.png">
-                <img alt="DSELab" class="shield-logo-02" src="Figures/DSELab_logo/DSELab_logo_01.png">
-                <img alt="TEDS" class="shield-logo-03" src="Figures/TEDS_Emblem_light_2.png"
-                     style="padding-left: 0.2vw;">
-                <img alt="MyJP SIM2" class="shield-logo-03" src="icons/MyJP_SIM_2.png">
-
-            </td>
-
-            <td class="navbar-center">
-                <div class="navbar-menu-wrapper">
-                    <table class="navbar-menu">
-                        <tr>
-                            <td><a href="#MEMBERS">
-                                <div class="p5"><span
-                                        style="  text-transform: uppercase;">MEMBERS</span></div>
-                            </a></td>
-                            <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
-                                <div class="p5"><span
-                                        style="  text-transform: uppercase;">RESEARCH</span></div>
-                            </a></td>
-                            <td><a href="#NEWS">
-                                <div class="p5"><span
-                                        style="  text-transform: uppercase;">NEWS</span></div>
-                            </a></td>
-                            <td><a href="#CONFER">
-                                <div class="p5"><span
-                                        style="  text-transform: uppercase;">CONFERENCE</span></div>
-                            </a></td>
-                            <td><a href="https://ise-hp.ws.hosei.ac.jp">
-                                <div class="p5"><span
-                                        style="  text-transform: uppercase;">HOSEI</span></div>
-                            </a></td>
-                            <td><a href="#HEADER">
-                                <div class="p5"><span style="  text-transform: uppercase;">TOP</span>
-                                </div>
-                            </a></td>
-                        </tr>
-                    </table>
-                </div>
-            </td>
-
-            <td class="navbar-right"></td>
-        </tr>
-    </table>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#projects">Projects</a>
+        <!--<a href="#members">Members</a>-->
+        <a href="#contact">Contact</a>
+          <div class="lang-switch">
+  <a href="https://qingfeng-liu.github.io/index.html">JP</a>
+  <a href="https://qingfeng-liu.github.io/index_en.html">EN</a>
+  <a href="https://translate.google.com/translate?sl=auto&tl=zh-CN&u=https://qingfeng-liu.github.io/index.html" target="_blank">中文</a>
 </div>
-
-
-<!--================-->
-<!--　　HEADER　　-->
-<!--================-->
-<div id="HEADER" style="text-shadow: 0 2px 6px rgba(0,0,0,.4);">
-    <!--<img style="position: absolute; left: 100px; top: 100px; z-index: 1;" src="eo_hosei.jpg" width="200">-->
-    <!--style="border-style: solid; border-width: 0px; border-top-width: 5px; border-color: #EE490D;"-->
-    <div class="container2" id="next" style="text-align: left;">
-        <hr style="border: 1px solid transparent; margin-top: -10px; padding-top: 10px; padding-bottom: 0;">
-        <table border="0" class="main" width="90%">
-            <tr>
-                <td style="text-align:center;" width="100%">
-  <span style="font-size: 2.5vmax; font-weight: 700; display:inline-block;
-               margin-top: 7vmin; margin-bottom: 0.2vmin; line-height:1.5;">
-    <span style="color:#ffffff;">
-      データサイエンス＆計量経済学研究室<br>
-      <span style="  text-transform: uppercase;">
-        Data Science & Econometrics Laboratory
-      </span>
-    </span>
-  </span>
-                </td>
-
-            </tr>
-        </table>
-        <!--<p class="p8" style="text-align: right; width:70%; height: 20%;">
-            <font color=#ffffff style="font-size: 1.5vmax;">SINCE 2022</font>
-        </p>-->
-        <!--<img alt="SELab_logo" class="logo" src="/Figures/DSELab_logo/DSELab_logo_02.png">-->
-        <img alt="SELab_logo" class="logo" src="/Figures/DSELab_logo/DSELab_logo_02.webp">
-
-
-        <table border="0" class="main" width="90%">
-            <tr>
-                <td>
-                    <span style="font-size: 2vmax; font-weight: 700; text-align: center; display: block;
-             margin-top: 0.5vmin; margin-bottom: 1.5vmax; line-height: 1.8;">
-  <font color="#ffffff">
-    データサイエンス・機械学習・計量経済学<br>
-    社会科学＆自然科学に活用
-  </font>
-</span>
-
-                </td>
-            </tr>
-        </table>
-        <hr style="border: 1px solid transparent; margin-top: 0px; padding-top: 20px; padding-bottom: 0px;">
+      </nav>
     </div>
-</div>
+  </header>
 
-
-<div id="mobile-boost">
-<table style="width: 90%; margin: 0 auto; border-collapse: collapse; position: relative;">
-
-    <tr>
-        <td style="text-align: center; padding: 10px 0;">
-            <table style="margin:0 auto; text-shadow: 0 0.5px 1px rgba(0,0,0,.4); border-collapse:separate; border-spacing:3vw 0.5vw;">
-                <tr>
-                    <td><a href="#MEMBERS">
-                        <div class="p5" style="font-size: 1.2vmax;">
-                            <span style="  text-transform: uppercase;">MEMBERS</span>
-                        </div>
-                    </a></td>
-                    <td><a href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">
-                        <div class="p5" style="font-size: 1.2vmax;">
-                            <span style="  text-transform: uppercase;">RESEARCH</span>
-                        </div>
-                    </a></td>
-                    <td><a href="#NEWS">
-                        <div class="p5" style="font-size: 1.2vmax;">
-                            <span style="  text-transform: uppercase;">NEWS</span>
-                        </div>
-                    </a></td>
-                    <td><a href="#CONFER">
-                        <div class="p5" style="font-size: 1.2vmax;">
-                            <span style="  text-transform: uppercase;">CONFERENCE</span>
-                        </div>
-                    </a></td>
-                    <td><a href="https://ise-hp.ws.hosei.ac.jp">
-                        <div class="p5" style="font-size: 1.2vmax;">
-                            <span style="  text-transform: uppercase;">HOSEI</span>
-                        </div>
-                    </a></td>
-                </tr>
-                <tr>
-                    <td colspan="6" style="padding-top: 0px;">
-                        <table style="margin:0 auto; border-collapse:separate; border-spacing:3vw 0;">
-                            <tr>
-                                <td><a class="color1" href="https://qingfeng-liu.github.io/index.html">
-                                    <div style="font-size: 1.2vmax;">
-                                        <span style="  text-transform: uppercase;">JAPANESE</span>
-                                    </div>
-                                </a></td>
-                                <td><a class="color1" href="https://qingfeng-liu.github.io/index_en.html">
-                                    <div style="font-size: 1.2vmax;">
-                                        <span style="  text-transform: uppercase;">ENGLISH</span>
-                                    </div>
-                                </a></td>
-                                <td><a class="color1" href="https://qingfeng-liu.github.io/index_cn.html">
-                                    <div style="font-size: 1.2vmax;">
-                                        <span style="  text-transform: uppercase;">CHINESE</span>
-                                    </div>
-                                </a></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-
-
-<script>
-    // When the user scrolls down 20px from the top of the document, slide down the navbar
-    window.onscroll = function () {
-        scrollFunction()
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-100px";
-        }
-    }
-</script>
-
-<div>
-    <div>
-        <div class="anchor" id="NEWS"></div>
-        <div class="anchor" id="CONFER"></div>
-
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-            <table border="0" class="main" width="90%">
-                <tr>
-                    <td style="padding-top: 1.2vmax; padding-bottom: 1vmax;" width="100%">
-                        <table align="center" border="0" cellspacing="0" id="demo_1"
-                               style="font-size: 1.2vmax; text-justify:auto;"
-                               width="100%">
-                            <tbody>
-                            <tr>
-                                <td align="center" valign="top" width="0%"></td>
-                                <td align="left" style="border-bottom-width: 1px;
-                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="49%">
-                                    <img alt="shikotsuko" src="shikotsuko01.png"
-                                         style="border-bottom: 1px solid #c4c4ce;"
-                                         width="100%">
-                                    <!--src="shikotsuko2.png" alt="Lake Shikotsu"-->
-                                    <div style="line-height: 2vmax; padding: 15px">
-                                        <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                                            <p class="p5" style="font-size: 1.2vmax;">
-                                                お知らせ
-                                            </p>
-                                        </div>
-                                        <div style="padding-bottom: 15px">
-                                            2026/01/27 Associate Editor, 2026~2028 (<i><b>the Journal of the American Statistical Association </b></i>(JASA)) 担当.
-                                            <br>
-                                            2024/10/21 論文学術誌掲載決定 Gu, D., Liu, Q. and Zhang, X., (2024), Model
-                                            Averaging under Flexible Loss Functions.
-                                            <i>INFORMS Journal on Computing</i>.<br>
-                                            2024/04/01 論文学術誌掲載決定 Liu, Q. and Feng, Y., (2024), Machine
-                                            Collaboration.
-                                            <i>stat</i>. <a class="color1"
-                                                            href="https://arxiv.org/abs/2105.02569">PDF</a><br>
-                                            鴇田 優太 (2022年入ゼミ) <a class="color1"
-                                                                        href="https://signate.jp/competitions/1106">SIGNATEコンペティション<br></a>第７位入賞
-                                            (2023).<br>
-                                            2024/04/01 ゼミ募集 <a href="semi_intro.pdf">PDF <img alt="PAPER icon"
-                                                                                                  class="pdf-icon"
-                                                                                                  src="icons/iconmonstr-file-34-240.png"></a>
-                                            <a
-                                                    href="semi_intro.pptx">SLIDE <img alt="SLIDE icon" class="pdf-icon"
-                                                                                      src="icons/iconmonstr-school-27-240.png"></a>
-                                            <a
-                                                    href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img
-                                                    alt="SLIDE icon" class="pdf-icon"
-                                                    src="icons/iconmonstr-youtube-3-240.png"></a>
-                                            劉ゼミ3年生募集開始.<br>
-                                            <span id="dots2"></span><span
-                                                id="more2">
-                                                2022/04/03 ゼミ募集 <a href="semi_intro.pdf">PDF <img alt="PAPER icon"
-                                                                                                      class="pdf-icon"
-                                                                                                      src="icons/iconmonstr-file-34-240.png"></a> <a
-                                                href="semi_intro.pptx">SLIDE <img alt="SLIDE icon" class="pdf-icon"
-                                                                                  src="icons/iconmonstr-school-27-240.png"></a> <a
-                                                href="https://www.youtube.com/watch?v=E-qVjWBCrug">YouTube <img
-                                                alt="SLIDE icon" class="pdf-icon"
-                                                src="icons/iconmonstr-youtube-3-240.png"></a>
-                                                劉ゼミ3年生募集開始.<br>
-                                                2022/04/03 研究室ウェブページ公開. <br><br></span>
-                                            &#9656;
-                                            <u id="myBtn2" onclick="moreFunction()">Read more</u>
-                                        </div>
-                                    </div>
-
-                                    <!--<td width="6%" valign="top" align="center"></td>-->
-                                <td align="center" style="padding-bottom: 2vmax;" valign="top" width="2%">
-                                    <font color=#ffffff>abc</font></td>
-                                <td align="left" style="border-bottom-width: 1px;
-                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="49%">
-                                    <img alt="Global" src="Global01.png" style="border-bottom: 1px solid #c4c4ce;"
-                                         width="100%">
-                                    <div style="line-height: 2vmax; padding: 15px">
-                                        <div align="left"
-                                             style="font-size: 1.2vmax;   color: #EE490D;
-                                    text-transform: uppercase;">
-                                            <p class="p5" style="font-size: 1.2vmax;">
-                                                Forthcoming Meeting
-                                            </p>
-                                        </div>
-                                        <div style="padding-bottom: 15px; display: flex;">
-                                            <img alt="MyJP_SIM_2_icon" src="icons/MyJP_SIM_2.png"
-                                                 style="padding-top: 5px; height: 5.5em; margin-right: 10px;">
-                                            <img alt="MyJP_SIM_2_icon" src="Figures/DSELab_logo/DSELab_logo_01.png"
-     style="padding-top: 5px; height: 5.9em; margin-right: 10px; transform: translateY(-3px);">
-
-                                            <div>
-                                                <a class="color1" href="https://qingfeng-liu.github.io/MyJP-SIM2_2026.html"
-                                                   style="text-decoration:underline; font-size: 1.2vmax;">
-                                                    Meeting You in Japan — Symposium on Innovative Mathematical Minds
-                                                (<strong style="color: #040404">MyJP-SIM<sup>2</sup></strong>)</a>, organized under the
-                                                umbrella of TEDS. Tokyo, 2026.
-                                            </div>
-                                        </div>
-                                        <div align="left"
-                                             style="font-size: 1.2vmax;   color: #EE490D;
-                                    text-transform: uppercase;">
-                                            <p class="p5" style="font-size: 1.2vmax;">
-                                                研究会シリーズ
-                                            </p>
-                                        </div>
-
-                                        <div style="padding-bottom: 15px; display: flex; ">
-                                            <img alt="TEDS_Emblem_light" src="Figures/TEDS_Emblem_light.png"
-                                                 style="padding-top: 5px; height: 5.2em; margin-right: 10px;">
-                                            <div style="padding-bottom: 15px">
-
-                                                <a class="color1" href="https://teds-datascience.github.io/seminars/"
-                                                   style="text-decoration:underline; font-size: 1.2vmax;">
-                                                    Transdisciplinary Econometrics & Data Science Seminar</a>
-                                                （学際共創計量経済学・データサイエンスセミナー）
-                                            </div>
-                                        </div>
-
-                                        <div align="left"
-                                             style="font-size: 1.2vmax;   color: #EE490D;
-                                    text-transform: uppercase;">
-                                            <strong style="font-size: 1.2vmax; color: #333;">
-                                                The 2025 Workshop on Statistical Network Analysis and Beyond (SNAB
-                                                2025)</strong><br>
-                                        </div>
-                                        <div style="padding-bottom: 15px; display: flex; ">
-                                            <img alt="SNAB2025" src="Figures/SNAB2025_transparent.png"
-                                                 style="padding-top: 5px; height: 5.2em; margin-right: 10px;">
-                                            <div style="padding-bottom: 15px">
-
-                                                <a class="color1" href="https://yangfengstat.github.io/snab2025/"
-                                                   style="text-decoration:underline;">
-                                                    The SNAB 2025 will take place on June 2–4, 2025 at the renowned
-                                                    Hotel
-                                                    New Otani in Tokyo, Japan.
-                                                </a>
-                                            </div>
-                                        </div>
-
-
-                                        <div align="left"
-                                             style="font-size: 1.2vmax;   color: #EE490D;
-                                    text-transform: uppercase;">
-                                            <strong style="font-size: 1.2vmax; color: #333;">
-                                                ACIEK(winter) - IMIP2024
-                                            </strong>
-                                        </div>
-                                        <div style="padding-bottom: 15px; display: flex; ">
-                                            <img alt="ACIEK" src="Figures/logo_ACIEK_blue.png"
-                                                 style="padding-top: 5px; height: 5.2em; margin-right: 10px;">
-                                            <img alt="IMIP" src="Figures/IMIP.png"
-                                                 style="padding-top: 5px; height: 5.2em; margin-right: 10px;">
-                                        </div>
-
-
-                                        <div style="padding-bottom: 15px">
-                                            Opening Speech 劉 慶豊
-                                        </div>
-                                        <div class="same_height">
-                                            <img alt="ACIEK_01" src="Opening_Speech_2024_IMIP.jpeg"
-                                                 style="border-bottom: 1px solid #c4c4ce;"
-                                            ><img alt="ACIEK_02" src="Opening_Speech_02.jpeg"
-                                                  style="border-bottom: 1px solid #c4c4ce;"
-                                        >
-                                        </div>
-                                        <div style="line-height: 2vmax; padding-left: 15px">
-                                        </div>
-                                    </div>
-
-                                <td align="center" valign="top" width="0%"></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+          <div class="eyebrow">Data Science • Econometrics • Machine Learning • AI</div>
+          <h1>
+            <span class="gradient">Data Science</span> と
+            <span class="gradient">AI</span> を中核に、
+            社会科学と自然科学を横断する知を創出する研究室
+          </h1>
+          <p class="lead">
+            本研究室は、データサイエンス、機械学習、計量経済学を基盤として、
+            社会科学と自然科学の双方に応用可能な理論と実証研究を推進する。
+            AI と統計の融合により、現実の複雑な問題に対する分析、予測、意思決定支援を目指す。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">研究業績を見る</a>
+              <a class="btn btn-primary" href="https://nrid.nii.ac.jp/en/nrid/1000060378958/">科研費プロジェクト</a>
+              <a class="btn btn-primary" href="#projects">DSELabプロジェクト</a>
+            <a class="btn btn-secondary" href="#contact">研究室に連絡する</a>
+          </div>
+          <div class="chip-list">
+            <span class="chip">Artificial Intelligence</span>
+            <span class="chip">Data Science</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Econometrics</span>
+            <span class="chip">Causal Inference</span>
+            <span class="chip">Federated Learning</span>
+            <span class="chip">Financial Data Science</span>
+            <span class="chip">Digital Transformation</span>
+          </div>
         </div>
 
-
-    </div>
-</div>
-
-
-<div>
-    <h1></h1>
-    <div class="anchor" id="MEMBERS"></div>
-    <div style="width:100%; height:100%;">
-        <h2>Faculty Member</h2>
-
-        <table border="0" class="main" style="font-size: 1.5vmax;" width="90%">
-            <tr>
-                <td style="padding-top: 0pt; padding-right: 2vw; vertical-align: top;" width="25%">
-                    <img alt="Prof. Qingfeng Liu" src="Figures/profile.jpeg" width="100%">
-                </td>
-                <td style="padding-left: 1vw; vertical-align: top;">
-                <td style="padding-left: 1vw; vertical-align: top;">
-                    <div style="width: 100%; font-size: 1.2vmax; line-height: 1.8; text-align: left;">
-                        <strong>教　授</strong> 　劉 慶豊 <a class="color1" href="CV.pdf"> <img alt="CV icon"
-                                                                                              class="pdf-icon"
-                                                                                              src="icons/iconmonstr-cv-4-240.png"></a><br>
-                        <a class="color1" href="https://ise-hp.ws.hosei.ac.jp/">法政大学理工学部経営システム工学科
-                            学科主任</a><br>
-                        <strong>出　身</strong> 　中国内モンゴル自治区<br>
-                        <strong>学　位</strong> 　京都大学経済学博士<br>
-                        <strong>学　会</strong> 　Associate Editor, <b><i>the Journal of the American Statistical Association </i>(JASA)</b><br>
-                        <strong>研　究</strong>　
-                        <a class="color1" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ&hl=en">学術論文
-                            <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a><br>
-                        <strong>趣　味</strong> 　バトミントン・園芸<br>
-                        <strong>E-mail</strong> 　qliu[at]hosei.ac.jp
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <h1></h1>
-        <h2>Things in a Human Brain</h2>
-        <div class="ai-section">
-
-            <!-- Column 1: One Image -->
-            <div class="ai-column">
-                <img alt="MY THOUGHTS" class="ai-img-trimmed" src="Figures/my_thoughts.png">
+        <div class="hero-side">
+          <div class="panel">
+            <div class="panel-inner" style="text-align:center;">
+              <img src="Figures/DSELab_logo/DSELab_logo_02.webp" alt="DSE Lab Logo" style="max-height:120px; margin:auto;">
             </div>
+          </div>
 
-            <!-- Column 2: Text (DX・AI Business) -->
-            <div class="ai-column" style="font-size: 1.2vmax; line-height: 1.8; text-align: center;">
-                <div class="ai-title-container">
-                    <div class="ai-title">
-                        <h1 class="pdf-title">
-                            学習資料
-                        </h1>
-                    </div>
-                </div>
-                <div class="ai-text" style="font-size: 1.2vmax;">
-                    <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit"><img alt="CV icon"
-                                                                                            class="pdf-icon"
-                                                                                            src="icons/iconmonstr-save-as-lined-240.png">
-                        ML・AI資料コード集
-                    </a>
-                    <br>
-                    <a href="AI_Driven_Business.pdf"><img alt="SLIDE icon" class="pdf-icon"
-                                                          src="icons/iconmonstr-school-27-240.png"> DX・AI Edge</a>
-                    <br>
-                    <a href="My_Thoughts/Federated_Learning_Lecture.pdf"><img alt="SLIDE icon" class="pdf-icon"
-                                                                              src="icons/iconmonstr-school-27-240.png">
-                        Federated Learning</a>
-                    <br>
-                    <a href="My_Thoughts/Double_Descents.pdf"><img alt="PAPER icon"
-                                                                   class="pdf-icon"
-                                                                   src="icons/iconmonstr-file-34-240.png"> Why Double
-                        Descent?</a>
-                </div>
+          <div class="panel">
+            <div class="panel-inner">
+              <div class="mini-title">Research Vision</div>
+              <div class="vision-title">理論・実証・AI実装を結ぶ研究拠点</div>
+              <p class="vision-text">
+                数理的基盤に支えられた分析と AI による知的処理を統合し、
+                経済・産業・社会に資する高水準の研究と教育を展開する。
+              </p>
             </div>
+          </div>
 
-            <!-- Column 3: One Image -->
-            <div class="ai-column">
-                <img alt="MY MIND" class="ai-img-trimmed" src="Figures/my_mind.png">
+          <div class="dual-box">
+            <div class="metric">
+              <strong>AI</strong>
+              <div>機械学習、知的モデル、意思決定支援、責任ある設計</div>
             </div>
-
-            <!-- Column 4: Text (My Mind) -->
-            <div class="ai-column" style="font-size: 1.2vmax; line-height: 1.8; text-align: center;">
-                <div class="ai-title-container">
-                    <div class="ai-title">
-                        <h1 class="pdf-title">
-                            詩文雑感
-                        </h1>
-                    </div>
-                </div>
-                <div class="ai-text">
-                    <a href="https://qingfeng-liu.github.io/Analects.html"><img alt="Analects icon" class="pdf-icon"
-                                                                                src="icons/iconmonstr-book-26-240.png">
-                        論語新篇</a>
-                    <br>
-                    <a href="https://qingfeng-liu.github.io/poems.html"><img alt="Poem icon" class="pdf-icon"
-                                                                             src="icons/iconmonstr-cat-6-240.png"> 凡璞瑰珍集</a>
-                    <br>
-                    <a href="My_Thoughts/Reconstructing_Quantum_Mechanics_under_the_ZDESP_Framework.pdf"><img
-                            alt="Poem icon" class="pdf-icon"
-                            src="icons/iconmonstr-cat-6-240.png"> ChatGPTとのQM対談</a>
-
-                </div>
+            <div class="metric">
+              <strong>DS</strong>
+              <div>計量分析、推論、計算、大規模データ解析、実証研究</div>
             </div>
+          </div>
 
+          <div class="panel">
+            <div class="panel-inner">
+              <div class="mini-title">Core Message</div>
+              <p class="foot-note">高度な方法論、学際的発想、実践的有効性、国際的視野。</p>
+            </div>
+          </div>
         </div>
-        <h1></h1>
-        <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-            <tr>
-                <td>
-                    <div style="width: 100%; display: flex; justify-content: center;">
-                        <div style="margin-top: -1vmax; font-size: 1.1vmax; line-height: 1.8; text-justify: auto;">
-                            <div>
-                                <main style="font-size: 1.2vmax; text-align: justify;">
-                                    <strong>劉 慶豊 教授</strong>は, データサイエンス, 計量経済学, 機械学習（人工知能の基盤となる技術）の分野で研究を行っている．
-                                    現在, 法政大学理工学部の教授を務め, ニューヨーク大学グローバル公衆衛生学院の共同研究員も兼任する．
-                                    京都大学で経済学博士号を取得後に渡米し, Princeton Universityでポストドクトラル研究員として研究に従事した．
-                                    これまでに京都大学および米国Columbia Universityで客員教授・訪問研究者として研究を行った経験がある．
-                                    研究成果は<span style="font-style: italic;">Journal of Business & Economic Statistics</span>,
-                                    <span style="font-style: italic;">Econometrics Journal</span>, <span
-                                        style="font-style: italic;">Econometric Reviews</span>などの国際誌に掲載され,
-                                    <span style="font-style: italic;"><b>the Journal of the American Statistical Association</b></span>や<span
-                                        style="font-style: italic;">Asia-Pacific Financial Markets</span>のAssociate Editorを務めている．
-                                    受賞歴として, 新潟大学経済学会賞, <span style="font-style: italic;">ACIEK(Winter)-IMIP 2024</span>の傑出した貢献賞や<span
-                                        style="font-style: italic;">IEOM 2024</span>東京大会の優秀会議賞などがある．近年は, 機械学習と計量経済学の融合を進め,
-                                    日本学術振興会（JSPS）の科学研究費と全国銀行学術研究振興財団の学術研究助成を得て, 連合学習（Federated
-                                    Machine Learning）というプライバシー保護を重視した経済分析の新しい機械学習の手法を探求している．
-                                    劉教授は, データサイエンスの分野で, 経済問題の解決と産業技術の発展のために, 機械学習と計量経済学の手法を開発し,
-                                    IoT, ビッグデータ解析, フィンテックなどを活用して, 第四次産業革命とSociety5.0に向けたソリューションを提供することを目指している．
-                                </main>
-                            </div>
+      </div>
+    </section>
 
-                            <p style="font-weight: 500; font-size: 1.2vmax;">
-                                <strong>信　条</strong>　やると決めたら楽しくやる, やるからには必ず極める．<br>
-                                <strong>預　言</strong>　日本経済は匠の精神で蘇る．<br>
-                                <strong>心　得</strong>　対立するより, 仲間に迎える．
-                            </p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-</div>
-
-
-<h1></h1>
-
-<div class="ai-section">
-
-    <!-- Column 1: One Image -->
-    <div class="ai-column">
-        <img alt="AI Trend" class="ai-img-trimmed" src="Figures/ai_trend.png">
-    </div>
-
-    <!-- Column 2: Text (DX・AI Business) -->
-    <div class="ai-column">
-        <div class="ai-title-container">
-            <div class="ai-title">
-                <a href="AI_Driven_Business.pdf">
-                    <h1 class="title">
-                        <img alt="SLIDE icon" src="icons/iconmonstr-school-27-240.png">DX・AI Edge
-                    </h1>
-                </a>
-            </div>
+    <section id="about">
+      <div class="container panel section-box">
+        <div class="about-grid">
+          <div>
+            <div class="mini-title">About the Lab</div>
+            <h2 class="section-title">データサイエンスと計量経済学を核とする研究室</h2>
+          </div>
+          <div class="about-text">
+            <img src="Qingfeng_Liu.jpg" alt="Professor" style="width:160px; border-radius:12px; float:right; margin-left:20px;">
+            劉 慶豊教授は、データサイエンス、計量経済学、機械学習の分野で研究を行っている。
+            現在、法政大学理工学部教授を務め、ニューヨーク大学グローバル公衆衛生学院の共同研究員も兼任する。
+            京都大学で経済学博士号を取得後、Princeton University でポストドクトラル研究員として研究に従事した。
+            研究成果は Journal of Business &amp; Economic Statistics、Econometrics Journal、Econometric Reviews などの国際誌に掲載され、
+            the Journal of the American Statistical Association や Asia-Pacific Financial Markets の Associate Editor を務めている。
+            近年は、機械学習と計量経済学の融合を進め、連合学習をはじめとするプライバシー保護型の新しい経済分析手法を探究している。
+          </div>
         </div>
-        <div class="main" style="font-size: 1.2vmax; text-align: center;">
-            経営意思決定支援<br>営業サポート<br>市場開発個人化<br>Supply Chain<br>
-            採用・労務人事<br>顧客対応自動化<br>財務最適化<br>AI生産システム
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">Research Areas</div>
+            <h2 class="section-title">Data Science と AI が交差する研究領域</h2>
+          </div>
+          <div class="section-intro">
+            理論構築から応用実装までを一体として捉え、予測、説明、推論、最適意思決定の各側面を深く追究する。
+          </div>
         </div>
+
+        <div class="card-grid-2">
+          <article class="card">
+            <div class="bar"></div>
+            <h3>AI-Driven Econometrics</h3>
+            <p>計量経済学と人工知能を接続し、予測・因果推論・意思決定支援を統合した新しい分析枠組みを探究する。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Machine Learning &amp; Statistical Learning</h3>
+            <p>高次元データ、非線形性、不規則な観測構造に対応するための学習理論と統計的推測手法を開発する。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Federated Learning &amp; Privacy</h3>
+            <p>分散環境における協調学習を通じて、プライバシー保護と高精度分析の両立を目指す。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Data Science for Industry and Society</h3>
+            <p>金融、産業、医療、社会システムなどに対し、データ駆動型の機械学習モデルを適用する。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="news">
+  <div class="container panel section-box">
+
+    <div class="mini-title">News</div>
+    <h2 class="section-title">お知らせ</h2>
+
+    <div class="list">
+
+      <!-- visible -->
+      <div class="list-item">
+        <div>
+          2026/01/27　Serve as Associate Editor, 2026 ~ , <i>the Journal of the American Statistical Association (JASA)</i>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div>
+          2024/10/21　Gu, D., Liu, Q. and Zhang, X. (2024), Model Averaging under Flexible Loss Functions, <i>INFORMS Journal on Computing</i>
+        </div>
+      </div>
+
+      <div class="list-item">
+        <div>
+          2024/04/01　Liu, Q. and Feng, Y. (2024), Machine Collaboration, <i>stat</i> <a href="https://arxiv.org/abs/2105.02569" class="pub-link">PDF</a>
+        </div>
+      </div>
+
+      <!-- hidden -->
+      <div id="more-news" style="display:none;">
+
+        <div class="list-item">
+          <div>
+            2023　鴇田 優太（2022年入ゼミ） <a href="https://signate.jp/competitions/1106" class="pub-link">SIGNATEコンペティション 第7位入賞</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div>
+            2024/04/01　ゼミ募集 <a href="semi_intro.pdf" class="pub-link">PDF</a> / <a href="semi_intro.pptx" class="pub-link">SLIDE</a> / <a href="https://www.youtube.com/watch?v=E-qVjWBCrug" class="pub-link">YouTube</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div>
+            2022/04/03　ゼミ募集 <a href="semi_intro.pdf" class="pub-link">PDF</a> / <a href="semi_intro.pptx" class="pub-link">SLIDE</a> / <a href="https://www.youtube.com/watch?v=E-qVjWBCrug" class="pub-link">YouTube</a>
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div>
+            2022/04/03　研究室ウェブページ公開
+          </div>
+        </div>
+
+      </div>
+
+      <!-- toggle -->
+      <div style="text-align:right; margin-top:10px;">
+        <u id="toggle-btn" style="cursor:pointer;" onclick="toggleNews()">Read more</u>
+      </div>
+
     </div>
 
-    <!-- Column 3: Two Images Stacked -->
-    <div class="ai-column">
-        <img alt="What is AI" src="Figures/ChatGPT.png">
-        <img alt="ML Graphic" src="Figures/img-course_detail02.png">
-    </div>
-
-    <!-- Column 4: Text (ML・AI Toolkit) -->
-    <div class="ai-column">
-        <div class="ai-title-container">
-            <div class="ai-title">
-                <a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit">
-                    <h1 class="title">
-                        <img alt="icon" class="github-icon" src="icons/iconmonstr-github-3-240.png">
-                        ML・AI Tools
-                    </h1>
-                </a>
-            </div>
-        </div>
-        <div class="main" style="font-size: 1.2vmax; text-align: center;">
-            DNN深層学習<br>強化学習<br>ML因果推論<br>LLMテキスト処理
-            <br>ChatGPT Script<br>OpenAI API<br>画像認識異常検知<br>Semantic Search
-        </div>
-    </div>
-
-</div>
-
-
-<h1></h1>
-<h2>Awards 受賞など</h2>
-<div>
-    <table border="0" class="main" width="90%">
-        <tr>
-            <td style="padding-top: 0vmax; padding-bottom: 1vmax;" width="100%">
-                <table align="center" border="0" cellspacing="0" id="demo_2"
-                       style="font-size: 1.2vmax; text-justify:auto;"
-                       width="100%">
-                    <tbody>
-                    <tr>
-                        <!--<td align="center" valign="top" width="3%"></td> -->
-                        <td align="left" style="border-bottom-width: 1px;
-                            border-style: solid; border-color: #c4c4c4; border-width: 1px;" valign="top" width="100%">
-                            <div class="same_height">
-                                <img alt="ACIEK_01" src="ACIEK_Award.jpg"
-                                     style="border-bottom: 1px solid #c4c4ce;"
-                                ><img alt="tokita_compe" src="tokita_compe.png"
-                                      style="border-bottom: 1px solid #c4c4ce;"
-                            >
-                            </div>
-                            <figure class="figure-caption">
-                                <figcaption class="left">ACIEK(winter)-IMIP2024<br>Outstanding Contribution Award
-                                </figcaption>
-                                <figcaption class="right">鴇田 優太 (2022年入ゼミ) <a class="color1"
-                                                                                      href="https://signate.jp/competitions/1106">
-                                    <br>SIGNATEコンペティション第７位入賞 (2023)</a>
-                                </figcaption>
-                            </figure>
-
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </table>
-</div>
-
-
-<div>
-    <h1></h1>
-    <h2>Research Project and Undergraduate Thesis 研究プロジェクトと卒業論文</h2>
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-
-    <tr>
-        <td>
-            <div style="font-size: 1.5vmax; color: #EE490D;
-                                align: left; text-transform: uppercase;">
-                <p class="p5" style="font-size: 1.2vmax;">
-                    2025年度学部・大学院合同研究プロジェクト
-                </p>
-            </div>
-            <div style="line-height: 2vmax; padding-bottom: 15px">
-                [1] BERT由来特徴量とディープラーニングを用いた小売業の広告効果予測モデルの構築, 青柳匠真, 山本未来, 前澤佳月, 李仁鵬.
-                <a class="color1" href="./Thesis/2025project/2025project01.pdf">
-                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">
-                </a>
-                <a class="color1" href="./Thesis/2025project/2025project01slide.pdf">
-                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">SLIDE
-                </a><br>
-
-                [2] LoRA, Stable DiffusionとEfficientNetを用いたコーディネート推薦モデルの開発, モウスウショ, 梶原裕, 有賀爽玲.
-                <a class="color1" href="./Thesis/2025project/2025project02.pdf">
-                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">
-                </a>
-                <a class="color1" href="./Thesis/2025project/2025project02slide.pdf">
-                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">SLIDE
-                </a><br>
-
-                [3] 株価予測におけるTCN-LightGBM複合モデルの適用, 中居幸太, 李径直, 菓子尾伊織.
-                <a class="color1" href="./Thesis/2025project/2025project03.pdf">
-                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">
-                </a>
-                <a class="color1" href="./Thesis/2025project/2025project03slide.pdf">
-                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">SLIDE
-                </a><br>
-
-                [4] 衣料品レビューの感情予測と商品の改善点分析, 王心月, 目黒海人, 宮寺奈緒美.
-                <a class="color1" href="./Thesis/2025project/2025project04.pdf">
-                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">
-                </a>
-                <a class="color1" href="./Thesis/2025project/2025project04slide.pdf">
-                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png">SLIDE
-                </a><br>
-            </div>
-        </td>
-    </tr>
-</table>
-
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2025年度卒業予定者
-                    </p>
-                </div>
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] 高次元不均衡データのためのData-Driven Switch Loss法, 勝山智仁, 眞室貴滉, (2026).
-                    <!-- <a class="color1" href=""> <img alt="PAPER icon" class="pdf-icon"
-                                                                 src="icons/iconmonstr-file-34-240.png"></a> --><br>
-
-                    [2] 画像識別AIモデルによるリサイクル資源分類アプリケーション開発, 滝口桜子, 中山莉菜, 長沢花梨, (2026).
-                    <!-- <a class="color1" href=""> <img alt="PAPER icon" class="pdf-icon"
-                                                                 src="icons/iconmonstr-file-34-240.png"></a> --><br>
-
-                    [3] AI生成画像識別のための転移学習モデルの検証とフェイク画像検出への応用, 今村秀虎, 小柳颯聖, (2026).
-                    <!-- <a class="color1" href=""> <img alt="PAPER icon" class="pdf-icon"
-                                                                 src="icons/iconmonstr-file-34-240.png"></a> --><br>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2024年度卒業生
-                    </p>
-                </div>
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] 機械学習を用いた順位予測モデルの構築と精度評価：競馬予測を事例として, 岩﨑照英, 田中幸佑, 徳丸颯太,
-                    (2025).
-                    <a class="color1" href="20X4026_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
-
-                    [2] テクニカル指標と株価変動の関連性に関する実証分析, 久保村光汰, (2025).
-                    <a class="color1" href="abstract_tokita_2023.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                            src="icons/iconmonstr-file-34-240.png"></a><br>
-
-                    [3] サッカーにおける戦略策定を目的としたデータ分析, 下村勘太, 林雅哉, (2025).
-                    <a class="color1" href="21X4029_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
-
-                    [4] 機械学習を用いた不正会計の検出と分析, 田嶋俊紀, 平田円, (2025).
-                    <a class="color1" href="21X4037_1.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                 src="icons/iconmonstr-file-34-240.png"></a><br>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2023年度卒業生
-                    </p>
-                </div>
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] 汎化性能を考慮した食品パッケージの画像分類, 鴇田優太, (2024). <a class="color1"
-                                                                                         href="abstract_tokita_2023.pdf">
-                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">概要</a>
-                    <a class="color1" href="thesis_tokita.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                     src="icons/iconmonstr-file-34-240.png">本文</a>
-                    <img alt="SLIDE icon" class="pdf-icon" src="icons/iconmonstr-school-27-240.png"><a class="color1"
-                                                                                                       href="beamer_tokita.pdf">SLIDE</a><br>
-                    [2] 会計監査における分析的手続への不正検知を目的とした機械学習手法の導入可能性, 舟橋純平, (2024). <a
-                        class="color1" href="202302.pdf"></a>
-                    <br>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2022年度卒業生
-                    </p>
-                </div>
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] ツイートデータとインデックスデータを併用した株価騰落予測, 黒崎地大, 山田壮雄, (2023). <a
-                        class="color1"
-                        href="202201.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                src="icons/iconmonstr-file-34-240.png"></a><br>
-                    [2] 人口問題におけるテレワーク推進と移住支援策がもたらす効果について, 大島宙也, 前田翼, (2023). <a
-                        class="color1"
-                        href="202202.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                src="icons/iconmonstr-file-34-240.png"></a><br>
-                    [3] サッカーの勝敗要因に関するデータ分析 伊藤光毅, 鹿野紘樹, 北林良太, (2023). <a class="color1"
-                                                                                                      href="202203.pdf">
-                    <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png"></a>
-                    <br>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-<div>
-    <h1></h1>
-    <h2>Master's Thesis 修士論文</h2>
-
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax; color: #EE490D;
-                            align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2025年度修士課程修了生
-                    </p>
-                </div>
-
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-
-                    [1] 企業デジタル化要因の因果効果の推定：GLDAGモデルと連合学習の応用, 李 星宇,
-                    (2026修了予定).
-                    <!--<a class="color1" href="2025_li_gldag.pdf">
-                        <img alt="PAPER icon" class="pdf-icon" src="icons/iconmonstr-file-34-240.png">
-                    </a><br>-->
-
-                </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2024年度修士課程修了生
-                    </p>
-                </div>
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-                    [1] Adversarial Autoencoderを用いたVertical Federated Learning, 黄凱, (2025修了).
-                    <a class="color1" href="2024_huang.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                  src="icons/iconmonstr-file-34-240.png"></a><br>
-
-                    [2] Differential Machine Learningを用いたラフ・ボラティリティモデルのキャリブレーション, 黒崎地大,
-                    (2025修了).
-                    <a class="color1" href="2024_kurosaki.pdf"> <img alt="PAPER icon" class="pdf-icon"
-                                                                     src="icons/iconmonstr-file-34-240.png"></a>
-                    <br>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<div>
-    <h1></h1>
-    <h2>卒業生・修了生就職先</h2>
-
-    <table border="0" class="main" style="font-size: 1.2vmax" width="90%">
-        <tr>
-            <td>
-                <div style="font-size: 1.5vmax;   color: #EE490D;
-                                    align: left; text-transform: uppercase;">
-                    <p class="p5" style="font-size: 1.2vmax;">
-                        2024年度卒業生・修士課程修了生就職先
-                    </p>
-                </div>
-                <div style="line-height: 2vmax; padding-bottom: 15px">
-                    大手監査法人, 警視庁, フィナンシャルアドバイザリー会社, 大手地方銀行, 大手カード会社, 大手総合コンサルティング会社, 大手自動車メーカーデータサイエンス部門, 大手IT企業ソフトウエア開発部門(Job採用)
-                    <br>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-<div>
-    <h1></h1>
-    <h2>指導した博士号取得者</h2>
-
-    <table border="0" class="main" style="font-size: 1.2vmax; width: 90%; margin: 0 auto;">
-        <tr>
-            <td>
-                <div style="line-height: 1.6;">
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <tr>
-                            <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
-                                <img alt="Qingsong Yao" src="qingsong_yao.jpg"
-                                     style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
-                            </td>
-                            <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
-                                <strong style="font-size: 1.1em; color: #333;">Dr. Qingsong YAO</strong><br>
-                                経済学博士号取得<br>
-                                修了後の所属: Assistant Professor, Louisiana State University, USA.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 15px 10px 15px 0; vertical-align: top; width: 120px;">
-                                <img alt="Ziyan Zhao" src="ziyan_zhao.jpg"
-                                     style="width: 100px; height: auto; border-radius: 60%; object-fit: cover;">
-                            </td>
-                            <td style="padding: 15px; vertical-align: top; border-bottom: 1px solid #ddd;">
-                                <strong style="font-size: 1.1em; color: #333;">Dr. Ziyan ZHAO</strong><br>
-                                商学博士号取得<br>
-                                修了後の所属: Research Fellow, Nanyang Technological University, Singapore.
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<h1></h1>
-
-
-
-
-    <div class="container2 hero" id="end">
-  <div class="hero__inner">
-    <div class="hero__title">Data Science & Econometrics Laboratory – DSELab</div>
-    <p class="hero__subtitle">Swim freely in the open sea.</p>
-    <hr class="hero__rule">
-    <p class="hero__meta" style="color: #ffffff;">
-      <a class="hero__subsubtitle" style="color: #FFFFFF" href="mailto:tedsseminars@gmail.com">E-mail: tedsseminars@gmail.com</a>
-    </p>
   </div>
-</div>
+</section>
+
+<script>
+function toggleNews() {
+  var more = document.getElementById("more-news");
+  var btn = document.getElementById("toggle-btn");
+
+  if (more.style.display === "none") {
+    more.style.display = "block";
+    btn.innerText = "Read less";
+  } else {
+    more.style.display = "none";
+    btn.innerText = "Read more";
+  }
+}
+</script>
+    <section id="conferences">
+      <div class="container panel section-box">
+        <div class="mini-title">International Meetings</div>
+        <h2 class="section-title">主催する国際会議</h2>
+        <div class="card-grid-3">
+          <article class="card" style="text-align:center;">
+            <a href="https://qingfeng-liu.github.io/MyJP-SIM2_2026.html">
+              <img src="/icons/MyJP_SIM_2_W.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
+              <p>MyJP-SIM² 2026 International Symposium</p>
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>TEDs Seminar</h3>
+            <p>
+              学際共創計量経済学・データサイエンスセミナーとして、
+              研究交流と国際発信を継続的に推進する。
+              <a class="pub-link" href="https://teds-datascience.github.io/seminars/">Seminar Page</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>SNAB 2025</h3>
+            <p>
+              Statistical Network Analysis and Beyond に関連する国際研究会の企画・運営に参画する。
+              <a class="pub-link" href="https://yangfengstat.github.io/snab2025/">Official Website</a>
+            </p>
+          </article>
+
+          <!--<article class="card">
+            <h3>Student Research Projects</h3>
+            <p>
+              広告効果予測、画像生成推薦、株価予測、レビュー感情分析など、
+              AI とデータ分析を活用した共同研究プロジェクトを実施している。
+            </p>
+          </article> -->
+        </div>
+      </div>
+    </section>
+    <section id="awards">
+  <div class="container panel section-box">
+
+    <div class="mini-title">Awards</div>
+    <h2 class="section-title">受賞・実績</h2>
+
+    <div class="card-grid-2">
+
+      <!-- Card 1 -->
+      <article class="card" style="text-align:center;">
+        <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
+          <img src="ACIEK_Award.jpg"
+               alt="ACIEK Award"
+               style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <h3 style="font-size:18px;">
+          ACIEK (Winter)-IMIP 2024
+        </h3>
+
+        <p>
+          Outstanding Contribution Award
+        </p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" style="text-align:center;">
+        <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
+          <img src="tokita_compe.png"
+               alt="SIGNATE Competition"
+               style="width:100%; height:100%; object-fit:cover; object-position:center;">
+        </div>
+
+        <h3 style="font-size:18px;">
+          鴇田 優太（2022年入ゼミ）
+        </h3>
+
+        <p>
+          <a href="https://signate.jp/competitions/1106" class="pub-link">
+            SIGNATEコンペティション 第7位入賞（2023）
+          </a>
+        </p>
+      </article>
+
     </div>
-<script>
-    function myFunction() {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("myBtn");
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "Read more";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Read less";
-            moreText.style.display = "inline";
-        }
-    }
-</script>
-<script>
-    function moreFunction() {
-        var dots2 = document.getElementById("dots2");
-        var moreText2 = document.getElementById("more2");
-        var btnText2 = document.getElementById("myBtn2");
+  </div>
+</section>
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">Projects &amp; Output</div>
+            <h2 class="section-title">研究成果・学位・就職実績</h2>
+          </div>
+          <div class="section-intro">
+            研究室の成果を、研究プロジェクト、卒業論文、修士論文、博士号取得者、就職実績という形で整理して示す。
+          </div>
+        </div>
 
-        if (dots2.style.display === "none") {
-            dots2.style.display = "inline";
-            btnText2.innerHTML = "Read more";
-            moreText2.style.display = "none";
-        } else {
-            dots2.style.display = "none";
-            btnText2.innerHTML = "Read less";
-            moreText2.style.display = "inline";
-        }
-    }
-</script>
+        <div class="list">
 
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
-        type="text/javascript">
-</script>
+          <div class="list-item">
+            <div class="list-number">01</div>
+            <div class="pub-block">
+              <div class="pub-subtitle">2025年度学部・大学院合同研究プロジェクト</div>
 
+              <div class="pub-item">
+                [1] BERT由来特徴量とディープラーニングを用いた小売業の広告効果予測モデルの構築
+                <a class="pub-link" href="./Thesis/2025project/2025project01.pdf">PDF</a>
+                <a class="pub-link" href="./Thesis/2025project/2025project01slide.pdf">SLIDE</a>
+              </div>
 
+              <div class="pub-item">
+                [2] LoRA, Stable DiffusionとEfficientNetを用いたコーディネート推薦モデルの開発
+                <a class="pub-link" href="./Thesis/2025project/2025project02.pdf">PDF</a>
+                <a class="pub-link" href="./Thesis/2025project/2025project02slide.pdf">SLIDE</a>
+              </div>
+
+              <div class="pub-item">
+                [3] 株価予測におけるTCN-LightGBM複合モデルの適用
+                <a class="pub-link" href="./Thesis/2025project/2025project03.pdf">PDF</a>
+                <a class="pub-link" href="./Thesis/2025project/2025project03slide.pdf">SLIDE</a>
+              </div>
+
+              <div class="pub-item">
+                [4] 衣料品レビューの感情予測と商品の改善点分析
+                <a class="pub-link" href="./Thesis/2025project/2025project04.pdf">PDF</a>
+                <a class="pub-link" href="./Thesis/2025project/2025project04slide.pdf">SLIDE</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="list-number">02</div>
+            <div class="pub-block">
+              <div class="pub-subtitle">卒業論文</div>
+
+              <div class="pub-item">
+                2025年度卒業予定者<br>
+                [1] 高次元不均衡データのためのData-Driven Switch Loss法, 勝山智仁, 眞室貴滉, (2026).<br>
+                [2] 画像識別AIモデルによるリサイクル資源分類アプリケーション開発, 滝口桜子, 中山莉菜, 長沢花梨, (2026).<br>
+                [3] AI生成画像識別のための転移学習モデルの検証とフェイク画像検出への応用, 今村秀虎, 小柳颯聖, (2026).
+              </div>
+
+              <div class="pub-item">
+                2024年度卒業生<br>
+                [1] 機械学習を用いた順位予測モデルの構築と精度評価：競馬予測を事例として
+                <a class="pub-link" href="20X4026_1.pdf">PDF</a><br>
+                [2] テクニカル指標と株価変動の関連性に関する実証分析
+                <a class="pub-link" href="abstract_tokita_2023.pdf">PDF</a><br>
+                [3] サッカーにおける戦略策定を目的としたデータ分析
+                <a class="pub-link" href="21X4029_1.pdf">PDF</a><br>
+                [4] 機械学習を用いた不正会計の検出と分析
+                <a class="pub-link" href="21X4037_1.pdf">PDF</a>
+              </div>
+
+              <div class="pub-item">
+                2023年度卒業生<br>
+                [1] 汎化性能を考慮した食品パッケージの画像分類
+                <a class="pub-link" href="abstract_tokita_2023.pdf">概要</a>
+                <a class="pub-link" href="thesis_tokita.pdf">本文</a>
+                <a class="pub-link" href="beamer_tokita.pdf">SLIDE</a><br>
+                [2] 会計監査における分析的手続への不正検知を目的とした機械学習手法の導入可能性
+              </div>
+
+              <div class="pub-item">
+                2022年度卒業生<br>
+                [1] ツイートデータとインデックスデータを併用した株価騰落予測
+                <a class="pub-link" href="202201.pdf">PDF</a><br>
+                [2] 人口問題におけるテレワーク推進と移住支援策がもたらす効果について
+                <a class="pub-link" href="202202.pdf">PDF</a><br>
+                [3] サッカーの勝敗要因に関するデータ分析
+                <a class="pub-link" href="202203.pdf">PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="list-number">03</div>
+            <div class="pub-block">
+              <div class="pub-subtitle">修士論文</div>
+
+              <div class="pub-item">
+                2025年度修士課程修了予定者<br>
+                [1] 企業デジタル化要因の因果効果の推定：GLDAGモデルと連合学習の応用, 李 星宇, (2026修了予定).
+              </div>
+
+              <div class="pub-item">
+                2024年度修士課程修了生<br>
+                [1] Adversarial Autoencoderを用いたVertical Federated Learning
+                <a class="pub-link" href="2024_huang.pdf">PDF</a><br>
+                [2] Differential Machine Learningを用いたラフ・ボラティリティモデルのキャリブレーション
+                <a class="pub-link" href="2024_kurosaki.pdf">PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="list-number">04</div>
+            <div class="pub-block">
+              <div class="pub-subtitle">博士号取得者</div>
+
+              <div class="pub-item">
+                Dr. Qingsong YAO<br>
+                経済学博士号取得<br>
+                修了後の所属: Assistant Professor, Louisiana State University, USA.
+              </div>
+
+              <div class="pub-item">
+                Dr. Ziyan ZHAO<br>
+                商学博士号取得<br>
+                修了後の所属: Research Fellow, Nanyang Technological University, Singapore.
+              </div>
+            </div>
+          </div>
+
+          <div class="list-item">
+            <div class="list-number">05</div>
+            <div class="pub-block">
+              <div class="pub-subtitle">就職状況</div>
+              <div class="pub-item">
+                業生・修士課程修了生就職先<br>
+                大手監査法人、警視庁、フィナンシャルアドバイザリー会社、
+                大手地方銀行、大手カード会社、大手総合コンサルティング会社、
+                大手自動車メーカーデータサイエンス部門、
+                大手IT企業ソフトウエア開発部門(Job採用) 、中高教員
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--<section id="members">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">People</div>
+            <h2 class="section-title">知的野心を共有する研究コミュニティ</h2>
+          </div>
+          <div class="section-intro">
+            数理的厳密性、創造性、国際性を重視しながら、教員・学生・共同研究者が有機的に連携する。
+          </div>
+        </div>
+
+        <div class="card-grid-4">
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Professor / Principal Investigator</h3>
+            <p>研究全体の方向性、理論的深化、学際的展開を主導する。</p>
+          </article>
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Doctoral Researchers</h3>
+            <p>高度な方法論、証明、アルゴリズム開発を担う研究中核層。</p>
+          </article>
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Graduate Students</h3>
+            <p>実証分析、実験設計、応用研究を通じて先端テーマに挑戦する。</p>
+          </article>
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Collaborators</h3>
+            <p>国際共同研究や産学連携を通じて知の広がりを形成する。</p>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="panel section-box">
+          <div class="mini-title">Contact</div>
+          <h2 class="section-title">未来を形づくる研究に参加する</h2>
+          <div class="contact-text">
+            Data Science、AI、機械学習、因果推論、計量経済学、最適化、分散学習などに関心のある学生・研究者・共同研究パートナーを歓迎する。
+          </div>
+          <div class="contact-meta">
+            <div class="meta-box">
+              <div class="meta-label">Email</div>
+              <div>qliu[at]hosei.ac.jp</div>
+            </div>
+            <div class="meta-box">
+              <div class="meta-label">Location</div>
+              <div>法政大学理工学部経営システム工学科</div>
+            </div>
+            <div class="meta-box">
+              <div class="meta-label">Research Topics</div>
+              <div>AI, Data Science, Econometrics, Causal Inference, Federated Learning</div>
+            </div>
+            <div class="meta-box">
+              <div class="meta-label">Open to</div>
+              <div>Students, Collaborators, Visiting Researchers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel section-box">
+  <div class="mini-title">Lab Identity</div>
+  <h2 class="section-title">Data. Intelligence. Insight.</h2>
+
+  <div class="contact-text">
+    本研究室は、Data Science、Artificial Intelligence、計量経済学を基盤として、
+    理論・実証・実装を統合した研究を推進する。
+    数理的厳密性に裏付けられた分析と、AIによる高度な知的処理を融合し、
+    経済・産業・社会における複雑な問題に対する新しい解決手法を探究する。
+    また、国際的な研究ネットワークと連携し、学術的貢献と社会的インパクトの双方を重視する。
+  </div>
+
+  <ul class="identity-list">
+    <li>Data Science・AI・Econometricsを統合した研究教育</li>
+    <li>理論研究と実データ分析の両立</li>
+    <li>国際共同研究・学会発信の積極的推進</li>
+    <li>学生主体の研究プロジェクトと実装重視の教育</li>
+  </ul>
+</div>
+      </div>
+    </section>
+  </main>
+
+  <section>
+    <div class="container panel section-box" style="text-align:center;">
+      <h2 class="section-title">Affiliations</h2>
+      <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
+        <a href="https://ise-hp.ws.hosei.ac.jp/research/">
+          <img src="Figures/hosei_shield_transparent.png" alt="Hosei" style="height:81px; width:85px;">
+        </a>
+        <a href="https://teds-datascience.github.io/seminars/">
+          <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" style="height:90px; transform: translateY(-3px);">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© Data Science &amp; Econometrics Lab</div>
+      <div>Advanced research in intelligent systems, machine learning, and data science</div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -537,6 +537,76 @@
   padding: 6px 10px;
   border-radius: 10px;
 }
+/* =========================
+   header split control
+   ========================= */
+
+/* PC */
+@media (min-width: 821px) {
+  .header-bottom {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/* smartphone */
+@media (max-width: 820px) {
+
+  /* 親headerは固定しない */
+  .site-header {
+    position: static;
+    top: auto;
+    z-index: auto;
+    backdrop-filter: none;
+    background: transparent;
+    border-bottom: none;
+  }
+
+  /* 上段だけ常に残す */
+  .header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: rgba(7, 17, 31, 0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+.header-top {
+  height: 110px;
+}
+  /* 上段の高さぶんだけ下げる */
+  .header-bottom {
+    margin-top: 110px;
+    position: static;
+    background: rgba(7, 17, 31, 0.85);
+  }
+
+  /* 上段の中のPC用navは消す */
+  .nav-desktop {
+    display: none;
+  }
+
+  /* 下段にスマホ用navを出す */
+  .nav-mobile {
+    display: flex;
+  }
+
+  /* スマホ用navの見た目 */
+  .header-bottom .nav {
+    gap: 16px 18px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+}
   </style>
 </head>
 <body>
@@ -789,7 +859,7 @@ function toggleNews() {
       <div class="container panel section-box">
         <div class="mini-title">International Meetings</div>
         <h2 class="section-title">International Conferences Organized by the Lab</h2>
-        <div class="card-grid-3">
+        <div class="card-grid-3" style="margin-top:10px;">
           <article class="card" style="text-align:center;">
             <a href="https://qingfeng-liu.github.io/MyJP-SIM2_2026.html">
               <img src="/icons/MyJP_SIM_2_W.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
@@ -831,7 +901,7 @@ function toggleNews() {
     <div class="mini-title">Awards</div>
     <h2 class="section-title">Awards & Achievements</h2>
 
-    <div class="card-grid-2">
+    <div class="card-grid-2" style="margin-top:10px;">
 
       <!-- Card 1 -->
       <article class="card" style="text-align:center;">

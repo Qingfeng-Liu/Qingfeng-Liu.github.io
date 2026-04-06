@@ -604,6 +604,12 @@
   }
 }
   </style>
+  <script>
+    const hour = new Date().getHours();
+    if (hour >= 0 && hour < 5) {
+      window.location.href = 'index_dark.html';
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">

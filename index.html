@@ -7,17 +7,17 @@
   <meta name="description" content="Data Science と AI を中核に据えた高度な研究室ウェブページ" />
   <style>
     :root {
-      --bg: #f8f9fa;
+      --bg: #f4f6fb;
       --bg-soft: #ffffff;
-      --panel: rgba(0,0,0,0.05);
-      --panel-strong: rgba(0,0,0,0.08);
-      --line: rgba(0,0,0,0.1);
-      --text: #1a1a1a;
-      --muted: #6c757d;
-      --accent: #007bff;
-      --accent-2: #0056b3;
-      --accent-3: #6610f2;
-      --shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+      --panel: rgba(35,41,70,0.04);
+      --panel-strong: rgba(35,41,70,0.08);
+      --line: rgba(35,41,70,0.10);
+      --text: #232946;
+      --muted: #6e738d;
+      --accent: #2196f3;
+      --accent-2: #1565c0;
+      --accent-3: #00bcd4;
+      --shadow: 0 18px 60px rgba(35,41,70,0.08);
       --radius-xl: 30px;
       --radius-lg: 22px;
       --radius-md: 16px;
@@ -39,8 +39,65 @@
     }
 
     a {
-      color: inherit;
+      color: var(--accent-2) !important;
+      font-weight: 700;
       text-decoration: none;
+      border-radius: 8px;
+      padding: 2px 6px;
+      transition: color 0.18s, background 0.18s, box-shadow 0.18s;
+      font-weight: 500;
+      background: none;
+      box-shadow: none;
+      outline: none;
+      display: inline-block;
+    }
+    a:hover, a:focus {
+      color: var(--accent-2) !important;
+      background: none;
+      box-shadow: none;
+      text-decoration: underline;
+    }
+    /* ボタンや特殊リンクは上書き */
+    .btn, .btn-primary, .btn-secondary {
+      color: var(--accent-2) !important;
+      background: #fff;
+      border-radius: 16px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+      padding: 0 22px;
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s, background 0.25s, border-color 0.25s;
+      border: none;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: var(--accent-2) !important;
+      border: none;
+    }
+    .btn:hover, .btn:focus {
+      color: #fff !important;
+      background: var(--accent-2);
+      border: none;
+      transform: translateY(-2px);
+    }
+    .pub-link, .card-link {
+      color: var(--accent-2) !important;
+      background: none;
+      border-radius: 8px;
+      padding: 2px 6px;
+      font-weight: 700;
+      text-decoration: none !important;
+      transition: color 0.18s, background 0.18s, box-shadow 0.18s;
+      box-shadow: none;
+    }
+    .pub-link:hover, .card-link:hover, .pub-link:focus, .card-link:focus {
+      color: var(--accent-2) !important;
+      background: none;
+      box-shadow: none;
+      text-decoration: underline !important;
     }
 
     img {
@@ -135,14 +192,14 @@
 
     .hero h1 {
       margin: 0;
-      font-size: clamp(38px, 6vw, 78px);
+      font-size: clamp(32px, 4vw, 60px);
       line-height: 1.06;
       letter-spacing: -0.03em;
       max-width: 12.5em;
     }
 
     .hero .gradient {
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+      background: linear-gradient(90deg, #3a7bd5 0%, #274472 60%, #1e2a38 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -288,7 +345,7 @@
 
     .section-title {
       margin: 10px 0 0;
-      font-size: clamp(28px, 4vw, 42px);
+      font-size: clamp(22px, 3vw, 32px);
       line-height: 1.2;
     }
 
@@ -335,7 +392,7 @@
 
     .card h3 {
       margin: 0 0 12px;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1.28;
     }
 
@@ -405,7 +462,7 @@
     .identity-list {
       margin: 22px 0 0;
       padding-left: 20px;
-      color: #dce9fa;
+      color: var(--text);
     }
 
     .identity-list li {
@@ -889,7 +946,7 @@ function toggleNews() {
         <div class="card-grid-3" style="margin-top:10px;">
           <article class="card" style="text-align:center;">
             <a href="https://qingfeng-liu.github.io/MyJP-SIM2_2026.html">
-              <img src="/icons/MyJP_SIM_2.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
+              <img src="icons/MyJP_SIM_2.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
               <p>MyJP-SIM² 2026 International Symposium</p>
             </a>
           </article>
@@ -1007,6 +1064,39 @@ function toggleNews() {
       </div>
     </section>
 
+    <section id="awards">
+      <div class="container panel section-box">
+        <div class="mini-title">AWARDS 受賞など</div>
+        <h2 class="section-title">AWARDS 受賞など</h2>
+        <div class="card-grid-2" style="margin-top:10px;">
+          <!-- Card 1 -->
+          <article class="card" style="text-align:center;">
+            <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
+              <img src="ACIEK_Award.jpg"
+                   alt="ACIEK Award"
+                   style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <h3 style="font-size:18px;">ACIEK (Winter)-IMIP 2024</h3>
+            <p>Outstanding Contribution Award</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" style="text-align:center;">
+            <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
+              <img src="tokita_compe.png"
+                   alt="SIGNATE Competition"
+                   style="width:100%; height:100%; object-fit:cover; object-position:center;">
+            </div>
+            <h3 style="font-size:18px;">鴇田 優太（2022年入ゼミ）</h3>
+            <p>
+              <a href="https://signate.jp/competitions/1106" class="pub-link">
+                SIGNATEコンペティション 第7位入賞 (2023)
+              </a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
     <section id="projects">
       <div class="container">
         <div class="section-head">
@@ -1015,7 +1105,7 @@ function toggleNews() {
             <h2 class="section-title">研究成果・学位・就職実績</h2>
           </div>
           <div class="section-intro">
-            研究室の成果を、研究プロジェクト、卒業論文、修士論文、博士号取得者、就職実績という形で整理して示す。
+            研究プロジェクト、卒業論文、修士論文、博士号取得者、就職実績などの紹介。
           </div>
         </div>
 
@@ -1237,22 +1327,41 @@ function toggleNews() {
     <li>国際共同研究・学会発信の積極的推進</li>
     <li>学生主体の研究プロジェクトと実装重視の教育</li>
   </ul>
+  <div class="panel" style="margin-top:18px; background: linear-gradient(180deg, rgba(125, 211, 252, 0.14), rgba(255,255,255,0.03)); border-radius: 22px; padding: 18px 22px;">
+    <div class="contact-text" style="margin:0;">
+      <b>信条</b>　やると決めたら楽しくやる, やるからには必ず極める．<br>
+      <b>預言</b>　日本経済は匠の精神で蘇る．<br>
+      <b>心得</b>　対立するより, 仲間に迎える．
+    </div>
+  </div>
 </div>
       </div>
     </section>
   </main>
 
   <section>
-    <div class="container panel section-box" style="text-align:center;">
-      <h2 class="section-title">Affiliations</h2>
-      <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:20px;">
-        <a href="https://ise-hp.ws.hosei.ac.jp/research/">
-          <img src="Figures/hosei_shield_transparent.png" alt="Hosei" style="height:81px; width:85px;">
-        </a>
-        <a href="https://teds-datascience.github.io/seminars/">
-          <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" style="height:90px; transform: translateY(-3px);">
-        </a>
+    <div class="container panel section-box affiliations-box" style="text-align:center; background: linear-gradient(135deg, #f6fafd 60%, #e9eef5 100%); box-shadow: 0 8px 40px 0 rgba(33, 150, 243, 0.08), 0 1.5px 0 0 #e0e7ef; border-radius: 32px; border: 1.5px solid #e0e7ef; padding: 48px 0 44px; position: relative; overflow: hidden;">
+      <h2 class="section-title" style="font-size:2.6rem; letter-spacing:0.04em; margin-bottom:28px; background: linear-gradient(90deg, #274472 100%, #3a7bd5 100%); -webkit-background-clip: text; background-clip: text; color: black;">Affiliations</h2>
+      <div style="display:flex; gap:64px; justify-content:center; flex-wrap:wrap; margin-top:10px; align-items:flex-end;">
+        <div style="display:flex; flex-direction:column; align-items:center; min-width:140px;">
+          <a href="https://ise-hp.ws.hosei.ac.jp/research/" style="transition: transform 0.22s cubic-bezier(.4,2,.6,1); display:inline-block;">
+            <img src="Figures/hosei_shield_transparent.png" alt="Hosei" style="height:90px; width:95px; margin-bottom:10px; transition: box-shadow 0.22s, transform 0.22s; display:block;">
+          </a>
+          <span style="font-size:1.13rem; color:#232946; font-weight:600; letter-spacing:0.01em; line-height:1.2; display:block; text-align:center; margin-top:0;">Hosei University</span>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; min-width:140px;">
+          <a href="https://teds-datascience.github.io/seminars/" style="transition: transform 0.22s cubic-bezier(.4,2,.6,1); display:inline-block;">
+            <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" style="height:98px; margin-bottom:10px; transition: box-shadow 0.22s, transform 0.22s; display:block;">
+          </a>
+          <span style="font-size:1.13rem; color:#232946; font-weight:600; letter-spacing:0.01em; line-height:1.2; display:block; text-align:center; margin-top:0;">TEDS</span>
+        </div>
       </div>
+      <style>
+        .affiliations-box a:hover img {
+          box-shadow: 0 6px 32px 0 #2196f3cc, 0 1.5px 0 0 #b3c6e0;
+          transform: scale(1.07) rotate(-2deg);
+        }
+      </style>
     </div>
   </section>
 

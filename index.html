@@ -7,17 +7,17 @@
   <meta name="description" content="Data Science と AI を中核に据えた高度な研究室ウェブページ" />
   <style>
     :root {
-      --bg: #07111f;
-      --bg-soft: #0c1830;
-      --panel: rgba(255,255,255,0.06);
-      --panel-strong: rgba(255,255,255,0.09);
-      --line: rgba(255,255,255,0.12);
-      --text: #edf4ff;
-      --muted: #a8b7cf;
-      --accent: #7dd3fc;
-      --accent-2: #93c5fd;
-      --accent-3: #a78bfa;
-      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+      --bg: #f8f9fa;
+      --bg-soft: #ffffff;
+      --panel: rgba(0,0,0,0.05);
+      --panel-strong: rgba(0,0,0,0.08);
+      --line: rgba(0,0,0,0.1);
+      --text: #1a1a1a;
+      --muted: #6c757d;
+      --accent: #007bff;
+      --accent-2: #0056b3;
+      --accent-3: #6610f2;
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
       --radius-xl: 30px;
       --radius-lg: 22px;
       --radius-md: 16px;
@@ -33,11 +33,7 @@
     body {
       margin: 0;
       font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(125, 211, 252, 0.14), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.12), transparent 25%),
-        radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.10), transparent 26%),
-        linear-gradient(180deg, #06101d 0%, #091527 48%, #07111f 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
       color: var(--text);
       line-height: 1.75;
     }
@@ -62,8 +58,8 @@
       top: 0;
       z-index: 1000;
       backdrop-filter: blur(14px);
-      background: rgba(7, 17, 31, 0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.9);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
     .header-inner {
@@ -107,7 +103,7 @@
     }
 
     .nav a:hover {
-      color: #fff;
+      color: var(--text);
       transform: translateY(-1px);
     }
 
@@ -128,9 +124,9 @@
       gap: 10px;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(125, 211, 252, 0.10);
-      border: 1px solid rgba(125, 211, 252, 0.22);
-      color: #d7f3ff;
+      background: rgba(0, 123, 255, 0.10);
+      border: 1px solid rgba(0, 123, 255, 0.22);
+      color: var(--text);
       font-size: 11px;
       letter-spacing: 0.26em;
       text-transform: uppercase;
@@ -189,9 +185,9 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.05);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.05);
+      color: var(--text);
+      border: 1px solid rgba(0,0,0,0.1);
     }
 
     .chip-list {
@@ -204,10 +200,10 @@
     .chip {
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.1);
       font-size: 14px;
-      color: #d9e8fb;
+      color: var(--text);
     }
 
     .hero-side {
@@ -365,9 +361,9 @@
       display: grid;
       place-items: center;
       font-weight: 700;
-      background: rgba(125, 211, 252, 0.10);
-      border: 1px solid rgba(125, 211, 252, 0.18);
-      color: #dff6ff;
+      background: rgba(0, 123, 255, 0.10);
+      border: 1px solid rgba(0, 123, 255, 0.18);
+      color: var(--text);
       flex: 0 0 auto;
     }
 
@@ -447,7 +443,7 @@
     }
 
     .pub-subtitle {
-      color: #dcecff;
+      color: var(--text);
       font-size: 17px;
       margin-bottom: 4px;
     }
@@ -616,9 +612,9 @@
   <div class="header-top">
     <div class="container header-inner">
       <div style="display:flex; align-items:center; gap:16px;">
-        <img src="Figures/DSELab_logo/DSELab_logo_02.webp"
+        <img src="Figures/DSELab_logo/DSELab_logo_00.png"
              alt="Lab Logo"
-             style="height:70px;">
+             style="height:90px;">
         <div class="brand">
           <div class="brand-top">Research Laboratory</div>
           <div class="brand-title">Data Science &amp; Econometrics Lab</div>
@@ -701,9 +697,9 @@
         </div>
 
         <div class="hero-side">
-          <div class="panel">
+          <div class="panel" style="background: linear-gradient(180deg, rgba(125, 211, 252, 0.14), rgba(255,255,255,0.03));">
             <div class="panel-inner" style="text-align:center;">
-              <img src="Figures/DSELab_logo/DSELab_logo_02.webp" alt="DSE Lab Logo" style="max-height:120px; margin:auto;">
+              <img src="Figures/DSELab_logo/DSELab_logo_00.png" alt="DSE Lab Logo" style="max-height:200px; margin:auto;">
             </div>
           </div>
 
@@ -885,7 +881,7 @@ function toggleNews() {
         <div class="card-grid-3" style="margin-top:10px;">
           <article class="card" style="text-align:center;">
             <a href="https://qingfeng-liu.github.io/MyJP-SIM2_2026.html">
-              <img src="/icons/MyJP_SIM_2_W.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
+              <img src="/icons/MyJP_SIM_2.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
               <p>MyJP-SIM² 2026 International Symposium</p>
             </a>
           </article>

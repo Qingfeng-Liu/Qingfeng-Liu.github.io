@@ -7,17 +7,17 @@
   <meta name="description" content="An advanced laboratory website centered on Data Science and AI" />
   <style>
     :root {
-      --bg: #f8f9fa;
-      --bg-soft: #ffffff;
-      --panel: rgba(0,0,0,0.05);
-      --panel-strong: rgba(0,0,0,0.08);
-      --line: rgba(0,0,0,0.1);
-      --text: #1a1a1a;
-      --muted: #6c757d;
-      --accent: #007bff;
-      --accent-2: #0056b3;
-      --accent-3: #6610f2;
-      --shadow: 0 18px 60px rgba(0, 0, 0, 0.1);
+      --bg: #07111f;
+      --bg-soft: #0c1830;
+      --panel: rgba(255,255,255,0.06);
+      --panel-strong: rgba(255,255,255,0.09);
+      --line: rgba(255,255,255,0.12);
+      --text: #edf4ff;
+      --muted: #a8b7cf;
+      --accent: #7dd3fc;
+      --accent-2: #93c5fd;
+      --accent-3: #a78bfa;
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
       --radius-xl: 30px;
       --radius-lg: 22px;
       --radius-md: 16px;
@@ -33,7 +33,11 @@
     body {
       margin: 0;
       font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
-      background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(125, 211, 252, 0.14), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.12), transparent 25%),
+        radial-gradient(circle at 80% 80%, rgba(96, 165, 250, 0.10), transparent 26%),
+        linear-gradient(180deg, #06101d 0%, #091527 48%, #07111f 100%);
       color: var(--text);
       line-height: 1.75;
     }
@@ -58,8 +62,8 @@
       top: 0;
       z-index: 1000;
       backdrop-filter: blur(14px);
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid rgba(0,0,0,0.1);
+      background: rgba(7, 17, 31, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .header-inner {
@@ -103,7 +107,7 @@
     }
 
     .nav a:hover {
-      color: var(--text);
+      color: #fff;
       transform: translateY(-1px);
     }
 
@@ -124,9 +128,9 @@
       gap: 10px;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(0, 123, 255, 0.10);
-      border: 1px solid rgba(0, 123, 255, 0.22);
-      color: var(--text);
+      background: rgba(125, 211, 252, 0.10);
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      color: #d7f3ff;
       font-size: 11px;
       letter-spacing: 0.26em;
       text-transform: uppercase;
@@ -185,9 +189,9 @@
     }
 
     .btn-secondary {
-      background: rgba(0,0,0,0.05);
-      color: var(--text);
-      border: 1px solid rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.14);
     }
 
     .chip-list {
@@ -200,10 +204,10 @@
     .chip {
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
       font-size: 14px;
-      color: var(--text);
+      color: #d9e8fb;
     }
 
     .hero-side {
@@ -361,9 +365,9 @@
       display: grid;
       place-items: center;
       font-weight: 700;
-      background: rgba(0, 123, 255, 0.10);
-      border: 1px solid rgba(0, 123, 255, 0.18);
-      color: var(--text);
+      background: rgba(125, 211, 252, 0.10);
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      color: #dff6ff;
       flex: 0 0 auto;
     }
 
@@ -443,7 +447,7 @@
     }
 
     .pub-subtitle {
-      color: var(--text);
+      color: #dcecff;
       font-size: 17px;
       margin-bottom: 4px;
     }
@@ -604,12 +608,6 @@
   }
 }
   </style>
-  <script>
-    const hour = new Date().getHours();
-    if (hour >= 0 && hour < 5) {
-      window.location.href = 'index_en_dark.html';
-    }
-  </script>
 </head>
 <body>
   <header class="site-header">

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSELab 産学連携セミナー</title>
+  <meta name="description" content="DSELab 産学連携セミナーの開催情報と講演内容をまとめたページ" />
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: rgba(255,255,255,0.82);
+      --surface-strong: #ffffff;
+      --line: rgba(35,41,70,0.12);
+      --text: #1f2a44;
+      --muted: #66708a;
+      --accent: #1b77d2;
+      --accent-soft: #dcedff;
+      --accent-deep: #0d4f96;
+      --shadow: 0 18px 54px rgba(31,42,68,0.10);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --maxw: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      color: var(--text);
+      line-height: 1.8;
+      background:
+        radial-gradient(circle at top right, rgba(27,119,210,0.16), transparent 28%),
+        linear-gradient(180deg, #fbfdff 0%, #eef3f9 100%);
+    }
+
+    a {
+      color: var(--accent-deep);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--maxw), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.82);
+      border-bottom: 1px solid rgba(31,42,68,0.08);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      min-height: 82px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand-top {
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .header-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: var(--surface-strong);
+      border: 1px solid rgba(27,119,210,0.20);
+      box-shadow: 0 8px 24px rgba(27,119,210,0.12);
+      font-weight: 700;
+    }
+
+    main {
+      padding: 42px 0 54px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+    }
+
+    .hero-copy {
+      padding: 36px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.94), rgba(232,241,252,0.92));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(32px, 4.2vw, 54px);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-meta {
+      padding: 30px;
+      display: grid;
+      gap: 16px;
+      background:
+        linear-gradient(180deg, rgba(27,119,210,0.10), rgba(255,255,255,0.92));
+    }
+
+    .meta-card {
+      padding: 18px 20px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(27,119,210,0.14);
+    }
+
+    .meta-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    section {
+      padding-top: 30px;
+    }
+
+    .section-box {
+      padding: 32px;
+    }
+
+    .section-head {
+      margin-bottom: 22px;
+    }
+
+    .section-top {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.2;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .info-card {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(31,42,68,0.08);
+    }
+
+    .info-card h3 {
+      margin: 0 0 12px;
+      font-size: 19px;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .speaker-block {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .speaker-focus {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(27,119,210,0.12), rgba(255,255,255,0.96));
+      border: 1px solid rgba(27,119,210,0.14);
+    }
+
+    .speaker-focus h3,
+    .speaker-details h3 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    .speaker-name {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .speaker-ruby {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .speaker-details {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.80);
+      border: 1px solid rgba(31,42,68,0.08);
+    }
+
+    .detail-line {
+      margin: 0 0 10px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(27,119,210,0.10);
+      border: 1px solid rgba(27,119,210,0.16);
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .program-box {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(27,119,210,0.08), rgba(255,255,255,0.92));
+      border: 1px solid rgba(27,119,210,0.14);
+    }
+
+    .program-title {
+      margin: 0 0 12px;
+      font-size: 26px;
+      line-height: 1.35;
+      color: var(--accent-deep);
+    }
+
+    .program-note {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 26px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .speaker-block,
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0;
+      }
+
+      .hero-copy,
+      .hero-meta,
+      .section-box,
+      .speaker-focus,
+      .speaker-details,
+      .program-box,
+      .info-card {
+        padding: 22px;
+      }
+
+      .container {
+        width: min(var(--maxw), calc(100% - 20px));
+      }
+
+      .header-link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="Figures/DSELab_logo/DSELab_logo_00.png" alt="DSELab logo" />
+        <div class="brand-copy">
+          <div class="brand-top">Industry-Academia Seminar</div>
+          <div class="brand-title">DSELab 産学連携セミナー</div>
+        </div>
+      </div>
+      <a class="header-link" href="index.html">DSELab トップへ戻る</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="panel hero-copy">
+          <div class="eyebrow">DSELab Seminar Series</div>
+          <h1>産学の知をつなぐ<br />DSELab 産学連携セミナー</h1>
+          <p class="lead">
+            DSELab 産学連携セミナーは、研究と実務の接点から生まれる知見を共有し、
+            AI 時代の課題解決力と新しい価値創造を考えるためのセミナーシリーズです。
+          </p>
+        </div>
+
+        <div class="panel hero-meta">
+          <div class="meta-card">
+            <div class="meta-label">開催回</div>
+            <div class="meta-value">第一回産学連携セミナー</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">日時</div>
+            <div class="meta-value">2026年5月15日（金）15:10〜</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">会場</div>
+            <div class="meta-value">W6003 DSELab</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel section-box">
+          <div class="section-head">
+            <div class="section-top">Overview</div>
+            <h2>第1回セミナー概要</h2>
+          </div>
+          <div class="card-grid">
+            <div class="info-card">
+              <h3>テーマ</h3>
+              <p>
+                AI 時代において、エンジニアに求められる課題解決力と新たな役割を、
+                組織戦略・人事戦略・DX 推進の観点から考えます。
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>対象</h3>
+              <p>
+                データサイエンス、AI、DX、人材育成、組織設計に関心をもつ学生・研究者・実務家を想定しています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel section-box">
+          <div class="section-head">
+            <div class="section-top">Speaker</div>
+            <h2>講演者</h2>
+          </div>
+          <div class="speaker-block">
+            <div class="speaker-focus">
+              <div class="speaker-name">龍澤 芝慧</div>
+              <div class="speaker-ruby">りゅうさわ ちえ</div>
+              <div class="pill-list">
+                <span class="pill">株式会社オープンアップシステム</span>
+                <span class="pill">株式会社オープンアップグループ所属</span>
+                <span class="pill">経営管理統括本部長</span>
+              </div>
+            </div>
+            <div class="speaker-details">
+              <h3>プロフィール</h3>
+              <p class="detail-line">修士（経営学）／博士後期課程修了</p>
+              <p class="detail-line">専門・関心領域</p>
+              <div class="pill-list">
+                <span class="pill">組織戦略</span>
+                <span class="pill">人事戦略</span>
+                <span class="pill">AI活用</span>
+                <span class="pill">DX推進</span>
+                <span class="pill">課題解決人材の育成</span>
+                <span class="pill">技術と仕事・組織の接続</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="panel section-box">
+          <div class="section-head">
+            <div class="section-top">Program</div>
+            <h2>講演タイトル</h2>
+          </div>
+          <div class="program-box">
+            <p class="program-title">「AI時代における課題解決力とエンジニアの新たな役割」</p>
+            <p class="program-note">
+              研究室で進む AI・データサイエンスの探究と、企業現場における実践的な知見を接続する講演です。
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      DSELab Industry-Academia Seminar Page
+    </div>
+  </footer>
+</body>
+</html>

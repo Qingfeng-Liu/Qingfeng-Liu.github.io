@@ -114,6 +114,14 @@
       font-weight: 700;
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     main {
       padding: 42px 0 54px;
     }
@@ -243,9 +251,32 @@
 
     .speaker-block {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 320px 0.9fr 1.1fr;
       gap: 22px;
       align-items: stretch;
+    }
+
+    .speaker-photo {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(27,119,210,0.14), rgba(255,255,255,0.98));
+      border: 1px solid rgba(27,119,210,0.16);
+    }
+
+    .speaker-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-caption {
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.86);
+      border-top: 1px solid rgba(31,42,68,0.08);
     }
 
     .speaker-focus {
@@ -340,6 +371,10 @@
         padding: 16px 0;
       }
 
+      .header-actions {
+        width: 100%;
+      }
+
       .hero-copy,
       .hero-meta,
       .section-box,
@@ -370,7 +405,10 @@
           <div class="brand-title">DSELab 産学連携セミナー</div>
         </div>
       </div>
-      <a class="header-link" href="index.html">DSELab トップへ戻る</a>
+      <div class="header-actions">
+        <a class="header-link" href="https://translate.google.com/translate?sl=ja&tl=en&u=https://qingfeng-liu.github.io/dselab_industry_seminar.html" target="_blank" rel="noopener noreferrer">English</a>
+        <a class="header-link" href="index.html">DSELab トップへ戻る</a>
+      </div>
     </div>
   </header>
 
@@ -433,6 +471,10 @@
             <h2>講演者</h2>
           </div>
           <div class="speaker-block">
+            <div class="speaker-photo">
+              <img src="Figures/龍澤芝慧写真.png" alt="龍澤芝慧氏の写真" />
+              <div class="photo-caption">講演者写真</div>
+            </div>
             <div class="speaker-focus">
               <div class="speaker-name">龍澤 芝慧</div>
               <div class="speaker-ruby">りゅうさわ ちえ</div>

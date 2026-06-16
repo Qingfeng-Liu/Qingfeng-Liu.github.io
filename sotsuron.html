@@ -101,14 +101,20 @@
     }
 
     /* Sub-section */
-    .dl-group {
+    .dl-groups {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
       margin-top: 20px;
     }
+    @media (max-width: 600px) {
+      .dl-groups { grid-template-columns: 1fr; }
+    }
     .dl-group h3 {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
-      color: var(--text);
-      margin-bottom: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
 
     /* Download buttons */
@@ -172,42 +178,44 @@
     <h2>聴講レポート様式</h2>
     <p class="desc">卒論研究中間ポスター発表会において、他の学生の発表を聴講した際に提出するレポートの様式です。</p>
 
-    <div class="dl-group">
-      <h3>PDF版</h3>
-      <div class="dl-list">
-        <a class="dl-btn" href="attendance_report_form.pdf" download>
-          <span class="icon">📄</span>
-          <span class="label">
-            聴講レポート様式<br>
-            <span class="ext">PDF</span>
-          </span>
-        </a>
+    <div class="dl-groups">
+      <div class="dl-group">
+        <h3>PDF版</h3>
+        <div class="dl-list">
+          <a class="dl-btn" href="attendance_report_form.pdf" download>
+            <span class="icon">📄</span>
+            <span class="label">
+              聴講レポート様式<br>
+              <span class="ext">PDF</span>
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="dl-group">
-      <h3>Word版</h3>
-      <div class="dl-list">
-        <a class="dl-btn" href="attendance_report_form.docx" download>
-          <span class="icon">📝</span>
-          <span class="label">
-            聴講レポート様式<br>
-            <span class="ext">Word (docx)</span>
-          </span>
-        </a>
+      <div class="dl-group">
+        <h3>Word版</h3>
+        <div class="dl-list">
+          <a class="dl-btn" href="attendance_report_form.docx" download>
+            <span class="icon">📝</span>
+            <span class="label">
+              聴講レポート様式<br>
+              <span class="ext">Word (docx)</span>
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="dl-group">
-      <h3>LaTeX版</h3>
-      <div class="dl-list">
-        <a class="dl-btn" href="attendance_report_form.tex" download>
-          <span class="icon">📝</span>
-          <span class="label">
-            聴講レポート様式<br>
-            <span class="ext">LaTeX</span>
-          </span>
-        </a>
+      <div class="dl-group">
+        <h3>LaTeX版</h3>
+        <div class="dl-list">
+          <a class="dl-btn" href="attendance_report_form.tex" download>
+            <span class="icon">📝</span>
+            <span class="label">
+              聴講レポート様式<br>
+              <span class="ext">LaTeX</span>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

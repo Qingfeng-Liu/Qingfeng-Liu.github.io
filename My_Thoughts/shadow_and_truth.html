@@ -3,7 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>影子与真相——蚂蚁、长颈鹿与宇宙认知的三重局限</title>
+  <title>影子与真相 | Shadows and Truth | 影と真実</title>
+  <script>
+    // Auto-redirect based on browser language
+    (function() {
+      const lang = navigator.language.toLowerCase();
+      let redirectPath = 'shadow_and_truth.html'; // Default to Chinese
+      
+      if (lang.startsWith('ja')) {
+        redirectPath = 'shadow_and_truth_ja.html';
+      } else if (lang.startsWith('en')) {
+        redirectPath = 'shadow_and_truth_en.html';
+      }
+      
+      // Only redirect if current location doesn't already match target
+      if (!window.location.pathname.includes(redirectPath)) {
+        window.location.href = redirectPath;
+      }
+    })();
+  </script>
   <style>
     body {
       background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);

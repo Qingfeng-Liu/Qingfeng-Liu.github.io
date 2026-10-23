@@ -24,19 +24,48 @@ def render(kind, scale):
         pts=[(x2,y2),(x2-16*math.cos(a-.5),y2-16*math.sin(a-.5)),(x2-16*math.cos(a+.5),y2-16*math.sin(a+.5))]
         d.polygon([xy(p) for p in pts],fill=color)
     text(70,42,'DSELab  /  RESEARCH IN FOCUS',22,TEAL,True)
-    titles={'subgoal':('Direct subgoals. Less search.','Xiang & Liu (2026)  /  Frozen hierarchical world models'), 'tvs-adf':('Changing structure. Dynamic forecasts.','Zhao & Liu (2026)  /  Time-varying structural approximate dynamic factor model'), 'tmle':('Long histories help short series.','Iwasawa, Liu & Zhao (2026)  /  Tying maximum likelihood estimation'), 'model-averaging':('Choose weights for the loss that matters.','Gu, Liu & Zhang (2025)  /  Model averaging under flexible loss functions')}
+    titles={'subgoal':('Learn the condition. Predict the subgoal.','Xiang & Liu (2026)  /  Frozen hierarchical world models'), 'tvs-adf':('Changing structure. Dynamic forecasts.','Zhao & Liu (2026)  /  Time-varying structural approximate dynamic factor model'), 'tmle':('Long histories help short series.','Iwasawa, Liu & Zhao (2026)  /  Tying maximum likelihood estimation'), 'model-averaging':('Choose weights for the loss that matters.','Gu, Liu & Zhang (2025)  /  Model averaging under flexible loss functions')}
     title,sub=titles[kind]; text(70,100,title,52,bold=True); text(70,176,sub,26,MUTED)
     if kind=='subgoal':
-        box(70,285,330,310); text(98,310,'CONDITION',22,TEAL,True)
-        for y,t in [(365,'Current state'),(435,'Goal'),(505,'Remaining steps')]:
-            box(94,y-4,282,54,LIGHT); text(112,y,t,28)
-        box(510,270,520,340,LIGHT); text(540,298,'FROZEN WORLD MODEL',28,BLUE,True)
-        for i in range(3):
-            box(550+i*145,370,124,80); text(564+i*145,393,'Level '+str(i+1),24)
-        box(610,495,320,76,'#d9f1f1'); text(643,515,'Lightweight head',28,TEAL,True)
-        arrow(400,450,510,450); arrow(770,450,770,495,TEAL); arrow(1030,450,1130,450)
-        box(1130,345,400,210); text(1160,372,'DIRECT OUTPUT',22,TEAL,True); text(1160,422,'Subgoal',44,bold=True); text(1160,489,'No high-level search',25,MUTED)
-        box(70,675,1460,135,'#173653',NAVY); text(108,705,'Higher success',38,'white',True); text(650,705,'>100x faster',38,'#88e0e2',True); text(108,762,'Compared with high-level search  |  Conceptual method overview',23,'#d1e4f3')
+        # arXiv:2610.26179v2, Figures 1-2 and Sections 3.2-3.4.
+        # The trainable head emits a condition, never a direct latent subgoal.
+        box(70,280,280,265)
+        text(94,303,'ENCODED INPUTS',21,TEAL,True)
+        for y,t in [(356,'State context'),(416,'Goal'),(476,'Remaining steps')]:
+            text(94,y,t,27)
+        arrow(350,410,410,410)
+        box(410,315,260,180,'#d9f1f1')
+        text(436,340,'Condition head',29,TEAL,True)
+        text(436,390,'Trainable MLP',25)
+        text(436,438,'Only trained module',20,MUTED)
+        arrow(670,410,850,410,TEAL)
+        text(690,345,'Condition',23,TEAL,True)
+        text(705,374,'vector',23,TEAL,True)
+        box(850,315,300,180,LIGHT)
+        text(877,340,'Coarse predictor',28,BLUE,True)
+        text(877,392,'Frozen world model',24)
+        text(877,440,'Also takes state context',20,MUTED)
+        # State context also enters the frozen coarse predictor directly.
+        line([(210,280),(210,246),(1000,246),(1000,295)],MUTED,3)
+        arrow(1000,295,1000,315,MUTED)
+        text(560,220,'State context',20,MUTED)
+        arrow(1150,410,1210,410)
+        box(1210,315,320,180)
+        text(1235,340,'Latent waypoint',29,bold=True)
+        text(1235,396,'First = subgoal',27,TEAL,True)
+        text(1235,443,'Continue rollout',21,MUTED)
+        line([(1370,495),(1370,565),(540,565)],TEAL,3)
+        arrow(540,565,540,495,TEAL)
+        text(630,578,'Autoregressive high-level rollout; no candidate optimization',25,TEAL)
+        arrow(1370,495,1370,665)
+        box(70,665,1000,145,NAVY,NAVY)
+        text(100,688,'TRAINING: recorded trajectories + hindsight goals',27,'white',True)
+        text(100,735,'Prediction losses backpropagate through the frozen predictor.',24,'#d1e4f3')
+        text(100,775,'Only the condition head is updated.',23,'#d1e4f3')
+        box(1120,665,410,145,LIGHT)
+        text(1147,688,'Low-level MPC',30,BLUE,True)
+        text(1147,735,'Frozen fine predictor',25)
+        text(1147,776,'Optimize primitive actions',23,MUTED)
     elif kind=='tvs-adf':
         for x,label in [(70,'Observed series'),(580,'Time-varying loadings'),(1090,'Structural forecast')]:
             box(x,285,440,350); text(x+26,310,label,29,bold=True)

@@ -247,22 +247,6 @@
       border: 1px solid rgba(0,0,0,0.1);
     }
 
-    .chip-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .chip {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.1);
-      font-size: 14px;
-      color: var(--text);
-    }
-
     .hero-side {
       display: grid;
       gap: 18px;
@@ -510,6 +494,23 @@
       color: var(--muted);
     }
 
+    /* Recent papers: one full-width card per row. */
+    #papers { scroll-margin-top: 150px; }
+    .paper-list { display: grid; gap: 26px; margin-top: 28px; }
+    .paper-card { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 28px; padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 22px; align-items: center; }
+    .paper-figure { display: block; min-width: 0; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; }
+    .paper-figure img { width: 100%; height: auto; }
+    .paper-figure span { display: block; padding: 7px 12px; font-size: 12px; background: #f4f8fc; }
+    .paper-body { min-width: 0; overflow-wrap: anywhere; }
+    .paper-body h3 { margin: 12px 0; font-size: 22px; line-height: 1.4; }
+    .paper-body p { margin: 12px 0; }
+    .paper-citation { color: var(--muted); font-size: 14px; }
+    .paper-status { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #e8f4fc; color: #1565c0; font-size: 12px; font-weight: 700; }
+    @media (max-width: 820px) {
+      .paper-card { grid-template-columns: minmax(0, 1fr); padding: 16px; gap: 18px; }
+      .paper-body h3 { font-size: 20px; }
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .about-grid,
@@ -687,6 +688,7 @@
       <!-- PCではここにナビを一体化させる -->
       <nav class="nav nav-desktop">
         <a href="#about">About</a>
+        <a href="#papers">Papers</a>
         <a href="#research">Research</a>
         <a href="dselab_industry_seminar.html">産学連携セミナー</a>
         <a href="#conferences">Conferences</a>
@@ -707,6 +709,7 @@
     <div class="container">
       <nav class="nav nav-mobile">
         <a href="#about">About</a>
+        <a href="#papers">Papers</a>
         <a href="#research">Research</a>
         <a href="dselab_industry_seminar.html">産学連携セミナー</a>
         <a href="#conferences">Conferences</a>
@@ -751,32 +754,16 @@
               <a href="https://doi.org/10.5281/zenodo.19970390" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; font-weight: 600; color: var(--accent-2) !important; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border: 1px solid rgba(33,150,243,0.3); border-radius: 20px; background: rgba(33,150,243,0.06); transition: background 0.18s;">▸ Working Paper (Zenodo)</a>
             </div>
           </div>
-          <p class="lead">
-            本研究室は、データサイエンス、機械学習、計量経済学を基盤として、
-            社会科学と自然科学の双方に応用可能な理論と実証研究を推進する。
-            AI と統計の融合により、現実の複雑な問題に対する分析、予測、意思決定支援を目指す。
-          </p>
+          <p class="lead">データサイエンス・AI・計量経済学を融合し、複雑な社会課題の分析・予測・意思決定を支える研究を推進する。</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">研究業績を見る</a>
-            <a class="btn btn-primary" href="https://nrid.nii.ac.jp/en/nrid/1000060378958/">科研費プロジェクト</a>
+            <a class="btn btn-primary" href="#papers">最近の論文</a>
+            <a class="btn btn-primary" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">研究業績</a>
             <a class="btn btn-primary" href="#projects">DSELabプロジェクト</a>
-            <a class="btn btn-primary" href="dselab_industry_seminar.html">産学連携セミナー</a>
             <a class="btn btn-primary" href="#materials">学習資料</a>
-            <a class="btn btn-primary" href="#writings">詩文雑感</a>
             <a class="btn btn-secondary" href="#contact">研究室に連絡する</a>
           </div>
           <div style="margin-top:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(135deg, rgba(14,165,233,0.12), rgba(34,197,94,0.08));">
-            <strong>最新更新:</strong> Our paper, "Tying Maximum Likelihood Estimation for Dependent Data" has been accepted in its current form for publication in <i>Econometric Reviews</i> (2026/06/11). <a href="#news" class="pub-link">News欄へ</a>
-          </div>
-          <div class="chip-list">
-            <span class="chip">Artificial Intelligence</span>
-            <span class="chip">Data Science</span>
-            <span class="chip">Machine Learning</span>
-            <span class="chip">Econometrics</span>
-            <span class="chip">Causal Inference</span>
-            <span class="chip">Federated Learning</span>
-            <span class="chip">Financial Data Science</span>
-            <span class="chip">Digital Transformation</span>
+            <strong>最新更新:</strong> Zhao &amp; Liu の論文が <i>Journal of Forecasting</i> に採択（2026/10/22）。<a href="#papers" class="pub-link">最近の論文へ</a>
           </div>
         </div>
 
@@ -784,17 +771,6 @@
           <div class="panel" style="background: linear-gradient(180deg, rgba(125, 211, 252, 0.14), rgba(255,255,255,0.03));">
             <div class="panel-inner" style="text-align:center;">
               <img src="Figures/DSELab_logo/DSELab_logo_00.png" alt="DSE Lab Logo" style="max-height:200px; margin:auto;">
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-inner">
-              <div class="mini-title">Research Vision</div>
-              <div class="vision-title">理論・実証・AI実装を結ぶ研究拠点</div>
-              <p class="vision-text">
-                数理的基盤に支えられた分析と AI による知的処理を統合し、
-                経済・産業・社会に資する高水準の研究と教育を展開する。
-              </p>
             </div>
           </div>
 
@@ -839,67 +815,54 @@
       </div>
     </section>
 
-    <section id="policy">
+    <section id="papers">
       <div class="container panel section-box">
-        <div class="section-head">
-          <div>
-            <div class="mini-title">本研究室の2027年度大学院教育方針</div>
-            <h2 class="section-title">本研究室における2027年度 大学院教育方針（IISTは2027年9月入学生から）</h2>
-          </div>
-        </div>
-        <div class="section-intro" style="margin-bottom:16px;">
-          以下は、本研究室に所属して大学院で研究する学生を対象とした教育方針です。本研究室では、2027年度より大学院教育・研究体制をさらに強化します。英語による教育と研究を中心に、英語コース（IISTコース）の募集を拡大します。日本語コース・英語コース（IISTコース）いずれの在籍者も、英語による講義・指導・研究活動を積極的に行います。
-        </div>
-        <ul style="margin-bottom:16px;">
-          <li>英語コース（IISTコース）の募集を拡大します。</li>
-          <li>日本語コース・英語コース（IISTコース）いずれの在籍者も、英語での教育・研究指導を実施します。</li>
-          <li>数学（特に線形代数、微積分、確率統計）やプログラミングの知識・スキルを重視します。</li>
-        </ul>
-        <div>
-          国際的な環境で学び、研究したい方、積極的な応募をお待ちしています。
-        </div>
-      </div>
-    </section>
-
-    <section id="research">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="mini-title">Research Areas</div>
-            <h2 class="section-title">Data Science と AI が交差する研究領域</h2>
-          </div>
-          <div class="section-intro">
-            理論構築から応用実装までを一体として捉え、予測、説明、推論、最適意思決定の各側面を深く追究する。
-          </div>
-        </div>
-
-        <div class="card-grid-2">
-          <article class="card">
-            <div class="bar"></div>
-            <h3>AI-Driven Econometrics</h3>
-            <p>計量経済学と人工知能を接続し、予測・因果推論・意思決定支援を統合した新しい分析枠組みを探究する。</p>
+        <div class="mini-title">Recent Papers</div>
+        <h2 class="section-title">最近の論文</h2>
+        <div class="paper-list">
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/tvs-adf@2x.png" target="_blank" rel="noopener noreferrer" aria-label="時変因子載荷、構造識別、予測を結ぶモデルの概念図（大きな画像を開く）">
+              <img src="Figures/papers/tvs-adf.png" srcset="Figures/papers/tvs-adf@2x.png 2x" width="1600" height="900" loading="lazy" alt="時変因子載荷、構造識別、予測を結ぶモデルの概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Accepted</span>
+              <h3>Time-Varying Structural Approximate Dynamic Factor Model</h3>
+              <p class="paper-citation">Zhao, Z. and Liu, Q. (2026). Time-Varying Structural Approximate Dynamic Factor Model. <i>Journal of Forecasting</i>, forthcoming.</p>
+              <p>時間とともに変化する因子載荷と構造識別を組み合わせ、動的な関係を捉えて予測に活かす。</p>
+              <a class="pub-link" href="https://doi.org/10.1002/for.70236" target="_blank" rel="noopener noreferrer">DOI: 10.1002/for.70236 ↗</a>
+            </div>
           </article>
-
-          <article class="card">
-            <div class="bar"></div>
-            <h3>Machine Learning &amp; Statistical Learning</h3>
-            <p>高次元データ、非線形性、不規則な観測構造に対応するための学習理論と統計的推測手法を開発する。</p>
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/subgoal@2x.png" target="_blank" rel="noopener noreferrer" aria-label="凍結した階層世界モデルと軽量ヘッドで直接サブゴールを生成する概念図（大きな画像を開く）">
+              <img src="Figures/papers/subgoal.png" srcset="Figures/papers/subgoal@2x.png 2x" width="1600" height="900" loading="lazy" alt="凍結した階層世界モデルと軽量ヘッドで直接サブゴールを生成する概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Working Paper</span>
+              <h3>Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models</h3>
+              <p class="paper-citation">Xiang, K. and Liu, Q. (2026). Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models. arXiv:2610.26179.</p>
+              <p>凍結した階層世界モデルに軽量ヘッドを加え、現在状態・目標・残りステップから直接サブゴールを生成し、高層探索に比べ成功率を高めながら100倍超の高速化を実現する。</p>
+              <a class="pub-link" href="https://doi.org/10.48550/arXiv.2610.26179" target="_blank" rel="noopener noreferrer">arXiv:2610.26179 / DOI ↗</a>
+            </div>
           </article>
-
-          <article class="card">
-            <div class="bar"></div>
-            <h3>Federated Learning &amp; Privacy</h3>
-            <p>分散環境における協調学習を通じて、プライバシー保護と高精度分析の両立を目指す。</p>
-          </article>
-
-          <article class="card">
-            <div class="bar"></div>
-            <h3>Data Science for Industry and Society</h3>
-            <p>金融、産業、医療、社会システムなどに対し、データ駆動型の機械学習モデルを適用する。</p>
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/model-averaging@2x.png" target="_blank" rel="noopener noreferrer" aria-label="非対称損失に応じた重み選択とモデル平均の概念図（大きな画像を開く）">
+              <img src="Figures/papers/model-averaging.png" srcset="Figures/papers/model-averaging@2x.png 2x" width="1600" height="900" loading="lazy" alt="非対称損失に応じた重み選択とモデル平均の概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Published</span>
+              <h3>Model Averaging under Flexible Loss Functions</h3>
+              <p class="paper-citation">Gu, D., Liu, Q. and Zhang, X. (2025). Model Averaging under Flexible Loss Functions. <i>INFORMS Journal on Computing</i>, 37(6), 1605–1623.</p>
+              <p>柔軟・非対称な損失関数のもとでモデル平均の重みを選択し、意思決定の目的に合わせて予測を統合する。</p>
+              <a class="pub-link" href="https://doi.org/10.1287/ijoc.2023.0291" target="_blank" rel="noopener noreferrer">DOI: 10.1287/ijoc.2023.0291 ↗</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
+
     <section id="news">
   <div class="container panel section-box">
 
@@ -909,6 +872,8 @@
     <div class="list" style="margin-top:10px;">
 
       <!-- visible -->
+      <div class="list-item"><div>2026/10/23　Xiang &amp; Liu の working paper を arXiv で公開（<a class="pub-link" href="https://doi.org/10.48550/arXiv.2610.26179">arXiv:2610.26179</a>）。</div></div>
+      <div class="list-item"><div>2026/10/22　Zhao &amp; Liu の論文が <i>Journal of Forecasting</i> に採択（<a class="pub-link" href="https://doi.org/10.1002/for.70236">DOI: 10.1002/for.70236</a>）。</div></div>
       <div class="list-item">
         <div>
           2026/06/24　今年度の進路状況を更新：最大手都市銀行（SE）、最大手都市銀行（データサイエンス部門）、大手通信会社（データサイエンス部門）、アメリカ大手半導体企業日本法人（CE）、最大手航空会社、大学院進学2名、海外留学1名、起業者（海外留学予定）。
@@ -936,7 +901,7 @@
 
       <div class="list-item">
         <div>
-          2024/10/21　Gu, D., Liu, Q. and Zhang, X. (2024), Model Averaging under Flexible Loss Functions, <i>INFORMS Journal on Computing</i>
+          2025/10/21　Gu, D., Liu, Q. and Zhang, X. (2025), Model Averaging under Flexible Loss Functions, <i>INFORMS Journal on Computing</i>, 37(6), 1605–1623. <a class="pub-link" href="https://doi.org/10.1287/ijoc.2023.0291">DOI: 10.1287/ijoc.2023.0291</a>
         </div>
       </div>
 
@@ -1022,6 +987,68 @@ function toggleNews() {
               <p>SNAB 2025<br><span style='font-size:0.9em;'>Statistical Network Analysis and Beyond</span></p>
             </a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">Research Areas</div>
+            <h2 class="section-title">Data Science と AI が交差する研究領域</h2>
+          </div>
+          <div class="section-intro">
+            理論構築から応用実装までを一体として捉え、予測、説明、推論、最適意思決定の各側面を深く追究する。
+          </div>
+        </div>
+
+        <div class="card-grid-2">
+          <article class="card">
+            <div class="bar"></div>
+            <h3>AI-Driven Econometrics</h3>
+            <p>計量経済学と人工知能を接続し、予測・因果推論・意思決定支援を統合した新しい分析枠組みを探究する。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Machine Learning &amp; Statistical Learning</h3>
+            <p>高次元データ、非線形性、不規則な観測構造に対応するための学習理論と統計的推測手法を開発する。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Federated Learning &amp; Privacy</h3>
+            <p>分散環境における協調学習を通じて、プライバシー保護と高精度分析の両立を目指す。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Data Science for Industry and Society</h3>
+            <p>金融、産業、医療、社会システムなどに対し、データ駆動型の機械学習モデルを適用する。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="policy">
+      <div class="container panel section-box">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">本研究室の2027年度大学院教育方針</div>
+            <h2 class="section-title">本研究室における2027年度 大学院教育方針（IISTは2027年9月入学生から）</h2>
+          </div>
+        </div>
+        <div class="section-intro" style="margin-bottom:16px;">
+          以下は、本研究室に所属して大学院で研究する学生を対象とした教育方針です。本研究室では、2027年度より大学院教育・研究体制をさらに強化します。英語による教育と研究を中心に、英語コース（IISTコース）の募集を拡大します。日本語コース・英語コース（IISTコース）いずれの在籍者も、英語による講義・指導・研究活動を積極的に行います。
+        </div>
+        <ul style="margin-bottom:16px;">
+          <li>英語コース（IISTコース）の募集を拡大します。</li>
+          <li>日本語コース・英語コース（IISTコース）いずれの在籍者も、英語での教育・研究指導を実施します。</li>
+          <li>数学（特に線形代数、微積分、確率統計）やプログラミングの知識・スキルを重視します。</li>
+        </ul>
+        <div>
+          国際的な環境で学び、研究したい方、積極的な応募をお待ちしています。
         </div>
       </div>
     </section>

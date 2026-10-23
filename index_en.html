@@ -443,6 +443,20 @@
 
     .hero .pub-link { max-width: 100%; overflow-wrap: anywhere; }
 
+    .latest-update .pub-link,
+    .latest-update .pub-link:hover,
+    .latest-update .pub-link:focus {
+      color: var(--muted) !important;
+      font-weight: 400;
+      text-decoration: none !important;
+    }
+    .latest-update .pub-link:hover,
+    .latest-update .pub-link:focus { text-decoration: underline !important; }
+    .latest-update .pub-link[href="#papers"] {
+      color: #1565c0 !important;
+      font-weight: 700;
+    }
+
     /* Recent papers: one full-width card per row. */
     #papers { scroll-margin-top: 150px; }
     .paper-list { display: grid; gap: 26px; margin-top: 28px; }
@@ -687,7 +701,7 @@
             <a class="btn btn-primary" href="#materials">Learning Materials</a>
             <a class="btn btn-secondary" href="#contact">Contact the Lab</a>
           </div>
-          <div style="margin-top:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(135deg, rgba(14,165,233,0.12), rgba(34,197,94,0.08));">
+          <div class="latest-update" style="margin-top:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(135deg, rgba(14,165,233,0.12), rgba(34,197,94,0.08));">
             <strong>Latest Update:</strong>
             <div>2026/10/23 Xiang &amp; Liu’s working paper, <a href="https://doi.org/10.48550/arXiv.2610.26179" class="pub-link" target="_blank" rel="noopener noreferrer">Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models</a>, is now available on arXiv (<a href="https://doi.org/10.48550/arXiv.2610.26179" class="pub-link">arXiv:2610.26179</a>).</div>
             <div>2026/10/22 Zhao &amp; Liu’s paper, <a href="https://doi.org/10.1002/for.70236" class="pub-link" target="_blank" rel="noopener noreferrer">Time-Varying Structural Approximate Dynamic Factor Model</a>, has been accepted in <i>Journal of Forecasting</i>.</div>

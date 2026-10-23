@@ -194,22 +194,6 @@
       border: 1px solid rgba(255,255,255,0.14);
     }
 
-    .chip-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .chip {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
-      font-size: 14px;
-      color: #d9e8fb;
-    }
-
     .hero-side {
       display: grid;
       gap: 18px;
@@ -457,6 +441,41 @@
       color: var(--muted);
     }
 
+    .hero .pub-link { max-width: 100%; overflow-wrap: anywhere; }
+
+    .latest-update .pub-link,
+    .latest-update .pub-link:hover,
+    .latest-update .pub-link:focus {
+      color: var(--muted) !important;
+      font-weight: 400;
+      text-decoration: none !important;
+    }
+    .latest-update .pub-link:hover,
+    .latest-update .pub-link:focus { text-decoration: underline !important; }
+    .latest-update .pub-link[href="#papers"] {
+      color: var(--accent) !important;
+      font-weight: 700;
+    }
+
+    /* Recent papers: one full-width card per row. */
+    #papers { scroll-margin-top: 150px; }
+    .paper-list { display: grid; gap: 26px; margin-top: 28px; }
+    .paper-card { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 28px; padding: 24px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 22px; align-items: center; }
+    .paper-figure { display: block; min-width: 0; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; }
+    .paper-figure img { width: 100%; height: auto; }
+    .paper-figure span { display: block; padding: 7px 12px; font-size: 12px; background: #14243c; }
+    .paper-body { min-width: 0; overflow-wrap: anywhere; }
+    .paper-body h3 { margin: 12px 0; font-size: 22px; line-height: 1.4; }
+    .paper-body p { margin: 12px 0; }
+    .paper-citation { color: var(--muted); font-size: 14px; }
+    .paper-status { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #15334e; color: var(--accent); font-size: 12px; font-weight: 700; }
+    @media (max-width: 820px) {
+      .paper-card { grid-template-columns: minmax(0, 1fr); padding: 16px; gap: 18px; }
+      .paper-body h3 { font-size: 20px; }
+    }
+
+    #papers .pub-link { color: var(--accent); }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .about-grid,
@@ -618,7 +637,7 @@
       <div style="display:flex; align-items:center; gap:16px;">
         <img src="Figures/DSELab_logo/DSELab_logo_02.webp"
              alt="Lab Logo"
-             style="height:70px;">
+             style="height:90px;">
         <div class="brand">
           <div class="brand-top">Research Laboratory</div>
           <div class="brand-title">Data Science &amp; Econometrics Lab</div>
@@ -628,6 +647,7 @@
       <!-- PCではここにナビを一体化させる -->
       <nav class="nav nav-desktop">
         <a href="#about">About</a>
+        <a href="#papers">Papers</a>
         <a href="#research">Research</a>
         <a href="dselab_industry_seminar.html">産学連携セミナー</a>
         <a href="#conferences">Conferences</a>
@@ -648,6 +668,7 @@
     <div class="container">
       <nav class="nav nav-mobile">
         <a href="#about">About</a>
+        <a href="#papers">Papers</a>
         <a href="#research">Research</a>
         <a href="dselab_industry_seminar.html">産学連携セミナー</a>
         <a href="#conferences">Conferences</a>
@@ -679,63 +700,39 @@
             <span class="gradient">AI</span> を中核に、
             社会科学と自然科学を横断する知を創出する研究室
           </h2>
-          <div style="margin: 22px 0 18px; padding: 16px 22px 16px 20px; border-left: 4px solid; border-image: linear-gradient(180deg, #7dd3fc 0%, #a78bfa 100%) 1; background: linear-gradient(135deg, rgba(125,211,252,0.09) 0%, rgba(167,139,250,0.06) 100%); border-radius: 0 16px 16px 0;">
-            <div style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 7px;">Research Philosophy</div>
+          <div style="margin: 22px 0 18px; padding: 16px 22px 16px 20px; border-left: 4px solid; border-image: linear-gradient(180deg, #2196f3 0%, #00bcd4 100%) 1; background: linear-gradient(135deg, rgba(33,150,243,0.07) 0%, rgba(0,188,212,0.04) 100%); border-radius: 0 16px 16px 0;">
+            <div style="font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px;">Research Philosophy</div>
             <div style="font-size: 1.08rem; font-weight: 800; letter-spacing: 0.04em; margin-bottom: 5px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;">
-              <span style="background: linear-gradient(90deg, #7dd3fc 0%, #a78bfa 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Argo Helm Intelligence</span>
-              <span style="font-size: 0.78em; font-weight: 700; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; border: 1.5px solid rgba(125,211,252,0.35); border-radius: 6px; padding: 1px 7px;">aHi</span>
+              <span style="background: linear-gradient(90deg, #2196f3 0%, #00bcd4 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Argo Helm Intelligence</span>
+              <span style="font-size: 0.78em; font-weight: 700; color: var(--muted); letter-spacing: 0.08em; border: 1.5px solid rgba(33,150,243,0.35); border-radius: 6px; padding: 1px 7px;">aHi</span>
             </div>
-            <div style="font-style: italic; color: rgba(255,255,255,0.5); font-size: 0.95rem; line-height: 1.6; letter-spacing: 0.01em;">
+            <div style="font-style: italic; color: var(--muted); font-size: 0.95rem; line-height: 1.6; letter-spacing: 0.01em;">
               "Let intelligence become the Argo; let humanity remain at the helm."
             </div>
             <div style="margin-top: 10px;">
-              <a href="https://doi.org/10.5281/zenodo.19970390" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; font-weight: 600; color: #7dd3fc !important; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border: 1px solid rgba(125,211,252,0.3); border-radius: 20px; background: rgba(125,211,252,0.07); transition: background 0.18s;">▸ Working Paper (Zenodo)</a>
+              <a href="https://doi.org/10.5281/zenodo.19970390" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; font-weight: 600; color: var(--accent-2) !important; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border: 1px solid rgba(33,150,243,0.3); border-radius: 20px; background: rgba(33,150,243,0.06); transition: background 0.18s;">▸ Working Paper (Zenodo)</a>
             </div>
           </div>
-          <p class="lead">
-            本研究室は、データサイエンス、機械学習、計量経済学を基盤として、
-            社会科学と自然科学の双方に応用可能な理論と実証研究を推進する。
-            AI と統計の融合により、現実の複雑な問題に対する分析、予測、意思決定支援を目指す。
-          </p>
+          <p class="lead">データサイエンス・AI・計量経済学を融合し、複雑な社会課題の分析・予測・意思決定を支える研究を推進する。</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">研究業績を見る</a>
-            <a class="btn btn-primary" href="https://nrid.nii.ac.jp/en/nrid/1000060378958/">科研費プロジェクト</a>
+            <a class="btn btn-primary" href="#papers">最近の論文</a>
+            <a class="btn btn-primary" href="https://scholar.google.co.jp/citations?user=lF2IbfwAAAAJ">研究業績</a>
             <a class="btn btn-primary" href="#projects">DSELabプロジェクト</a>
-            <a class="btn btn-primary" href="dselab_industry_seminar.html">産学連携セミナー</a>
             <a class="btn btn-primary" href="#materials">学習資料</a>
-            <a class="btn btn-primary" href="#writings">詩文雑感</a>
             <a class="btn btn-secondary" href="#contact">研究室に連絡する</a>
           </div>
-          <div style="margin-top:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(135deg, rgba(14,165,233,0.12), rgba(34,197,94,0.08));">
-            <strong>最新更新:</strong> Our paper, "Tying Maximum Likelihood Estimation for Dependent Data" has been accepted in its current form for publication in <i>Econometric Reviews</i> (2026/06/11). <a href="#news" class="pub-link">News欄へ</a>
-          </div>
-          <div class="chip-list">
-            <span class="chip">Artificial Intelligence</span>
-            <span class="chip">Data Science</span>
-            <span class="chip">Machine Learning</span>
-            <span class="chip">Econometrics</span>
-            <span class="chip">Causal Inference</span>
-            <span class="chip">Federated Learning</span>
-            <span class="chip">Financial Data Science</span>
-            <span class="chip">Digital Transformation</span>
+          <div class="latest-update" style="margin-top:14px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(135deg, rgba(14,165,233,0.12), rgba(34,197,94,0.08));">
+            <strong>最新更新:</strong>
+            <div>2026/10/23　Xiang &amp; Liu の working paper <a href="https://doi.org/10.48550/arXiv.2610.26179" class="pub-link" target="_blank" rel="noopener noreferrer">Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models</a>を arXiv で公開（<a href="https://doi.org/10.48550/arXiv.2610.26179" class="pub-link">arXiv:2610.26179</a>）。</div>
+            <div>2026/10/22　Zhao &amp; Liu の論文 <a href="https://doi.org/10.1002/for.70236" class="pub-link" target="_blank" rel="noopener noreferrer">Time-Varying Structural Approximate Dynamic Factor Model</a>が <i>Journal of Forecasting</i> に採択。</div>
+            <a href="#papers" class="pub-link">最近の論文へ</a>
           </div>
         </div>
 
         <div class="hero-side">
-          <div class="panel">
+          <div class="panel" style="background: linear-gradient(180deg, rgba(125, 211, 252, 0.14), rgba(255,255,255,0.03));">
             <div class="panel-inner" style="text-align:center;">
-              <img src="Figures/DSELab_logo/DSELab_logo_02.webp" alt="DSE Lab Logo" style="max-height:120px; margin:auto;">
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-inner">
-              <div class="mini-title">Research Vision</div>
-              <div class="vision-title">理論・実証・AI実装を結ぶ研究拠点</div>
-              <p class="vision-text">
-                数理的基盤に支えられた分析と AI による知的処理を統合し、
-                経済・産業・社会に資する高水準の研究と教育を展開する。
-              </p>
+              <img src="Figures/DSELab_logo/DSELab_logo_02.webp" alt="DSE Lab Logo" style="max-height:200px; margin:auto;">
             </div>
           </div>
 
@@ -760,7 +757,6 @@
       </div>
     </section>
 
-
     <section id="about">
       <div class="container panel section-box">
         <div class="about-grid">
@@ -781,45 +777,67 @@
       </div>
     </section>
 
-    <section id="research">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="mini-title">Research Areas</div>
-            <h2 class="section-title">Data Science と AI が交差する研究領域</h2>
-          </div>
-          <div class="section-intro">
-            理論構築から応用実装までを一体として捉え、予測、説明、推論、最適意思決定の各側面を深く追究する。
-          </div>
-        </div>
-
-        <div class="card-grid-2">
-          <article class="card">
-            <div class="bar"></div>
-            <h3>AI-Driven Econometrics</h3>
-            <p>計量経済学と人工知能を接続し、予測・因果推論・意思決定支援を統合した新しい分析枠組みを探究する。</p>
+    <section id="papers">
+      <div class="container panel section-box">
+        <div class="mini-title">Recent Papers</div>
+        <h2 class="section-title">最近の論文</h2>
+        <div class="paper-list">
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/tvs-adf@2x.png" target="_blank" rel="noopener noreferrer" aria-label="時変因子載荷、構造識別、予測を結ぶモデルの概念図（大きな画像を開く）">
+              <img src="Figures/papers/tvs-adf.png" srcset="Figures/papers/tvs-adf@2x.png 2x" width="1600" height="900" loading="lazy" alt="時変因子載荷、構造識別、予測を結ぶモデルの概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Accepted</span>
+              <h3>Time-Varying Structural Approximate Dynamic Factor Model</h3>
+              <p class="paper-citation">Zhao, Z. and Liu, Q. (2026). Time-Varying Structural Approximate Dynamic Factor Model. <i>Journal of Forecasting</i>, forthcoming.</p>
+              <p>時間とともに変化する因子載荷と構造識別を組み合わせ、動的な関係を捉えて予測に活かす。</p>
+              <a class="pub-link" href="https://doi.org/10.1002/for.70236" target="_blank" rel="noopener noreferrer">DOI: 10.1002/for.70236 ↗</a>
+            </div>
           </article>
-
-          <article class="card">
-            <div class="bar"></div>
-            <h3>Machine Learning &amp; Statistical Learning</h3>
-            <p>高次元データ、非線形性、不規則な観測構造に対応するための学習理論と統計的推測手法を開発する。</p>
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/subgoal@2x.png?v=4" target="_blank" rel="noopener noreferrer" aria-label="凍結エンコーダー、軽量条件ヘッド、凍結予測器によるサブゴール生成と低層MPCの概念図（大きな画像を開く）">
+              <img src="Figures/papers/subgoal.png?v=4" srcset="Figures/papers/subgoal@2x.png?v=4 2x" width="1600" height="900" loading="lazy" alt="凍結エンコーダー、軽量条件ヘッド、凍結予測器によるサブゴール生成と低層MPCの概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Working Paper</span>
+              <h3>Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models</h3>
+              <p class="paper-citation">Xiang, K. and Liu, Q. (2026). Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models. arXiv:2610.26179.</p>
+              <p>状態・目標・残りステップから学習済みヘッドが条件ベクトルを出力し、凍結した高層予測器がサブゴールを生成することで高層探索を置き換え、低層MPCを維持しつつ高層求解時間を100倍超短縮し、端から端までの評価を1.28–4.39倍高速化する。</p>
+              <a class="pub-link" href="https://doi.org/10.48550/arXiv.2610.26179" target="_blank" rel="noopener noreferrer">arXiv:2610.26179 / DOI ↗</a>
+            </div>
           </article>
-
-          <article class="card">
-            <div class="bar"></div>
-            <h3>Federated Learning &amp; Privacy</h3>
-            <p>分散環境における協調学習を通じて、プライバシー保護と高精度分析の両立を目指す。</p>
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/tmle@2x.png" target="_blank" rel="noopener noreferrer" aria-label="長短の時系列間で情報を共有するパラメータ結合型最尤推定の概念図">
+              <img src="Figures/papers/tmle.png" srcset="Figures/papers/tmle@2x.png 2x" width="1600" height="900" loading="lazy" alt="長短の時系列間で情報を共有するパラメータ結合型最尤推定の概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Published</span>
+              <h3>Tying Maximum Likelihood Estimation for Dependent Data</h3>
+              <p class="paper-citation">Iwasawa, M., Liu, Q. and Zhao, Z. (2026). Tying Maximum Likelihood Estimation for Dependent Data. <i>Econometric Reviews</i>, 1–20.</p>
+              <p>長い時系列と短い時系列の一部のパラメータを柔軟に結び付け、ブートストラップで結合の強さを選ぶことで、短い系列の推定精度を高める。</p>
+              <a class="pub-link" href="https://doi.org/10.1080/07474938.2026.2690038" target="_blank" rel="noopener noreferrer">DOI: 10.1080/07474938.2026.2690038 ↗</a>
+            </div>
           </article>
-
-          <article class="card">
-            <div class="bar"></div>
-            <h3>Data Science for Industry and Society</h3>
-            <p>金融、産業、医療、社会システムなどに対し、データ駆動型の機械学習モデルを適用する。</p>
+          <article class="paper-card">
+            <a class="paper-figure" href="Figures/papers/model-averaging@2x.png" target="_blank" rel="noopener noreferrer" aria-label="非対称損失に応じた重み選択とモデル平均の概念図（大きな画像を開く）">
+              <img src="Figures/papers/model-averaging.png" srcset="Figures/papers/model-averaging@2x.png 2x" width="1600" height="900" loading="lazy" alt="非対称損失に応じた重み選択とモデル平均の概念図">
+              <span>クリックで拡大 ↗</span>
+            </a>
+            <div class="paper-body">
+              <span class="paper-status">Published</span>
+              <h3>Model Averaging under Flexible Loss Functions</h3>
+              <p class="paper-citation">Gu, D., Liu, Q. and Zhang, X. (2025). Model Averaging under Flexible Loss Functions. <i>INFORMS Journal on Computing</i>, 37(6), 1605–1623.</p>
+              <p>柔軟・非対称な損失関数のもとでモデル平均の重みを選択し、意思決定の目的に合わせて予測を統合する。</p>
+              <a class="pub-link" href="https://doi.org/10.1287/ijoc.2023.0291" target="_blank" rel="noopener noreferrer">DOI: 10.1287/ijoc.2023.0291 ↗</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
+
     <section id="news">
   <div class="container panel section-box">
 
@@ -829,6 +847,8 @@
     <div class="list" style="margin-top:10px;">
 
       <!-- visible -->
+      <div class="list-item"><div>2026/10/23　Xiang &amp; Liu の working paper を arXiv で公開（<a class="pub-link" href="https://doi.org/10.48550/arXiv.2610.26179">arXiv:2610.26179</a>）。</div></div>
+      <div class="list-item"><div>2026/10/22　Zhao &amp; Liu の論文が <i>Journal of Forecasting</i> に採択（<a class="pub-link" href="https://doi.org/10.1002/for.70236">DOI: 10.1002/for.70236</a>）。</div></div>
       <div class="list-item">
         <div>
           2026/06/24　今年度の進路状況を更新：最大手都市銀行（SE）、最大手都市銀行（データサイエンス部門）、大手通信会社（データサイエンス部門）、アメリカ大手半導体企業日本法人（CE）、最大手航空会社、大学院進学2名、海外留学1名、起業者（海外留学予定）。
@@ -856,7 +876,7 @@
 
       <div class="list-item">
         <div>
-          2024/10/21　Gu, D., Liu, Q. and Zhang, X. (2024), Model Averaging under Flexible Loss Functions, <i>INFORMS Journal on Computing</i>
+          2025/10/21　Gu, D., Liu, Q. and Zhang, X. (2025), Model Averaging under Flexible Loss Functions, <i>INFORMS Journal on Computing</i>, 37(6), 1605–1623. <a class="pub-link" href="https://doi.org/10.1287/ijoc.2023.0291">DOI: 10.1287/ijoc.2023.0291</a>
         </div>
       </div>
 
@@ -926,7 +946,7 @@ function toggleNews() {
         <div class="card-grid-3" style="margin-top:10px;">
           <article class="card" style="text-align:center;">
             <a href="https://qingfeng-liu.github.io/MyJP-SIM2_2026.html">
-              <img src="/icons/MyJP_SIM_2_W.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
+              <img src="icons/MyJP_SIM_2.png" alt="MyJP-SIM2" style="max-height:100px; margin:auto;">
               <p>MyJP-SIM² 2026 International Symposium</p>
             </a>
           </article>
@@ -945,56 +965,70 @@ function toggleNews() {
         </div>
       </div>
     </section>
-    <section id="awards">
-  <div class="container panel section-box">
 
-    <div class="mini-title">Awards</div>
-    <h2 class="section-title">受賞・実績</h2>
-
-    <div class="card-grid-2" style="margin-top:10px;">
-
-      <!-- Card 1 -->
-      <article class="card" style="text-align:center;">
-        <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
-          <img src="ACIEK_Award.jpg"
-               alt="ACIEK Award"
-               style="width:100%; height:100%; object-fit:cover;">
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">Research Areas</div>
+            <h2 class="section-title">Data Science と AI が交差する研究領域</h2>
+          </div>
+          <div class="section-intro">
+            理論構築から応用実装までを一体として捉え、予測、説明、推論、最適意思決定の各側面を深く追究する。
+          </div>
         </div>
 
-        <h3 style="font-size:18px;">
-          ACIEK (Winter)-IMIP 2024
-        </h3>
+        <div class="card-grid-2">
+          <article class="card">
+            <div class="bar"></div>
+            <h3>AI-Driven Econometrics</h3>
+            <p>計量経済学と人工知能を接続し、予測・因果推論・意思決定支援を統合した新しい分析枠組みを探究する。</p>
+          </article>
 
-        <p>
-          Outstanding Contribution Award
-        </p>
-      </article>
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Machine Learning &amp; Statistical Learning</h3>
+            <p>高次元データ、非線形性、不規則な観測構造に対応するための学習理論と統計的推測手法を開発する。</p>
+          </article>
 
-      <!-- Card 2 -->
-      <article class="card" style="text-align:center;">
-        <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
-          <img src="tokita_compe.png"
-               alt="SIGNATE Competition"
-               style="width:100%; height:100%; object-fit:cover; object-position:center;">
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Federated Learning &amp; Privacy</h3>
+            <p>分散環境における協調学習を通じて、プライバシー保護と高精度分析の両立を目指す。</p>
+          </article>
+
+          <article class="card">
+            <div class="bar"></div>
+            <h3>Data Science for Industry and Society</h3>
+            <p>金融、産業、医療、社会システムなどに対し、データ駆動型の機械学習モデルを適用する。</p>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <h3 style="font-size:18px;">
-          鴇田 優太（2022年入ゼミ）
-        </h3>
+    <section id="policy">
+      <div class="container panel section-box">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">本研究室の2027年度大学院教育方針</div>
+            <h2 class="section-title">本研究室における2027年度 大学院教育方針（IISTは2027年9月入学生から）</h2>
+          </div>
+        </div>
+        <div class="section-intro" style="margin-bottom:16px;">
+          以下は、本研究室に所属して大学院で研究する学生を対象とした教育方針です。本研究室では、2027年度より大学院教育・研究体制をさらに強化します。英語による教育と研究を中心に、英語コース（IISTコース）の募集を拡大します。日本語コース・英語コース（IISTコース）いずれの在籍者も、英語による講義・指導・研究活動を積極的に行います。
+        </div>
+        <ul style="margin-bottom:16px;">
+          <li>英語コース（IISTコース）の募集を拡大します。</li>
+          <li>日本語コース・英語コース（IISTコース）いずれの在籍者も、英語での教育・研究指導を実施します。</li>
+          <li>数学（特に線形代数、微積分、確率統計）やプログラミングの知識・スキルを重視します。</li>
+        </ul>
+        <div>
+          国際的な環境で学び、研究したい方、積極的な応募をお待ちしています。
+        </div>
+      </div>
+    </section>
 
-        <p>
-          <a href="https://signate.jp/competitions/1106" class="pub-link">
-            SIGNATEコンペティション 第7位入賞（2023）
-          </a>
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-          <!-- 学習資料セクション -->
+    <!-- 学習資料セクション -->
     <section id="materials">
       <div class="container panel section-box">
         <div class="section-head">
@@ -1007,6 +1041,14 @@ function toggleNews() {
           </div>
         </div>
         <div class="card-grid-2">
+          <article class="card" style="background: linear-gradient(180deg, rgba(33,150,243,0.10), rgba(255,255,255,0.04)); border-color: rgba(33,150,243,0.18);">
+            <div class="bar"></div>
+            <h3><a href="My_Thoughts/LLM_AI_Talk_JA.pdf" target="_blank">大規模言語モデル（LLM）と私たち</a></h3>
+            <p>LLMの発展、便益、脅威、人間の主導権とAIとの正しい関係について整理した日本語スライド資料。</p>
+            <div class="card-links">
+              <a href="My_Thoughts/LLM_AI_Talk_JA.pdf" class="card-link">PDFで閲覧 →</a>
+            </div>
+          </article>
           <article class="card">
             <div class="bar"></div>
             <h3><a href="https://github.com/Qingfeng-Liu/Machine-Learning-Toolkit" target="_blank">Machine Learning Toolkit</a></h3>
@@ -1033,10 +1075,35 @@ function toggleNews() {
           </article>
           <article class="card">
             <div class="bar"></div>
+            <h3><a href="My_Thoughts/LLM_JEPA_World_Model_Lecture_Notes_JA.pdf" target="_blank">LLM と JEPA 世界モデルの原理および情報の十分性</a></h3>
+            <p>LLM と JEPA の違い、崩壊防止と状態情報の保持、識別可能性の結果、情報の十分性を整理した講義ノート。 著者：劉 慶豊</p>
+            <div class="card-links">
+              <a href="My_Thoughts/LLM_JEPA_World_Model_Lecture_Notes_JA.pdf" class="card-link">日本語 PDFで閲覧 →</a>
+              <a href="My_Thoughts/LLM_JEPA_World_Model_Notes_author.pdf" class="card-link">中国語 PDFで閲覧 →</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="bar"></div>
             <h3><a href="My_Thoughts/Double_Descents.pdf" target="_blank">Why Double Descent?</a></h3>
             <p>機械学習における「二重降下」現象についての理論的考察。</p>
             <div class="card-links">
               <a href="My_Thoughts/Double_Descents.pdf" class="card-link">PDFで閲覧 →</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="bar"></div>
+            <h3><a href="My_Thoughts/AI_Agent_Tutorial_JA.pdf" target="_blank">AI Agent Tutorial</a></h3>
+            <p>AIエージェントの基本構成、ワークフロー、実装の考え方を整理したチュートリアル資料。</p>
+            <div class="card-links">
+              <a href="My_Thoughts/AI_Agent_Tutorial_JA.pdf" class="card-link">PDFで閲覧 →</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="bar"></div>
+            <h3><a href="My_Thoughts/shadow_and_truth_ja.html">影と真実——蚂蚁、キリン、そして宇宙認知の三つの限界</a></h3>
+            <p>哲学随笔・凡璞 ／ 蚂蚁、影子、长颈鹿という三つの寓話から、宇宙認識の根本的な限界を論じる哲学エッセイ。</p>
+            <div class="card-links">
+              <a href="My_Thoughts/shadow_and_truth_ja.html" class="card-link">読む →</a>
             </div>
           </article>
         </div>
@@ -1092,6 +1159,39 @@ function toggleNews() {
       </div>
     </section>
 
+    <section id="awards">
+      <div class="container panel section-box">
+        <div class="mini-title">AWARDS 受賞など</div>
+        <h2 class="section-title">AWARDS 受賞など</h2>
+        <div class="card-grid-2" style="margin-top:10px;">
+          <!-- Card 1 -->
+          <article class="card" style="text-align:center;">
+            <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
+              <img src="ACIEK_Award.jpg"
+                   alt="ACIEK Award"
+                   style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <h3 style="font-size:18px;">ACIEK (Winter)-IMIP 2024</h3>
+            <p>Outstanding Contribution Award</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" style="text-align:center;">
+            <div style="height:220px; overflow:hidden; border-radius:12px; margin-bottom:16px;">
+              <img src="tokita_compe.png"
+                   alt="SIGNATE Competition"
+                   style="width:100%; height:100%; object-fit:cover; object-position:center;">
+            </div>
+            <h3 style="font-size:18px;">鴇田 優太（2022年入ゼミ）</h3>
+            <p>
+              <a href="https://signate.jp/competitions/1106" class="pub-link">
+                SIGNATEコンペティション 第7位入賞 (2023)
+              </a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
     <section id="projects">
       <div class="container">
         <div class="section-head">
@@ -1100,7 +1200,7 @@ function toggleNews() {
             <h2 class="section-title">学生研究成果・学位・就職実績</h2>
           </div>
           <div class="section-intro">
-            研究室の成果を、研究プロジェクト、卒業論文、修士論文、博士号取得者、就職実績という形で整理して示す。
+            研究プロジェクト、卒業論文、修士論文、博士号取得者、就職実績などの紹介。
           </div>
         </div>
 
@@ -1243,6 +1343,43 @@ function toggleNews() {
       </div>
     </section>
 
+    <!--<section id="members">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="mini-title">People</div>
+            <h2 class="section-title">知的野心を共有する研究コミュニティ</h2>
+          </div>
+          <div class="section-intro">
+            数理的厳密性、創造性、国際性を重視しながら、教員・学生・共同研究者が有機的に連携する。
+          </div>
+        </div>
+
+        <div class="card-grid-4">
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Professor / Principal Investigator</h3>
+            <p>研究全体の方向性、理論的深化、学際的展開を主導する。</p>
+          </article>
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Doctoral Researchers</h3>
+            <p>高度な方法論、証明、アルゴリズム開発を担う研究中核層。</p>
+          </article>
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Graduate Students</h3>
+            <p>実証分析、実験設計、応用研究を通じて先端テーマに挑戦する。</p>
+          </article>
+          <article class="card">
+            <div class="members-icon"></div>
+            <h3>Collaborators</h3>
+            <p>国際共同研究や産学連携を通じて知の広がりを形成する。</p>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
     <section id="contact">
       <div class="container contact-grid">
         <div class="panel section-box">
@@ -1302,25 +1439,25 @@ function toggleNews() {
   </main>
 
   <section>
-    <div class="container panel section-box affiliations-box" style="text-align:center; background: linear-gradient(135deg, #0c1830 60%, #07111f 100%); box-shadow: 0 8px 40px 0 rgba(33, 150, 243, 0.08), 0 1.5px 0 0 #1a2332; border-radius: 32px; border: 1.5px solid #1a2332; padding: 48px 0 44px; position: relative; overflow: hidden;">
-      <h2 class="section-title" style="font-size:2.6rem; letter-spacing:0.04em; margin-bottom:28px; background: linear-gradient(90deg, #7dd3fc 0%, #a78bfa 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Affiliations</h2>
+    <div class="container panel section-box affiliations-box" style="text-align:center; background: linear-gradient(135deg, #f6fafd 60%, #e9eef5 100%); box-shadow: 0 8px 40px 0 rgba(33, 150, 243, 0.08), 0 1.5px 0 0 #e0e7ef; border-radius: 32px; border: 1.5px solid #e0e7ef; padding: 48px 0 44px; position: relative; overflow: hidden;">
+      <h2 class="section-title" style="font-size:2.6rem; letter-spacing:0.04em; margin-bottom:28px; background: linear-gradient(90deg, #274472 100%, #3a7bd5 100%); -webkit-background-clip: text; background-clip: text; color: black;">Affiliations</h2>
       <div style="display:flex; gap:64px; justify-content:center; flex-wrap:wrap; margin-top:10px; align-items:flex-end;">
         <div style="display:flex; flex-direction:column; align-items:center; min-width:140px;">
           <a href="https://ise-hp.ws.hosei.ac.jp/research/" style="transition: transform 0.22s cubic-bezier(.4,2,.6,1); display:inline-block;">
             <img src="Figures/hosei_shield_transparent.png" alt="Hosei" style="height:90px; width:95px; margin-bottom:10px; transition: box-shadow 0.22s, transform 0.22s; display:block;">
           </a>
-          <span style="font-size:1.13rem; color:#edf4ff; font-weight:600; letter-spacing:0.01em; line-height:1.2; display:block; text-align:center; margin-top:0;">Hosei University</span>
+          <span style="font-size:1.13rem; color:#232946; font-weight:600; letter-spacing:0.01em; line-height:1.2; display:block; text-align:center; margin-top:0;">Hosei University</span>
         </div>
         <div style="display:flex; flex-direction:column; align-items:center; min-width:140px;">
           <a href="https://teds-datascience.github.io/seminars/" style="transition: transform 0.22s cubic-bezier(.4,2,.6,1); display:inline-block;">
             <img src="Figures/TEDS_Emblem_light.png" alt="TEDS" style="height:98px; margin-bottom:10px; transition: box-shadow 0.22s, transform 0.22s; display:block;">
           </a>
-          <span style="font-size:1.13rem; color:#edf4ff; font-weight:600; letter-spacing:0.01em; line-height:1.2; display:block; text-align:center; margin-top:0;">TEDS</span>
+          <span style="font-size:1.13rem; color:#232946; font-weight:600; letter-spacing:0.01em; line-height:1.2; display:block; text-align:center; margin-top:0;">TEDS</span>
         </div>
       </div>
       <style>
         .affiliations-box a:hover img {
-          box-shadow: 0 6px 32px 0 #7dd3fccc, 0 1.5px 0 0 #1a2332;
+          box-shadow: 0 6px 32px 0 #2196f3cc, 0 1.5px 0 0 #b3c6e0;
           transform: scale(1.07) rotate(-2deg);
         }
       </style>

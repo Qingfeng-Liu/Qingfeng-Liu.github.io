@@ -24,7 +24,7 @@ def render(kind, scale):
         pts=[(x2,y2),(x2-16*math.cos(a-.5),y2-16*math.sin(a-.5)),(x2-16*math.cos(a+.5),y2-16*math.sin(a+.5))]
         d.polygon([xy(p) for p in pts],fill=color)
     text(70,42,'DSELab  /  RESEARCH IN FOCUS',22,TEAL,True)
-    titles={'subgoal':('Direct subgoals. Less search.','Xiang & Liu (2026)  /  Frozen hierarchical world models'), 'tvs-adf':('Changing structure. Dynamic forecasts.','Zhao & Liu (2026)  /  Time-varying structural approximate dynamic factor model'), 'model-averaging':('Choose weights for the loss that matters.','Gu, Liu & Zhang (2025)  /  Model averaging under flexible loss functions')}
+    titles={'subgoal':('Direct subgoals. Less search.','Xiang & Liu (2026)  /  Frozen hierarchical world models'), 'tvs-adf':('Changing structure. Dynamic forecasts.','Zhao & Liu (2026)  /  Time-varying structural approximate dynamic factor model'), 'tmle':('Long histories help short series.','Iwasawa, Liu & Zhao (2026)  /  Tying maximum likelihood estimation'), 'model-averaging':('Choose weights for the loss that matters.','Gu, Liu & Zhang (2025)  /  Model averaging under flexible loss functions')}
     title,sub=titles[kind]; text(70,100,title,52,bold=True); text(70,176,sub,26,MUTED)
     if kind=='subgoal':
         box(70,285,330,310); text(98,310,'CONDITION',22,TEAL,True)
@@ -55,6 +55,28 @@ def render(kind, scale):
         arrow(510,462,580,462); arrow(1020,462,1090,462)
         box(70,685,1460,125,NAVY,NAVY); text(105,713,'Latent factors  +  changing loadings  +  structural identification',34,'white',True)
         text(105,765,'Track evolving relationships and use them to forecast  |  Conceptual overview',23,'#d1e4f3')
+    elif kind=='tmle':
+        box(70,285,470,350); text(100,310,'Unequal time-series lengths',29,bold=True)
+        text(100,370,'Long history',24,BLUE,True)
+        line([(100+i*10,437+math.sin(i*.45)*22) for i in range(40)],BLUE,4)
+        text(100,495,'Short history',24,TEAL,True)
+        line([(350+i*10,567+math.sin(i*.45)*22) for i in range(15)],TEAL,4)
+        arrow(540,460,620,460)
+        box(620,285,420,350,LIGHT); text(648,310,'Tie selected parameters',29,bold=True)
+        box(650,380,150,65); text(670,397,'Long-series',23,BLUE,True)
+        box(650,510,150,65); text(670,527,'Short-series',23,TEAL,True)
+        arrow(725,445,725,510,TEAL)
+        text(830,440,'Share',26,TEAL,True); text(830,475,'information',26,TEAL,True)
+        text(648,592,'Bootstrap selects tying strength',23,MUTED)
+        arrow(1040,460,1120,460)
+        box(1120,285,410,350); text(1150,310,'More accurate estimation',27,bold=True)
+        text(1150,397,'Short-series parameters',26,BLUE,True)
+        text(1150,457,'Finite-sample risk bounds',24,MUTED)
+        text(1150,512,'Volatility forecasting',26,TEAL,True)
+        text(1150,559,'Multivariate GARCH application',22,MUTED)
+        box(70,685,1460,125,NAVY,NAVY)
+        text(105,713,'Transfer information across related dependent series',36,'white',True)
+        text(105,765,'Parameter tying + data-driven tuning  |  Conceptual method overview',23,'#d1e4f3')
     else:
         box(70,285,410,340); text(100,310,'Candidate models',30,bold=True)
         for j in range(3):
@@ -74,5 +96,5 @@ def render(kind, scale):
     im.save(OUT/(kind+('@2x' if scale==2 else '')+'.png'),optimize=True)
 
 if __name__=='__main__':
-    for name in ['subgoal','tvs-adf','model-averaging']:
+    for name in ['subgoal','tvs-adf','model-averaging','tmle']:
         for scale in [1,2]: render(name,scale)

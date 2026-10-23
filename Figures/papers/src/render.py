@@ -24,48 +24,74 @@ def render(kind, scale):
         pts=[(x2,y2),(x2-16*math.cos(a-.5),y2-16*math.sin(a-.5)),(x2-16*math.cos(a+.5),y2-16*math.sin(a+.5))]
         d.polygon([xy(p) for p in pts],fill=color)
     text(70,42,'DSELab  /  RESEARCH IN FOCUS',22,TEAL,True)
-    titles={'subgoal':('Learn the condition. Predict the subgoal.','Xiang & Liu (2026)  /  Frozen hierarchical world models'), 'tvs-adf':('Changing structure. Dynamic forecasts.','Zhao & Liu (2026)  /  Time-varying structural approximate dynamic factor model'), 'tmle':('Long histories help short series.','Iwasawa, Liu & Zhao (2026)  /  Tying maximum likelihood estimation'), 'model-averaging':('Choose weights for the loss that matters.','Gu, Liu & Zhang (2025)  /  Model averaging under flexible loss functions')}
+    titles={'subgoal':('Frozen models. One lightweight head.','Xiang & Liu (2026)  /  Frozen hierarchical world models'), 'tvs-adf':('Changing structure. Dynamic forecasts.','Zhao & Liu (2026)  /  Time-varying structural approximate dynamic factor model'), 'tmle':('Long histories help short series.','Iwasawa, Liu & Zhao (2026)  /  Tying maximum likelihood estimation'), 'model-averaging':('Choose weights for the loss that matters.','Gu, Liu & Zhang (2025)  /  Model averaging under flexible loss functions')}
     title,sub=titles[kind]; text(70,100,title,52,bold=True); text(70,176,sub,26,MUTED)
     if kind=='subgoal':
-        # arXiv:2610.26179v2, Figures 1-2 and Sections 3.2-3.4.
-        # The trainable head emits a condition, never a direct latent subgoal.
-        box(70,280,280,265)
-        text(94,303,'ENCODED INPUTS',21,TEAL,True)
-        for y,t in [(356,'State context'),(416,'Goal'),(476,'Remaining steps')]:
-            text(94,y,t,27)
-        arrow(350,410,410,410)
-        box(410,315,260,180,'#d9f1f1')
-        text(436,340,'Condition head',29,TEAL,True)
-        text(436,390,'Trainable MLP',25)
-        text(436,438,'Only trained module',20,MUTED)
-        arrow(670,410,850,410,TEAL)
-        text(690,345,'Condition',23,TEAL,True)
-        text(705,374,'vector',23,TEAL,True)
-        box(850,315,300,180,LIGHT)
-        text(877,340,'Coarse predictor',28,BLUE,True)
-        text(877,392,'Frozen world model',24)
-        text(877,440,'Also takes state context',20,MUTED)
-        # State context also enters the frozen coarse predictor directly.
-        line([(210,280),(210,246),(1000,246),(1000,295)],MUTED,3)
-        arrow(1000,295,1000,315,MUTED)
-        text(560,220,'State context',20,MUTED)
-        arrow(1150,410,1210,410)
-        box(1210,315,320,180)
-        text(1235,340,'Latent waypoint',29,bold=True)
-        text(1235,396,'First = subgoal',27,TEAL,True)
-        text(1235,443,'Continue rollout',21,MUTED)
-        line([(1370,495),(1370,565),(540,565)],TEAL,3)
-        arrow(540,565,540,495,TEAL)
-        text(630,578,'Autoregressive high-level rollout; no candidate optimization',25,TEAL)
-        arrow(1370,495,1370,665)
-        box(70,665,1000,145,NAVY,NAVY)
-        text(100,688,'TRAINING: recorded trajectories + hindsight goals',27,'white',True)
-        text(100,735,'Prediction losses backpropagate through the frozen predictor.',24,'#d1e4f3')
-        text(100,775,'Only the condition head is updated.',23,'#d1e4f3')
-        box(1120,665,410,145,LIGHT)
-        text(1147,688,'Low-level MPC',30,BLUE,True)
-        text(1147,735,'Frozen fine predictor',25)
-        text(1147,776,'Optimize primitive actions',23,MUTED)
+        # arXiv:2610.26179v2, Fig. 1 and Secs. 3.1-3.4.
+        # E encodes observations; g emits conditions; F2 emits waypoints.
+        # Simplified one-step view, not the full autoregressive algorithm.
+        def dot(x,y,r,color):
+            d.ellipse(xy((x-r,y-r,x+r,y+r)),fill=color)
+        def lock(cx,cy):
+            d.arc(xy((cx-14,cy-28,cx+14,cy+7)),180,360,fill=BLUE,width=6*scale)
+            d.rounded_rectangle(xy((cx-22,cy-7,cx+22,cy+28)),radius=7*scale,fill=BLUE)
+            dot(cx,cy+7,3,'white')
+        def neural(cx,cy):
+            layers=[[(cx-70,cy-42),(cx-70,cy+42)],[(cx,cy-58),(cx,cy),(cx,cy+58)],[(cx+70,cy-35),(cx+70,cy+35)]]
+            for left,right in zip(layers,layers[1:]):
+                for p1 in left:
+                    for p2 in right: line([p1,p2],'#79b9be',3)
+            for layer in layers:
+                for x,y in layer: dot(x,y,13,TEAL)
+        for x,w,c in [(70,310,LIGHT),(440,310,'#d9f1f1'),(810,350,LIGHT),(1220,310,'white')]:
+            box(x,310,w,320,c)
+        text(96,333,'01  ENCODE',22,BLUE,True)
+        # Camera/image encoder pictogram with a lock badge.
+        box(145,385,150,95,'white',BLUE)
+        d.rectangle(xy((160,399,183,412)),fill=BLUE)
+        d.ellipse(xy((190,401,253,464)),outline=BLUE,width=7*scale)
+        dot(222,433,15,'#afd8ed');lock(302,457)
+        text(100,508,'Frozen encoder',32,BLUE,True)
+        text(100,559,'Observation + goal',25)
+        text(100,598,'Latent state + goal',23,MUTED)
+        arrow(380,470,440,470)
+        text(466,333,'02  CONDITION',22,TEAL,True)
+        neural(595,433)
+        text(467,508,'Lightweight head',30,TEAL,True)
+        text(467,559,'+ Remaining steps',25)
+        text(467,598,'Outputs a condition',23,MUTED)
+        arrow(750,470,810,470,TEAL)
+        text(836,333,'03  PREDICT',22,BLUE,True)
+        # Stacked model blocks, with a lock: distinct from the trainable head.
+        for x,y in [(925,385),(907,408),(889,431)]:
+            box(x,y,130,45,'white',BLUE)
+            for k in range(3): dot(x+26+k*37,y+23,5,BLUE)
+        lock(1055,456)
+        text(837,508,'Frozen predictor',32,BLUE,True)
+        text(837,559,'State + condition',25)
+        text(837,598,'Generates a waypoint',23,MUTED)
+        arrow(1160,470,1220,470)
+        text(1246,333,'04  SUBGOAL',22,TEAL,True)
+        # Waypoint + flag pictogram; illustrative, not an experimental rollout.
+        line([(1260,465),(1350,405),(1470,465)],'#a5c9d9',5)
+        dot(1260,465,9,MUTED);dot(1350,405,13,TEAL);dot(1470,465,9,BLUE)
+        line([(1470,465),(1470,390)],BLUE,4)
+        d.polygon([xy(v) for v in [(1470,390),(1510,404),(1470,420)]],fill=BLUE)
+        text(1247,508,'Next subgoal',32,TEAL,True)
+        text(1247,559,'First waypoint',25)
+        text(1247,598,'Guides action planning',23,MUTED)
+        # Keep the retained low-level controller visible, without algorithm detail.
+        box(70,690,1460,120,NAVY,NAVY)
+        text(110,715,'Subgoal',34,'#88e0e2',True)
+        arrow(295,742,395,742,'#88e0e2')
+        # Friendly robot icon for low-level control.
+        d.rounded_rectangle(xy((440,715,502,764)),radius=12*scale,outline='#88e0e2',width=3*scale)
+        dot(459,738,5,'#88e0e2');dot(483,738,5,'#88e0e2')
+        line([(471,715),(471,702)],'#88e0e2',3);dot(471,699,4,'#88e0e2')
+        text(530,715,'Low-level MPC',34,'white',True)
+        arrow(880,742,980,742,'#88e0e2')
+        text(1030,715,'Action',34,'white',True)
+        text(110,772,'High-level search replaced; low-level action planning retained.',21,'#d1e4f3')
     elif kind=='tvs-adf':
         for x,label in [(70,'Observed series'),(580,'Time-varying loadings'),(1090,'Structural forecast')]:
             box(x,285,440,350); text(x+26,310,label,29,bold=True)

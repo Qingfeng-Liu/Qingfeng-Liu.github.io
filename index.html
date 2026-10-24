@@ -680,6 +680,8 @@
   </style>
   <link rel="stylesheet" href="assets/theme.css?v=1">
   <script src="assets/theme.js?v=1"></script>
+  <link rel="stylesheet" href="assets/paper-gallery.css?v=1">
+  <script src="assets/paper-gallery.js?v=1" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -836,10 +838,23 @@
         <h2 class="section-title">最近の論文</h2>
         <div class="paper-list">
           <article class="paper-card">
-            <a class="paper-figure" href="Figures/papers/tvs-adf@2x.png" target="_blank" rel="noopener noreferrer" aria-label="時変因子載荷、構造識別、予測を結ぶモデルの概念図（大きな画像を開く）">
+            <div class="paper-gallery" role="group" aria-label="応用イメージ / 原理図" data-pause="自動切り替えを一時停止" data-play="自動切り替えを再開">
+              <div class="paper-slides">
+                <a class="paper-figure paper-slide" href="Figures/papers/applications/tvs-adf@2x.png" target="_blank" rel="noopener noreferrer" aria-label="動的システム予測：変化する経済のつながりと将来予測の応用イメージ">
+                  <img src="Figures/papers/applications/tvs-adf.png" srcset="Figures/papers/applications/tvs-adf@2x.png 2x" width="1600" height="900" loading="lazy" alt="動的システム予測：変化する経済のつながりと将来予測の応用イメージ">
+                  <span>応用イメージ · クリックで拡大 ↗</span>
+                </a>
+            <a class="paper-figure paper-slide" hidden href="Figures/papers/tvs-adf@2x.png" target="_blank" rel="noopener noreferrer" aria-label="時変因子載荷、構造識別、予測を結ぶモデルの概念図（大きな画像を開く）">
               <img src="Figures/papers/tvs-adf.png" srcset="Figures/papers/tvs-adf@2x.png 2x" width="1600" height="900" loading="lazy" alt="時変因子載荷、構造識別、予測を結ぶモデルの概念図">
               <span>クリックで拡大 ↗</span>
             </a>
+              </div>
+              <div class="paper-gallery-controls" hidden>
+                <button class="paper-choice" type="button" aria-pressed="true">応用イメージ</button>
+                <button class="paper-choice" type="button" aria-pressed="false">原理図</button>
+                <button class="paper-playback" type="button" aria-label="自動切り替えを一時停止">Ⅱ</button>
+              </div>
+            </div>
             <div class="paper-body">
               <span class="paper-status">Accepted</span>
               <h3>Time-Varying Structural Approximate Dynamic Factor Model</h3>
@@ -849,10 +864,23 @@
             </div>
           </article>
           <article class="paper-card">
-            <a class="paper-figure" href="Figures/papers/subgoal@2x.png?v=4" target="_blank" rel="noopener noreferrer" aria-label="凍結エンコーダー、軽量条件ヘッド、凍結予測器によるサブゴール生成と低層MPCの概念図（大きな画像を開く）">
+            <div class="paper-gallery" role="group" aria-label="応用イメージ / 原理図" data-pause="自動切り替えを一時停止" data-play="自動切り替えを再開">
+              <div class="paper-slides">
+                <a class="paper-figure paper-slide" href="Figures/papers/applications/subgoal@2x.png" target="_blank" rel="noopener noreferrer" aria-label="具身知能・ロボット制御：サブゴールを経て障害を回避する応用イメージ">
+                  <img src="Figures/papers/applications/subgoal.png" srcset="Figures/papers/applications/subgoal@2x.png 2x" width="1600" height="900" loading="lazy" alt="具身知能・ロボット制御：サブゴールを経て障害を回避する応用イメージ">
+                  <span>応用イメージ · クリックで拡大 ↗</span>
+                </a>
+            <a class="paper-figure paper-slide" hidden href="Figures/papers/subgoal@2x.png?v=4" target="_blank" rel="noopener noreferrer" aria-label="凍結エンコーダー、軽量条件ヘッド、凍結予測器によるサブゴール生成と低層MPCの概念図（大きな画像を開く）">
               <img src="Figures/papers/subgoal.png?v=4" srcset="Figures/papers/subgoal@2x.png?v=4 2x" width="1600" height="900" loading="lazy" alt="凍結エンコーダー、軽量条件ヘッド、凍結予測器によるサブゴール生成と低層MPCの概念図">
               <span>クリックで拡大 ↗</span>
             </a>
+              </div>
+              <div class="paper-gallery-controls" hidden>
+                <button class="paper-choice" type="button" aria-pressed="true">応用イメージ</button>
+                <button class="paper-choice" type="button" aria-pressed="false">原理図</button>
+                <button class="paper-playback" type="button" aria-label="自動切り替えを一時停止">Ⅱ</button>
+              </div>
+            </div>
             <div class="paper-body">
               <span class="paper-status">Working Paper</span>
               <h3>Learning Goal-Conditioned Subgoals through Frozen Hierarchical World Models</h3>
@@ -862,10 +890,23 @@
             </div>
           </article>
           <article class="paper-card">
-            <a class="paper-figure" href="Figures/papers/tmle@2x.png" target="_blank" rel="noopener noreferrer" aria-label="長短の時系列間で情報を共有するパラメータ結合型最尤推定の概念図">
+            <div class="paper-gallery" role="group" aria-label="応用イメージ / 原理図" data-pause="自動切り替えを一時停止" data-play="自動切り替えを再開">
+              <div class="paper-slides">
+                <a class="paper-figure paper-slide" href="Figures/papers/applications/tmle@2x.png" target="_blank" rel="noopener noreferrer" aria-label="金融リスク予測：長い履歴の情報を短い履歴のボラティリティ予測に活用する応用イメージ">
+                  <img src="Figures/papers/applications/tmle.png" srcset="Figures/papers/applications/tmle@2x.png 2x" width="1600" height="900" loading="lazy" alt="金融リスク予測：長い履歴の情報を短い履歴のボラティリティ予測に活用する応用イメージ">
+                  <span>応用イメージ · クリックで拡大 ↗</span>
+                </a>
+            <a class="paper-figure paper-slide" hidden href="Figures/papers/tmle@2x.png" target="_blank" rel="noopener noreferrer" aria-label="長短の時系列間で情報を共有するパラメータ結合型最尤推定の概念図">
               <img src="Figures/papers/tmle.png" srcset="Figures/papers/tmle@2x.png 2x" width="1600" height="900" loading="lazy" alt="長短の時系列間で情報を共有するパラメータ結合型最尤推定の概念図">
               <span>クリックで拡大 ↗</span>
             </a>
+              </div>
+              <div class="paper-gallery-controls" hidden>
+                <button class="paper-choice" type="button" aria-pressed="true">応用イメージ</button>
+                <button class="paper-choice" type="button" aria-pressed="false">原理図</button>
+                <button class="paper-playback" type="button" aria-label="自動切り替えを一時停止">Ⅱ</button>
+              </div>
+            </div>
             <div class="paper-body">
               <span class="paper-status">Published</span>
               <h3>Tying Maximum Likelihood Estimation for Dependent Data</h3>
@@ -875,10 +916,23 @@
             </div>
           </article>
           <article class="paper-card">
-            <a class="paper-figure" href="Figures/papers/model-averaging@2x.png" target="_blank" rel="noopener noreferrer" aria-label="非対称損失に応じた重み選択とモデル平均の概念図（大きな画像を開く）">
+            <div class="paper-gallery" role="group" aria-label="応用イメージ / 原理図" data-pause="自動切り替えを一時停止" data-play="自動切り替えを再開">
+              <div class="paper-slides">
+                <a class="paper-figure paper-slide" href="Figures/papers/applications/model-averaging@2x.png" target="_blank" rel="noopener noreferrer" aria-label="知的意思決定の応用例：欠品と余剰のコストを考慮した在庫管理と廃棄削減">
+                  <img src="Figures/papers/applications/model-averaging.png" srcset="Figures/papers/applications/model-averaging@2x.png 2x" width="1600" height="900" loading="lazy" alt="知的意思決定の応用例：欠品と余剰のコストを考慮した在庫管理と廃棄削減">
+                  <span>応用イメージ · クリックで拡大 ↗</span>
+                </a>
+            <a class="paper-figure paper-slide" hidden href="Figures/papers/model-averaging@2x.png" target="_blank" rel="noopener noreferrer" aria-label="非対称損失に応じた重み選択とモデル平均の概念図（大きな画像を開く）">
               <img src="Figures/papers/model-averaging.png" srcset="Figures/papers/model-averaging@2x.png 2x" width="1600" height="900" loading="lazy" alt="非対称損失に応じた重み選択とモデル平均の概念図">
               <span>クリックで拡大 ↗</span>
             </a>
+              </div>
+              <div class="paper-gallery-controls" hidden>
+                <button class="paper-choice" type="button" aria-pressed="true">応用イメージ</button>
+                <button class="paper-choice" type="button" aria-pressed="false">原理図</button>
+                <button class="paper-playback" type="button" aria-label="自動切り替えを一時停止">Ⅱ</button>
+              </div>
+            </div>
             <div class="paper-body">
               <span class="paper-status">Published</span>
               <h3>Model Averaging under Flexible Loss Functions</h3>

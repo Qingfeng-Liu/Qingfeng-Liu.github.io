@@ -1,0 +1,26 @@
+{
+  "generator": "built-in image_gen",
+  "style": "Approved navy/cyan/violet abstract application illustrations",
+  "prompts": [
+    {
+      "slug": "subgoal",
+      "title": "Embodied AI · Robot Control",
+      "prompt": "Precise typography edit of the supplied approved abstract sci-fi schematic. Preserve the dark navy background, cyan/violet glow, amber accents, composition, every object and the clear simplified application message. Keep all existing robot, route, subgoal, goal, obstacle shapes and internal labels unchanged. Add the title at top in the existing empty margin, centered. Do not overlap SUBGOAL label. New title text exactly: 'Embodied AI · Robot Control'. Use a large crisp modern sans-serif, cyan-white, title case, same typographic family as the existing labels, strong readability. Only add/replace the specified text; do not introduce other text, extra graphics, logos or watermark. Maintain 16:9 landscape; do not crop."
+    },
+    {
+      "slug": "tvs-adf",
+      "title": "Dynamic Systems Forecasting",
+      "prompt": "Precise typography edit of the supplied approved abstract sci-fi schematic. Preserve the dark navy background, cyan/violet glow, amber accents, composition, every object and the clear simplified application message. Keep existing network and prediction artwork, existing internal labels, colors and geometry unchanged. Add the title centered at top in the generous empty margin. New title text exactly: 'Dynamic Systems Forecasting'. Use a large crisp modern sans-serif, cyan-white, title case, same typographic family as the existing labels, strong readability. Only add/replace the specified text; do not introduce other text, extra graphics, logos or watermark. Maintain 16:9 landscape; do not crop."
+    },
+    {
+      "slug": "tmle",
+      "title": "Financial Risk Forecasting",
+      "prompt": "Precise typography edit of the supplied approved abstract sci-fi schematic. Preserve the dark navy background, cyan/violet glow, amber accents, composition, every object and the clear simplified application message. Keep existing buildings, long/short histories, shared time boundary, transfer arrow, uncertainty fan and internal labels unchanged. Add the title centered at top in the empty margin. New title text exactly: 'Financial Risk Forecasting'. Use a large crisp modern sans-serif, cyan-white, title case, same typographic family as the existing labels, strong readability. Only add/replace the specified text; do not introduce other text, extra graphics, logos or watermark. Maintain 16:9 landscape; do not crop."
+    },
+    {
+      "slug": "model-averaging",
+      "title": "Smart Decision-Making",
+      "prompt": "Precise typography edit of the supplied approved abstract sci-fi schematic. Preserve the dark navy background, cyan/violet glow, amber accents, composition, every object and the clear simplified application message. Keep all existing artwork, curves, arrows, costs icons, hub and colors unchanged. Add the title centered at top in the empty margin. Also REPLACE the existing 'STOCK ORDER' label beneath the right shelf with exactly 'Smart Inventory · Less Waste', neatly arranged in two lines if needed. Leave the existing 'PREDICTIONS' and 'COST-AWARE CHOICE' labels unchanged. New title text exactly: 'Smart Decision-Making'. Use a large crisp modern sans-serif, cyan-white, title case, same typographic family as the existing labels, strong readability. Only add/replace the specified text; do not introduce other text, extra graphics, logos or watermark. Maintain 16:9 landscape; do not crop."
+    }
+  ]
+}

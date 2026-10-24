@@ -46,7 +46,7 @@
       if (playing && visible && !hovered && !document.hidden && !gallery.contains(document.activeElement)) {
         show((current + 1) % slides.length);
       }
-    }, 7000);
+    }, 4000);
     reducedMotion.addEventListener('change', event => {
       if (event.matches) { playing = false; updatePlayback(); }
     });
